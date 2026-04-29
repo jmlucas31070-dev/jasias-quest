@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="24" height="18" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="forest" />
+    <property name="interior" value="false" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_tree_1.tsx" />
+  <layer name="ground" width="24" height="18">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+  </layer>
+  <objectgroup name="spawns">
+    <object name="wolf" type="monster" x="448" y="448" width="32" height="32">
+      <properties>
+        <property name="monster" value="wolf" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="boar" type="monster" x="640" y="320" width="32" height="32">
+      <properties>
+        <property name="monster" value="boar" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="search">
+    <object name="forest_maze_3_search_0" type="search" x="448" y="480" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_forest_maze_3_0" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="forest_maze_3_search_1" type="search" x="128" y="384" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_forest_maze_3_1" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="forest_maze_3_search_2" type="search" x="544" y="192" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_forest_maze_3_2" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="exits">
+    <object name="to_forest_maze_2" type="mapchange" x="0" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="forest_maze_2" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_forest_maze_4" type="mapchange" x="736" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="forest_maze_4" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+    <object name="to_forest_maze_7" type="mapchange" x="384" y="544" width="32" height="32">
+      <properties>
+        <property name="map" value="forest_maze_7" />
+        <property name="place" value="from_n" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

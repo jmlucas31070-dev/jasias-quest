@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="16" height="12" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="dragon" />
+    <property name="interior" value="true" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_cavewall_3.tsx" />
+  <layer name="ground" width="16" height="12">
+    <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_dragon_cave_7" type="mapchange" x="256" y="0" width="32" height="32">
+      <properties>
+        <property name="map" value="dragon_cave_7" />
+        <property name="place" value="from_s" />
+      </properties>
+    </object>
+    <object name="to_dragon_cave_10" type="mapchange" x="0" y="192" width="32" height="32">
+      <properties>
+        <property name="map" value="dragon_cave_10" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_dragon_cave_12" type="mapchange" x="480" y="192" width="32" height="32">
+      <properties>
+        <property name="map" value="dragon_cave_12" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="spawns">
+    <object name="fire_bat" type="monster" x="352" y="256" width="32" height="32">
+      <properties>
+        <property name="monster" value="fire_bat" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+    <object name="dragon_hatchling" type="monster" x="320" y="128" width="32" height="32">
+      <properties>
+        <property name="monster" value="dragon_hatchling" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+    <object name="young_dragon" type="monster" x="256" y="192" width="32" height="32">
+      <properties>
+        <property name="monster" value="young_dragon" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+    <object name="fire_bat" type="monster" x="416" y="160" width="32" height="32">
+      <properties>
+        <property name="monster" value="fire_bat" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="16" height="12" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="shop" />
+    <property name="interior" value="true" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_shop_1.tsx" />
+  <layer name="ground" width="16" height="12">
+    <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_lane" type="mapchange" x="256" y="352" width="32" height="32">
+      <properties>
+        <property name="map" value="lane" />
+        <property name="place" value="from_n" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="npcs">
+    <object name="npc_shopkeeper" type="npc" x="64" y="192" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_shopkeeper_hello" />
+      </properties>
+    </object>
+    <object name="npc_weaponer" type="npc" x="160" y="192" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_weaponer_hello" />
+      </properties>
+    </object>
+    <object name="npc_armorer" type="npc" x="256" y="192" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_armorer_hello" />
+      </properties>
+    </object>
+    <object name="npc_giftshop" type="npc" x="352" y="192" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_giftshop_hello" />
+      </properties>
+    </object>
+    <object name="npc_butcher" type="npc" x="448" y="192" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_butcher_hello" />
+      </properties>
+    </object>
+    <object name="npc_farmer" type="npc" x="544" y="192" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_farmer_hello" />
+      </properties>
+    </object>
+    <object name="npc_seamstress" type="npc" x="640" y="192" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_seamstress_hello" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

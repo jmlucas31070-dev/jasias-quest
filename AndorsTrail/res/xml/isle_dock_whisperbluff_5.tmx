@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="24" height="18" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="beach" />
+    <property name="interior" value="false" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_ground_4.tsx" />
+  <layer name="ground" width="24" height="18">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_isle_dock_whisperbluff_4" type="mapchange" x="0" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="isle_dock_whisperbluff_4" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_isle_dock_whisperbluff_6" type="mapchange" x="736" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="isle_dock_whisperbluff_6" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="spawns">
+    <object name="shipwreck_rat_dock_whisperbluff" type="monster" x="352" y="448" width="32" height="32">
+      <properties>
+        <property name="monster" value="shipwreck_rat_dock_whisperbluff" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="macaw_dock_whisperbluff" type="monster" x="416" y="160" width="32" height="32">
+      <properties>
+        <property name="monster" value="macaw_dock_whisperbluff" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="shore_crab_dock_whisperbluff" type="monster" x="224" y="96" width="32" height="32">
+      <properties>
+        <property name="monster" value="shore_crab_dock_whisperbluff" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="npcs">
+    <object name="npc_dock_whisperbluff_4" type="npc" x="288" y="384" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_dock_whisperbluff_4_hello" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="search">
+    <object name="isle_dock_whisperbluff_5_search_0" type="search" x="352" y="192" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_dock_whisperbluff_5_0" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="isle_dock_whisperbluff_5_search_1" type="search" x="192" y="192" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_dock_whisperbluff_5_1" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="isle_dock_whisperbluff_5_search_2" type="search" x="192" y="256" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_dock_whisperbluff_5_2" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

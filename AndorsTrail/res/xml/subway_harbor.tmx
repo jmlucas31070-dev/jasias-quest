@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="16" height="12" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="subway" />
+    <property name="interior" value="true" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_cavewall_4.tsx" />
+  <layer name="ground" width="16" height="12">
+    <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="stairs_to_harbor" type="mapchange" x="32" y="32" width="32" height="32">
+      <properties>
+        <property name="map" value="harbor" />
+        <property name="place" value="from_subway_harbor" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="npcs">
+    <object name="npc_subway_harbor_vendor" type="npc" x="256" y="192" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_subway_harbor_vendor_hello" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

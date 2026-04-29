@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="16" height="12" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="cave" />
+    <property name="interior" value="true" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_cavewall_1.tsx" />
+  <layer name="ground" width="16" height="12">
+    <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+  </layer>
+  <objectgroup name="spawns">
+    <object name="orc_warrior" type="monster" x="256" y="96" width="32" height="32">
+      <properties>
+        <property name="monster" value="orc_warrior" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="orc_whelp" type="monster" x="224" y="64" width="32" height="32">
+      <properties>
+        <property name="monster" value="orc_whelp" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+    <object name="orc_warrior" type="monster" x="128" y="96" width="32" height="32">
+      <properties>
+        <property name="monster" value="orc_warrior" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="exits">
+    <object name="to_orc_cave_2" type="mapchange" x="256" y="352" width="32" height="32">
+      <properties>
+        <property name="map" value="orc_cave_2" />
+        <property name="place" value="from_n" />
+      </properties>
+    </object>
+    <object name="to_slope" type="mapchange" x="256" y="352" width="32" height="32">
+      <properties>
+        <property name="map" value="slope" />
+        <property name="place" value="from_orc_caves" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

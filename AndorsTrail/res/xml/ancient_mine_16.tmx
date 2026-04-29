@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="16" height="12" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="mine" />
+    <property name="interior" value="true" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_cavewall_2.tsx" />
+  <layer name="ground" width="16" height="12">
+    <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_ancient_mine_12" type="mapchange" x="256" y="0" width="32" height="32">
+      <properties>
+        <property name="map" value="ancient_mine_12" />
+        <property name="place" value="from_s" />
+      </properties>
+    </object>
+    <object name="to_ancient_mine_15" type="mapchange" x="0" y="192" width="32" height="32">
+      <properties>
+        <property name="map" value="ancient_mine_15" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_ancient_mine_20" type="mapchange" x="256" y="352" width="32" height="32">
+      <properties>
+        <property name="map" value="ancient_mine_20" />
+        <property name="place" value="from_n" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="spawns">
+    <object name="rock_golem" type="monster" x="160" y="224" width="32" height="32">
+      <properties>
+        <property name="monster" value="rock_golem" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="tunnel_rat" type="monster" x="320" y="192" width="32" height="32">
+      <properties>
+        <property name="monster" value="tunnel_rat" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="rock_golem" type="monster" x="128" y="96" width="32" height="32">
+      <properties>
+        <property name="monster" value="rock_golem" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

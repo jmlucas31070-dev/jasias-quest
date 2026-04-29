@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="16" height="12" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="mine" />
+    <property name="interior" value="true" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_cavewall_2.tsx" />
+  <layer name="ground" width="16" height="12">
+    <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_ancient_mine_17" type="mapchange" x="256" y="0" width="32" height="32">
+      <properties>
+        <property name="map" value="ancient_mine_17" />
+        <property name="place" value="from_s" />
+      </properties>
+    </object>
+    <object name="to_ancient_mine_22" type="mapchange" x="480" y="192" width="32" height="32">
+      <properties>
+        <property name="map" value="ancient_mine_22" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="spawns">
+    <object name="rock_golem" type="monster" x="224" y="64" width="32" height="32">
+      <properties>
+        <property name="monster" value="rock_golem" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

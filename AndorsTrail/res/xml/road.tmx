@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="24" height="18" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="road" />
+    <property name="interior" value="false" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_outdoor_1.tsx" />
+  <layer name="ground" width="24" height="18">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+  </layer>
+  <objectgroup name="spawns">
+    <object name="cutpurse" type="monster" x="224" y="64" width="32" height="32">
+      <properties>
+        <property name="monster" value="cutpurse" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="thug" type="monster" x="256" y="224" width="32" height="32">
+      <properties>
+        <property name="monster" value="thug" />
+        <property name="quantity" value="3" />
+      </properties>
+    </object>
+    <object name="cutpurse" type="monster" x="256" y="288" width="32" height="32">
+      <properties>
+        <property name="monster" value="cutpurse" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="exits">
+    <object name="to_green" type="mapchange" x="0" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="green" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_lane" type="mapchange" x="736" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="lane" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

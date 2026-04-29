@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="24" height="18" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="island" />
+    <property name="interior" value="false" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_outdoor_1.tsx" />
+  <layer name="ground" width="24" height="18">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_isle_stormcliff_3" type="mapchange" x="0" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="isle_stormcliff_3" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_isle_stormcliff_5" type="mapchange" x="736" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="isle_stormcliff_5" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="spawns">
+    <object name="wolf_stormcliff" type="monster" x="224" y="352" width="32" height="32">
+      <properties>
+        <property name="monster" value="wolf_stormcliff" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="boar_stormcliff" type="monster" x="320" y="256" width="32" height="32">
+      <properties>
+        <property name="monster" value="boar_stormcliff" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="parrot_stormcliff" type="monster" x="576" y="352" width="32" height="32">
+      <properties>
+        <property name="monster" value="parrot_stormcliff" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="npcs">
+    <object name="npc_stormcliff_3" type="npc" x="672" y="64" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_stormcliff_3_hello" />
+      </properties>
+    </object>
+    <object name="npc_stormcliff_10" type="npc" x="224" y="288" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_stormcliff_10_hello" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="search">
+    <object name="isle_stormcliff_4_search_0" type="search" x="384" y="96" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_stormcliff_4_0" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="isle_stormcliff_4_search_1" type="search" x="160" y="416" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_stormcliff_4_1" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

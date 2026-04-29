@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="24" height="18" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="beach" />
+    <property name="interior" value="false" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_ground_4.tsx" />
+  <layer name="ground" width="24" height="18">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_isle_silvercliff_2" type="mapchange" x="0" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="isle_silvercliff_2" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_isle_silvercliff_4" type="mapchange" x="736" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="isle_silvercliff_4" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="spawns">
+    <object name="leech_silvercliff" type="monster" x="128" y="64" width="32" height="32">
+      <properties>
+        <property name="monster" value="leech_silvercliff" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+    <object name="swamp_ghoul_silvercliff" type="monster" x="64" y="192" width="32" height="32">
+      <properties>
+        <property name="monster" value="swamp_ghoul_silvercliff" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="bog_frog_silvercliff" type="monster" x="224" y="192" width="32" height="32">
+      <properties>
+        <property name="monster" value="bog_frog_silvercliff" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="npcs">
+    <object name="npc_silvercliff_2" type="npc" x="128" y="224" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_silvercliff_2_hello" />
+      </properties>
+    </object>
+    <object name="npc_silvercliff_11" type="npc" x="448" y="384" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_silvercliff_11_hello" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="search">
+    <object name="isle_silvercliff_3_search_0" type="search" x="384" y="128" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_silvercliff_3_0" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="isle_silvercliff_3_search_1" type="search" x="480" y="288" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_silvercliff_3_1" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

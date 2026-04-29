@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="16" height="12" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="mine" />
+    <property name="interior" value="true" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_cavewall_2.tsx" />
+  <layer name="ground" width="16" height="12">
+    <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_ancient_mine_3" type="mapchange" x="256" y="0" width="32" height="32">
+      <properties>
+        <property name="map" value="ancient_mine_3" />
+        <property name="place" value="from_s" />
+      </properties>
+    </object>
+    <object name="to_ancient_mine_6" type="mapchange" x="0" y="192" width="32" height="32">
+      <properties>
+        <property name="map" value="ancient_mine_6" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_ancient_mine_8" type="mapchange" x="480" y="192" width="32" height="32">
+      <properties>
+        <property name="map" value="ancient_mine_8" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+    <object name="to_ancient_mine_11" type="mapchange" x="256" y="352" width="32" height="32">
+      <properties>
+        <property name="map" value="ancient_mine_11" />
+        <property name="place" value="from_n" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="spawns">
+    <object name="mine_bat" type="monster" x="64" y="288" width="32" height="32">
+      <properties>
+        <property name="monster" value="mine_bat" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="mine_bat" type="monster" x="256" y="256" width="32" height="32">
+      <properties>
+        <property name="monster" value="mine_bat" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

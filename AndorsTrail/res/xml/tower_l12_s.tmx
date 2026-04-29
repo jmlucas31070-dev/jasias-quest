@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="16" height="12" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="interior" />
+    <property name="interior" value="true" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_indoor_1.tsx" />
+  <layer name="ground" width="16" height="12">
+    <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_tower_l12_spire" type="mapchange" x="256" y="0" width="32" height="32">
+      <properties>
+        <property name="map" value="tower_l12_spire" />
+        <property name="place" value="from_s" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="spawns">
+    <object name="tower_cave_bat_l12" type="monster" x="352" y="224" width="32" height="32">
+      <properties>
+        <property name="monster" value="tower_cave_bat_l12" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="tower_pheasant_l12" type="monster" x="416" y="224" width="32" height="32">
+      <properties>
+        <property name="monster" value="tower_pheasant_l12" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+    <object name="tower_rock_golem_l12" type="monster" x="256" y="128" width="32" height="32">
+      <properties>
+        <property name="monster" value="tower_rock_golem_l12" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="24" height="18" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="island" />
+    <property name="interior" value="false" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_outdoor_1.tsx" />
+  <layer name="ground" width="24" height="18">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_isle_whisperbight_5" type="mapchange" x="0" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="isle_whisperbight_5" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_isle_whisperbight_7" type="mapchange" x="736" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="isle_whisperbight_7" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="spawns">
+    <object name="tortoise_whisperbight" type="monster" x="192" y="160" width="32" height="32">
+      <properties>
+        <property name="monster" value="tortoise_whisperbight" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="shipwreck_rat_whisperbight" type="monster" x="256" y="480" width="32" height="32">
+      <properties>
+        <property name="monster" value="shipwreck_rat_whisperbight" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+    <object name="tropical_fish_whisperbight" type="monster" x="160" y="320" width="32" height="32">
+      <properties>
+        <property name="monster" value="tropical_fish_whisperbight" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="npcs">
+    <object name="npc_whisperbight_5" type="npc" x="544" y="192" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_whisperbight_5_hello" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="search">
+    <object name="isle_whisperbight_6_search_0" type="search" x="544" y="128" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_whisperbight_6_0" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="isle_whisperbight_6_search_1" type="search" x="128" y="128" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_whisperbight_6_1" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

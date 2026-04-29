@@ -1,8 +1,13 @@
-﻿# Andor's Trail
+﻿# Jasia's Quest
 
-Andor's Trail is a single-player quest-driven roguelike fantasy dungeon crawler RPG with a powerful story.
+Jasia's Quest is a single-player quest-driven roguelike fantasy dungeon crawler RPG with a powerful story.
 
-Uncover the truths about your home village and the disappearance of your brother. Battle fierce monsters, gain experience and levels. Solve quests, find hidden treasures and improve your equipment.
+Uncover the truths about your sister Sunny. Battle fierce monsters, gain experience and levels. Solve quests, find hidden treasures and improve your equipment.
+
+## Andor's Trail
+
+Source code is the Andor's Trail with the game removed and replaced with mine.
+All bugs belong to me at this point. *wink*
 
 ## News/Updates
 

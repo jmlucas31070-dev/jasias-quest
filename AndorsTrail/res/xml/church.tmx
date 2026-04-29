@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="16" height="12" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="church" />
+    <property name="interior" value="true" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_indoor_2.tsx" />
+  <layer name="ground" width="16" height="12">
+    <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+  </layer>
+  <objectgroup name="npcs">
+    <object name="npc_priest" type="npc" x="256" y="192" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_priest_hello" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="exits">
+    <object name="to_green" type="mapchange" x="256" y="352" width="32" height="32">
+      <properties>
+        <property name="map" value="green" />
+        <property name="place" value="from_n" />
+      </properties>
+    </object>
+    <object name="to_graveyard" type="mapchange" x="256" y="0" width="32" height="32">
+      <properties>
+        <property name="map" value="graveyard" />
+        <property name="place" value="from_s" />
+      </properties>
+    </object>
+    <object name="up_attic" type="mapchange" x="32" y="32" width="32" height="32">
+      <properties>
+        <property name="map" value="church_attic" />
+        <property name="place" value="from_attic_down" />
+      </properties>
+    </object>
+    <object name="down_basement" type="mapchange" x="448" y="32" width="32" height="32">
+      <properties>
+        <property name="map" value="church_basement" />
+        <property name="place" value="from_basement_up" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

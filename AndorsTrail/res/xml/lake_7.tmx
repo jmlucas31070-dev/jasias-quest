@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="24" height="18" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="lake" />
+    <property name="interior" value="false" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_ground_6.tsx" />
+  <layer name="ground" width="24" height="18">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+  </layer>
+  <objectgroup name="spawns">
+    <object name="drowned" type="monster" x="384" y="288" width="32" height="32">
+      <properties>
+        <property name="monster" value="drowned" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="water_nymph" type="monster" x="448" y="256" width="32" height="32">
+      <properties>
+        <property name="monster" value="water_nymph" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="search">
+    <object name="lake_7_search_0" type="search" x="64" y="64" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_lake_7_0" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="lake_7_search_1" type="search" x="352" y="192" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_lake_7_1" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="lake_7_search_2" type="search" x="352" y="352" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_lake_7_2" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="exits">
+    <object name="to_lake_6" type="mapchange" x="0" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="lake_6" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_lake_8" type="mapchange" x="736" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="lake_8" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

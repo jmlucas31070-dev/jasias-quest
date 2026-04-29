@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="24" height="18" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="graveyard" />
+    <property name="interior" value="false" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_broken_1.tsx" />
+  <layer name="ground" width="24" height="18">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+  </layer>
+  <objectgroup name="spawns">
+    <object name="ghoul" type="monster" x="320" y="480" width="32" height="32">
+      <properties>
+        <property name="monster" value="ghoul" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="wraith" type="monster" x="672" y="480" width="32" height="32">
+      <properties>
+        <property name="monster" value="wraith" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="skeleton" type="monster" x="448" y="64" width="32" height="32">
+      <properties>
+        <property name="monster" value="skeleton" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="grave_spider" type="monster" x="384" y="416" width="32" height="32">
+      <properties>
+        <property name="monster" value="grave_spider" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="wraith" type="monster" x="608" y="224" width="32" height="32">
+      <properties>
+        <property name="monster" value="wraith" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="phantom" type="monster" x="512" y="448" width="32" height="32">
+      <properties>
+        <property name="monster" value="phantom" />
+        <property name="quantity" value="3" />
+      </properties>
+    </object>
+    <object name="ghoul" type="monster" x="64" y="384" width="32" height="32">
+      <properties>
+        <property name="monster" value="ghoul" />
+        <property name="quantity" value="2" />
+      </properties>
+    </object>
+    <object name="graveyard_phantom" type="monster" x="384" y="288" width="32" height="32">
+      <properties>
+        <property name="monster" value="graveyard_phantom" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="search">
+    <object name="graveyard_search_0" type="search" x="576" y="320" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_graveyard_0" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="graveyard_search_1" type="search" x="608" y="256" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_graveyard_1" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="graveyard_search_2" type="search" x="544" y="320" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_graveyard_2" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="exits">
+    <object name="to_church" type="mapchange" x="384" y="544" width="32" height="32">
+      <properties>
+        <property name="map" value="church" />
+        <property name="place" value="from_n" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

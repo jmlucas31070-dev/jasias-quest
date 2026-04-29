@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="24" height="18" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="island" />
+    <property name="interior" value="false" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_outdoor_1.tsx" />
+  <layer name="ground" width="24" height="18">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+  </layer>
+  <objectgroup name="spawns">
+    <object name="macaw" type="monster" x="192" y="160" width="32" height="32">
+      <properties>
+        <property name="monster" value="macaw" />
+        <property name="quantity" value="3" />
+      </properties>
+    </object>
+    <object name="monkey" type="monster" x="416" y="128" width="32" height="32">
+      <properties>
+        <property name="monster" value="monkey" />
+        <property name="quantity" value="3" />
+      </properties>
+    </object>
+    <object name="lake_isle_witch" type="monster" x="384" y="288" width="32" height="32">
+      <properties>
+        <property name="monster" value="lake_isle_witch" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="search">
+    <object name="lake_isle_3_search_0" type="search" x="256" y="224" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_lake_isle_3_0" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="lake_isle_3_search_1" type="search" x="128" y="352" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_lake_isle_3_1" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="exits">
+    <object name="to_lake_isle_2" type="mapchange" x="0" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="lake_isle_2" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

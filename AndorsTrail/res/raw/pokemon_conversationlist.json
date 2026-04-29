@@ -1,0 +1,6888 @@
+[
+  {
+    "id": "loremaster_intro",
+    "message": "\"At last, you have come. I am Loremaster Aelarion. Aelthoria stretches across nine realms - and each holds beasts bound by ancient mages into Astral form. Will you take up the codex and the orb?\"",
+    "replies": [
+      {
+        "text": "Yes - I'll be a Warden.",
+        "nextPhrase": "loremaster_choose_starter",
+        "requires": []
+      },
+      {
+        "text": "Tell me about the Realms.",
+        "nextPhrase": "loremaster_realms",
+        "requires": []
+      },
+      {
+        "text": "Not yet.",
+        "nextPhrase": "loremaster_later",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "loremaster_choose_starter",
+    "message": "\"Then choose your first companion. Each starter is bonded to one of the great elements.\"",
+    "replies": [
+      {
+        "text": "The Verdant sapling beast.",
+        "nextPhrase": "loremaster_starter_grass",
+        "requires": []
+      },
+      {
+        "text": "The Pyre cub.",
+        "nextPhrase": "loremaster_starter_fire",
+        "requires": []
+      },
+      {
+        "text": "The Tide hatchling.",
+        "nextPhrase": "loremaster_starter_water",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "loremaster_starter_grass",
+    "message": "\"A wise choice. Take your codex, your first orbs, and your Verdant companion.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "quest_intro",
+        "value": "starter_chosen"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "key_codex",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "orb_crystal",
+        "quantity": 5
+      },
+      {
+        "reward": "item",
+        "id": "vial_mending",
+        "quantity": 3
+      },
+      {
+        "reward": "skill",
+        "id": "starter_grass",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "loremaster_starter_fire",
+    "message": "\"A wise choice. Take your codex, your first orbs, and your Pyre companion.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "quest_intro",
+        "value": "starter_chosen"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "key_codex",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "orb_crystal",
+        "quantity": 5
+      },
+      {
+        "reward": "item",
+        "id": "vial_mending",
+        "quantity": 3
+      },
+      {
+        "reward": "skill",
+        "id": "starter_fire",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "loremaster_starter_water",
+    "message": "\"A wise choice. Take your codex, your first orbs, and your Tide companion.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "quest_intro",
+        "value": "starter_chosen"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "key_codex",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "orb_crystal",
+        "quantity": 5
+      },
+      {
+        "reward": "item",
+        "id": "vial_mending",
+        "quantity": 3
+      },
+      {
+        "reward": "skill",
+        "id": "starter_water",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "loremaster_realms",
+    "message": "\"Eldarwyn, Mythwood, Tindrelar, Caelynduin, Vorastel, Lirathven, Solanthil, Norhammar, Veilarnen. Nine realms in all - one for each star of the Aether.\"",
+    "replies": [
+      {
+        "text": "Back.",
+        "nextPhrase": "loremaster_intro",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "loremaster_later",
+    "message": "\"Return when you are ready, traveler.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "rival_first",
+    "message": "\"Hah - so the Loremaster gave you a codex too. I am Tharion. I will earn every Mark before you. Until we meet at the Highcrest gates.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "ascender_intro",
+    "message": "\"I am Ascender Vaelin. Bring me a beast and the proper Catalyst Shard, and I will channel its Ascension.\"",
+    "replies": [
+      {
+        "text": "Show me which catalysts work.",
+        "nextPhrase": "ascender_list",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "ascender_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "ascender_list",
+    "message": "\"Pyre Catalyst, Tide Catalyst, Verdant Catalyst, Storm Catalyst, Lunar, Solar, Dusk, Dawn, Iron, Glacier, Kingstone. Each shapes a different bloodline.\"",
+    "replies": [
+      {
+        "text": "Back.",
+        "nextPhrase": "ascender_intro",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "ascender_done",
+    "message": "\"The realms are patient. Return when ready.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "matron_intro",
+    "message": "\"I am Matron Sylpha of the Hatchery. Leave a pair with me - bonded beasts of compatible bloodlines, one of each parent - and the realm will gift you their offspring.\"",
+    "replies": [
+      {
+        "text": "How does breeding work?",
+        "nextPhrase": "matron_explain",
+        "requires": []
+      },
+      {
+        "text": "Drop a pair.",
+        "nextPhrase": "matron_drop_pair",
+        "requires": []
+      },
+      {
+        "text": "Pick up an egg.",
+        "nextPhrase": "matron_pickup",
+        "requires": []
+      },
+      {
+        "text": "Goodbye.",
+        "nextPhrase": "matron_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "matron_explain",
+    "message": "\"Bloodlines compatible by element will produce a hatchling matching the mother. Hold an Incense and the realm sometimes gifts a special form.\"",
+    "replies": [
+      {
+        "text": "Back.",
+        "nextPhrase": "matron_intro",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "matron_drop_pair",
+    "message": "\"Leave them on the rug. I will care for them.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "hatchery",
+        "value": "pair_left"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "matron_pickup",
+    "message": "\"Here is what the realm has shaped for you.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "hatchery_pickup",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "matron_done",
+    "message": "\"Walk softly, Warden.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "spellbinder_intro",
+    "message": "\"Spellbinder Orin, at your service. Each beast bears a Codex of spells it can learn - and only those. Show me your beast and a Spirit Crystal, and if the spell is on its learnable list I will swap it into a slot without consuming the crystal. Weapon-form beasts may channel every Beast Spell of their element.\"",
+    "replies": [
+      {
+        "text": "Swap a slot.",
+        "nextPhrase": "spellbinder_swap",
+        "requires": []
+      },
+      {
+        "text": "What spells can my beast learn?",
+        "nextPhrase": "spellbinder_learnable",
+        "requires": []
+      },
+      {
+        "text": "Tell me about beast equipment.",
+        "nextPhrase": "spellbinder_weapon",
+        "requires": []
+      },
+      {
+        "text": "Goodbye.",
+        "nextPhrase": "spellbinder_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "spellbinder_learnable",
+    "message": "\"Every beast in your codex carries a learnable list - the spells of its own elements, a few mundane staples, and a small set of cross-elemental tricks. Not every beast can learn every spell; that is the old law of the realms. Bring it to me and I will read its list aloud.\"",
+    "replies": [
+      {
+        "text": "Back.",
+        "nextPhrase": "spellbinder_intro",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "spellbinder_weapon",
+    "message": "\"Each beast yields one piece of equipment - a Fang, Aegis, Gauntlet, Crown, or one of two Signet Rings. Legendary beasts forge the Fang and Aegis, the only pieces that channel every Beast Spell of their element. Common beasts forge the rest - Gauntlets, Crowns, and Rings - and each casts one signature spell while worn.\"",
+    "replies": [
+      {
+        "text": "Back.",
+        "nextPhrase": "spellbinder_intro",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "spellbinder_swap",
+    "message": "\"Done. The crystal returns to your pouch; your beast remembers it now.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "tm_swap",
+        "value": "performed"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "spellbinder_done",
+    "message": "\"The crystals are patient.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "championseer_reset_intro",
+    "message": "\"Champion - the realm has been still for too long. The Conclaves grow stale. Speak the rite and the Wardens will rebuild their bonds and stand ready for rematches. New wardens will be able to earn Marks again.\"",
+    "replies": [
+      {
+        "text": "Begin the Gym Reset rite.",
+        "nextPhrase": "championseer_reset_begin",
+        "requires": [
+          {
+            "type": "skillLevel",
+            "id": "highlords_defeated",
+            "value": 9
+          }
+        ]
+      },
+      {
+        "text": "Not yet.",
+        "nextPhrase": "championseer_reset_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "championseer_reset_begin",
+    "message": "\"It is sung. The nine Conclaves now bear fresh seals. Tour them at your leisure - their Wardens await.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "quest_gym_reset_championship",
+        "value": "started"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "gym_reset_started",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "championseer_reset_done",
+    "message": "\"Return when you wish to renew the realms.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "loresinger_intro",
+    "message": "\"I am Loresinger Iri. I rename only those beasts you bound yourself. Speak the new name and I will sing it into the codex.\"",
+    "replies": [
+      {
+        "text": "Rename a beast.",
+        "nextPhrase": "loresinger_done",
+        "requires": []
+      },
+      {
+        "text": "Goodbye.",
+        "nextPhrase": "loresinger_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "loresinger_done",
+    "message": "\"It is sung. The realm remembers.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "buddy_walker_intro",
+    "message": "\"Keeper Thalor here. Walk with your Bond Companion and you will both grow. Some of the rarest Ascensions come only through walking together.\"",
+    "replies": [
+      {
+        "text": "Set Bond Companion.",
+        "nextPhrase": "buddy_walker_set",
+        "requires": []
+      },
+      {
+        "text": "Goodbye.",
+        "nextPhrase": "buddy_walker_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "buddy_walker_set",
+    "message": "\"Done. Your bond will deepen with each step.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "buddy_set",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "buddy_walker_done",
+    "message": "\"Walk well, Warden.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "park_ranger_intro",
+    "message": "\"Welcome to the Ethereal Glade. Beasts you have bound elsewhere may roam here freely - rebind one to bring it back, or simply watch.\"",
+    "replies": [
+      {
+        "text": "Send a beast in.",
+        "nextPhrase": "park_send_in",
+        "requires": []
+      },
+      {
+        "text": "Run a tour.",
+        "nextPhrase": "park_run_tour",
+        "requires": []
+      },
+      {
+        "text": "Leave.",
+        "nextPhrase": "park_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "park_send_in",
+    "message": "\"It is loose in the Glade now.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "park_send",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "park_run_tour",
+    "message": "\"You have one chance to retrieve six. Pick well.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "park_run",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "park_done",
+    "message": "\"The Glade is calm today.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "championseer_intro",
+    "message": "\"I am Champion-Seer Orielle. Show me nine Conclave Marks of one realm and I will open the path to its Eldritch Council and Highlord.\"",
+    "replies": [
+      {
+        "text": "I am ready to challenge.",
+        "nextPhrase": "championseer_challenge",
+        "requires": [
+          {
+            "type": "skillLevel",
+            "id": "marks_collected",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "text": "Not yet.",
+        "nextPhrase": "championseer_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "championseer_challenge",
+    "message": "\"Then climb. The Council awaits.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "championship",
+        "value": "open"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "championseer_done",
+    "message": "\"Return when the Marks are yours.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "aether_archivist_intro",
+    "message": "\"Aether Archivist Belren. The Vault holds your bonded beasts beyond what your codex can carry.\"",
+    "replies": [
+      {
+        "text": "Withdraw a beast.",
+        "nextPhrase": "aether_withdraw",
+        "requires": []
+      },
+      {
+        "text": "Deposit a beast.",
+        "nextPhrase": "aether_deposit",
+        "requires": []
+      },
+      {
+        "text": "Goodbye.",
+        "nextPhrase": "aether_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "aether_withdraw",
+    "message": "\"Done. The codex marks them ready again.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "vault",
+        "value": "withdrew"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "aether_deposit",
+    "message": "\"Done. They will rest until called.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "vault",
+        "value": "deposited"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "aether_done",
+    "message": "\"The Vault is patient.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "smith_intro",
+    "message": "\"Smith Korran of the forge. Bring me beast essence and I will craft Fangs, Hides, and Aegises. Divine essences yield rare luminous gear.\"",
+    "replies": [
+      {
+        "text": "Forge a Fang.",
+        "nextPhrase": "smith_done",
+        "requires": []
+      },
+      {
+        "text": "Forge a Hide.",
+        "nextPhrase": "smith_done",
+        "requires": []
+      },
+      {
+        "text": "Forge an Aegis.",
+        "nextPhrase": "smith_done",
+        "requires": []
+      },
+      {
+        "text": "Goodbye.",
+        "nextPhrase": "smith_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "smith_done",
+    "message": "\"It will be ready by morning.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "smith_order",
+        "value": "placed"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "sanctum_intro",
+    "message": "\"Welcome to the Sanctum. Shall I tend to your bonded beasts?\"",
+    "replies": [
+      {
+        "text": "Yes please.",
+        "nextPhrase": "sanctum_heal",
+        "requires": []
+      },
+      {
+        "text": "No, just visiting.",
+        "nextPhrase": "sanctum_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "sanctum_heal",
+    "message": "\"They are restored. Travel safely.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "sanctum_heal",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "sanctum_done",
+    "message": "\"The Sanctum is open day and night.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "bazaar_intro",
+    "message": "\"Welcome to the Bazaar. Orbs, vials, escape cords, repels and crystals - we have them all.\"",
+    "replies": [
+      {
+        "text": "Show wares.",
+        "nextPhrase": "bazaar_done",
+        "requires": []
+      },
+      {
+        "text": "Goodbye.",
+        "nextPhrase": "bazaar_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "bazaar_done",
+    "message": "\"Come back any time.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "city_willowmere_greeter",
+    "message": "\"Welcome to Willowmere, traveler. This is your first step into Eldarwyn. Eldarwyn, a verdant peninsula of mossy hills and ancient ruins. Take these gifts of our realm - you will need them on the trail.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "region_entered_kanto",
+        "value": "1"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "region_body_kanto",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_neck_kanto",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_feet_kanto",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "region_entered_kanto",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_thornglen",
+    "message": "\"I am Brennor, Warden of the Thornglen Conclave. My Conclave is bound to the Rock element. Defeat me and you will earn the Stoneheart Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_thornglen_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_thornglen_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_thornglen_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_thornglen",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_thornglen_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_thornglen_victory",
+    "message": "\"Well fought. Take the Stoneheart Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_thornglen",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_rock_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_azuremoor",
+    "message": "\"I am Selene, Warden of the Azuremoor Conclave. My Conclave is bound to the Water element. Defeat me and you will earn the Tidesong Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_azuremoor_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_azuremoor_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_azuremoor_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_azuremoor",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_azuremoor_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_azuremoor_victory",
+    "message": "\"Well fought. Take the Tidesong Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_azuremoor",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_water_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_amberhollow",
+    "message": "\"I am Lirael, Warden of the Amberhollow Conclave. My Conclave is bound to the Electric element. Defeat me and you will earn the Stormcoil Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_amberhollow_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_amberhollow_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_amberhollow_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_amberhollow",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_amberhollow_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_amberhollow_victory",
+    "message": "\"Well fought. Take the Stormcoil Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_amberhollow",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_electric_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_bramblefen",
+    "message": "\"I am Eryndis, Warden of the Bramblefen Conclave. My Conclave is bound to the Grass element. Defeat me and you will earn the Verdant Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_bramblefen_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_bramblefen_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_bramblefen_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_bramblefen",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_bramblefen_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_bramblefen_victory",
+    "message": "\"Well fought. Take the Verdant Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_bramblefen",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_grass_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_ashenford",
+    "message": "\"I am Vasilan, Warden of the Ashenford Conclave. My Conclave is bound to the Poison element. Defeat me and you will earn the Venomroot Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_ashenford_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_ashenford_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_ashenford_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_ashenford",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_ashenford_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_ashenford_victory",
+    "message": "\"Well fought. Take the Venomroot Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_ashenford",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_poison_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_mistspire",
+    "message": "\"I am Yulienne, Warden of the Mistspire Conclave. My Conclave is bound to the Psychic element. Defeat me and you will earn the Mindweave Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_mistspire_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_mistspire_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_mistspire_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_mistspire",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_mistspire_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_mistspire_victory",
+    "message": "\"Well fought. Take the Mindweave Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_mistspire",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_psychic_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_gravelmark",
+    "message": "\"I am Khorus, Warden of the Gravelmark Conclave. My Conclave is bound to the Ground element. Defeat me and you will earn the Stoneform Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_gravelmark_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_gravelmark_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_gravelmark_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_gravelmark",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_gravelmark_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_gravelmark_victory",
+    "message": "\"Well fought. Take the Stoneform Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_gravelmark",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ground_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_dragonshire",
+    "message": "\"I am Haerthal, Warden of the Dragonshire Conclave. My Conclave is bound to the Fire element. Defeat me and you will earn the Flameheart Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_dragonshire_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_dragonshire_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_dragonshire_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_dragonshire",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_dragonshire_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_dragonshire_victory",
+    "message": "\"Well fought. Take the Flameheart Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_dragonshire",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fire_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "grunt_kanto",
+    "message": "\"You wear no banner. Then you are not of the Crimson Talon. Out of our way - or fall.\"",
+    "replies": [
+      {
+        "text": "Stand aside.",
+        "nextPhrase": "grunt_kanto_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "grunt_kanto_battle",
+    "message": "\"As you wish.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_grunt_kanto",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "grunt_kanto_defeated",
+    "message": "\"The Crimson Talon will return. We always do.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "foiled_kanto",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "team_boss_kanto",
+    "message": "\"I am Ravenmaw Vex, master of the Crimson Talon. I would harness beast power for conquest. Stand aside, Warden.\"",
+    "replies": [
+      {
+        "text": "Never.",
+        "nextPhrase": "team_boss_kanto_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_kanto_battle",
+    "message": "\"Then break with the rest.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_boss_kanto",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_kanto_defeated",
+    "message": "\"Hmm. The Crimson Talon is undone. The realm... is yours, for now.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "region_cleared_kanto",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "council_loremarch_aelfar",
+    "message": "\"I am Loremarch Aelfar, of the Eldritch Council. My Conclave answers to the Rock element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_loremarch_aelfar_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_whisperseer_yralin",
+    "message": "\"I am Whisperseer Yralin, of the Eldritch Council. My Conclave answers to the Ice element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_whisperseer_yralin_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_shadeweaver_voren",
+    "message": "\"I am Shadeweaver Voren, of the Eldritch Council. My Conclave answers to the Ghost element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_shadeweaver_voren_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_dragonkin_sael",
+    "message": "\"I am Dragonkin Sael, of the Eldritch Council. My Conclave answers to the Dragon element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_dragonkin_sael_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_tharion_the_verdant",
+    "message": "\"I am Tharion the Verdant, Highlord of Eldarwyn. The Council has fallen. Now you face me. Show me every bond you have forged.\"",
+    "replies": [
+      {
+        "text": "Begin.",
+        "nextPhrase": "highlord_tharion_the_verdant_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "highlord_tharion_the_verdant_battle",
+    "message": "\"For the realm.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "highlord_battle_kanto",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_tharion_the_verdant_defeated",
+    "message": "\"You have outdone me. Take the title for Eldarwyn.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "highlord_kanto",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "highlords_defeated",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "key_balloon",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "city_newhaven_greeter",
+    "message": "\"Welcome to Newhaven, traveler. This is your first step into Mythwood. Mythwood, where ancient towers brush the clouds and bell-songs guide travelers. Take these gifts of our realm - you will need them on the trail.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "region_entered_johto",
+        "value": "1"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "region_body_johto",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_neck_johto",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_feet_johto",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "region_entered_johto",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_oakvale",
+    "message": "\"I am Faelir, Warden of the Oakvale Conclave. My Conclave is bound to the Flying element. Defeat me and you will earn the Skybell Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_oakvale_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_oakvale_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_oakvale_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_oakvale",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_oakvale_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_oakvale_victory",
+    "message": "\"Well fought. Take the Skybell Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_oakvale",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_flying_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_stillwater",
+    "message": "\"I am Marinia, Warden of the Stillwater Conclave. My Conclave is bound to the Bug element. Defeat me and you will earn the Chitin Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_stillwater_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_stillwater_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_stillwater_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_stillwater",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_stillwater_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_stillwater_victory",
+    "message": "\"Well fought. Take the Chitin Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_stillwater",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_bug_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_ironvale",
+    "message": "\"I am Jarekal, Warden of the Ironvale Conclave. My Conclave is bound to the Normal element. Defeat me and you will earn the Lawkeeper Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_ironvale_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_ironvale_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_ironvale_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_ironvale",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_ironvale_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_ironvale_victory",
+    "message": "\"Well fought. Take the Lawkeeper Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_ironvale",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_normal_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_goldspire",
+    "message": "\"I am Sorinel, Warden of the Goldspire Conclave. My Conclave is bound to the Ghost element. Defeat me and you will earn the Wraith Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_goldspire_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_goldspire_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_goldspire_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_goldspire",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_goldspire_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_goldspire_victory",
+    "message": "\"Well fought. Take the Wraith Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_goldspire",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ghost_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_ebonshade",
+    "message": "\"I am Mistanya, Warden of the Ebonshade Conclave. My Conclave is bound to the Fighting element. Defeat me and you will earn the Stormfist Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_ebonshade_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_ebonshade_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_ebonshade_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_ebonshade",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_ebonshade_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_ebonshade_victory",
+    "message": "\"Well fought. Take the Stormfist Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_ebonshade",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fighting_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_valehome",
+    "message": "\"I am Pryxis, Warden of the Valehome Conclave. My Conclave is bound to the Steel element. Defeat me and you will earn the Forgeheart Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_valehome_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_valehome_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_valehome_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_valehome",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_valehome_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_valehome_victory",
+    "message": "\"Well fought. Take the Forgeheart Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_valehome",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_steel_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_frostmere",
+    "message": "\"I am Caelyr, Warden of the Frostmere Conclave. My Conclave is bound to the Ice element. Defeat me and you will earn the Frostfang Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_frostmere_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_frostmere_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_frostmere_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_frostmere",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_frostmere_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_frostmere_victory",
+    "message": "\"Well fought. Take the Frostfang Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_frostmere",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ice_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_stormpeak",
+    "message": "\"I am Drakon, Warden of the Stormpeak Conclave. My Conclave is bound to the Dragon element. Defeat me and you will earn the Wyrmcrest Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_stormpeak_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_stormpeak_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_stormpeak_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_stormpeak",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_stormpeak_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_stormpeak_victory",
+    "message": "\"Well fought. Take the Wyrmcrest Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_stormpeak",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_dragon_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "grunt_johto",
+    "message": "\"You wear no banner. Then you are not of the Crimson Talon. Out of our way - or fall.\"",
+    "replies": [
+      {
+        "text": "Stand aside.",
+        "nextPhrase": "grunt_johto_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "grunt_johto_battle",
+    "message": "\"As you wish.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_grunt_johto",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "grunt_johto_defeated",
+    "message": "\"The Crimson Talon will return. We always do.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "foiled_johto",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "team_boss_johto",
+    "message": "\"I am Ravenmaw Vex, master of the Crimson Talon. I would rebuild their fallen banner. Stand aside, Warden.\"",
+    "replies": [
+      {
+        "text": "Never.",
+        "nextPhrase": "team_boss_johto_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_johto_battle",
+    "message": "\"Then break with the rest.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_boss_johto",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_johto_defeated",
+    "message": "\"Hmm. The Crimson Talon is undone. The realm... is yours, for now.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "region_cleared_johto",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "council_stormcaller_vael",
+    "message": "\"I am Stormcaller Vael, of the Eldritch Council. My Conclave answers to the Psychic element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_stormcaller_vael_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_venomspeaker_kaer",
+    "message": "\"I am Venomspeaker Kaer, of the Eldritch Council. My Conclave answers to the Poison element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_venomspeaker_kaer_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_beastmaster_rhia",
+    "message": "\"I am Beastmaster Rhia, of the Eldritch Council. My Conclave answers to the Fighting element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_beastmaster_rhia_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_drakemother_thysa",
+    "message": "\"I am Drakemother Thysa, of the Eldritch Council. My Conclave answers to the Dark element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_drakemother_thysa_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_sythari_dawnfire",
+    "message": "\"I am Sythari Dawnfire, Highlord of Mythwood. The Council has fallen. Now you face me. Show me every bond you have forged.\"",
+    "replies": [
+      {
+        "text": "Begin.",
+        "nextPhrase": "highlord_sythari_dawnfire_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "highlord_sythari_dawnfire_battle",
+    "message": "\"For the realm.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "highlord_battle_johto",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_sythari_dawnfire_defeated",
+    "message": "\"You have outdone me. Take the title for Mythwood.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "highlord_johto",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "highlords_defeated",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "key_balloon",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "city_saltbreeze_greeter",
+    "message": "\"Welcome to Saltbreeze, traveler. This is your first step into Tindrelar. Tindrelar, an archipelago of jungles and volcanic ridges. Take these gifts of our realm - you will need them on the trail.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "region_entered_hoenn",
+        "value": "1"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "region_body_hoenn",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_neck_hoenn",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_feet_hoenn",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "region_entered_hoenn",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_tidereach",
+    "message": "\"I am Roxanis, Warden of the Tidereach Conclave. My Conclave is bound to the Rock element. Defeat me and you will earn the Boulderfast Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_tidereach_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_tidereach_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_tidereach_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_tidereach",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_tidereach_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_tidereach_victory",
+    "message": "\"Well fought. Take the Boulderfast Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_tidereach",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_rock_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_verdantbrook",
+    "message": "\"I am Briara, Warden of the Verdantbrook Conclave. My Conclave is bound to the Fighting element. Defeat me and you will earn the Knuckle Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_verdantbrook_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_verdantbrook_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_verdantbrook_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_verdantbrook",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_verdantbrook_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_verdantbrook_victory",
+    "message": "\"Well fought. Take the Knuckle Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_verdantbrook",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fighting_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_argentpier",
+    "message": "\"I am Wattaria, Warden of the Argentpier Conclave. My Conclave is bound to the Electric element. Defeat me and you will earn the Dynamo Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_argentpier_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_argentpier_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_argentpier_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_argentpier",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_argentpier_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_argentpier_victory",
+    "message": "\"Well fought. Take the Dynamo Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_argentpier",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_electric_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_ironbluff",
+    "message": "\"I am Flannarya, Warden of the Ironbluff Conclave. My Conclave is bound to the Fire element. Defeat me and you will earn the Heatfast Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_ironbluff_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_ironbluff_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_ironbluff_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_ironbluff",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_ironbluff_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_ironbluff_victory",
+    "message": "\"Well fought. Take the Heatfast Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_ironbluff",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fire_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_lavendish",
+    "message": "\"I am Norindri, Warden of the Lavendish Conclave. My Conclave is bound to the Normal element. Defeat me and you will earn the Balance Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_lavendish_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_lavendish_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_lavendish_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_lavendish",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_lavendish_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_lavendish_victory",
+    "message": "\"Well fought. Take the Balance Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_lavendish",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_normal_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_fortunehold",
+    "message": "\"I am Winona-El, Warden of the Fortunehold Conclave. My Conclave is bound to the Flying element. Defeat me and you will earn the Feather Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_fortunehold_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_fortunehold_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_fortunehold_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_fortunehold",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_fortunehold_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_fortunehold_victory",
+    "message": "\"Well fought. Take the Feather Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_fortunehold",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_flying_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_dustglade",
+    "message": "\"I am Tate-Liza, Warden of the Dustglade Conclave. My Conclave is bound to the Psychic element. Defeat me and you will earn the Mind Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_dustglade_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_dustglade_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_dustglade_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_dustglade",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_dustglade_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_dustglade_victory",
+    "message": "\"Well fought. Take the Mind Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_dustglade",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_psychic_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_stormrend",
+    "message": "\"I am Wallaceon, Warden of the Stormrend Conclave. My Conclave is bound to the Water element. Defeat me and you will earn the Rain Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_stormrend_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_stormrend_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_stormrend_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_stormrend",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_stormrend_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_stormrend_victory",
+    "message": "\"Well fought. Take the Rain Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_stormrend",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_water_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "grunt_hoenn",
+    "message": "\"You wear no banner. Then you are not of the Tide Cult. Out of our way - or fall.\"",
+    "replies": [
+      {
+        "text": "Stand aside.",
+        "nextPhrase": "grunt_hoenn_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "grunt_hoenn_battle",
+    "message": "\"As you wish.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_grunt_hoenn",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "grunt_hoenn_defeated",
+    "message": "\"The Tide Cult will return. We always do.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "foiled_hoenn",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "team_boss_hoenn",
+    "message": "\"I am Mareth Saelin, master of the Tide Cult. I would drown the realm to expand the seas. Stand aside, Warden.\"",
+    "replies": [
+      {
+        "text": "Never.",
+        "nextPhrase": "team_boss_hoenn_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_hoenn_battle",
+    "message": "\"Then break with the rest.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_boss_hoenn",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_hoenn_defeated",
+    "message": "\"Hmm. The Tide Cult is undone. The realm... is yours, for now.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "region_cleared_hoenn",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "council_sidneth_umbra",
+    "message": "\"I am Sidneth Umbra, of the Eldritch Council. My Conclave answers to the Dark element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_sidneth_umbra_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_phoebia_cinder",
+    "message": "\"I am Phoebia Cinder, of the Eldritch Council. My Conclave answers to the Ghost element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_phoebia_cinder_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_glaceus_frosthand",
+    "message": "\"I am Glaceus Frosthand, of the Eldritch Council. My Conclave answers to the Ice element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_glaceus_frosthand_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_drachis_wyrmsworn",
+    "message": "\"I am Drachis Wyrmsworn, of the Eldritch Council. My Conclave answers to the Dragon element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_drachis_wyrmsworn_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_stell-aurion_the_tall",
+    "message": "\"I am Stell-Aurion the Tall, Highlord of Tindrelar. The Council has fallen. Now you face me. Show me every bond you have forged.\"",
+    "replies": [
+      {
+        "text": "Begin.",
+        "nextPhrase": "highlord_stell-aurion_the_tall_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "highlord_stell-aurion_the_tall_battle",
+    "message": "\"For the realm.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "highlord_battle_hoenn",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_stell-aurion_the_tall_defeated",
+    "message": "\"You have outdone me. Take the title for Tindrelar.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "highlord_hoenn",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "highlords_defeated",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "key_balloon",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "city_dawnvale_greeter",
+    "message": "\"Welcome to Dawnvale, traveler. This is your first step into Caelynduin. Caelynduin, mountain kingdom of myth and starlight. Take these gifts of our realm - you will need them on the trail.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "region_entered_sinnoh",
+        "value": "1"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "region_body_sinnoh",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_neck_sinnoh",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_feet_sinnoh",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "region_entered_sinnoh",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_oreldun",
+    "message": "\"I am Roark-Ael, Warden of the Oreldun Conclave. My Conclave is bound to the Rock element. Defeat me and you will earn the Coal Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_oreldun_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_oreldun_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_oreldun_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_oreldun",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_oreldun_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_oreldun_victory",
+    "message": "\"Well fought. Take the Coal Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_oreldun",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_rock_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_fellbark",
+    "message": "\"I am Gardenia-Lyr, Warden of the Fellbark Conclave. My Conclave is bound to the Grass element. Defeat me and you will earn the Forest Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_fellbark_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_fellbark_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_fellbark_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_fellbark",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_fellbark_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_fellbark_victory",
+    "message": "\"Well fought. Take the Forest Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_fellbark",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_grass_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_stormhall",
+    "message": "\"I am Maylenae, Warden of the Stormhall Conclave. My Conclave is bound to the Fighting element. Defeat me and you will earn the Cobble Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_stormhall_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_stormhall_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_stormhall_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_stormhall",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_stormhall_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_stormhall_victory",
+    "message": "\"Well fought. Take the Cobble Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_stormhall",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fighting_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_spiremarsh",
+    "message": "\"I am Crashis, Warden of the Spiremarsh Conclave. My Conclave is bound to the Water element. Defeat me and you will earn the Fen Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_spiremarsh_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_spiremarsh_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_spiremarsh_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_spiremarsh",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_spiremarsh_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_spiremarsh_victory",
+    "message": "\"Well fought. Take the Fen Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_spiremarsh",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_water_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_hearthhold",
+    "message": "\"I am Fantyne, Warden of the Hearthhold Conclave. My Conclave is bound to the Fire element. Defeat me and you will earn the Relic Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_hearthhold_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_hearthhold_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_hearthhold_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_hearthhold",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_hearthhold_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_hearthhold_victory",
+    "message": "\"Well fought. Take the Relic Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_hearthhold",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fire_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_veilport",
+    "message": "\"I am Byronna, Warden of the Veilport Conclave. My Conclave is bound to the Steel element. Defeat me and you will earn the Mineral Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_veilport_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_veilport_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_veilport_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_veilport",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_veilport_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_veilport_victory",
+    "message": "\"Well fought. Take the Mineral Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_veilport",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_steel_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_rimewatch",
+    "message": "\"I am Candicelyn, Warden of the Rimewatch Conclave. My Conclave is bound to the Ice element. Defeat me and you will earn the Icicle Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_rimewatch_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_rimewatch_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_rimewatch_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_rimewatch",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_rimewatch_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_rimewatch_victory",
+    "message": "\"Well fought. Take the Icicle Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_rimewatch",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ice_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_stargate",
+    "message": "\"I am Voltarion, Warden of the Stargate Conclave. My Conclave is bound to the Electric element. Defeat me and you will earn the Beacon Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_stargate_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_stargate_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_stargate_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_stargate",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_stargate_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_stargate_victory",
+    "message": "\"Well fought. Take the Beacon Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_stargate",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_electric_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "grunt_sinnoh",
+    "message": "\"You wear no banner. Then you are not of the Voidbound Order. Out of our way - or fall.\"",
+    "replies": [
+      {
+        "text": "Stand aside.",
+        "nextPhrase": "grunt_sinnoh_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "grunt_sinnoh_battle",
+    "message": "\"As you wish.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_grunt_sinnoh",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "grunt_sinnoh_defeated",
+    "message": "\"The Voidbound Order will return. We always do.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "foiled_sinnoh",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "team_boss_sinnoh",
+    "message": "\"I am Cyrus-Vael, master of the Voidbound Order. I would remake creation in their image. Stand aside, Warden.\"",
+    "replies": [
+      {
+        "text": "Never.",
+        "nextPhrase": "team_boss_sinnoh_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_sinnoh_battle",
+    "message": "\"Then break with the rest.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_boss_sinnoh",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_sinnoh_defeated",
+    "message": "\"Hmm. The Voidbound Order is undone. The realm... is yours, for now.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "region_cleared_sinnoh",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "council_aaronar_ironwill",
+    "message": "\"I am Aaronar Ironwill, of the Eldritch Council. My Conclave answers to the Steel element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_aaronar_ironwill_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_bertharaeth_sworn",
+    "message": "\"I am Bertharaeth Sworn, of the Eldritch Council. My Conclave answers to the Ground element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_bertharaeth_sworn_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_flintarya_pyre",
+    "message": "\"I am Flintarya Pyre, of the Eldritch Council. My Conclave answers to the Fire element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_flintarya_pyre_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_lucianos_mindspeaker",
+    "message": "\"I am Lucianos Mindspeaker, of the Eldritch Council. My Conclave answers to the Psychic element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_lucianos_mindspeaker_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_cynthiel_stormcrown",
+    "message": "\"I am Cynthiel Stormcrown, Highlord of Caelynduin. The Council has fallen. Now you face me. Show me every bond you have forged.\"",
+    "replies": [
+      {
+        "text": "Begin.",
+        "nextPhrase": "highlord_cynthiel_stormcrown_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "highlord_cynthiel_stormcrown_battle",
+    "message": "\"For the realm.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "highlord_battle_sinnoh",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_cynthiel_stormcrown_defeated",
+    "message": "\"You have outdone me. Take the title for Caelynduin.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "highlord_sinnoh",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "highlords_defeated",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "key_balloon",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "city_newbrightcity_greeter",
+    "message": "\"Welcome to Newbright City, traveler. This is your first step into Vorastel. Vorastel, a land of crossroads where every culture meets at sunset. Take these gifts of our realm - you will need them on the trail.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "region_entered_unova",
+        "value": "1"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "region_body_unova",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_neck_unova",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_feet_unova",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "region_entered_unova",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_strixhold",
+    "message": "\"I am Cilenor, Warden of the Strixhold Conclave. My Conclave is bound to the Grass element. Defeat me and you will earn the Trio Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_strixhold_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_strixhold_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_strixhold_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_strixhold",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_strixhold_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_strixhold_victory",
+    "message": "\"Well fought. Take the Trio Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_strixhold",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_grass_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_amberport",
+    "message": "\"I am Lenoria, Warden of the Amberport Conclave. My Conclave is bound to the Normal element. Defeat me and you will earn the Basic Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_amberport_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_amberport_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_amberport_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_amberport",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_amberport_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_amberport_victory",
+    "message": "\"Well fought. Take the Basic Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_amberport",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_normal_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_burgwall",
+    "message": "\"I am Burgath, Warden of the Burgwall Conclave. My Conclave is bound to the Bug element. Defeat me and you will earn the Insect Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_burgwall_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_burgwall_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_burgwall_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_burgwall",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_burgwall_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_burgwall_victory",
+    "message": "\"Well fought. Take the Insect Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_burgwall",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_bug_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_elesatown",
+    "message": "\"I am Elesya, Warden of the Elesatown Conclave. My Conclave is bound to the Electric element. Defeat me and you will earn the Bolt Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_elesatown_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_elesatown_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_elesatown_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_elesatown",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_elesatown_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_elesatown_victory",
+    "message": "\"Well fought. Take the Bolt Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_elesatown",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_electric_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_claystead",
+    "message": "\"I am Claudin, Warden of the Claystead Conclave. My Conclave is bound to the Ground element. Defeat me and you will earn the Quake Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_claystead_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_claystead_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_claystead_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_claystead",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_claystead_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_claystead_victory",
+    "message": "\"Well fought. Take the Quake Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_claystead",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ground_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_skyloftia",
+    "message": "\"I am Skyloria, Warden of the Skyloftia Conclave. My Conclave is bound to the Flying element. Defeat me and you will earn the Jet Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_skyloftia_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_skyloftia_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_skyloftia_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_skyloftia",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_skyloftia_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_skyloftia_victory",
+    "message": "\"Well fought. Take the Jet Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_skyloftia",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_flying_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_frosthelm",
+    "message": "\"I am Brycenor, Warden of the Frosthelm Conclave. My Conclave is bound to the Ice element. Defeat me and you will earn the Freeze Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_frosthelm_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_frosthelm_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_frosthelm_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_frosthelm",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_frosthelm_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_frosthelm_victory",
+    "message": "\"Well fought. Take the Freeze Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_frosthelm",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ice_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_drayhold",
+    "message": "\"I am Drayden-Lyr, Warden of the Drayhold Conclave. My Conclave is bound to the Dragon element. Defeat me and you will earn the Legend Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_drayhold_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_drayhold_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_drayhold_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_drayhold",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_drayhold_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_drayhold_victory",
+    "message": "\"Well fought. Take the Legend Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_drayhold",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_dragon_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "grunt_unova",
+    "message": "\"You wear no banner. Then you are not of the Liberation Choir. Out of our way - or fall.\"",
+    "replies": [
+      {
+        "text": "Stand aside.",
+        "nextPhrase": "grunt_unova_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "grunt_unova_battle",
+    "message": "\"As you wish.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_grunt_unova",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "grunt_unova_defeated",
+    "message": "\"The Liberation Choir will return. We always do.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "foiled_unova",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "team_boss_unova",
+    "message": "\"I am Ghaeron Septimus, master of the Liberation Choir. I would sever bonds between warden and beast. Stand aside, Warden.\"",
+    "replies": [
+      {
+        "text": "Never.",
+        "nextPhrase": "team_boss_unova_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_unova_battle",
+    "message": "\"Then break with the rest.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_boss_unova",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_unova_defeated",
+    "message": "\"Hmm. The Liberation Choir is undone. The realm... is yours, for now.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "region_cleared_unova",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "council_shauntalia_wraith",
+    "message": "\"I am Shauntalia Wraith, of the Eldritch Council. My Conclave answers to the Ghost element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_shauntalia_wraith_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_marshallon_brawl",
+    "message": "\"I am Marshallon Brawl, of the Eldritch Council. My Conclave answers to the Fighting element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_marshallon_brawl_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_caitliene_mind",
+    "message": "\"I am Caitliene Mind, of the Eldritch Council. My Conclave answers to the Psychic element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_caitliene_mind_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_grimsleyr_umbra",
+    "message": "\"I am Grimsleyr Umbra, of the Eldritch Council. My Conclave answers to the Dark element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_grimsleyr_umbra_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_aldiath_the_elder",
+    "message": "\"I am Aldiath the Elder, Highlord of Vorastel. The Council has fallen. Now you face me. Show me every bond you have forged.\"",
+    "replies": [
+      {
+        "text": "Begin.",
+        "nextPhrase": "highlord_aldiath_the_elder_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "highlord_aldiath_the_elder_battle",
+    "message": "\"For the realm.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "highlord_battle_unova",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_aldiath_the_elder_defeated",
+    "message": "\"You have outdone me. Take the title for Vorastel.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "highlord_unova",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "highlords_defeated",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "key_balloon",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "city_vivienport_greeter",
+    "message": "\"Welcome to Vivienport, traveler. This is your first step into Lirathven. Lirathven, the gilded heart of the Aelthorian arts. Take these gifts of our realm - you will need them on the trail.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "region_entered_kalos",
+        "value": "1"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "region_body_kalos",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_neck_kalos",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_feet_kalos",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "region_entered_kalos",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_santallume",
+    "message": "\"I am Violarya, Warden of the Santallume Conclave. My Conclave is bound to the Bug element. Defeat me and you will earn the Bug Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_santallume_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_santallume_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_santallume_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_santallume",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_santallume_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_santallume_victory",
+    "message": "\"Well fought. Take the Bug Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_santallume",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_bug_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_cyllistry",
+    "message": "\"I am Grantaer, Warden of the Cyllistry Conclave. My Conclave is bound to the Rock element. Defeat me and you will earn the Cliff Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_cyllistry_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_cyllistry_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_cyllistry_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_cyllistry",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_cyllistry_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_cyllistry_victory",
+    "message": "\"Well fought. Take the Cliff Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_cyllistry",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_rock_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_shaledawn",
+    "message": "\"I am Korrinel, Warden of the Shaledawn Conclave. My Conclave is bound to the Fighting element. Defeat me and you will earn the Rumble Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_shaledawn_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_shaledawn_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_shaledawn_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_shaledawn",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_shaledawn_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_shaledawn_victory",
+    "message": "\"Well fought. Take the Rumble Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_shaledawn",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fighting_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_lumioria",
+    "message": "\"I am Clemonel, Warden of the Lumioria Conclave. My Conclave is bound to the Electric element. Defeat me and you will earn the Voltage Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_lumioria_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_lumioria_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_lumioria_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_lumioria",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_lumioria_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_lumioria_victory",
+    "message": "\"Well fought. Take the Voltage Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_lumioria",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_electric_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_lavergne",
+    "message": "\"I am Valeralis, Warden of the Lavergne Conclave. My Conclave is bound to the Fairy element. Defeat me and you will earn the Fairy Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_lavergne_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_lavergne_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_lavergne_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_lavergne",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_lavergne_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_lavergne_victory",
+    "message": "\"Well fought. Take the Fairy Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_lavergne",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fairy_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_anidris",
+    "message": "\"I am Olympya, Warden of the Anidris Conclave. My Conclave is bound to the Psychic element. Defeat me and you will earn the Psychic Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_anidris_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_anidris_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_anidris_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_anidris",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_anidris_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_anidris_victory",
+    "message": "\"Well fought. Take the Psychic Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_anidris",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_psychic_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_snowmark",
+    "message": "\"I am Wulfaer, Warden of the Snowmark Conclave. My Conclave is bound to the Ice element. Defeat me and you will earn the Iceberg Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_snowmark_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_snowmark_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_snowmark_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_snowmark",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_snowmark_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_snowmark_victory",
+    "message": "\"Well fought. Take the Iceberg Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_snowmark",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ice_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_couroland",
+    "message": "\"I am Drasna-Lyr, Warden of the Couroland Conclave. My Conclave is bound to the Dragon element. Defeat me and you will earn the Iceberg Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_couroland_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_couroland_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_couroland_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_couroland",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_couroland_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_couroland_victory",
+    "message": "\"Well fought. Take the Iceberg Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_couroland",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_dragon_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "grunt_kalos",
+    "message": "\"You wear no banner. Then you are not of the Crucible Order. Out of our way - or fall.\"",
+    "replies": [
+      {
+        "text": "Stand aside.",
+        "nextPhrase": "grunt_kalos_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "grunt_kalos_battle",
+    "message": "\"As you wish.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_grunt_kalos",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "grunt_kalos_defeated",
+    "message": "\"The Crucible Order will return. We always do.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "foiled_kalos",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "team_boss_kalos",
+    "message": "\"I am Lysandros the Pure, master of the Crucible Order. I would purge the realm of the unworthy. Stand aside, Warden.\"",
+    "replies": [
+      {
+        "text": "Never.",
+        "nextPhrase": "team_boss_kalos_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_kalos_battle",
+    "message": "\"Then break with the rest.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_boss_kalos",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_kalos_defeated",
+    "message": "\"Hmm. The Crucible Order is undone. The realm... is yours, for now.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "region_cleared_kalos",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "council_malvina_umbra",
+    "message": "\"I am Malvina Umbra, of the Eldritch Council. My Conclave answers to the Dark element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_malvina_umbra_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_siebold_tide",
+    "message": "\"I am Siebold Tide, of the Eldritch Council. My Conclave answers to the Water element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_siebold_tide_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_wikstrom_forge",
+    "message": "\"I am Wikstrom Forge, of the Eldritch Council. My Conclave answers to the Steel element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_wikstrom_forge_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_drasnia_wyrm",
+    "message": "\"I am Drasnia Wyrm, of the Eldritch Council. My Conclave answers to the Dragon element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_drasnia_wyrm_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_diantharia_goldcrown",
+    "message": "\"I am Diantharia Goldcrown, Highlord of Lirathven. The Council has fallen. Now you face me. Show me every bond you have forged.\"",
+    "replies": [
+      {
+        "text": "Begin.",
+        "nextPhrase": "highlord_diantharia_goldcrown_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "highlord_diantharia_goldcrown_battle",
+    "message": "\"For the realm.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "highlord_battle_kalos",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_diantharia_goldcrown_defeated",
+    "message": "\"You have outdone me. Take the title for Lirathven.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "highlord_kalos",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "highlords_defeated",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "key_balloon",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "city_sunhaven_greeter",
+    "message": "\"Welcome to Sunhaven, traveler. This is your first step into Solanthil. Solanthil, sun-blessed isles where guardians watch from the cliffs. Take these gifts of our realm - you will need them on the trail.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "region_entered_alola",
+        "value": "1"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "region_body_alola",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_neck_alola",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_feet_alola",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "region_entered_alola",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_hauwailo",
+    "message": "\"I am Halaina, Warden of the Hauwailo Conclave. My Conclave is bound to the Normal element. Defeat me and you will earn the Trial Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_hauwailo_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_hauwailo_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_hauwailo_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_hauwailo",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_hauwailo_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_hauwailo_victory",
+    "message": "\"Well fought. Take the Trial Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_hauwailo",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_normal_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_kiawakiln",
+    "message": "\"I am Kiawanis, Warden of the Kiawakiln Conclave. My Conclave is bound to the Fire element. Defeat me and you will earn the Ember Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_kiawakiln_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_kiawakiln_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_kiawakiln_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_kiawakiln",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_kiawakiln_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_kiawakiln_victory",
+    "message": "\"Well fought. Take the Ember Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_kiawakiln",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fire_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_lanaport",
+    "message": "\"I am Lanari, Warden of the Lanaport Conclave. My Conclave is bound to the Water element. Defeat me and you will earn the Wave Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_lanaport_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_lanaport_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_lanaport_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_lanaport",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_lanaport_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_lanaport_victory",
+    "message": "\"Well fought. Take the Wave Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_lanaport",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_water_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_marabough",
+    "message": "\"I am Maraela, Warden of the Marabough Conclave. My Conclave is bound to the Grass element. Defeat me and you will earn the Bloom Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_marabough_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_marabough_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_marabough_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_marabough",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_marabough_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_marabough_victory",
+    "message": "\"Well fought. Take the Bloom Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_marabough",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_grass_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_sophalia",
+    "message": "\"I am Sopharel, Warden of the Sophalia Conclave. My Conclave is bound to the Electric element. Defeat me and you will earn the Spark Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_sophalia_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_sophalia_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_sophalia_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_sophalia",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_sophalia_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_sophalia_victory",
+    "message": "\"Well fought. Take the Spark Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_sophalia",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_electric_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_achaland",
+    "message": "\"I am Achanya, Warden of the Achaland Conclave. My Conclave is bound to the Ghost element. Defeat me and you will earn the Spectre Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_achaland_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_achaland_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_achaland_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_achaland",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_achaland_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_achaland_victory",
+    "message": "\"Well fought. Take the Spectre Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_achaland",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ghost_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_miryia",
+    "message": "\"I am Mirelia, Warden of the Miryia Conclave. My Conclave is bound to the Fairy element. Defeat me and you will earn the Glow Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_miryia_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_miryia_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_miryia_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_miryia",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_miryia_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_miryia_victory",
+    "message": "\"Well fought. Take the Glow Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_miryia",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fairy_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_guzmark",
+    "message": "\"I am Skullen, Warden of the Guzmark Conclave. My Conclave is bound to the Bug element. Defeat me and you will earn the Skull Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_guzmark_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_guzmark_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_guzmark_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_guzmark",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_guzmark_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_guzmark_victory",
+    "message": "\"Well fought. Take the Skull Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_guzmark",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_bug_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "grunt_alola",
+    "message": "\"You wear no banner. Then you are not of the Skull Wraiths. Out of our way - or fall.\"",
+    "replies": [
+      {
+        "text": "Stand aside.",
+        "nextPhrase": "grunt_alola_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "grunt_alola_battle",
+    "message": "\"As you wish.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_grunt_alola",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "grunt_alola_defeated",
+    "message": "\"The Skull Wraiths will return. We always do.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "foiled_alola",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "team_boss_alola",
+    "message": "\"I am Guzmar Boneking, master of the Skull Wraiths. I would live outside the laws of the realm. Stand aside, Warden.\"",
+    "replies": [
+      {
+        "text": "Never.",
+        "nextPhrase": "team_boss_alola_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_alola_battle",
+    "message": "\"Then break with the rest.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_boss_alola",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_alola_defeated",
+    "message": "\"Hmm. The Skull Wraiths is undone. The realm... is yours, for now.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "region_cleared_alola",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "council_hala-lyr_brawl",
+    "message": "\"I am Hala-Lyr Brawl, of the Eldritch Council. My Conclave answers to the Fighting element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_hala-lyr_brawl_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_olivya_stoneheart",
+    "message": "\"I am Olivya Stoneheart, of the Eldritch Council. My Conclave answers to the Rock element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_olivya_stoneheart_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_acerolyn_wraith",
+    "message": "\"I am Acerolyn Wraith, of the Eldritch Council. My Conclave answers to the Ghost element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_acerolyn_wraith_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_kahili-sael_wing",
+    "message": "\"I am Kahili-Sael Wing, of the Eldritch Council. My Conclave answers to the Flying element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_kahili-sael_wing_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_hauarionel_newleaf",
+    "message": "\"I am Hauarionel Newleaf, Highlord of Solanthil. The Council has fallen. Now you face me. Show me every bond you have forged.\"",
+    "replies": [
+      {
+        "text": "Begin.",
+        "nextPhrase": "highlord_hauarionel_newleaf_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "highlord_hauarionel_newleaf_battle",
+    "message": "\"For the realm.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "highlord_battle_alola",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_hauarionel_newleaf_defeated",
+    "message": "\"You have outdone me. Take the title for Solanthil.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "highlord_alola",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "highlords_defeated",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "key_balloon",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "city_wedgemoor_greeter",
+    "message": "\"Welcome to Wedgemoor, traveler. This is your first step into Norhammar. Norhammar, an industrial frontier of black smoke and standing stones. Take these gifts of our realm - you will need them on the trail.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "region_entered_galar",
+        "value": "1"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "region_body_galar",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_neck_galar",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_feet_galar",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "region_entered_galar",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_milobrook",
+    "message": "\"I am Milarya, Warden of the Milobrook Conclave. My Conclave is bound to the Grass element. Defeat me and you will earn the Grass Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_milobrook_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_milobrook_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_milobrook_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_milobrook",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_milobrook_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_milobrook_victory",
+    "message": "\"Well fought. Take the Grass Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_milobrook",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_grass_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_nessamere",
+    "message": "\"I am Nessanyr, Warden of the Nessamere Conclave. My Conclave is bound to the Water element. Defeat me and you will earn the Water Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_nessamere_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_nessamere_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_nessamere_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_nessamere",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_nessamere_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_nessamere_victory",
+    "message": "\"Well fought. Take the Water Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_nessamere",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_water_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_kabunhold",
+    "message": "\"I am Kabunis, Warden of the Kabunhold Conclave. My Conclave is bound to the Fire element. Defeat me and you will earn the Fire Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_kabunhold_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_kabunhold_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_kabunhold_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_kabunhold",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_kabunhold_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_kabunhold_victory",
+    "message": "\"Well fought. Take the Fire Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_kabunhold",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fire_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_alistream",
+    "message": "\"I am Allistera, Warden of the Alistream Conclave. My Conclave is bound to the Ghost element. Defeat me and you will earn the Ghost Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_alistream_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_alistream_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_alistream_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_alistream",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_alistream_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_alistream_victory",
+    "message": "\"Well fought. Take the Ghost Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_alistream",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ghost_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_operahold",
+    "message": "\"I am Operaena, Warden of the Operahold Conclave. My Conclave is bound to the Fairy element. Defeat me and you will earn the Fairy Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_operahold_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_operahold_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_operahold_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_operahold",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_operahold_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_operahold_victory",
+    "message": "\"Well fought. Take the Fairy Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_operahold",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_fairy_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_gordieton",
+    "message": "\"I am Gordiel, Warden of the Gordieton Conclave. My Conclave is bound to the Rock element. Defeat me and you will earn the Rock Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_gordieton_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_gordieton_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_gordieton_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_gordieton",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_gordieton_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_gordieton_victory",
+    "message": "\"Well fought. Take the Rock Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_gordieton",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_rock_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_melonypole",
+    "message": "\"I am Melonyra, Warden of the Melonypole Conclave. My Conclave is bound to the Ice element. Defeat me and you will earn the Ice Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_melonypole_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_melonypole_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_melonypole_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_melonypole",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_melonypole_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_melonypole_victory",
+    "message": "\"Well fought. Take the Ice Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_melonypole",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ice_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_raihandun",
+    "message": "\"I am Raihandor, Warden of the Raihandun Conclave. My Conclave is bound to the Dragon element. Defeat me and you will earn the Dragon Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_raihandun_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_raihandun_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_raihandun_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_raihandun",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_raihandun_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_raihandun_victory",
+    "message": "\"Well fought. Take the Dragon Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_raihandun",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_dragon_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "grunt_galar",
+    "message": "\"You wear no banner. Then you are not of the Yew Court. Out of our way - or fall.\"",
+    "replies": [
+      {
+        "text": "Stand aside.",
+        "nextPhrase": "grunt_galar_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "grunt_galar_battle",
+    "message": "\"As you wish.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_grunt_galar",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "grunt_galar_defeated",
+    "message": "\"The Yew Court will return. We always do.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "foiled_galar",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "team_boss_galar",
+    "message": "\"I am Lord Aeldric Yew, master of the Yew Court. I would exploit the realm's eternal energies. Stand aside, Warden.\"",
+    "replies": [
+      {
+        "text": "Never.",
+        "nextPhrase": "team_boss_galar_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_galar_battle",
+    "message": "\"Then break with the rest.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_boss_galar",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_galar_defeated",
+    "message": "\"Hmm. The Yew Court is undone. The realm... is yours, for now.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "region_cleared_galar",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "council_marniael_umbra",
+    "message": "\"I am Marniael Umbra, of the Eldritch Council. My Conclave answers to the Dark element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_marniael_umbra_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_hopael_brawl",
+    "message": "\"I am Hopael Brawl, of the Eldritch Council. My Conclave answers to the Fighting element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_hopael_brawl_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_bedrael_mind",
+    "message": "\"I am Bedrael Mind, of the Eldritch Council. My Conclave answers to the Psychic element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_bedrael_mind_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_roseael_bloom",
+    "message": "\"I am Roseael Bloom, of the Eldritch Council. My Conclave answers to the Grass element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_roseael_bloom_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_leoniel_stargold",
+    "message": "\"I am Leoniel Stargold, Highlord of Norhammar. The Council has fallen. Now you face me. Show me every bond you have forged.\"",
+    "replies": [
+      {
+        "text": "Begin.",
+        "nextPhrase": "highlord_leoniel_stargold_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "highlord_leoniel_stargold_battle",
+    "message": "\"For the realm.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "highlord_battle_galar",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_leoniel_stargold_defeated",
+    "message": "\"You have outdone me. Take the title for Norhammar.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "highlord_galar",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "highlords_defeated",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "key_balloon",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "city_mesagosa_greeter",
+    "message": "\"Welcome to Mesagosa, traveler. This is your first step into Veilarnen. Veilarnen, a vast academy region of open frontiers and ancient secrets. Take these gifts of our realm - you will need them on the trail.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "region_entered_paldea",
+        "value": "1"
+      }
+    ],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "region_body_paldea",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_neck_paldea",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "region_feet_paldea",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "region_entered_paldea",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_cortondo",
+    "message": "\"I am Katyalyr, Warden of the Cortondria Conclave. My Conclave is bound to the Bug element. Defeat me and you will earn the Bug Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_cortondo_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_cortondo_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_cortondo_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_cortondo",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_cortondo_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_cortondo_victory",
+    "message": "\"Well fought. Take the Bug Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_cortondo",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_bug_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_artazon",
+    "message": "\"I am Brassinos, Warden of the Artazonel Conclave. My Conclave is bound to the Grass element. Defeat me and you will earn the Grass Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_artazon_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_artazon_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_artazon_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_artazon",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_artazon_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_artazon_victory",
+    "message": "\"Well fought. Take the Grass Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_artazon",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_grass_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_levincia",
+    "message": "\"I am Iononel, Warden of the Levinciel Conclave. My Conclave is bound to the Electric element. Defeat me and you will earn the Spark Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_levincia_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_levincia_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_levincia_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_levincia",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_levincia_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_levincia_victory",
+    "message": "\"Well fought. Take the Spark Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_levincia",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_electric_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_cascarrafa",
+    "message": "\"I am Kofunel, Warden of the Cascarrafel Conclave. My Conclave is bound to the Water element. Defeat me and you will earn the Wave Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_cascarrafa_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_cascarrafa_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_cascarrafa_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_cascarrafa",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_cascarrafa_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_cascarrafa_victory",
+    "message": "\"Well fought. Take the Wave Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_cascarrafa",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_water_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_medali",
+    "message": "\"I am Larynel, Warden of the Medalith Conclave. My Conclave is bound to the Normal element. Defeat me and you will earn the Normal Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_medali_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_medali_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_medali_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_medali",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_medali_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_medali_victory",
+    "message": "\"Well fought. Take the Normal Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_medali",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_normal_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_montenevera",
+    "message": "\"I am Ryminael, Warden of the Monteneveryn Conclave. My Conclave is bound to the Ghost element. Defeat me and you will earn the Ghost Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_montenevera_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_montenevera_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_montenevera_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_montenevera",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_montenevera_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_montenevera_victory",
+    "message": "\"Well fought. Take the Ghost Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_montenevera",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ghost_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_alfornada",
+    "message": "\"I am Tulinyr, Warden of the Alfornadyn Conclave. My Conclave is bound to the Psychic element. Defeat me and you will earn the Mind Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_alfornada_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_alfornada_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_alfornada_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_alfornada",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_alfornada_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_alfornada_victory",
+    "message": "\"Well fought. Take the Mind Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_alfornada",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_psychic_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "warden_glaseado",
+    "message": "\"I am Grusharion, Warden of the Glaseadelyn Conclave. My Conclave is bound to the Ice element. Defeat me and you will earn the Ice Mark.\"",
+    "replies": [
+      {
+        "text": "Challenge.",
+        "nextPhrase": "warden_glaseado_battle",
+        "requires": []
+      },
+      {
+        "text": "Maybe later.",
+        "nextPhrase": "warden_glaseado_done",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_glaseado_battle",
+    "message": "\"Then prove it.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_warden_glaseado",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "warden_glaseado_done",
+    "message": "\"Return when you have steeled your bond.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "warden_glaseado_victory",
+    "message": "\"Well fought. Take the Ice Mark - and a Spirit Crystal of my Conclave.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "item",
+        "id": "badge_glaseado",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "crystal_ice_signature",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "marks_collected",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "grunt_paldea",
+    "message": "\"You wear no banner. Then you are not of the Star Heralds. Out of our way - or fall.\"",
+    "replies": [
+      {
+        "text": "Stand aside.",
+        "nextPhrase": "grunt_paldea_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "grunt_paldea_battle",
+    "message": "\"As you wish.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_grunt_paldea",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "grunt_paldea_defeated",
+    "message": "\"The Star Heralds will return. We always do.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "foiled_paldea",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "team_boss_paldea",
+    "message": "\"I am Penharos the Lost, master of the Star Heralds. I would rewrite the laws of the academy. Stand aside, Warden.\"",
+    "replies": [
+      {
+        "text": "Never.",
+        "nextPhrase": "team_boss_paldea_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_paldea_battle",
+    "message": "\"Then break with the rest.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "battle_boss_paldea",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "team_boss_paldea_defeated",
+    "message": "\"Hmm. The Star Heralds is undone. The realm... is yours, for now.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "region_cleared_paldea",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "council_rikael_mind",
+    "message": "\"I am Rikael Mind, of the Eldritch Council. My Conclave answers to the Psychic element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_rikael_mind_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_poppyel_iron",
+    "message": "\"I am Poppyel Iron, of the Eldritch Council. My Conclave answers to the Steel element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_poppyel_iron_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_larryel_wing",
+    "message": "\"I am Larryel Wing, of the Eldritch Council. My Conclave answers to the Flying element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_larryel_wing_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "council_hassellyn_wyrm",
+    "message": "\"I am Hassellyn Wyrm, of the Eldritch Council. My Conclave answers to the Dragon element. Step forward.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "council_hassellyn_wyrm_started",
+        "value": "1"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_geetharion_shadowknight",
+    "message": "\"I am Geetharion Shadowknight, Highlord of Veilarnen. The Council has fallen. Now you face me. Show me every bond you have forged.\"",
+    "replies": [
+      {
+        "text": "Begin.",
+        "nextPhrase": "highlord_geetharion_shadowknight_battle",
+        "requires": []
+      }
+    ],
+    "switches": [],
+    "rewards": []
+  },
+  {
+    "id": "highlord_geetharion_shadowknight_battle",
+    "message": "\"For the realm.\"",
+    "replies": [],
+    "switches": [
+      {
+        "key": "highlord_battle_paldea",
+        "value": "started"
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "id": "highlord_geetharion_shadowknight_defeated",
+    "message": "\"You have outdone me. Take the title for Veilarnen.\"",
+    "replies": [],
+    "switches": [],
+    "rewards": [
+      {
+        "reward": "skill",
+        "id": "highlord_paldea",
+        "quantity": 1
+      },
+      {
+        "reward": "skill",
+        "id": "highlords_defeated",
+        "quantity": 1
+      },
+      {
+        "reward": "item",
+        "id": "key_balloon",
+        "quantity": 1
+      }
+    ]
+  }
+]

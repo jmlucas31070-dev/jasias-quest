@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map version="1.0" orientation="orthogonal" width="24" height="18" tilewidth="32" tileheight="32">
+  <properties>
+    <property name="biome" value="beach" />
+    <property name="interior" value="false" />
+  </properties>
+  <tileset firstgid="1" source="../drawable/map_ground_4.tsx" />
+  <layer name="ground" width="24" height="18">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+  </layer>
+  <objectgroup name="exits">
+    <object name="to_isle_dock_ambershoal_2" type="mapchange" x="0" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="isle_dock_ambershoal_2" />
+        <property name="place" value="from_e" />
+      </properties>
+    </object>
+    <object name="to_isle_dock_ambershoal_4" type="mapchange" x="736" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="isle_dock_ambershoal_4" />
+        <property name="place" value="from_w" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="spawns">
+    <object name="crab_dock_ambershoal" type="monster" x="128" y="448" width="32" height="32">
+      <properties>
+        <property name="monster" value="crab_dock_ambershoal" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="iguana_dock_ambershoal" type="monster" x="96" y="480" width="32" height="32">
+      <properties>
+        <property name="monster" value="iguana_dock_ambershoal" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="monkey_dock_ambershoal" type="monster" x="128" y="320" width="32" height="32">
+      <properties>
+        <property name="monster" value="monkey_dock_ambershoal" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+    <object name="islander_bandit_dock_ambershoal" type="monster" x="352" y="288" width="32" height="32">
+      <properties>
+        <property name="monster" value="islander_bandit_dock_ambershoal" />
+        <property name="quantity" value="1" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="npcs">
+    <object name="npc_dock_ambershoal_2" type="npc" x="448" y="160" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_dock_ambershoal_2_hello" />
+      </properties>
+    </object>
+    <object name="npc_dock_ambershoal_8" type="npc" x="224" y="224" width="32" height="32">
+      <properties>
+        <property name="phrase" value="phrase_npc_dock_ambershoal_8_hello" />
+      </properties>
+    </object>
+  </objectgroup>
+  <objectgroup name="search">
+    <object name="isle_dock_ambershoal_3_search_0" type="search" x="480" y="160" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_dock_ambershoal_3_0" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+    <object name="isle_dock_ambershoal_3_search_1" type="search" x="352" y="480" width="32" height="32">
+      <properties>
+        <property name="droplist" value="search_isle_dock_ambershoal_3_1" />
+        <property name="reset" value="daily" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>
