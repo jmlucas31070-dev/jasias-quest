@@ -1,0 +1,148 @@
+[
+    {
+        "id": "fm_mine_already",
+        "message": "This vein has been picked clean. The rock will need time to settle before you can work it again.",
+        "replies": [
+            { "text": "Step back.", "nextPhraseID": "X" }
+        ]
+    },
+    {
+        "id": "fm_mine_no_pick",
+        "message": "There is workable rock here, but you would need a pickaxe to make any headway.",
+        "replies": [
+            { "text": "Leave it for now.", "nextPhraseID": "X" }
+        ]
+    },
+
+    {
+        "id": "fm_mine_low_strike",
+        "message": "A soft outcrop of rock. Easy enough to chip at with a pickaxe.",
+        "replies": [
+            { "text": "N", "nextPhraseID": "fm_mine_already",
+              "requires": [
+                  { "requireType": "timerElapsed", "requireID": "fm_t_mine_low", "value": 3456, "negate": true }
+              ]
+            },
+            { "text": "N", "nextPhraseID": "fm_mine_no_pick_branch",
+              "requires": [
+                  { "requireType": "wear", "requireID": "fm_pickaxe_wood",  "negate": true },
+                  { "requireType": "wear", "requireID": "fm_pickaxe_iron",  "negate": true },
+                  { "requireType": "wear", "requireID": "fm_pickaxe_steel", "negate": true }
+              ]
+            },
+            { "text": "Strike the rock.", "nextPhraseID": "fm_mine_low_take" },
+            { "text": "Leave it alone.",  "nextPhraseID": "X" }
+        ]
+    },
+    {
+        "id": "fm_mine_low_take",
+        "message": "Your pickaxe rings against the stone. After a few minutes' work you collect what's broken loose.",
+        "rewards": [
+            { "rewardType": "dropList",    "rewardID": "fm_drop_mine_low" },
+            { "rewardType": "createTimer", "rewardID": "fm_t_mine_low" }
+        ],
+        "replies": [
+            { "text": "Continue.", "nextPhraseID": "X" }
+        ]
+    },
+
+    {
+        "id": "fm_mine_mid_strike",
+        "message": "A workable vein of darker rock. There is metal in here.",
+        "replies": [
+            { "text": "N", "nextPhraseID": "fm_mine_already",
+              "requires": [
+                  { "requireType": "timerElapsed", "requireID": "fm_t_mine_mid", "value": 3456, "negate": true }
+              ]
+            },
+            { "text": "N", "nextPhraseID": "fm_mine_no_pick_branch",
+              "requires": [
+                  { "requireType": "wear", "requireID": "fm_pickaxe_iron",  "negate": true },
+                  { "requireType": "wear", "requireID": "fm_pickaxe_steel", "negate": true }
+              ]
+            },
+            { "text": "Work the vein.",  "nextPhraseID": "fm_mine_mid_take" },
+            { "text": "Leave it alone.", "nextPhraseID": "X" }
+        ]
+    },
+    {
+        "id": "fm_mine_mid_take",
+        "message": "Iron and copper crumble out as you swing. You bag the best chunks.",
+        "rewards": [
+            { "rewardType": "dropList",    "rewardID": "fm_drop_mine_mid" },
+            { "rewardType": "createTimer", "rewardID": "fm_t_mine_mid" }
+        ],
+        "replies": [
+            { "text": "Continue.", "nextPhraseID": "X" }
+        ]
+    },
+
+    {
+        "id": "fm_mine_high_strike",
+        "message": "A heavy vein of dense ore. Soft tools will only chip themselves apart on this.",
+        "replies": [
+            { "text": "N", "nextPhraseID": "fm_mine_already",
+              "requires": [
+                  { "requireType": "timerElapsed", "requireID": "fm_t_mine_high", "value": 3456, "negate": true }
+              ]
+            },
+            { "text": "N", "nextPhraseID": "fm_mine_no_pick_branch",
+              "requires": [
+                  { "requireType": "wear", "requireID": "fm_pickaxe_steel", "negate": true }
+              ]
+            },
+            { "text": "Crack it open.",  "nextPhraseID": "fm_mine_high_take" },
+            { "text": "Leave it alone.", "nextPhraseID": "X" }
+        ]
+    },
+    {
+        "id": "fm_mine_high_take",
+        "message": "The vein gives up its riches. You wipe sweat from your brow and pocket the haul.",
+        "rewards": [
+            { "rewardType": "dropList",    "rewardID": "fm_drop_mine_high" },
+            { "rewardType": "createTimer", "rewardID": "fm_t_mine_high" }
+        ],
+        "replies": [
+            { "text": "Continue.", "nextPhraseID": "X" }
+        ]
+    },
+
+    {
+        "id": "fm_mine_gem_strike",
+        "message": "Crystals glitter inside a fissure in the rock. This is gem country.",
+        "replies": [
+            { "text": "N", "nextPhraseID": "fm_mine_already",
+              "requires": [
+                  { "requireType": "timerElapsed", "requireID": "fm_t_mine_gem", "value": 3456, "negate": true }
+              ]
+            },
+            { "text": "N", "nextPhraseID": "fm_mine_no_pick_branch",
+              "requires": [
+                  { "requireType": "wear", "requireID": "fm_pickaxe_iron",  "negate": true },
+                  { "requireType": "wear", "requireID": "fm_pickaxe_steel", "negate": true }
+              ]
+            },
+            { "text": "Work the fissure carefully.", "nextPhraseID": "fm_mine_gem_take" },
+            { "text": "Leave it alone.",             "nextPhraseID": "X" }
+        ]
+    },
+    {
+        "id": "fm_mine_gem_take",
+        "message": "You ease the crystals free of the matrix and tuck them away.",
+        "rewards": [
+            { "rewardType": "dropList",    "rewardID": "fm_drop_mine_gem" },
+            { "rewardType": "createTimer", "rewardID": "fm_t_mine_gem" }
+        ],
+        "replies": [
+            { "text": "Continue.", "nextPhraseID": "X" }
+        ]
+    },
+
+    {
+        "id": "fm_mine_no_pick_branch",
+        "message": "There is workable rock here, but you would need a pickaxe to make any headway.",
+        "replies": [
+            { "text": "Leave it for now.", "nextPhraseID": "X" }
+        ]
+    }
+]

@@ -1,0 +1,2832 @@
+[
+    {
+        "id": "g_iron_root",
+        "message": "Aldric the Ironclad: \"Welcome to the Iron Hall, traveler. Our halls are forge-lit and ringing with the clatter of training swords. Strength of arm, courage in battle, and the iron will to endure.\"",
+        "replies": [
+            {
+                "text": "I wish to join the Iron Hall.",
+                "nextPhraseID": "g_iron_trial_1",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "g_quest_iron",
+                        "value": 10,
+                        "negate": true
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Apprentice.",
+                "nextPhraseID": "g_iron_trial_2",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_iron",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Adept.",
+                "nextPhraseID": "g_iron_trial_3",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_iron",
+                        "value": 20
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Journeyman.",
+                "nextPhraseID": "g_iron_trial_4",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_iron",
+                        "value": 30
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Veteran.",
+                "nextPhraseID": "g_iron_trial_5",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_iron",
+                        "value": 40
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Elder.",
+                "nextPhraseID": "g_iron_trial_6",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_iron",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Grandmaster.",
+                "nextPhraseID": "g_iron_trial_7",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_iron",
+                        "value": 60
+                    }
+                ]
+            },
+            {
+                "text": "I am ready for the master trial of the Iron Hall.",
+                "nextPhraseID": "g_iron_master_intro",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_iron",
+                        "value": 70
+                    }
+                ]
+            },
+            {
+                "text": "I have walked the master's path and returned.",
+                "nextPhraseID": "g_iron_master_finish",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_iron",
+                        "value": 70
+                    },
+                    {
+                        "requireType": "timerElapsed",
+                        "requireID": "g_t_master_iron",
+                        "value": 5760
+                    },
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 50000
+                    }
+                ]
+            },
+            {
+                "text": "Greetings, fellow master.",
+                "nextPhraseID": "g_iron_master_done_again",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "g_quest_iron",
+                        "value": 100
+                    }
+                ]
+            },
+            {
+                "text": "Tell me about the Iron Hall.",
+                "nextPhraseID": "g_iron_lore"
+            },
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_lore",
+        "message": "\"The Iron Hall has stood for many lives of men. We take in those who would learn our craft, train them through seven trials, and elevate the few who endure to master rank. Each trial requires a tribute — gold, sweat, and patience. Speak again when you are ready.\"",
+        "replies": [
+            {
+                "text": "I will think on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_trial_1",
+        "message": "\"You wish to join the Iron Hall? Good. Initiation is free — but know that every trial after this one will demand tribute. Kneel, take the oath, and rise as an Initiate.\"",
+        "replies": [
+            {
+                "text": "I take the oath.",
+                "nextPhraseID": "g_iron_advance_1",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_iron",
+                        "value": 10
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_iron",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_iron",
+                        "value": 5
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_advance_1",
+        "message": "\"You are raised to the rank of Initiate. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_trial_2",
+        "message": "\"To be raised to Apprentice you must offer a tribute of 50 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (50 gold).",
+                "nextPhraseID": "g_iron_advance_2",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -50
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_iron",
+                        "value": 20
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_iron",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_iron",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_advance_2",
+        "message": "\"You are raised to the rank of Apprentice. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_trial_3",
+        "message": "\"To be raised to Adept you must offer a tribute of 200 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (200 gold).",
+                "nextPhraseID": "g_iron_advance_3",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -200
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_iron",
+                        "value": 30
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_iron",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_iron",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 200
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_advance_3",
+        "message": "\"You are raised to the rank of Adept. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_trial_4",
+        "message": "\"To be raised to Journeyman you must offer a tribute of 500 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (500 gold).",
+                "nextPhraseID": "g_iron_advance_4",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -500
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_iron",
+                        "value": 40
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_iron",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_iron",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 500
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_advance_4",
+        "message": "\"You are raised to the rank of Journeyman. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_trial_5",
+        "message": "\"To be raised to Veteran you must offer a tribute of 1500 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (1500 gold).",
+                "nextPhraseID": "g_iron_advance_5",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -1500
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_iron",
+                        "value": 50
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_iron",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_iron",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 1500
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_advance_5",
+        "message": "\"You are raised to the rank of Veteran. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_trial_6",
+        "message": "\"To be raised to Elder you must offer a tribute of 5000 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (5000 gold).",
+                "nextPhraseID": "g_iron_advance_6",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -5000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_iron",
+                        "value": 60
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_iron",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_iron",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 5000
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_advance_6",
+        "message": "\"You are raised to the rank of Elder. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_trial_7",
+        "message": "\"To be raised to Grandmaster you must offer a tribute of 15000 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (15000 gold).",
+                "nextPhraseID": "g_iron_advance_7",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -15000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_iron",
+                        "value": 70
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_iron",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_iron",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 15000
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_advance_7",
+        "message": "\"You are raised to the rank of Grandmaster. Few who walk through our doors reach this rank. There is one trial left — the master trial — but it is not a trial of strength. Speak to me again when you are ready to begin it.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_master_intro",
+        "message": "\"The master trial is not fought; it is endured. Walk the world for a season. Touch the places that frighten you. When you return, bring with you 50000 gold as the final tribute, and I will know whether the Iron Hall has truly entered your bones.\"",
+        "replies": [
+            {
+                "text": "I will go.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "createTimer",
+                        "rewardID": "g_t_master_iron"
+                    }
+                ]
+            },
+            {
+                "text": "Not yet.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_iron_master_finish",
+        "message": "\"You have walked the path and you have returned. Lay down the tribute, and take this — the Tome of the Iron Hall. From this day, you are one of us in name as you have long been in deed.\"",
+        "replies": [
+            {
+                "text": "I lay down the tribute.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -50000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_iron",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "g_tome_iron",
+                        "value": 1
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_iron",
+                        "value": 25
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "g_iron_master_done_again",
+        "message": "\"Welcome home, master. The halls are yours.\"",
+        "replies": [
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_root",
+        "message": "Vespera the Quiet: \"Welcome to the Shadow Lodge, traveler. Our halls are low-ceilinged and lit only by tallow candles. Coin moves in the shadows, and so do those who know its weight.\"",
+        "replies": [
+            {
+                "text": "I wish to join the Shadow Lodge.",
+                "nextPhraseID": "g_shadow_trial_1",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "g_quest_shadow",
+                        "value": 10,
+                        "negate": true
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Apprentice.",
+                "nextPhraseID": "g_shadow_trial_2",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_shadow",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Adept.",
+                "nextPhraseID": "g_shadow_trial_3",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_shadow",
+                        "value": 20
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Journeyman.",
+                "nextPhraseID": "g_shadow_trial_4",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_shadow",
+                        "value": 30
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Veteran.",
+                "nextPhraseID": "g_shadow_trial_5",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_shadow",
+                        "value": 40
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Elder.",
+                "nextPhraseID": "g_shadow_trial_6",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_shadow",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Grandmaster.",
+                "nextPhraseID": "g_shadow_trial_7",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_shadow",
+                        "value": 60
+                    }
+                ]
+            },
+            {
+                "text": "I am ready for the master trial of the Shadow Lodge.",
+                "nextPhraseID": "g_shadow_master_intro",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_shadow",
+                        "value": 70
+                    }
+                ]
+            },
+            {
+                "text": "I have walked the master's path and returned.",
+                "nextPhraseID": "g_shadow_master_finish",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_shadow",
+                        "value": 70
+                    },
+                    {
+                        "requireType": "timerElapsed",
+                        "requireID": "g_t_master_shadow",
+                        "value": 5760
+                    },
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 50000
+                    }
+                ]
+            },
+            {
+                "text": "Greetings, fellow master.",
+                "nextPhraseID": "g_shadow_master_done_again",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "g_quest_shadow",
+                        "value": 100
+                    }
+                ]
+            },
+            {
+                "text": "Tell me about the Shadow Lodge.",
+                "nextPhraseID": "g_shadow_lore"
+            },
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_lore",
+        "message": "\"The Shadow Lodge has stood for many lives of men. We take in those who would learn our craft, train them through seven trials, and elevate the few who endure to master rank. Each trial requires a tribute — gold, sweat, and patience. Speak again when you are ready.\"",
+        "replies": [
+            {
+                "text": "I will think on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_trial_1",
+        "message": "\"You wish to join the Shadow Lodge? Good. Initiation is free — but know that every trial after this one will demand tribute. Kneel, take the oath, and rise as an Initiate.\"",
+        "replies": [
+            {
+                "text": "I take the oath.",
+                "nextPhraseID": "g_shadow_advance_1",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_shadow",
+                        "value": 10
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_shadow",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_shadow",
+                        "value": 5
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_advance_1",
+        "message": "\"You are raised to the rank of Initiate. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_trial_2",
+        "message": "\"To be raised to Apprentice you must offer a tribute of 50 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (50 gold).",
+                "nextPhraseID": "g_shadow_advance_2",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -50
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_shadow",
+                        "value": 20
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_shadow",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_shadow",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_advance_2",
+        "message": "\"You are raised to the rank of Apprentice. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_trial_3",
+        "message": "\"To be raised to Adept you must offer a tribute of 200 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (200 gold).",
+                "nextPhraseID": "g_shadow_advance_3",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -200
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_shadow",
+                        "value": 30
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_shadow",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_shadow",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 200
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_advance_3",
+        "message": "\"You are raised to the rank of Adept. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_trial_4",
+        "message": "\"To be raised to Journeyman you must offer a tribute of 500 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (500 gold).",
+                "nextPhraseID": "g_shadow_advance_4",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -500
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_shadow",
+                        "value": 40
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_shadow",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_shadow",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 500
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_advance_4",
+        "message": "\"You are raised to the rank of Journeyman. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_trial_5",
+        "message": "\"To be raised to Veteran you must offer a tribute of 1500 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (1500 gold).",
+                "nextPhraseID": "g_shadow_advance_5",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -1500
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_shadow",
+                        "value": 50
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_shadow",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_shadow",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 1500
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_advance_5",
+        "message": "\"You are raised to the rank of Veteran. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_trial_6",
+        "message": "\"To be raised to Elder you must offer a tribute of 5000 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (5000 gold).",
+                "nextPhraseID": "g_shadow_advance_6",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -5000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_shadow",
+                        "value": 60
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_shadow",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_shadow",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 5000
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_advance_6",
+        "message": "\"You are raised to the rank of Elder. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_trial_7",
+        "message": "\"To be raised to Grandmaster you must offer a tribute of 15000 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (15000 gold).",
+                "nextPhraseID": "g_shadow_advance_7",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -15000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_shadow",
+                        "value": 70
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_shadow",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_shadow",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 15000
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_advance_7",
+        "message": "\"You are raised to the rank of Grandmaster. Few who walk through our doors reach this rank. There is one trial left — the master trial — but it is not a trial of strength. Speak to me again when you are ready to begin it.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_master_intro",
+        "message": "\"The master trial is not fought; it is endured. Walk the world for a season. Touch the places that frighten you. When you return, bring with you 50000 gold as the final tribute, and I will know whether the Shadow Lodge has truly entered your bones.\"",
+        "replies": [
+            {
+                "text": "I will go.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "createTimer",
+                        "rewardID": "g_t_master_shadow"
+                    }
+                ]
+            },
+            {
+                "text": "Not yet.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_master_finish",
+        "message": "\"You have walked the path and you have returned. Lay down the tribute, and take this — the Tome of the Shadow Lodge. From this day, you are one of us in name as you have long been in deed.\"",
+        "replies": [
+            {
+                "text": "I lay down the tribute.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -50000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_shadow",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "g_tome_shadow",
+                        "value": 1
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_shadow",
+                        "value": 25
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "g_shadow_master_done_again",
+        "message": "\"Welcome home, master. The halls are yours.\"",
+        "replies": [
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_root",
+        "message": "Father Caelan: \"Welcome to the Sun Sanctum, traveler. Our halls are bright with stained-glass dawn light. Mercy is a discipline. So is judgement.\"",
+        "replies": [
+            {
+                "text": "I wish to join the Sun Sanctum.",
+                "nextPhraseID": "g_sun_trial_1",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "g_quest_sun",
+                        "value": 10,
+                        "negate": true
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Apprentice.",
+                "nextPhraseID": "g_sun_trial_2",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_sun",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Adept.",
+                "nextPhraseID": "g_sun_trial_3",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_sun",
+                        "value": 20
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Journeyman.",
+                "nextPhraseID": "g_sun_trial_4",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_sun",
+                        "value": 30
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Veteran.",
+                "nextPhraseID": "g_sun_trial_5",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_sun",
+                        "value": 40
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Elder.",
+                "nextPhraseID": "g_sun_trial_6",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_sun",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Grandmaster.",
+                "nextPhraseID": "g_sun_trial_7",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_sun",
+                        "value": 60
+                    }
+                ]
+            },
+            {
+                "text": "I am ready for the master trial of the Sun Sanctum.",
+                "nextPhraseID": "g_sun_master_intro",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_sun",
+                        "value": 70
+                    }
+                ]
+            },
+            {
+                "text": "I have walked the master's path and returned.",
+                "nextPhraseID": "g_sun_master_finish",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_sun",
+                        "value": 70
+                    },
+                    {
+                        "requireType": "timerElapsed",
+                        "requireID": "g_t_master_sun",
+                        "value": 5760
+                    },
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 50000
+                    }
+                ]
+            },
+            {
+                "text": "Greetings, fellow master.",
+                "nextPhraseID": "g_sun_master_done_again",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "g_quest_sun",
+                        "value": 100
+                    }
+                ]
+            },
+            {
+                "text": "Tell me about the Sun Sanctum.",
+                "nextPhraseID": "g_sun_lore"
+            },
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_lore",
+        "message": "\"The Sun Sanctum has stood for many lives of men. We take in those who would learn our craft, train them through seven trials, and elevate the few who endure to master rank. Each trial requires a tribute — gold, sweat, and patience. Speak again when you are ready.\"",
+        "replies": [
+            {
+                "text": "I will think on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_trial_1",
+        "message": "\"You wish to join the Sun Sanctum? Good. Initiation is free — but know that every trial after this one will demand tribute. Kneel, take the oath, and rise as an Initiate.\"",
+        "replies": [
+            {
+                "text": "I take the oath.",
+                "nextPhraseID": "g_sun_advance_1",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_sun",
+                        "value": 10
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_sun",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_sun",
+                        "value": 5
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_advance_1",
+        "message": "\"You are raised to the rank of Initiate. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_trial_2",
+        "message": "\"To be raised to Apprentice you must offer a tribute of 50 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (50 gold).",
+                "nextPhraseID": "g_sun_advance_2",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -50
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_sun",
+                        "value": 20
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_sun",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_sun",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_advance_2",
+        "message": "\"You are raised to the rank of Apprentice. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_trial_3",
+        "message": "\"To be raised to Adept you must offer a tribute of 200 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (200 gold).",
+                "nextPhraseID": "g_sun_advance_3",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -200
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_sun",
+                        "value": 30
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_sun",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_sun",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 200
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_advance_3",
+        "message": "\"You are raised to the rank of Adept. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_trial_4",
+        "message": "\"To be raised to Journeyman you must offer a tribute of 500 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (500 gold).",
+                "nextPhraseID": "g_sun_advance_4",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -500
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_sun",
+                        "value": 40
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_sun",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_sun",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 500
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_advance_4",
+        "message": "\"You are raised to the rank of Journeyman. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_trial_5",
+        "message": "\"To be raised to Veteran you must offer a tribute of 1500 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (1500 gold).",
+                "nextPhraseID": "g_sun_advance_5",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -1500
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_sun",
+                        "value": 50
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_sun",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_sun",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 1500
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_advance_5",
+        "message": "\"You are raised to the rank of Veteran. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_trial_6",
+        "message": "\"To be raised to Elder you must offer a tribute of 5000 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (5000 gold).",
+                "nextPhraseID": "g_sun_advance_6",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -5000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_sun",
+                        "value": 60
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_sun",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_sun",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 5000
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_advance_6",
+        "message": "\"You are raised to the rank of Elder. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_trial_7",
+        "message": "\"To be raised to Grandmaster you must offer a tribute of 15000 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (15000 gold).",
+                "nextPhraseID": "g_sun_advance_7",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -15000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_sun",
+                        "value": 70
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_sun",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_sun",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 15000
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_advance_7",
+        "message": "\"You are raised to the rank of Grandmaster. Few who walk through our doors reach this rank. There is one trial left — the master trial — but it is not a trial of strength. Speak to me again when you are ready to begin it.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_master_intro",
+        "message": "\"The master trial is not fought; it is endured. Walk the world for a season. Touch the places that frighten you. When you return, bring with you 50000 gold as the final tribute, and I will know whether the Sun Sanctum has truly entered your bones.\"",
+        "replies": [
+            {
+                "text": "I will go.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "createTimer",
+                        "rewardID": "g_t_master_sun"
+                    }
+                ]
+            },
+            {
+                "text": "Not yet.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_sun_master_finish",
+        "message": "\"You have walked the path and you have returned. Lay down the tribute, and take this — the Tome of the Sun Sanctum. From this day, you are one of us in name as you have long been in deed.\"",
+        "replies": [
+            {
+                "text": "I lay down the tribute.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -50000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_sun",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "g_tome_sun",
+                        "value": 1
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_sun",
+                        "value": 25
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "g_sun_master_done_again",
+        "message": "\"Welcome home, master. The halls are yours.\"",
+        "replies": [
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_root",
+        "message": "Mother Briar: \"Welcome to the Verdant Circle, traveler. Our halls are open to the sky, ringed by living oak. The wild remembers all who walked through it. Walk gently.\"",
+        "replies": [
+            {
+                "text": "I wish to join the Verdant Circle.",
+                "nextPhraseID": "g_verdant_trial_1",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "g_quest_verdant",
+                        "value": 10,
+                        "negate": true
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Apprentice.",
+                "nextPhraseID": "g_verdant_trial_2",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_verdant",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Adept.",
+                "nextPhraseID": "g_verdant_trial_3",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_verdant",
+                        "value": 20
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Journeyman.",
+                "nextPhraseID": "g_verdant_trial_4",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_verdant",
+                        "value": 30
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Veteran.",
+                "nextPhraseID": "g_verdant_trial_5",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_verdant",
+                        "value": 40
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Elder.",
+                "nextPhraseID": "g_verdant_trial_6",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_verdant",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Grandmaster.",
+                "nextPhraseID": "g_verdant_trial_7",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_verdant",
+                        "value": 60
+                    }
+                ]
+            },
+            {
+                "text": "I am ready for the master trial of the Verdant Circle.",
+                "nextPhraseID": "g_verdant_master_intro",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_verdant",
+                        "value": 70
+                    }
+                ]
+            },
+            {
+                "text": "I have walked the master's path and returned.",
+                "nextPhraseID": "g_verdant_master_finish",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_verdant",
+                        "value": 70
+                    },
+                    {
+                        "requireType": "timerElapsed",
+                        "requireID": "g_t_master_verdant",
+                        "value": 5760
+                    },
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 50000
+                    }
+                ]
+            },
+            {
+                "text": "Greetings, fellow master.",
+                "nextPhraseID": "g_verdant_master_done_again",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "g_quest_verdant",
+                        "value": 100
+                    }
+                ]
+            },
+            {
+                "text": "Tell me about the Verdant Circle.",
+                "nextPhraseID": "g_verdant_lore"
+            },
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_lore",
+        "message": "\"The Verdant Circle has stood for many lives of men. We take in those who would learn our craft, train them through seven trials, and elevate the few who endure to master rank. Each trial requires a tribute — gold, sweat, and patience. Speak again when you are ready.\"",
+        "replies": [
+            {
+                "text": "I will think on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_trial_1",
+        "message": "\"You wish to join the Verdant Circle? Good. Initiation is free — but know that every trial after this one will demand tribute. Kneel, take the oath, and rise as an Initiate.\"",
+        "replies": [
+            {
+                "text": "I take the oath.",
+                "nextPhraseID": "g_verdant_advance_1",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_verdant",
+                        "value": 10
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_verdant",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_verdant",
+                        "value": 5
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_advance_1",
+        "message": "\"You are raised to the rank of Initiate. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_trial_2",
+        "message": "\"To be raised to Apprentice you must offer a tribute of 50 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (50 gold).",
+                "nextPhraseID": "g_verdant_advance_2",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -50
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_verdant",
+                        "value": 20
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_verdant",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_verdant",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_advance_2",
+        "message": "\"You are raised to the rank of Apprentice. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_trial_3",
+        "message": "\"To be raised to Adept you must offer a tribute of 200 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (200 gold).",
+                "nextPhraseID": "g_verdant_advance_3",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -200
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_verdant",
+                        "value": 30
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_verdant",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_verdant",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 200
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_advance_3",
+        "message": "\"You are raised to the rank of Adept. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_trial_4",
+        "message": "\"To be raised to Journeyman you must offer a tribute of 500 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (500 gold).",
+                "nextPhraseID": "g_verdant_advance_4",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -500
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_verdant",
+                        "value": 40
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_verdant",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_verdant",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 500
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_advance_4",
+        "message": "\"You are raised to the rank of Journeyman. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_trial_5",
+        "message": "\"To be raised to Veteran you must offer a tribute of 1500 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (1500 gold).",
+                "nextPhraseID": "g_verdant_advance_5",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -1500
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_verdant",
+                        "value": 50
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_verdant",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_verdant",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 1500
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_advance_5",
+        "message": "\"You are raised to the rank of Veteran. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_trial_6",
+        "message": "\"To be raised to Elder you must offer a tribute of 5000 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (5000 gold).",
+                "nextPhraseID": "g_verdant_advance_6",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -5000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_verdant",
+                        "value": 60
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_verdant",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_verdant",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 5000
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_advance_6",
+        "message": "\"You are raised to the rank of Elder. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_trial_7",
+        "message": "\"To be raised to Grandmaster you must offer a tribute of 15000 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (15000 gold).",
+                "nextPhraseID": "g_verdant_advance_7",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -15000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_verdant",
+                        "value": 70
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_verdant",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_verdant",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 15000
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_advance_7",
+        "message": "\"You are raised to the rank of Grandmaster. Few who walk through our doors reach this rank. There is one trial left — the master trial — but it is not a trial of strength. Speak to me again when you are ready to begin it.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_master_intro",
+        "message": "\"The master trial is not fought; it is endured. Walk the world for a season. Touch the places that frighten you. When you return, bring with you 50000 gold as the final tribute, and I will know whether the Verdant Circle has truly entered your bones.\"",
+        "replies": [
+            {
+                "text": "I will go.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "createTimer",
+                        "rewardID": "g_t_master_verdant"
+                    }
+                ]
+            },
+            {
+                "text": "Not yet.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_master_finish",
+        "message": "\"You have walked the path and you have returned. Lay down the tribute, and take this — the Tome of the Verdant Circle. From this day, you are one of us in name as you have long been in deed.\"",
+        "replies": [
+            {
+                "text": "I lay down the tribute.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -50000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_verdant",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "g_tome_verdant",
+                        "value": 1
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_verdant",
+                        "value": 25
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "g_verdant_master_done_again",
+        "message": "\"Welcome home, master. The halls are yours.\"",
+        "replies": [
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_root",
+        "message": "Magister Vorell: \"Welcome to the Arcanum Spire, traveler. Our halls are glass-floored, lit by hovering motes of cold blue fire. Knowledge is the only weapon that grows sharper with use.\"",
+        "replies": [
+            {
+                "text": "I wish to join the Arcanum Spire.",
+                "nextPhraseID": "g_arcane_trial_1",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "g_quest_arcane",
+                        "value": 10,
+                        "negate": true
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Apprentice.",
+                "nextPhraseID": "g_arcane_trial_2",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_arcane",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Adept.",
+                "nextPhraseID": "g_arcane_trial_3",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_arcane",
+                        "value": 20
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Journeyman.",
+                "nextPhraseID": "g_arcane_trial_4",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_arcane",
+                        "value": 30
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Veteran.",
+                "nextPhraseID": "g_arcane_trial_5",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_arcane",
+                        "value": 40
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Elder.",
+                "nextPhraseID": "g_arcane_trial_6",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_arcane",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Master, I am ready to be tested for the rank of Grandmaster.",
+                "nextPhraseID": "g_arcane_trial_7",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_arcane",
+                        "value": 60
+                    }
+                ]
+            },
+            {
+                "text": "I am ready for the master trial of the Arcanum Spire.",
+                "nextPhraseID": "g_arcane_master_intro",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_arcane",
+                        "value": 70
+                    }
+                ]
+            },
+            {
+                "text": "I have walked the master's path and returned.",
+                "nextPhraseID": "g_arcane_master_finish",
+                "requires": [
+                    {
+                        "requireType": "questLatestProgress",
+                        "requireID": "g_quest_arcane",
+                        "value": 70
+                    },
+                    {
+                        "requireType": "timerElapsed",
+                        "requireID": "g_t_master_arcane",
+                        "value": 5760
+                    },
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 50000
+                    }
+                ]
+            },
+            {
+                "text": "Greetings, fellow master.",
+                "nextPhraseID": "g_arcane_master_done_again",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "g_quest_arcane",
+                        "value": 100
+                    }
+                ]
+            },
+            {
+                "text": "Tell me about the Arcanum Spire.",
+                "nextPhraseID": "g_arcane_lore"
+            },
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_lore",
+        "message": "\"The Arcanum Spire has stood for many lives of men. We take in those who would learn our craft, train them through seven trials, and elevate the few who endure to master rank. Each trial requires a tribute — gold, sweat, and patience. Speak again when you are ready.\"",
+        "replies": [
+            {
+                "text": "I will think on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_trial_1",
+        "message": "\"You wish to join the Arcanum Spire? Good. Initiation is free — but know that every trial after this one will demand tribute. Kneel, take the oath, and rise as an Initiate.\"",
+        "replies": [
+            {
+                "text": "I take the oath.",
+                "nextPhraseID": "g_arcane_advance_1",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_arcane",
+                        "value": 10
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_arcane",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_arcane",
+                        "value": 5
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_advance_1",
+        "message": "\"You are raised to the rank of Initiate. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_trial_2",
+        "message": "\"To be raised to Apprentice you must offer a tribute of 50 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (50 gold).",
+                "nextPhraseID": "g_arcane_advance_2",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -50
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_arcane",
+                        "value": 20
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_arcane",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_arcane",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_advance_2",
+        "message": "\"You are raised to the rank of Apprentice. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_trial_3",
+        "message": "\"To be raised to Adept you must offer a tribute of 200 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (200 gold).",
+                "nextPhraseID": "g_arcane_advance_3",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -200
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_arcane",
+                        "value": 30
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_arcane",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_arcane",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 200
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_advance_3",
+        "message": "\"You are raised to the rank of Adept. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_trial_4",
+        "message": "\"To be raised to Journeyman you must offer a tribute of 500 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (500 gold).",
+                "nextPhraseID": "g_arcane_advance_4",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -500
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_arcane",
+                        "value": 40
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_arcane",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_arcane",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 500
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_advance_4",
+        "message": "\"You are raised to the rank of Journeyman. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_trial_5",
+        "message": "\"To be raised to Veteran you must offer a tribute of 1500 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (1500 gold).",
+                "nextPhraseID": "g_arcane_advance_5",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -1500
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_arcane",
+                        "value": 50
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_arcane",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_arcane",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 1500
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_advance_5",
+        "message": "\"You are raised to the rank of Veteran. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_trial_6",
+        "message": "\"To be raised to Elder you must offer a tribute of 5000 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (5000 gold).",
+                "nextPhraseID": "g_arcane_advance_6",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -5000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_arcane",
+                        "value": 60
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_arcane",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_arcane",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 5000
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_advance_6",
+        "message": "\"You are raised to the rank of Elder. Train, travel, gather what you need, and return when you are ready for the next trial.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_trial_7",
+        "message": "\"To be raised to Grandmaster you must offer a tribute of 15000 gold. The coin is symbolic — it goes to the upkeep of these halls and to the widows of those who fell here. Are you prepared?\"",
+        "replies": [
+            {
+                "text": "I offer the tribute (15000 gold).",
+                "nextPhraseID": "g_arcane_advance_7",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -15000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_arcane",
+                        "value": 70
+                    },
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "g_rank_arcane",
+                        "value": 999
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_arcane",
+                        "value": 5
+                    }
+                ],
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 15000
+                    }
+                ]
+            },
+            {
+                "text": "I am not ready.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_advance_7",
+        "message": "\"You are raised to the rank of Grandmaster. Few who walk through our doors reach this rank. There is one trial left — the master trial — but it is not a trial of strength. Speak to me again when you are ready to begin it.\"",
+        "replies": [
+            {
+                "text": "Thank you, master.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_master_intro",
+        "message": "\"The master trial is not fought; it is endured. Walk the world for a season. Touch the places that frighten you. When you return, bring with you 50000 gold as the final tribute, and I will know whether the Arcanum Spire has truly entered your bones.\"",
+        "replies": [
+            {
+                "text": "I will go.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "createTimer",
+                        "rewardID": "g_t_master_arcane"
+                    }
+                ]
+            },
+            {
+                "text": "Not yet.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_master_finish",
+        "message": "\"You have walked the path and you have returned. Lay down the tribute, and take this — the Tome of the Arcanum Spire. From this day, you are one of us in name as you have long been in deed.\"",
+        "replies": [
+            {
+                "text": "I lay down the tribute.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": -50000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "g_quest_arcane",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "g_tome_arcane",
+                        "value": 1
+                    },
+                    {
+                        "rewardType": "alignmentChange",
+                        "rewardID": "guild_arcane",
+                        "value": 25
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "g_arcane_master_done_again",
+        "message": "\"Welcome home, master. The halls are yours.\"",
+        "replies": [
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    }
+]

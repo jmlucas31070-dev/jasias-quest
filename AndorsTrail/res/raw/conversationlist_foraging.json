@@ -1,0 +1,84 @@
+[
+    {
+        "id": "fm_forage_already",
+        "message": "You have already gathered everything useful from here. Come back tomorrow.",
+        "replies": [
+            { "text": "Leave it alone.", "nextPhraseID": "X" }
+        ]
+    },
+
+    {
+        "id": "fm_forage_common_pick",
+        "message": "A clump of weedy ground cover. Twigs and herbs poke through the leaves.",
+        "replies": [
+            { "text": "N", "nextPhraseID": "fm_forage_already",
+              "requires": [
+                  { "requireType": "timerElapsed", "requireID": "fm_t_forage_common", "value": 3456, "negate": true }
+              ]
+            },
+            { "text": "Search through the brush.", "nextPhraseID": "fm_forage_common_take" },
+            { "text": "Leave it alone.",            "nextPhraseID": "X" }
+        ]
+    },
+    {
+        "id": "fm_forage_common_take",
+        "message": "You rummage carefully through the undergrowth and pocket what you find.",
+        "rewards": [
+            { "rewardType": "dropList",    "rewardID": "fm_drop_forage_common" },
+            { "rewardType": "createTimer", "rewardID": "fm_t_forage_common" }
+        ],
+        "replies": [
+            { "text": "Continue.", "nextPhraseID": "X" }
+        ]
+    },
+
+    {
+        "id": "fm_forage_berry_pick",
+        "message": "A bush heavy with wild berries. A few small fruits hang lower down.",
+        "replies": [
+            { "text": "N", "nextPhraseID": "fm_forage_already",
+              "requires": [
+                  { "requireType": "timerElapsed", "requireID": "fm_t_forage_berry", "value": 3456, "negate": true }
+              ]
+            },
+            { "text": "Pick the berries.", "nextPhraseID": "fm_forage_berry_take" },
+            { "text": "Leave it alone.",   "nextPhraseID": "X" }
+        ]
+    },
+    {
+        "id": "fm_forage_berry_take",
+        "message": "You strip the bush of ripe berries and put them in your pouch.",
+        "rewards": [
+            { "rewardType": "dropList",    "rewardID": "fm_drop_forage_berry" },
+            { "rewardType": "createTimer", "rewardID": "fm_t_forage_berry" }
+        ],
+        "replies": [
+            { "text": "Continue.", "nextPhraseID": "X" }
+        ]
+    },
+
+    {
+        "id": "fm_forage_nut_pick",
+        "message": "Fallen nuts and acorns are scattered around the base of an old tree.",
+        "replies": [
+            { "text": "N", "nextPhraseID": "fm_forage_already",
+              "requires": [
+                  { "requireType": "timerElapsed", "requireID": "fm_t_forage_nut", "value": 3456, "negate": true }
+              ]
+            },
+            { "text": "Gather what you can.", "nextPhraseID": "fm_forage_nut_take" },
+            { "text": "Leave it alone.",      "nextPhraseID": "X" }
+        ]
+    },
+    {
+        "id": "fm_forage_nut_take",
+        "message": "You crouch down and gather a good handful of nuts.",
+        "rewards": [
+            { "rewardType": "dropList",    "rewardID": "fm_drop_forage_nut" },
+            { "rewardType": "createTimer", "rewardID": "fm_t_forage_nut" }
+        ],
+        "replies": [
+            { "text": "Continue.", "nextPhraseID": "X" }
+        ]
+    }
+]
