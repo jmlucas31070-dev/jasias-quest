@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="3">
+  <tileset firstgid="1" source="outdoor1.tsx"/>
+  <tileset firstgid="257" source="outdoor2.tsx"/>
+  <tileset firstgid="513" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="back_s" type="MapChange" x="224" y="352" width="32" height="32">
+      <properties><property name="map" value="jq_ring_clearing"/><property name="place" value="from_ring_path"/></properties>
+    </object>
+    <object id="2" name="forest_n" type="MapChange" x="224" y="0" width="32" height="32">
+      <properties><property name="map" value="jq_ring_forest"/><property name="place" value="from_ring_path"/></properties>
+    </object>
+  </objectgroup>
+</map>

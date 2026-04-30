@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="6">
+  <tileset firstgid="1" source="outdoor1.tsx"/>
+  <tileset firstgid="257" source="outdoor2.tsx"/>
+  <tileset firstgid="513" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="out" type="MapChange" x="224" y="352" width="32" height="32">
+      <properties><property name="map" value="jq_drow_cave_entry"/><property name="place" value="from_ring_clearing"/></properties>
+    </object>
+    <object id="2" name="path_n" type="MapChange" x="224" y="0" width="32" height="32">
+      <properties><property name="map" value="jq_ring_path"/><property name="place" value="from_ring_clearing"/></properties>
+    </object>
+    <object id="3" name="lake_e" type="MapChange" x="480" y="160" width="32" height="32">
+      <properties><property name="map" value="jq_ring_lake"/><property name="place" value="from_ring_clearing"/></properties>
+    </object>
+    <object id="4" name="pad_s" type="MapChange" x="224" y="320" width="32" height="32">
+      <properties><property name="map" value="jq_ring_rocket_pad"/><property name="place" value="from_ring_clearing"/></properties>
+    </object>
+    <object id="5" name="sign" type="Sign" x="224" y="192" width="32" height="32">
+      <properties><property name="message" value="@string/jq_sign_ring_clearing"/></properties>
+    </object>
+  </objectgroup>
+</map>

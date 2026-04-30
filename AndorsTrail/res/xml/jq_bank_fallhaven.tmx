@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="20">
+
+  <tileset firstgid="1" source="indoor1.tsx"/>
+  <tileset firstgid="513" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,
+17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,
+17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,
+17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,
+17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,
+17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,
+17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,
+17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,
+17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,
+17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,
+17,17,17,17,17,17,17,1,1,17,17,17,17,17,17,17
+    </data>
+  </layer>
+
+  <layer id="2" name="Object" width="16" height="12">
+    <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    </data>
+  </layer>
+
+  <layer id="3" name="Above" width="16" height="12">
+    <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    </data>
+  </layer>
+
+  <objectgroup id="4" name="eventLayer">
+
+    <!-- South door: leaves the bank back to the host map -->
+    <object id="1" name="exit" type="MapChange" x="224" y="352" width="64" height="32">
+      <properties>
+        <property name="map" value="PLACEHOLDER_HOST_MAP"/>
+        <property name="place" value="PLACEHOLDER_RETURN_PLACE"/>
+      </properties>
+    </object>
+
+    <!-- Banker (teller) at the central counter -->
+    <object id="2" name="banker" type="Spawn" x="224" y="160" width="32" height="32">
+      <properties>
+        <property name="monsterType" value="jq_npc_banker"/>
+        <property name="quantity" value="1"/>
+      </properties>
+    </object>
+
+    <!-- Clerk on the side desk -->
+    <object id="3" name="clerk" type="Spawn" x="96" y="160" width="32" height="32">
+      <properties>
+        <property name="monsterType" value="jq_npc_bank_clerk"/>
+        <property name="quantity" value="1"/>
+      </properties>
+    </object>
+
+    <!-- Guard by the door -->
+    <object id="4" name="guard" type="Spawn" x="320" y="320" width="32" height="32">
+      <properties>
+        <property name="monsterType" value="jq_npc_bank_guard"/>
+        <property name="quantity" value="1"/>
+      </properties>
+    </object>
+
+    <!-- Lobby signpost lists the services on offer -->
+    <object id="5" name="signpost" type="Sign" x="32" y="320" width="32" height="32">
+      <properties>
+        <property name="message" value="@string/jq_bank_signpost_fallhaven"/>
+      </properties>
+    </object>
+
+  </objectgroup>
+</map>

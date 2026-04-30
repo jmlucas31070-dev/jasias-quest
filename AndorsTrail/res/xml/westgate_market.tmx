@@ -132,5 +132,26 @@
       </properties>
     </object>
 
+  
+    <!-- Bank of the Realm: Westgate branch -->
+    <object id="20" name="jq_bank_westgate_door" type="MapChange" x="864" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="jq_bank_westgate"/>
+        <property name="place" value="entry"/>
+      </properties>
+    </object>
+    <object id="21" name="jq_bank_westgate_sign" type="Sign" x="864" y="256" width="32" height="32">
+      <properties>
+        <property name="message" value="@string/jq_bank_market_sign"/>
+      </properties>
+    </object>
+    <!-- Return spot when leaving the bank -->
+    <object id="22" name="from_jq_bank_westgate" type="MapChange" x="864" y="320" width="32" height="32">
+      <properties>
+        <property name="map" value="westgate_market"/>
+        <property name="place" value="from_jq_bank_westgate"/>
+      </properties>
+    </object>
+
   </objectgroup>
 </map>

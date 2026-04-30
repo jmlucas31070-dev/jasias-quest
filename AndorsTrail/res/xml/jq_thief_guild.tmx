@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="5">
+  <tileset firstgid="1" source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="door_s" type="MapChange" x="224" y="352" width="32" height="32">
+      <properties><property name="map" value="castle_town"/><property name="place" value="from_thief_guild"/></properties>
+    </object>
+    <object id="2" name="fence" type="Spawn" x="192" y="160" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_thief_master"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="3" name="lookout" type="Spawn" x="96" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_thief_lookout"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="4" name="wand_chest" type="Container" x="384" y="160" width="32" height="32">
+      <properties><property name="droplistID" value="jq_drop_stolen_wand"/><property name="spawnChance" value="100"/></properties>
+    </object>
+  </objectgroup>
+</map>

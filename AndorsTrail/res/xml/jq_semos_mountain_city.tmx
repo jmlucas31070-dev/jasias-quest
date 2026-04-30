@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="7">
+  <tileset firstgid="1" source="outdoor1.tsx"/>
+  <tileset firstgid="257" source="outdoor2.tsx"/>
+  <tileset firstgid="513" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="gate_s" type="MapChange" x="224" y="352" width="32" height="32">
+      <properties><property name="map" value="mountain_path"/><property name="place" value="from_semos"/></properties>
+    </object>
+    <object id="2" name="gate_n" type="MapChange" x="224" y="0" width="32" height="32">
+      <properties><property name="map" value="jq_drow_cave_entry"/><property name="place" value="from_semos"/></properties>
+    </object>
+    <object id="3" name="mayor" type="Spawn" x="96" y="160" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_semos_mayor"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="4" name="merchant" type="Spawn" x="192" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_semos_merchant"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="5" name="witness_steve" type="Spawn" x="320" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_semos_witness"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="6" name="sign" type="Sign" x="224" y="320" width="32" height="32">
+      <properties><property name="message" value="@string/jq_sign_semos"/></properties>
+    </object>
+  </objectgroup>
+</map>

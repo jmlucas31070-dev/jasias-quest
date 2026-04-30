@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="13">
+  <tileset firstgid="1" source="cave1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="back_s" type="MapChange" x="224" y="352" width="32" height="32">
+      <properties><property name="map" value="jq_dragon_cave_central"/><property name="place" value="from_thrones"/></properties>
+    </object>
+    <object id="2" name="throne_bronze" type="Spawn" x="32" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_dragon_bronze_lord"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="3" name="throne_copper" type="Spawn" x="96" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_dragon_copper_lord"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="4" name="throne_brass" type="Spawn" x="160" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_dragon_brass_lord"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="5" name="throne_silver" type="Spawn" x="224" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_dragon_silver_lord"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="6" name="throne_gold" type="Spawn" x="288" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_dragon_gold_lord"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="7" name="throne_white" type="Spawn" x="352" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_dragon_white_lord"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="8" name="throne_yellow" type="Spawn" x="32" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_dragon_yellow_lord"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="9" name="throne_black" type="Spawn" x="96" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_dragon_black_lord"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="10" name="throne_blue" type="Spawn" x="160" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_dragon_blue_lord"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="11" name="throne_red" type="Spawn" x="224" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_dragon_red_lord"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="12" name="sign" type="Sign" x="224" y="320" width="32" height="32">
+      <properties><property name="message" value="@string/jq_sign_thrones"/></properties>
+    </object>
+  </objectgroup>
+</map>

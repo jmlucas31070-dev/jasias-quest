@@ -1,0 +1,1423 @@
+[
+  {
+    "id": "jq_banker_main",
+    "message": "@string/jq_banker_greet",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_signup",
+        "next_phrase_id": "jq_banker_signed",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank_member",
+            "value": 0
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_bank_card",
+            "value": 1
+          },
+          {
+            "rewardType": "questProgress",
+            "id": "jq_quest_bank_member",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_deposit",
+        "next_phrase_id": "jq_bank_deposit_menu",
+        "requires": [
+          {
+            "requireType": "inventoryKeep",
+            "id": "jq_bank_card",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_withdraw",
+        "next_phrase_id": "jq_bank_withdraw_menu",
+        "requires": [
+          {
+            "requireType": "inventoryKeep",
+            "id": "jq_bank_card",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_loan",
+        "next_phrase_id": "jq_bank_loan_menu",
+        "requires": [
+          {
+            "requireType": "inventoryKeep",
+            "id": "jq_bank_card",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_lockbox",
+        "next_phrase_id": "jq_bank_lockbox_menu",
+        "requires": [
+          {
+            "requireType": "inventoryKeep",
+            "id": "jq_bank_card",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_about",
+        "next_phrase_id": "jq_bank_about"
+      },
+      {
+        "text": "@string/common_goodbye",
+        "next_phrase_id": "X_END_CONVERSATION"
+      }
+    ]
+  },
+  {
+    "id": "jq_banker_signed",
+    "message": "@string/jq_banker_signed_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_about",
+    "message": "@string/jq_bank_about_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_deposit_menu",
+    "message": "@string/jq_bank_deposit_menu_msg",
+    "replies": [
+      {
+        "text": "@string/jq_bank_deposit_10",
+        "next_phrase_id": "jq_bank_deposit_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 10
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_note_10",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_deposit_50",
+        "next_phrase_id": "jq_bank_deposit_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 50
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_note_50",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_deposit_100",
+        "next_phrase_id": "jq_bank_deposit_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 100
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_note_100",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_deposit_500",
+        "next_phrase_id": "jq_bank_deposit_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 500
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_note_500",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_deposit_1000",
+        "next_phrase_id": "jq_bank_deposit_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 1000
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_note_1000",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_deposit_5000",
+        "next_phrase_id": "jq_bank_deposit_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 5000
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_note_5000",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_deposit_10000",
+        "next_phrase_id": "jq_bank_deposit_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 10000
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_note_10000",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_deposit_done",
+    "message": "@string/jq_bank_deposit_done_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_withdraw_menu",
+    "message": "@string/jq_bank_withdraw_menu_msg",
+    "replies": [
+      {
+        "text": "@string/jq_bank_withdraw_10",
+        "next_phrase_id": "jq_bank_withdraw_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_note_10",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_withdraw_50",
+        "next_phrase_id": "jq_bank_withdraw_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_note_50",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 50
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_withdraw_100",
+        "next_phrase_id": "jq_bank_withdraw_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_note_100",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_withdraw_500",
+        "next_phrase_id": "jq_bank_withdraw_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_note_500",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 500
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_withdraw_1000",
+        "next_phrase_id": "jq_bank_withdraw_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_note_1000",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 1000
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_withdraw_5000",
+        "next_phrase_id": "jq_bank_withdraw_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_note_5000",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 5000
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_withdraw_10000",
+        "next_phrase_id": "jq_bank_withdraw_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_note_10000",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 10000
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_withdraw_done",
+    "message": "@string/jq_bank_withdraw_done_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_loan_menu",
+    "message": "@string/jq_bank_loan_menu_msg",
+    "replies": [
+      {
+        "text": "@string/jq_bank_loan_take_10",
+        "next_phrase_id": "jq_bank_loan_taken",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 0
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 100
+          },
+          {
+            "rewardType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_take_20",
+        "next_phrase_id": "jq_bank_loan_taken",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 0
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 500
+          },
+          {
+            "rewardType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_take_30",
+        "next_phrase_id": "jq_bank_loan_taken",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 0
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 1000
+          },
+          {
+            "rewardType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_take_40",
+        "next_phrase_id": "jq_bank_loan_taken",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 0
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "gold",
+            "value": 5000
+          },
+          {
+            "rewardType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_repay_10",
+        "next_phrase_id": "jq_bank_loan_paid",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 10
+          },
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 110
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 99
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_repay_20",
+        "next_phrase_id": "jq_bank_loan_paid",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 20
+          },
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 550
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 99
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_repay_30",
+        "next_phrase_id": "jq_bank_loan_paid",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 30
+          },
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 1100
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 99
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_repay_40",
+        "next_phrase_id": "jq_bank_loan_paid",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 40
+          },
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 5500
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 99
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_check",
+        "next_phrase_id": "jq_bank_loan_status"
+      },
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_loan_taken",
+    "message": "@string/jq_bank_loan_taken_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_loan_paid",
+    "message": "@string/jq_bank_loan_paid_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main",
+        "rewards": [
+          {
+            "rewardType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_loan_status",
+    "message": "@string/jq_bank_loan_status_msg",
+    "replies": [
+      {
+        "text": "@string/jq_bank_loan_status_none",
+        "next_phrase_id": "jq_bank_loan_menu",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_status_10",
+        "next_phrase_id": "jq_bank_loan_menu",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_status_20",
+        "next_phrase_id": "jq_bank_loan_menu",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_status_30",
+        "next_phrase_id": "jq_bank_loan_menu",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_loan_status_40",
+        "next_phrase_id": "jq_bank_loan_menu",
+        "requires": [
+          {
+            "requireType": "questProgress",
+            "id": "jq_quest_bank",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_lockbox_menu",
+    "message": "@string/jq_bank_lockbox_menu_msg",
+    "replies": [
+      {
+        "text": "@string/jq_bank_lockbox_deposit",
+        "next_phrase_id": "jq_bank_lockbox_deposit_menu"
+      },
+      {
+        "text": "@string/jq_bank_lockbox_withdraw",
+        "next_phrase_id": "jq_bank_lockbox_withdraw_menu"
+      },
+      {
+        "text": "@string/jq_bank_lockbox_cache",
+        "next_phrase_id": "jq_bank_lockbox_cache_menu"
+      },
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_banker_main"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_lockbox_deposit_menu",
+    "message": "@string/jq_bank_lockbox_dep_menu_msg",
+    "replies": [
+      {
+        "text": "@string/jq_bank_lockbox_dep_ruby",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_ruby",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_ruby",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_emerald",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_emerald",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_emerald",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_sapphire",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_sapphire",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_sapphire",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_diamond",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_diamond",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_diamond",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_pearl",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_pearl",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_pearl",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_scroll",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_scroll",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_scroll",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_tome",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_tome",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_tome",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_deed",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_deed",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_deed",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_signet",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_signet",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_signet",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_amulet",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_amulet",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_amulet",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_chalice",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_chalice",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_chalice",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_crown",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_crown",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_crown",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_blade",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_blade",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_blade",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_shield",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_shield",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_shield",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_cloak",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_cloak",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_cloak",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_dep_relic",
+        "next_phrase_id": "jq_bank_lockbox_dep_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_good_relic",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_relic",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_bank_lockbox_menu"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_lockbox_dep_done",
+    "message": "@string/jq_bank_lockbox_dep_done_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_bank_lockbox_menu"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_lockbox_withdraw_menu",
+    "message": "@string/jq_bank_lockbox_wd_menu_msg",
+    "replies": [
+      {
+        "text": "@string/jq_bank_lockbox_wd_ruby",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_ruby",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_ruby",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_emerald",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_emerald",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_emerald",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_sapphire",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_sapphire",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_sapphire",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_diamond",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_diamond",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_diamond",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_pearl",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_pearl",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_pearl",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_scroll",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_scroll",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_scroll",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_tome",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_tome",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_tome",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_deed",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_deed",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_deed",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_signet",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_signet",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_signet",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_amulet",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_amulet",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_amulet",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_chalice",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_chalice",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_chalice",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_crown",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_crown",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_crown",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_blade",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_blade",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_blade",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_shield",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_shield",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_shield",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_cloak",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_cloak",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_cloak",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_wd_relic",
+        "next_phrase_id": "jq_bank_lockbox_wd_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_relic",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_relic",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_bank_lockbox_menu"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_lockbox_wd_done",
+    "message": "@string/jq_bank_lockbox_wd_done_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_bank_lockbox_menu"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_lockbox_cache_menu",
+    "message": "@string/jq_bank_lockbox_cache_menu_msg",
+    "replies": [
+      {
+        "text": "@string/jq_bank_lockbox_cache_buy",
+        "next_phrase_id": "jq_bank_lockbox_cache_done",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "gold",
+            "value": 50
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "give_item",
+            "id": "jq_voucher_cache",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_bank_lockbox_cache_redeem",
+        "next_phrase_id": "jq_bank_lockbox_cache_redeemed",
+        "requires": [
+          {
+            "requireType": "inventory_remove",
+            "id": "jq_voucher_cache",
+            "value": 1
+          }
+        ],
+        "rewards": [
+          {
+            "rewardType": "dropList",
+            "id": "jq_bank_drop_cache",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_bank_lockbox_menu"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_lockbox_cache_done",
+    "message": "@string/jq_bank_lockbox_cache_done_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_bank_lockbox_menu"
+      }
+    ]
+  },
+  {
+    "id": "jq_bank_lockbox_cache_redeemed",
+    "message": "@string/jq_bank_lockbox_cache_redeemed_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_bank_lockbox_menu"
+      }
+    ]
+  },
+  {
+    "id": "jq_guard_main",
+    "message": "@string/jq_bank_guard_msg",
+    "replies": [
+      {
+        "text": "@string/common_goodbye",
+        "next_phrase_id": "X_END_CONVERSATION"
+      }
+    ]
+  },
+  {
+    "id": "jq_clerk_main",
+    "message": "@string/jq_bank_clerk_msg",
+    "replies": [
+      {
+        "text": "@string/jq_bank_clerk_rates",
+        "next_phrase_id": "jq_clerk_rates"
+      },
+      {
+        "text": "@string/common_goodbye",
+        "next_phrase_id": "X_END_CONVERSATION"
+      }
+    ]
+  },
+  {
+    "id": "jq_clerk_rates",
+    "message": "@string/jq_bank_clerk_rates_msg",
+    "replies": [
+      {
+        "text": "@string/jq_banker_reply_back",
+        "next_phrase_id": "jq_clerk_main"
+      }
+    ]
+  }
+]

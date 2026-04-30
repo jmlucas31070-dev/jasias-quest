@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="10">
+  <tileset firstgid="1" source="cave1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="back" type="MapChange" x="224" y="352" width="32" height="32">
+      <properties><property name="map" value="jq_drow_cave_lloth"/><property name="place" value="from_council"/></properties>
+    </object>
+    <object id="2" name="elder_silver" type="Spawn" x="32" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_moon_silver_elder"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="3" name="elder_crimson" type="Spawn" x="160" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_moon_crimson_elder"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="4" name="elder_azure" type="Spawn" x="288" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_moon_azure_elder"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="5" name="elder_gold" type="Spawn" x="416" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_moon_gold_elder"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="6" name="elder_emerald" type="Spawn" x="32" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_moon_emerald_elder"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="7" name="elder_violet" type="Spawn" x="160" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_moon_violet_elder"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="8" name="elder_pearl" type="Spawn" x="288" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_moon_pearl_elder"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="9" name="lloth" type="Spawn" x="224" y="32" width="32" height="32">
+      <properties><property name="monsterType" value="jq_npc_lloth"/><property name="quantity" value="1"/></properties>
+    </object>
+  </objectgroup>
+</map>
