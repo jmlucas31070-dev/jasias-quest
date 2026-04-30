@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Westgate House - 2 rooms.
+  Room A: sewing nook. Room B: kitchen with stove.
+-->
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="18" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="10">
+
+  <tileset firstgid="1" source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="18" height="12">
+    <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="18" height="12"/>
+  <layer id="3" name="Above" width="18" height="12"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="entry" type="MapChange" x="256" y="352" width="32" height="32">
+      <properties><property name="map" value="westgate_market"/><property name="place" value="door_home2"/></properties>
+    </object>
+    <!-- Sewing room (left) -->
+    <object id="2" name="sewing_machine" type="Spawn" x="96" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_sewing_machine"/><property name="quantity" value="1"/></properties>
+    </object>
+    <!-- Kitchen (right) -->
+    <object id="3" name="stove" type="Spawn" x="416" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_stove"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="4" name="signpost" type="Sign" x="288" y="352" width="32" height="32">
+      <properties><property name="message" value="@string/wg_signpost_home2"/></properties>
+    </object>
+  </objectgroup>
+</map>

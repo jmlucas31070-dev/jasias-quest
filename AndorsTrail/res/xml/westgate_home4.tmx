@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Westgate Estate - 4 rooms.
+  Room A: craft hall (sewing machine + forge)
+  Room B: kitchen with stove
+  Room C: butler's foyer (Reginald)
+  Room D: large garden plot (8 plots)
+-->
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="30" height="22"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="30">
+
+  <tileset firstgid="1" source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+  <tileset firstgid="513" source="outdoor1.tsx"/>
+
+  <layer id="1" name="Ground" width="30" height="22">
+    <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="30" height="22"/>
+  <layer id="3" name="Above" width="30" height="22"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="entry" type="MapChange" x="448" y="672" width="32" height="32">
+      <properties><property name="map" value="westgate_market"/><property name="place" value="door_home4"/></properties>
+    </object>
+
+    <!-- Foyer: butler -->
+    <object id="2" name="butler" type="Spawn" x="448" y="544" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_butler"/><property name="quantity" value="1"/></properties>
+    </object>
+
+    <!-- Craft hall (top left) -->
+    <object id="3" name="sewing_machine" type="Spawn" x="96" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_sewing_machine"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="4" name="forge" type="Spawn" x="96" y="224" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_forge"/><property name="quantity" value="1"/></properties>
+    </object>
+
+    <!-- Kitchen (top center) -->
+    <object id="5" name="stove" type="Spawn" x="448" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_stove"/><property name="quantity" value="1"/></properties>
+    </object>
+
+    <!-- Large garden plot (right) - 8 tiles -->
+    <object id="10" name="garden_a" type="Spawn" x="704" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_garden_plot"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="11" name="garden_b" type="Spawn" x="736" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_garden_plot"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="12" name="garden_c" type="Spawn" x="768" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_garden_plot"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="13" name="garden_d" type="Spawn" x="800" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_garden_plot"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="14" name="garden_e" type="Spawn" x="704" y="128" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_garden_plot"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="15" name="garden_f" type="Spawn" x="736" y="128" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_garden_plot"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="16" name="garden_g" type="Spawn" x="768" y="128" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_garden_plot"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="17" name="garden_h" type="Spawn" x="800" y="128" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_garden_plot"/><property name="quantity" value="1"/></properties>
+    </object>
+
+    <object id="20" name="signpost" type="Sign" x="480" y="672" width="32" height="32">
+      <properties><property name="message" value="@string/wg_signpost_home4"/></properties>
+    </object>
+  </objectgroup>
+</map>

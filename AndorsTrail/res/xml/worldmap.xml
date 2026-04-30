@@ -6973,4 +6973,52 @@
   <map id="interiors_wofol_warehouse" x="0" y="65220" width="25" height="15"/>
   <map id="interiors_wofol_weaponshop" x="0" y="65256" width="12" height="12"/>
   <map id="semos_mausoleum" x="0" y="65292" width="14" height="15"/>
+
+  <!-- Outdoor market square just west of Ados west gate -->
+  <map id="westgate_market" name="@string/map_westgate_market"
+       worldX="1170" worldY="640" worldW="120" worldH="120" />
+
+  <!-- The four house interiors. Interior maps don't usually appear on
+       the worldmap overlay, but listing them here means the realtor's
+       deeds can fast-travel directly to them once owned. -->
+  <map id="westgate_home1" name="@string/map_westgate_home1"
+       worldX="1180" worldY="600" worldW="40" worldH="40" interior="true" />
+  <map id="westgate_home2" name="@string/map_westgate_home2"
+       worldX="1180" worldY="660" worldW="60" worldH="40" interior="true" />
+  <map id="westgate_home3" name="@string/map_westgate_home3"
+       worldX="1180" worldY="710" worldW="80" worldH="60" interior="true" />
+  <map id="westgate_home4" name="@string/map_westgate_home4"
+       worldX="1180" worldY="780" worldW="100" worldH="80" interior="true" />
+
+  <!-- ==== Castle (next to the homes, north of the market) ==== -->
+  <!-- Castle entry sits on the worldmap as the public-facing tile. -->
+  <map id="castle_entry" name="@string/map_castle_entry"
+       worldX="1290" worldY="600" worldW="60" worldH="60" />
+
+  <!-- All other castle interiors are flagged interior="true" so they don't
+       clutter the worldmap overlay but remain valid fast-travel targets. -->
+  <map id="castle_grove"         name="@string/map_castle_grove"         worldX="1290" worldY="540" worldW="40" worldH="40" interior="true" />
+  <map id="castle_garden"        name="@string/map_castle_garden"        worldX="1330" worldY="540" worldW="40" worldH="40" interior="true" />
+  <map id="castle_antichamber"   name="@string/map_castle_antichamber"   worldX="1370" worldY="540" worldW="40" worldH="40" interior="true" />
+  <map id="castle_throne"        name="@string/map_castle_throne"        worldX="1410" worldY="540" worldW="40" worldH="40" interior="true" />
+  <map id="castle_workroom"      name="@string/map_castle_workroom"      worldX="1450" worldY="540" worldW="40" worldH="40" interior="true" />
+  <map id="castle_kitchen"       name="@string/map_castle_kitchen"       worldX="1290" worldY="580" worldW="40" worldH="40" interior="true" />
+  <map id="castle_dining"        name="@string/map_castle_dining"        worldX="1330" worldY="580" worldW="40" worldH="40" interior="true" />
+  <map id="castle_hall"          name="@string/map_castle_hall"          worldX="1370" worldY="580" worldW="40" worldH="40" interior="true" />
+  <map id="castle_trophy"        name="@string/map_castle_trophy"        worldX="1410" worldY="580" worldW="40" worldH="40" interior="true" />
+  <map id="castle_library"       name="@string/map_castle_library"       worldX="1450" worldY="580" worldW="40" worldH="40" interior="true" />
+  <map id="castle_guest_west"    name="@string/map_castle_guest_west"    worldX="1290" worldY="620" worldW="40" worldH="40" interior="true" />
+  <map id="castle_sunny_bedroom" name="@string/map_castle_sunny_bedroom" worldX="1330" worldY="620" worldW="40" worldH="40" interior="true" />
+  <map id="home"                 name="@string/map_castle_home"          worldX="1410" worldY="620" worldW="40" worldH="40" interior="true" />
+  <map id="castle_guest_east"    name="@string/map_castle_guest_east"    worldX="1450" worldY="620" worldW="40" worldH="40" interior="true" />
+
+  <map id="castle_b1"            name="@string/map_castle_b1"            worldX="1290" worldY="700" worldW="100" worldH="80" interior="true" />
+  <map id="castle_b2"            name="@string/map_castle_b2"            worldX="1290" worldY="800" worldW="100" worldH="80" interior="true" />
+
+  <map id="castle_roof"          name="@string/map_castle_roof"          worldX="1290" worldY="500" worldW="100" worldH="60" interior="true" />
+  <map id="castle_tower_nw"      name="@string/map_castle_tower_nw"      worldX="1290" worldY="460" worldW="30" worldH="30" interior="true" />
+  <map id="castle_tower_ne"      name="@string/map_castle_tower_ne"      worldX="1330" worldY="460" worldW="30" worldH="30" interior="true" />
+  <map id="castle_tower_sw"      name="@string/map_castle_tower_sw"      worldX="1370" worldY="460" worldW="30" worldH="30" interior="true" />
+  <map id="castle_tower_se"      name="@string/map_castle_tower_se"      worldX="1410" worldY="460" worldW="30" worldH="30" interior="true" />
+
 </worldmap>

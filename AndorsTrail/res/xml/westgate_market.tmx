@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Westgate Market - the outdoor square just west of Ados west gate.
+  This is a SKELETON MAP. Open it in Tiled, paint it with your project's
+  tilesets (recommended: world1.png ground, buildings1.png stalls, etc.)
+  to match Ados visually. The object layer below contains the working
+  spawnpoints, signs, and exits the engine actually reads.
+
+  Stalls (left column): weaponer, armorer, seamstress
+  Stalls (right column): grocer, farmers market, gift
+  Realtor: at the south side, by the gate to the home interiors.
+  Farmer: next to the farmers market stall.
+-->
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="30" height="22"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="40">
+
+  <tileset firstgid="1" source="world1.tsx"/>
+  <tileset firstgid="513" source="buildings1.tsx"/>
+  <tileset firstgid="769" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="30" height="22">
+    <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    </data>
+  </layer>
+
+  <layer id="2" name="Object" width="30" height="22"/>
+  <layer id="3" name="Above" width="30" height="22"/>
+
+  <objectgroup id="4" name="eventLayer">
+
+    <!-- Eastern exit back to Ados west gate (player coming in from Ados appears here) -->
+    <object id="1" name="ados_west_gate" type="MapChange" x="928" y="320" width="32" height="64">
+      <properties>
+        <property name="map" value="ados_outside_west"/>
+        <property name="place" value="from_westgate_market"/>
+      </properties>
+    </object>
+
+    <!-- NPCs around the square -->
+    <object id="2" name="realtor" type="Spawn" x="448" y="160" width="32" height="32">
+      <properties>
+        <property name="monsterType" value="wg_npc_realtor"/>
+        <property name="quantity" value="1"/>
+      </properties>
+    </object>
+
+    <!-- Stalls left side -->
+    <object id="3" name="weaponer" type="Spawn" x="128" y="288" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_weaponer"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="4" name="armorer" type="Spawn" x="128" y="416" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_armorer"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="5" name="seamstress" type="Spawn" x="128" y="544" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_seamstress"/><property name="quantity" value="1"/></properties>
+    </object>
+
+    <!-- Stalls right side -->
+    <object id="6" name="grocer" type="Spawn" x="800" y="288" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_grocer"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="7" name="farmers_market" type="Spawn" x="800" y="416" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_market"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="8" name="gift" type="Spawn" x="800" y="544" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_gift"/><property name="quantity" value="1"/></properties>
+    </object>
+
+    <!-- Farmer next to the farmers market stall -->
+    <object id="9" name="farmer" type="Spawn" x="736" y="416" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_farmer"/><property name="quantity" value="1"/></properties>
+    </object>
+
+    <!-- Doors south of the realtor leading to each owned home interior -->
+    <object id="10" name="door_home1" type="MapChange" x="320" y="608" width="32" height="32">
+      <properties>
+        <property name="map" value="westgate_home1"/>
+        <property name="place" value="entry"/>
+        <property name="requires" value="wg_deed_home1"/>
+      </properties>
+    </object>
+    <object id="11" name="door_home2" type="MapChange" x="416" y="608" width="32" height="32">
+      <properties>
+        <property name="map" value="westgate_home2"/>
+        <property name="place" value="entry"/>
+        <property name="requires" value="wg_deed_home2"/>
+      </properties>
+    </object>
+    <object id="12" name="door_home3" type="MapChange" x="512" y="608" width="32" height="32">
+      <properties>
+        <property name="map" value="westgate_home3"/>
+        <property name="place" value="entry"/>
+        <property name="requires" value="wg_deed_home3"/>
+      </properties>
+    </object>
+    <object id="13" name="door_home4" type="MapChange" x="608" y="608" width="32" height="32">
+      <properties>
+        <property name="map" value="westgate_home4"/>
+        <property name="place" value="entry"/>
+        <property name="requires" value="wg_deed_home4"/>
+      </properties>
+    </object>
+
+    <!-- Signpost -->
+    <object id="14" name="signpost" type="Sign" x="800" y="160" width="32" height="32">
+      <properties>
+        <property name="message" value="@string/wg_signpost_market"/>
+      </properties>
+    </object>
+
+  </objectgroup>
+</map>

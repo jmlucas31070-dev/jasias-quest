@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="8" height="8"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="4">
+  <tileset firstgid="1"   source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="8" height="8">
+    <data encoding="csv">
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="8" height="8"/>
+  <layer id="3" name="Above" width="8" height="8"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="stairs_down_roof" type="MapChange" x="96" y="192" width="32" height="32">
+      <properties><property name="map" value="castle_roof"/><property name="place" value="from_castle_tower_ne"/></properties>
+    </object>
+    <object id="2" name="lookout" type="Spawn" x="96" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_castle_lookout"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="3" name="sign_tower" type="Sign" x="128" y="192" width="32" height="32">
+      <properties><property name="message" value="@string/wg_castle_sign_tower_ne"/></properties>
+    </object>
+  </objectgroup>
+</map>

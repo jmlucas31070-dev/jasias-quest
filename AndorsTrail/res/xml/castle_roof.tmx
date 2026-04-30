@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="24" height="18"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="9">
+  <tileset firstgid="1"   source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="24" height="18">
+    <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="24" height="18"/>
+  <layer id="3" name="Above" width="24" height="18"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="stairs_down_entry" type="MapChange" x="352" y="288" width="32" height="32">
+      <properties><property name="map" value="castle_entry"/><property name="place" value="from_castle_roof"/></properties>
+    </object>
+    <object id="2" name="tower_nw_up" type="MapChange" x="64" y="64" width="32" height="32">
+      <properties><property name="map" value="castle_tower_nw"/><property name="place" value="from_castle_roof"/></properties>
+    </object>
+    <object id="3" name="tower_ne_up" type="MapChange" x="672" y="64" width="32" height="32">
+      <properties><property name="map" value="castle_tower_ne"/><property name="place" value="from_castle_roof"/></properties>
+    </object>
+    <object id="4" name="tower_sw_up" type="MapChange" x="64" y="480" width="32" height="32">
+      <properties><property name="map" value="castle_tower_sw"/><property name="place" value="from_castle_roof"/></properties>
+    </object>
+    <object id="5" name="tower_se_up" type="MapChange" x="672" y="480" width="32" height="32">
+      <properties><property name="map" value="castle_tower_se"/><property name="place" value="from_castle_roof"/></properties>
+    </object>
+    <object id="6" name="roof_guard" type="Spawn" x="352" y="64" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_castle_guard"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="7" name="roof_marshal" type="Spawn" x="352" y="480" width="32" height="32">
+      <properties><property name="monsterType" value="wg_npc_castle_guard_captain"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="8" name="sign_roof" type="Sign" x="352" y="352" width="32" height="32">
+      <properties><property name="message" value="@string/wg_castle_sign_roof"/></properties>
+    </object>
+  </objectgroup>
+</map>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Westgate Cottage - 1 room.
+  Contents: sewing machine.
+  Skeleton map - paint with your indoor tileset in Tiled.
+-->
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="12" height="10"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="10">
+
+  <tileset firstgid="1" source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="12" height="10">
+    <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="12" height="10"/>
+  <layer id="3" name="Above" width="12" height="10"/>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="1" name="entry" type="MapChange" x="160" y="288" width="32" height="32">
+      <properties>
+        <property name="map" value="westgate_market"/>
+        <property name="place" value="door_home1"/>
+      </properties>
+    </object>
+    <object id="2" name="sewing_machine" type="Spawn" x="96" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="wg_obj_sewing_machine"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="3" name="signpost" type="Sign" x="192" y="288" width="32" height="32">
+      <properties><property name="message" value="@string/wg_signpost_home1"/></properties>
+    </object>
+  </objectgroup>
+</map>
