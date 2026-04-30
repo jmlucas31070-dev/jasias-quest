@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="109">
+  <tileset firstgid="1"   source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12">
+    <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,257,0,0,0,0,0,273,0,0,0,0,0,0,257,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,258,0,0,0,0,0,0,0,0,0,0,0,0,258,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    </data>
+  </layer>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="100" name="exit_console" type="MapChange" x="224" y="352" width="32" height="32">
+      <properties><property name="map" value="home"/><property name="place" value="from_ember_center"/></properties>
+    </object>
+    <object id="101" name="to_route" type="MapChange" x="480" y="160" width="32" height="32">
+      <properties><property name="map" value="ab_ember_route"/><property name="place" value="from_center"/></properties>
+    </object>
+    <object id="102" name="to_hideout" type="MapChange" x="256" y="0" width="32" height="32">
+      <properties><property name="map" value="ab_ember_hideout"/><property name="place" value="from_center"/></properties>
+    </object>
+    <object id="103" name="clerk" type="Spawn" x="256" y="128" width="32" height="32">
+      <properties><property name="monsterType" value="ab_npc_ember_clerk"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="104" name="professor" type="Spawn" x="128" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="ab_npc_ember_professor"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="105" name="breeder" type="Spawn" x="384" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="ab_npc_ember_breeder"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="106" name="shopkeeper" type="Spawn" x="256" y="256" width="32" height="32">
+      <properties><property name="monsterType" value="ab_npc_ember_shopkeeper"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="107" name="town_label" type="namedArea" x="224" y="160" width="32" height="32">
+      <properties><property name="key" value="ember_center"/></properties>
+    </object>
+    <object id="108" name="welcome" type="Sign" x="256" y="288" width="32" height="32">
+      <properties><property name="message" value="Welcome to the Ashbridge Beast Center. Healers, breeders, and orbs upstairs."/></properties>
+    </object>
+  </objectgroup>
+</map>

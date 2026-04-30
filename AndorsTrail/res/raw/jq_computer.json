@@ -1,0 +1,29 @@
+{
+  "id": "jq_computer",
+  "name": "Computer",
+  "description": "A personal computer. You could use it to connect to something...",
+  "interactable": true,
+  "maps": [
+    "home",
+    "castle_sunnys_bedroom",
+    "castle_jasias_bedroom"
+  ],
+  "interaction": {
+    "type": "mud_connect",
+    "mudName": "Nemesis",
+    "mudHost": "nemesis.example.com",
+    "mudPort": 4000,
+    "grantItem": "jq_mud_access_token",
+    "grantItemOnConnect": "jq_mud_logout_device",
+    "storeOriginMap": true,
+    "returnMaps": [
+      "home",
+      "castle_sunnys_bedroom",
+      "castle_jasias_bedroom"
+    ],
+    "questStep": {
+      "questId": "jq_q_mud_connect",
+      "step": 1
+    }
+  }
+}

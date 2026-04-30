@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="108">
+  <tileset firstgid="1"   source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12">
+    <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,258,0,0,0,0,0,0,0,0,0,0,258,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,259,0,0,0,0,0,0,0,0,0,0,0,0,259,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    </data>
+  </layer>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="100" name="to_center" type="MapChange" x="0" y="160" width="32" height="32">
+      <properties><property name="map" value="ab_ember_center"/><property name="place" value="from_route"/></properties>
+    </object>
+    <object id="101" name="to_gym" type="MapChange" x="480" y="160" width="32" height="32">
+      <properties><property name="map" value="ab_ember_gym"/><property name="place" value="from_route"/></properties>
+    </object>
+    <object id="102" name="to_hideout" type="MapChange" x="256" y="352" width="32" height="32">
+      <properties><property name="map" value="ab_ember_hideout"/><property name="place" value="from_route"/></properties>
+    </object>
+    <object id="103" name="wild_patch" type="Spawn" x="128" y="128" width="64" height="64">
+      <properties><property name="monsterType" value="ab_wild_ember_cindlet"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="104" name="wild_patch" type="Spawn" x="320" y="96" width="64" height="64">
+      <properties><property name="monsterType" value="ab_wild_ember_smokrat"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="105" name="wild_patch" type="Spawn" x="192" y="256" width="64" height="64">
+      <properties><property name="monsterType" value="ab_wild_ember_smoulkin"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="106" name="route_label" type="namedArea" x="224" y="160" width="32" height="32">
+      <properties><property name="key" value="ember_route"/></properties>
+    </object>
+    <object id="107" name="trail_marker" type="Sign" x="256" y="288" width="32" height="32">
+      <properties><property name="message" value="Ashbridge Trail. Beasts roam here. Travelers carry orbs."/></properties>
+    </object>
+  </objectgroup>
+</map>

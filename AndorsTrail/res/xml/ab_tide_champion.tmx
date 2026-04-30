@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="104">
+  <tileset firstgid="1"   source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,1,2,1,2,1,2,1,2,1,2,1,2,1,2,17,
+17,2,1,2,1,2,1,2,1,2,1,2,1,2,1,17,
+17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12">
+    <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,273,0,0,0,0,0,0,0,0,0,0,273,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,257,257,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,259,0,0,0,0,0,0,0,0,0,0,259,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    </data>
+  </layer>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="100" name="exit_to_gym" type="MapChange" x="0" y="160" width="32" height="32">
+      <properties><property name="map" value="ab_tide_gym"/><property name="place" value="from_champion"/></properties>
+    </object>
+    <object id="101" name="champion" type="Spawn" x="256" y="64" width="32" height="32">
+      <properties><property name="monsterType" value="ab_npc_tide_champion"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="102" name="arena_label" type="namedArea" x="224" y="160" width="32" height="32">
+      <properties><property name="key" value="tide_arena"/></properties>
+    </object>
+    <object id="103" name="arena_plaque" type="Sign" x="256" y="288" width="32" height="32">
+      <properties><property name="message" value="Champion's Arena — Coralax. Bring the Tideholm Crest."/></properties>
+    </object>
+  </objectgroup>
+</map>

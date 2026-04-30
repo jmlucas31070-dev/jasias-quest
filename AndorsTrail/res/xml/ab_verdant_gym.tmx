@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="106">
+  <tileset firstgid="1"   source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12">
+    <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    </data>
+  </layer>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="100" name="exit_to_route" type="MapChange" x="256" y="352" width="32" height="32">
+      <properties><property name="map" value="ab_verdant_route"/><property name="place" value="from_gym"/></properties>
+    </object>
+    <object id="101" name="to_champion" type="MapChange" x="480" y="160" width="32" height="32">
+      <properties><property name="map" value="ab_verdant_champion"/><property name="place" value="from_gym"/></properties>
+    </object>
+    <object id="102" name="gymleader" type="Spawn" x="256" y="64" width="32" height="32">
+      <properties><property name="monsterType" value="ab_npc_verdant_gymleader"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="103" name="trial_keeper_a" type="Spawn" x="128" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="ab_npc_verdant_team_grunt"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="104" name="trial_keeper_b" type="Spawn" x="384" y="192" width="32" height="32">
+      <properties><property name="monsterType" value="ab_npc_verdant_team_grunt"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="105" name="gym_label" type="namedArea" x="224" y="160" width="32" height="32">
+      <properties><property name="key" value="verdant_gym"/></properties>
+    </object>
+  </objectgroup>
+</map>

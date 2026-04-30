@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
+     renderorder="right-down" width="16" height="12"
+     tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="5" nextobjectid="107">
+  <tileset firstgid="1"   source="indoor1.tsx"/>
+  <tileset firstgid="257" source="objects1.tsx"/>
+
+  <layer id="1" name="Ground" width="16" height="12">
+    <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    </data>
+  </layer>
+  <layer id="2" name="Object" width="16" height="12"/>
+  <layer id="3" name="Above" width="16" height="12">
+    <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    </data>
+  </layer>
+
+  <objectgroup id="4" name="eventLayer">
+    <object id="100" name="to_center" type="MapChange" x="0" y="160" width="32" height="32">
+      <properties><property name="map" value="ab_dusk_center"/><property name="place" value="from_route"/></properties>
+    </object>
+    <object id="101" name="to_gym" type="MapChange" x="480" y="160" width="32" height="32">
+      <properties><property name="map" value="ab_dusk_gym"/><property name="place" value="from_route"/></properties>
+    </object>
+    <object id="102" name="to_hideout" type="MapChange" x="256" y="352" width="32" height="32">
+      <properties><property name="map" value="ab_dusk_hideout"/><property name="place" value="from_route"/></properties>
+    </object>
+    <object id="103" name="wild_patch" type="Spawn" x="128" y="128" width="64" height="64">
+      <properties><property name="monsterType" value="ab_wild_dusk_wisplet"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="104" name="wild_patch" type="Spawn" x="320" y="96" width="64" height="64">
+      <properties><property name="monsterType" value="ab_wild_dusk_hexpup"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="105" name="wild_patch" type="Spawn" x="192" y="256" width="64" height="64">
+      <properties><property name="monsterType" value="ab_wild_dusk_hexnaught"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="106" name="route_label" type="namedArea" x="224" y="160" width="32" height="32">
+      <properties><property name="key" value="dusk_route"/></properties>
+    </object>
+  </objectgroup>
+</map>

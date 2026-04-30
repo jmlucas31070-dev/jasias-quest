@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  MODIFIED for Astral Beasts mod.
+  Diff vs upstream: added one Spawn object (id 6) for the Astral Console
+  on Sunny's side of the room, plus a Sign (id 7) describing it.
+-->
 <map version="1.0" tiledversion="1.4.3" orientation="orthogonal"
      renderorder="right-down" width="16" height="12"
      tilewidth="32" tileheight="32" infinite="0"
-     nextlayerid="5" nextobjectid="6">
+     nextlayerid="5" nextobjectid="8">
   <tileset firstgid="1"   source="indoor1.tsx"/>
   <tileset firstgid="257" source="objects1.tsx"/>
 
@@ -41,5 +46,23 @@
     <object id="5" name="plaque" type="Sign" x="224" y="288" width="32" height="32">
       <properties><property name="message" value="@string/wg_castle_sign_sunny"/></properties>
     </object>
+    <!-- ASTRAL BEASTS: console on side table -->
+    <object id="6" name="astral_console" type="Spawn" x="96" y="96" width="32" height="32">
+      <properties><property name="monsterType" value="ab_obj_computer"/><property name="quantity" value="1"/></properties>
+    </object>
+    <object id="7" name="astral_console_sign" type="Sign" x="96" y="128" width="32" height="32">
+      <properties><property name="message" value="@string/ab_sign_sunny_console"/></properties>
+    </object>
   </objectgroup>
+
+<overlay mapId="castle_sunnys_bedroom" modification="add_computer">
+  <objectgroup name="JQ_Objects">
+    <object id="9001" name="Computer" type="jq_computer" x="256" y="192" width="32" height="32">
+      <properties>
+        <property name="objectId" value="jq_computer"/>
+        <property name="interactable" value="true"/>
+      </properties>
+    </object>
+  </objectgroup>
+</overlay>
 </map>
