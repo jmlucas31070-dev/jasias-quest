@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="building_wall_int_clay" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_clay.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="ground_scratches" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_scratches.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="ground_rock_pebbles" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_pebbles.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0jEKgDAUBNGP91Kbuf+ZjEUghYKBJL9witcPyxIRDLIXZ7F1YLC74ejoYJKvW5DcQHIDixrePsFCT1uQ0NBuQZK6BckNSJIkST9yAc+3Auk=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwTEBAAAIwKA99q9sC32A+jMBAAAAFxZdlAAG
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzrEJADAQw0AX2n/mTBBI8/ghMlwtk4QhL2NYu8+CPgv6tx+UP1DU7kuSJEn6ywGTyQ9p
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0sEJACAMA8AMVd1/NDuEYME7yD+EJPdVZ3V23iodRnXwiXlbAAAA/zgEgAO6
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="0" width="32" height="224">
+   <properties>
+    <property name="map" value="level_1_deniran_lost_caves_n2_w_x1_y3"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="736" y="0" width="288" height="32">
+   <properties>
+    <property name="map" value="level_1_deniran_lost_caves_n2_w_x0_y2"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="96" width="32" height="32"/>
+  <object name="from_south_0" x="864" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

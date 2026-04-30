@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="building_castle" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_castle.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="furniture_light_iron_lamp" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_iron_lamp.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="furniture_light_flames" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_flames.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="logic_creature_human_imperial" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_human_imperial.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="furniture_light_small_lamp" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_small_lamp.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="item_armor_armor" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_armor_armor.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="furniture_other_stick" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_other_stick.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="furniture_carpet_carpets_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_carpet_carpets_2.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="9" name="furniture_table_grey_plain" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_table_grey_plain.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="10" name="item_weapon_spear" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_weapon_spear.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="11" name="item_pot_pot_on_stone" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_pot_pot_on_stone.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="12" name="item_pot_pot_green" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_pot_pot_green.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="13" name="building_wall_int_clay" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_clay.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="14" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrTY2Bg0BvFo3gUj+JRPIpH8ZDBqVTAQ93+gQ7/UftH7UfGPEDMSwDzDTH/0yr/DiX7R9P5qP3UxNxQPND2AwDZ8sNG
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1LEJACAQA8AHtdL957WwcwEh3nWpUgRSBQCQoX3ez7Ee9Y4rT1PE6L6FEBvS1AAq
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzzEKADAIA0C3gP9/cHdxl8IdZMgUUgUAAAC7LD0H2zn63yM/e2W8AEw=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0NEJACAIQEEncP9xW6CfSovggvsTnpYRkQAAsGj3Vfe75n/pv/5/ff3Ofkx6JzvcvLXy/qp9BiB9L10=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgFo2AUjIJRMApGwVAB+4H4ABUwueAXlBZgpAxTav81IFZhJB9Tav8rILZgJB9Tav8/IJ4OxKvIxNSwv3AA0j8u+zmBmIsA5qah/QPtf35QniSABalQzlymk//5GPGXM0KM9LEfVzmjRif7QeWMJSMmtqKT/fjKmdV0sh/mTw40NRxYxGhlPweavbQG2PzPjYYpAQCtXkZp
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0aENADAMA0GjNvtPHF6FRSq6Y2/qBAAAAGb19Bm2H64r1ho/ZAAe
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0rEJAAAIAzBXF/3/W38QFyHZC5YaAQAAP+WjW9tcfkRXjtQyN7SwADk=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="640" width="32" height="384">
+   <properties>
+    <property name="map" value="interiors_kalavan_castle_basement_x1_y0"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="384" y="992" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_kalavan_castle_basement_x0_y1"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_1" type="newmap" x="544" y="992" width="480" height="32">
+   <properties>
+    <property name="map" value="interiors_kalavan_castle_basement_x0_y1"/>
+    <property name="place" value="from_south_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="832" width="32" height="32"/>
+  <object name="from_north_0" x="384" y="992" width="32" height="32"/>
+  <object name="from_north_1" x="768" y="992" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

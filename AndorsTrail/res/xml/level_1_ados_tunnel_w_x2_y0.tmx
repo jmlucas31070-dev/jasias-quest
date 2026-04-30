@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_brown" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="furniture_light_iron_lamp" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_iron_lamp.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="furniture_light_flames" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_flames.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzqENADAMBLGXImX/kUsKS5sQA+O7TtIAAAB8U9dmu5bb+rMPr/YBAjgXvA==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzQEJAAAIA7CD/Tub4iC4FVgCAABAyzz/uWMBHcgABw==
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzaENAAAIBLE37L8yCsMI0Euqr5IUAAAAZ00f/3n83zUFsBO7
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0DsKACAQA9EtrPyB97+sK1h4AZlmHqQOSYQkSZIk6ZeW6TdE9wK3z0yB+18V/n6A248N7oQAoQ==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="864" width="32" height="160">
+   <properties>
+    <property name="map" value="level_1_ados_tunnel_w_x3_y0"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="896" y="992" width="128" height="32">
+   <properties>
+    <property name="map" value="level_1_ados_tunnel_w_x2_y1"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="928" width="32" height="32"/>
+  <object name="from_north_0" x="960" y="992" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

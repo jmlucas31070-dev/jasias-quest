@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_ground_4" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground_4.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="ground_rock_rocks" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_rocks.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="logic_creature_naga" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_naga.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="terrain_cave_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_cave_blue.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1jEKACAMA8CSP+X/X3NxFQTFRJoh8wVsqawqJs+DGZWr8CH0IfQR3+7taTB7mb8e++/gr7p0u3+u/4DdqH0Y+Dd7QNzhdx/xjzrEj6/0BzF6mW8=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0sENACAIBEELUn7Yf2l+NLEC1sSdhPfpQWvSnzqcnXB2gv9Pz6+064Dz5wMdjD0B5d9D7+P0Qb9BkiTVW5dxBOc=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1jEKACAMQ9G/9P5XdhcHQSWVpJD5hQrSAiqxDEIXkY/Qd7XVbx5/PW4dOuxg7uL4/ye9boDdUfs08G/32HFedkC8A8QdfveJH/8gA4tcD5c=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgFAwHsgNh3AO31GyC7/QYwvAfKbrMBtBtmP8Mgst9kgO23GWD7faB50GaA48VntBgeBaNgQIEvCXgwlBeDwQ2DJSzoUY8x45EbKWHAMBoGeAG17WcaYPsZRu2nm/0AKK4NUw==
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0AEJAAAIBLEH7Z/ZFiKyNbhLAAAA9rQFHFaP2wYghAAI
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="96" width="32" height="96">
+   <properties>
+    <property name="map" value="level_3_ados_snake_pit_s_x2_y0"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_east_1" type="newmap" x="992" y="384" width="32" height="128">
+   <properties>
+    <property name="map" value="level_3_ados_snake_pit_s_x2_y0"/>
+    <property name="place" value="from_east_1"/>
+   </properties>
+  </object>
+  <object name="exit_west_0" type="newmap" x="0" y="640" width="32" height="384">
+   <properties>
+    <property name="map" value="level_3_ados_snake_pit_s_x0_y0"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="0" y="992" width="544" height="32">
+   <properties>
+    <property name="map" value="level_3_ados_snake_pit_s_x1_y1"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="128" width="32" height="32"/>
+  <object name="from_west_1" x="992" y="448" width="32" height="32"/>
+  <object name="from_east_0" x="0" y="832" width="32" height="32"/>
+  <object name="from_north_0" x="256" y="992" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

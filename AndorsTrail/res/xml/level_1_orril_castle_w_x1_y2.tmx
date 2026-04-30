@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_brown" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="plant_mosses" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_mosses.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="plant_bush_various_small" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_bush_various_small.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="ground_rock_green_crystal" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_green_crystal.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="item_corpse_skull_dark" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_skull_dark.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="ground_rock_rock_cluster" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_rock_cluster.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="item_corpse_skeleton" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_skeleton.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="furniture_light_iron_lamp" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_iron_lamp.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="9" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="10" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtziEOACAQBLFLkPf//yJRGEJYQcXoTlfVCNZ8ftjfxecn/Rdf/Hvx+Un/5JPP5/N/8rWaQCYdiQ==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1ckJADAIBMA8cpj+G45diGEG/Au76Bh0dHKi8W5bhHxk5iz3gAYdjeKOXlEA/jWUen2IAH4=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1DEKACAMBMGr7/8P9gOChYmnssJ2gUkaLcnKPeM/6Vft7UVdN7nRT9+PX+d37/WLv/uPVIV/l7/a7aQ/m3MofHx8fBMFGzXlGO0=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYGBgEGbADpgZ6AOEGQYWjNpPOuACYm4q2c8LxHxYMBeZ5hHjNh4qhAvnaLogCbADMccQ8j+l6ZIdixjrME0X1CwP6F1e0DJc2EZ4PcJGRr6nxH4+LGU0LG0i0/RMl0MhnY7aP/LsZxsN/xFrPz3ra3zl5CgYWAAArAQEkQ==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="0" width="32" height="864">
+   <properties>
+    <property name="map" value="level_1_orril_castle_w_x2_y2"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="64" y="0" width="960" height="32">
+   <properties>
+    <property name="map" value="level_1_orril_castle_w_x1_y1"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="416" width="32" height="32"/>
+  <object name="from_south_0" x="544" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

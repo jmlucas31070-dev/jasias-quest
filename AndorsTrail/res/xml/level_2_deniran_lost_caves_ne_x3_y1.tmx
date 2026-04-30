@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="terrain_dark_caves" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_dark_caves.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="ground_stone_floors" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_stone_floors.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="plant_bush_large_green" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_bush_large_green.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="logic_creature_chaos" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_chaos.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtlzkOwDAIBBGi4v8PThtFFhDA4EQUU/mY9S0jAJAAPtDqrMpZgJS2ZMwn1dH8976y3W/8mouceSN+77pkj3+H+wQ/N7t3ZOIkKl3DMMTOZqe76n7IuhM9+brfiE7/H99nLQ99BMv/oMqLxWPumutT1tj6L8SgU9tbaCR7TjrPXEY/F3yBGPc=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0DEOgCAMhWEoONgL6f1PZgeGDqZEUFn+L3kTaV5pSsB3sqUu7N8772Xx3zeLtJQXe+XB3bVlZJfsZsT16uDud7tEqW5GJ3qjXaIAAPCXw3JyBgCTLij2AYE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtljEOACAIA1n6/y/7Al0Qiuaa3MoRhmpEfXQg8OP/2K/hfpndFbvoEp0uAHgHZxc4ujDbz7s53W9D5j5O/6T/Qdc9CCG1WXHoCJk=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtV7sOwyAMREpLS5MMbaaUifAh7f9/VT0UyUKJKcROGTjppljycX7IUaoMOiPWqP/CCMfX8H5Tsf/Sb9UV91JDQ0MDN0bgA3E4OPcEfCLeIz1SmkJuC1wQ50gP1jQQ/pXm9tE3F+nBmta8Cf5x5N6CI7wJ/v2KnsjdAU/Ac0IHpi94uydu0QvwWtBPVL+OqFY2cRPcvh7lgpqhCdXKM8zO2p1EzZDdqNUL+BaYbbejR3L+UTrB3aiZYtoNewxSu0vauz27iwMfVc8L0A==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0LEBAAAEBDEl9h/YEDqS/or/CLij7QIAeC1dwGG17AcqnwAm
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="0" width="32" height="256">
+   <properties>
+    <property name="map" value="level_2_deniran_lost_caves_ne_x2_y1"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_1" type="newmap" x="0" y="800" width="32" height="224">
+   <properties>
+    <property name="map" value="level_2_deniran_lost_caves_ne_x2_y1"/>
+    <property name="place" value="from_west_1"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="0" y="992" width="1024" height="32">
+   <properties>
+    <property name="map" value="level_2_deniran_lost_caves_ne_x3_y2"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="0" y="0" width="800" height="32">
+   <properties>
+    <property name="map" value="level_2_deniran_lost_caves_ne_x3_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="128" width="32" height="32"/>
+  <object name="from_east_1" x="0" y="896" width="32" height="32"/>
+  <object name="from_north_0" x="512" y="992" width="32" height="32"/>
+  <object name="from_south_0" x="384" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

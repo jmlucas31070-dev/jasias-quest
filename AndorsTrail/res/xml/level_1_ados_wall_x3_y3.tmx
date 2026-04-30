@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="building_wall_int_blue_green" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_blue_green.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="ground_brown_paving" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown_paving.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="building_wall_int_green_blue_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_green_blue_2.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="building_wall_int_green_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_green_blue.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="logic_creature_mutant" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_mutant.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt10sKwCAMBFBhVtmM979tW+hCpLaJ/Qh1Fg8RjRFFVEsp2Yo7O7G144E+JRRY1RFs9/bxxPJAruqR/HTIVY7sxOD4Z7G945YlgnPETWyssSfWREREJjT6HuTg+xgXb4Yv90DzaO8LO/4Wb6wLJj6r8j8LaqMj2Q==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrjYGBg4GBAAA48mFpqsKkfCoCDDubTMgyJ0UuuuQwE3D6Y43QUj+JRPIpH8SgeaXig68GBro8HQ/uAYdQdJLllpKXRwZJXR/HwwwAipBpB
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtltsKgCAQRBcrtguF0P//awpGIvtgsThRe2DexDko6DIR7XThQ1iI1poyhoGkB2cDxzCMf79/SDqwAycHB/LI56S3eTiAjzQ3fvl++KGHlsOc9rrrMSr1xxlkyDxqXCbF/siazUM1Ltr9NS7cqF9yKc9kadQvnckZb1+3CgeqJAXi
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzjERAAAMA6Hf699vfeRAAQUAAFDnBNMeXzwAFw==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal3" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="32" width="32" height="160">
+   <properties>
+    <property name="map" value="level_1_ados_wall_x2_y3"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_1" type="newmap" x="0" y="640" width="32" height="64">
+   <properties>
+    <property name="map" value="level_1_ados_wall_x2_y3"/>
+    <property name="place" value="from_west_1"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="64" y="0" width="64" height="32">
+   <properties>
+    <property name="map" value="level_1_ados_wall_x3_y2"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_1" type="newmap" x="352" y="0" width="64" height="32">
+   <properties>
+    <property name="map" value="level_1_ados_wall_x3_y2"/>
+    <property name="place" value="from_north_1"/>
+   </properties>
+  </object>
+  <object name="exit_north_2" type="newmap" x="640" y="0" width="64" height="32">
+   <properties>
+    <property name="map" value="level_1_ados_wall_x3_y2"/>
+    <property name="place" value="from_north_2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="96" width="32" height="32"/>
+  <object name="from_east_1" x="0" y="672" width="32" height="32"/>
+  <object name="from_south_0" x="96" y="0" width="32" height="32"/>
+  <object name="from_south_1" x="384" y="0" width="32" height="32"/>
+  <object name="from_south_2" x="672" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

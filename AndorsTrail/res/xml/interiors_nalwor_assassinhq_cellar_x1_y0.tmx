@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="8" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="building_wall_int_wall_bricks" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_wall_bricks.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="building_entrance_bricks_ns" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_entrance_bricks_ns.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="building_wall_int_wall_thin_bricks" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_wall_thin_bricks.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="ground_indoor_floor_tiles" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_indoor_floor_tiles.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="furniture_kitchen_cabinets" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_kitchen_cabinets.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="logic_creature_rodent" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_rodent.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="logic_creature_human_kalavan" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_human_kalavan.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="8" height="20">
+  <data encoding="base64" compression="zlib">
+   eNrjZGBg4BzFo3iAMAAWKQWh
+  </data>
+ </layer>
+ <layer name="Objects" width="8" height="20">
+  <data encoding="base64" compression="zlib">
+   eNpjYMAP2KCYHYhFgVgMTZ4LirmBWBKIpRgoBzwUygswjIKhAgCPtwC5
+  </data>
+ </layer>
+ <layer name="Above" width="8" height="20">
+  <data encoding="base64" compression="zlib">
+   eNpjYKA/4GAYWoAViNmAmB2PfziBmIthFJAKAEvoADY=
+  </data>
+ </layer>
+ <layer name="Walkable" width="8" height="20">
+  <data encoding="base64" compression="zlib">
+   eNrjYGBg4KAyZkBjYwP45DloLM9AwM0cdJQnJ3wGkzylGADKDQLh
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="8" height="20">
+  <data encoding="base64" compression="zlib">
+   eNpjY2BgYMOBuYCYDwdmAWJ2BtyAh0J5bjrJ8wIxExAzQ/3EC8VsUHlWKEbns0L9ABLnAGJOaHhhCz9uqFpeEsKPe4jI8+LA2MKLFUv4AQDArQL9
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="8" height="20">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgFo2DgAAACgAAB
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="8" height="20">
+  <data encoding="base64" compression="zlib">
+   eNpjYBjcgBMHexRgB2xDzL0AJ/QAGQ==
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="8" height="20">
+  <object name="exit_west_0" type="newmap" x="0" y="96" width="32" height="160">
+   <properties>
+    <property name="map" value="interiors_nalwor_assassinhq_cellar_x0_y0"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_1" type="newmap" x="0" y="384" width="32" height="192">
+   <properties>
+    <property name="map" value="interiors_nalwor_assassinhq_cellar_x0_y0"/>
+    <property name="place" value="from_west_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="8" height="20">
+  <object name="from_east_0" x="0" y="160" width="32" height="32"/>
+  <object name="from_east_1" x="0" y="480" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="8" height="20"/>
+ <objectgroup name="Replace" width="8" height="20"/>
+</map>

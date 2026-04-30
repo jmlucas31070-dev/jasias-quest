@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="ground_water_pool" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_water_pool.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="ground_grass_edges" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_edges.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="ground_earth_edges" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_earth_edges.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="ground_grass_corners" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_corners.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="plant_flower_daisy_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_blue.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="plant_flower_daisy_yellow" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_yellow.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="plant_flower_daisy_white" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_white.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="9" name="plant_tree_tree_green" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_tree_green.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="10" name="logic_creature_fairy" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_fairy.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="11" name="ground_green_paving" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_green_paving.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="12" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0DEOgDAMQ9EoUiRI739f1g6ghsoOAx7e/OMMMxsk5wKzmQUHuJ0bUH9NQh/ZqfRZnXiQxF2r9nxDZw/Zf9vySaUfYH4jSLyoo7Hb9wZftkVERET+6AInBBFm
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0KENgEAQBdH1VwW4AwWBU0gw9F/QTQer1s1LJvn6R0iSJEmSFHHRTYP+gp15aKdOW8HOvPTRQWfBzr5eaKVWtCf6KhJ1
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt16kNADAMBMErwP3XGxqWgDySNSMdXlNXkmq6lR/NmzfkUf+kV52dPgAAQLcfdd4AVc0HvQ==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtlNEKgCAMRX0tKIosTCL9/6/MoAcZqaFuRO3AeZJ23RYKwTB49E4ZsCPIniPnE3KvZ/YAxJwr7NXPVU7juRbsTSbmKm76HsH5ft0jt76fA9HODWgz6qQyTEBbYb8qUr9WRgiNXN+HujfmPzQEGS2POcjywNLvS8XOxZ4R1o4o/xGGeTtffecPRokOQw==
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0DEBAAAMAiAD2D+vLbYHIpAAAADwpQo4Mi0QAA0=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="224" width="32" height="800">
+   <properties>
+    <property name="map" value="level_0_fado_forest_x2_y0"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="0" y="992" width="256" height="32">
+   <properties>
+    <property name="map" value="level_0_fado_forest_x3_y1"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="608" width="32" height="32"/>
+  <object name="from_north_0" x="128" y="992" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

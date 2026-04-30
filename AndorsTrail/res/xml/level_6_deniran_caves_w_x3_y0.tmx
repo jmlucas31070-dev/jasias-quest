@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="terrain_mine" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_mine.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzbENADAMw7DM+UH/v9kXuhQuYA2cuTOzF3hk/b//8a/9Cf4U/wR/gj/+sR//2p/in+JfUq8D6gBpsA==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYCAOyDAMLBjJ9osAMdsA+112hNs/EuMeZrfsCIz3kZrnQP4WHUC/j+SyZrScHy3nR9P9qN/pCdgGOM8NpN2jYBSMdAAAy0UEIw==
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtz8EJADAMw8Cg/YfuCv20DlgGvQ/P3I1Hjb5+yNbf7xP0KfYp9flc2mfRf/RrfYp9in0zy3UAWJYG1w==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0IEAAAAAAqCF9tcb5EIoAQDeVAEA3Bl4DwAu
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="0" width="32" height="512">
+   <properties>
+    <property name="map" value="level_6_deniran_caves_w_x2_y0"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_1" type="newmap" x="0" y="544" width="32" height="256">
+   <properties>
+    <property name="map" value="level_6_deniran_caves_w_x2_y0"/>
+    <property name="place" value="from_west_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="256" width="32" height="32"/>
+  <object name="from_east_1" x="0" y="672" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

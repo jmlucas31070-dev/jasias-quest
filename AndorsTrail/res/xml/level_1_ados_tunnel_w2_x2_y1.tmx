@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_brown" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="furniture_light_iron_lamp" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_iron_lamp.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="furniture_light_flames" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_flames.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="item_corpse_huge_animal" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_huge_animal.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="ground_rock_rocks_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_rocks_2.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="ground_rock_pink_crystal" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_pink_crystal.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="logic_creature_human_barbarian" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_human_barbarian.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="9" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1zEOADAIQlETNu9/YE/QsSWWPzA/JoNdVW2MDnH7r/rI3EHmDvi7fOHH+8LHD/a5P7n+b/tvww7H5xfDv5MBnZsetQ==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt08sJACAMREFB8Nt/v6YJieAMvPMeQkrhBS3q0Ujan9GKtlMAAKSpn++Dn7vrAP8iAEA=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1kEKACAIRNHZev8LdwGDNvmFmaBtb1IQS1IZ39uh/ak8gjN0bxM+/f/Nfn3MILgGm/yXTLQvuP7x47vNn8zfHf70Lkjvwu6+zPz0wM8/DcsaRA==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBhYIIAD8w2wu0QGoXsG2g2CNDSbB4h5CfhRcBj7fzCnAY7ROKCL/SxAzDqAaYANiNlHeByM2j9qP6GykHu0/B2NeyoBXijmxGEfLxKmZboTGuD2hhCO+lBwAO1nGEH28+BIgwOdBhhG0wBN4wAAqcIESA==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1KENAAAIBLGXsP/CLIAkwbQjnLgE4E9JwKIlAF8G4NwA74QAGg==
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="64" width="32" height="672">
+   <properties>
+    <property name="map" value="level_1_ados_tunnel_w2_x1_y1"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="160" y="992" width="128" height="32">
+   <properties>
+    <property name="map" value="level_1_ados_tunnel_w2_x2_y2"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="384" width="32" height="32"/>
+  <object name="from_north_0" x="224" y="992" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

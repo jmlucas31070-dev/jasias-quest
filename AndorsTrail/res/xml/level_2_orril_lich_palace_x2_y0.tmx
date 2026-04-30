@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_brown" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown.png" width="160" height="32"/>
+ </tileset>
+ <tileset firstgid="6" name="logic_creature_mummy" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_mummy.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="8" name="logic_creature_undead_skeleton" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_undead_skeleton.png" width="192" height="32"/>
+ </tileset>
+ <tileset firstgid="14" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="96" height="160"/>
+ </tileset>
+ <tileset firstgid="29" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1TENAAAMw7BKIzD+aAdjR32YQrJJFgCoMkCt7758984DaHZ9+DJl
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1LENADAMwzA/kv/f7BfVQgGcMzm37QAAPiqr70v1vuq9+4HQefuTXQI=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0sEJACAMA8BuIFjx4f6DOoVU6B3k35BGAADd7MKs4u7H/BTLhxnF3ebn96T3o7kLE5AFVQ==
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0kERAAAIw7D9wL/iGUABl0joNQEA4DISZCXwDfBGAY7oABc=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="576" width="32" height="224">
+   <properties>
+    <property name="map" value="level_2_orril_lich_palace_x3_y0"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_0" type="newmap" x="0" y="544" width="32" height="192">
+   <properties>
+    <property name="map" value="level_2_orril_lich_palace_x1_y0"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="672" width="32" height="32"/>
+  <object name="from_east_0" x="0" y="640" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_brown" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="ground_rock_pebbles" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_pebbles.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="ground_rock_rubble" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_rubble.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="ground_rock_large_boulder" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_large_boulder.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="plant_bush_various_small" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_bush_various_small.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="logic_creature_animal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_animal.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="logic_creature_dragon" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_dragon.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="logic_creature_spider" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_spider.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="9" name="logic_creature_rodent" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_rodent.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="10" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwwEJAAAMBKGD7995PYaCq6aqqqq+fi2gDAE=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0MEJACAQBLF7qKD9F+w2cSCYwDQwVQDQa6djwzdGmmlZAQBPuTg7ACM=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1KENAAAIAzD0/j8Yg+UBaJPpCciqfstEP4Ct59a987QffwawadPqAMk=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBjZgAWIWQfQfnYg5hhA+7mAmJthFJAKmAZI7ygYBaQA5tEggAMeIOYdDYYRA2B1K+cA1608o1ExrMtI5gFuR3KOtuNo3kcYBaNgOAIAIVYAuA==
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1qENACAQBMFXhGAQ9N8rPXxCeMKMP7PqIs6aiU0LgLuGBHxkSUBRPiGv6hJQ1AaP+gBB
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="0" width="32" height="64">
+   <properties>
+    <property name="map" value="level_1_fado_great_cave_nw_x2_y1"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_1" type="newmap" x="0" y="160" width="32" height="864">
+   <properties>
+    <property name="map" value="level_1_fado_great_cave_nw_x2_y1"/>
+    <property name="place" value="from_west_1"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="0" y="992" width="1024" height="32">
+   <properties>
+    <property name="map" value="level_1_fado_great_cave_nw_x3_y2"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="0" y="0" width="544" height="32">
+   <properties>
+    <property name="map" value="level_1_fado_great_cave_nw_x3_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_1" type="newmap" x="640" y="0" width="384" height="32">
+   <properties>
+    <property name="map" value="level_1_fado_great_cave_nw_x3_y0"/>
+    <property name="place" value="from_north_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="32" width="32" height="32"/>
+  <object name="from_east_1" x="0" y="576" width="32" height="32"/>
+  <object name="from_north_0" x="512" y="992" width="32" height="32"/>
+  <object name="from_south_0" x="256" y="0" width="32" height="32"/>
+  <object name="from_south_1" x="832" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

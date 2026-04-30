@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="96" height="352"/>
+ </tileset>
+ <tileset firstgid="34" name="ground_grass_edges" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_edges.png" width="384" height="96"/>
+ </tileset>
+ <tileset firstgid="70" name="plant_flower_daisy_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_blue.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="78" name="plant_flower_daisy_yellow" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_yellow.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="86" name="plant_flower_daisy_white" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_white.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="94" name="plant_tree_tree_green" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_tree_green.png" width="256" height="320"/>
+ </tileset>
+ <tileset firstgid="174" name="plant_stump_stump_brown" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_stump_stump_brown.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="178" name="item_food_beehive2" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_food_beehive2.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="179" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwwEJAAAMBKHj+4dej6HgqqmqqqqvHyPACAE=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwwEJAAAMA6D1j7OEe46jYAIAAAB81jsSyACz
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtlDEKgDAQBPel4issjZ1Eq5Qxn/VSCGnS3hTewMLWs7BJ0mHZLQnop+WxNKhvlsWyQp3y/vUGb9DJoP9OAf13Kux/JAP+Rwrgf6TC/r13mOG1wwyvHQRvIHgDwRvMvF+W2+GDBH+Q4A8KgiAI/skLS44dLw==
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtlTEOACAIA+//3+GDTm6sWhLukiZupaBYQCm1WIS9WZq9y0/In9Askt4T8/+ug3APCPdgsr/3b+/77/6DV2cRkU3c/XcACK6vew==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBjZoH+A7Z8+wsO/b4DjYNpoHDAsBOIJAxgXK4F41WhcjMbFaDyMxgNaHIyCgU/7tGQTk/ZpyR4FAwvCBth+fRx4oO1Hd4cXDe0nxl2DKW4IucdvkLhjoNIMMXgdEK8HYgAXDj29
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="224" width="32" height="800">
+   <properties>
+    <property name="map" value="level_0_fado_forest_s_x2_y2"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="0" y="992" width="960" height="32">
+   <properties>
+    <property name="map" value="level_0_fado_forest_s_x3_y3"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="608" width="32" height="32"/>
+  <object name="from_north_0" x="480" y="992" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

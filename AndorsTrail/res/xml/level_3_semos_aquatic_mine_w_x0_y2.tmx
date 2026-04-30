@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_indoor_floor_tiles" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_indoor_floor_tiles.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="logic_portal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_portal.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="terrain_cave_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_cave_blue.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwwEJAAAMBKGD7995PYaCq6aqqqq+fi2gDAE=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzkEKACAIBVHB2nn/85aQG4l2UsE8+DvBEcEPbK5f/u9rhw5dN9UN0ZFnxf93HXkAAAAA8KoB7gEA5g==
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1zEKACAMA8AO+f+b/YHUQSx4gZuTNamqNHWSi/S/7c+A/t2OAAAA35r8k27tOM0CyFwOyQ==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1zESgCAMBdHfGyvhBMr9r4gFthiKDDpsZl7Lhg5Mkjns8s3mPG/U6n39pK+gvn2g79nDAAAAgElSR3Q7366OI2iP1Nrl5Z1+tj0i7lwm/FXyYPeZCnoaLUU=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0DENAAAMA6Be9S+5HvYtAQkkcFMFAAAAbwximAAH
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="992" width="32" height="32">
+   <properties>
+    <property name="map" value="level_3_semos_aquatic_mine_w_x1_y2"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="640" y="992" width="384" height="32">
+   <properties>
+    <property name="map" value="level_3_semos_aquatic_mine_w_x0_y3"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="352" y="0" width="288" height="32">
+   <properties>
+    <property name="map" value="level_3_semos_aquatic_mine_w_x0_y1"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="992" width="32" height="32"/>
+  <object name="from_north_0" x="832" y="992" width="32" height="32"/>
+  <object name="from_south_0" x="480" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

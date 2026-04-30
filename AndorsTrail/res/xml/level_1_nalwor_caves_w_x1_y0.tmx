@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_brown" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="item_blood_nsew_stains" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_blood_nsew_stains.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="logic_portal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_portal.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="ground_scratches" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_scratches.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="ground_scratches_edges" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_scratches_edges.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="ground_scratches_corners" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_scratches_corners.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzTEKACAMBMEQLM7/f1htRRAlEpAtpp5qZhUAAADAV0rnC69f38g4I38/pMnrWxuRty7c3AqUeSv5HhoSDCJJ
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0yEOADAIBDDE9BT/f+v8MoUYCWkN8nIEIgAAgGl2c2YOzHzt9GfPbLyl9FIl65rdDhqWAME=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzaENADAQw0DD33/iLlBSKf0QWzrsAUaSJEmSwm41nr//L22+0n+Kf4p/iv90BxSVHHE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0DEKACAMQ9GOTrqo9z+qnUtx0hbKf5A5JCIAAAAAKhpOojozdlpNs0xef3rr2x83e9t+9XXNDNzmdWeo2H0A1VoCzA==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzyEOAEAIA0Fc//9jzKnzIMhMsrppFQAAwKy8ru/ma3Mrh74xowExywB4
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="768" width="32" height="256">
+   <properties>
+    <property name="map" value="level_1_nalwor_caves_w_x2_y0"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="384" y="992" width="640" height="32">
+   <properties>
+    <property name="map" value="level_1_nalwor_caves_w_x1_y1"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="896" width="32" height="32"/>
+  <object name="from_north_0" x="704" y="992" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

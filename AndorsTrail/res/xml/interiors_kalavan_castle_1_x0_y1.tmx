@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="building_castle" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_castle.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="furniture_light_iron_lamp" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_iron_lamp.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="furniture_light_flames" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_flames.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="building_stairs_stairs" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_stairs_stairs.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="item_armor_sword_rack" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_armor_sword_rack.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="item_armor_armor" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_armor_armor.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="furniture_other_stick" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_other_stick.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="logic_creature_human_imperial" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_human_imperial.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="9" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0zEOABAQRNEVx1E4lb3/EeioFEiG+MWrfzaTdTPzBaXJB/jl/TLxcz/Tpy/6f/p7zXHHV+/fkUKn6rvpqPtR3AcA4HcVvzhlcg==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1LEJACAMBdGgqIuZ/VcyhYVYmULEcA8OAr+PSAzFqvNuSwBiS47txk/Ih1u3dOt36ggAAADvDYuDBIE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt07EJACAMBdHf3v4Lu4CFEKKoF3iQ7kgRklBUGR7pz3Y+ut/+mX7sX9Wnoc9ijwa7f02SJEk1A6G6HZI=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYCAd/ILS/4C4kIH+gF727wfiA1jwZSz2swMxB5TNgYSp4U9sQICR9v7nY8Qtdw2I1Rgps5+NAvtfAbEV48D5HxT204F49QDaT+u8B7JfAAsGASFG2tuvBLRDBYpVofgSHf1vBrTPHIotofgZBfa7QMsEVyRMbppAtp8Fj3pkuSIsZRol9kej+YUQjoCWaaCyAxav5Np/FUfZTAhfhpYdFowQTK08QSwWhJbb1MgT5GBQHlJjpCxPWFKIrRgZRsEoGAWjYBSMglEwgAAAyEg+/Q==
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtyaERADAMxLAHuWb/jUM6QWEqEQMn+/TtCbBdPT4AAPjNAC6LABY=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0LEJACAQBMGLBf/779YGTAXhZ8INN3mjA0yzLRilLm3ZAgDwrQN8HgA1
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="0" width="32" height="352">
+   <properties>
+    <property name="map" value="interiors_kalavan_castle_1_x1_y1"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="800" y="0" width="224" height="32">
+   <properties>
+    <property name="map" value="interiors_kalavan_castle_1_x0_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="160" width="32" height="32"/>
+  <object name="from_south_0" x="896" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

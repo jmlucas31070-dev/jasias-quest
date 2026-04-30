@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_rock_pebbles" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_pebbles.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="terrain_dark_caves" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_dark_caves.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="terrain_desert" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_desert.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="ground_dry_grass" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_dry_grass.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="logic_creature_human_armored" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_human_armored.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrl1bERwCAMQ1F6aRrtP1wWSHLYJ8cQil/qHjSgMYZu4kQwpKSPQp+NPht9BvuTz2TdPg0+DWV9Guv2uYDPIj+6qfRnty4fi/qOM3xxh119NPrud2QnH40+DvZR/I+/7WD2FfDR6KPA12E+H3wd6CvoX4HcNO8=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtl7EOwCAIRElbHSz//72FwaVLK4KXplzC/DgxhxLZtEkVqZMwaoTV3/mpVGqdNG93qQOYN5r1FdBH3zVd2geDs7YuOoO799U9PO0ZBnmP5r9hR85gZL8zyHsEf5Ttzbe8qxjo3YtvZXvwZ9gj/BbAnuUXh9lx4N3+Aj//bHb+BRM8Ado=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1sEOABAMA9Ce+v+f7AscaKdZTOJoryYEoA8KM+WqPsf/2sf4lgxo/P44MiCcAeEMN3WdGZR9OTIoPXX0QT3Tal+tkfar+1flO+9x2j+9Qwz6/Nhn0H/xj9mtY9Dn+O195Q+zACjVDVc=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtVzEKgDAQO1dRB3EqTqduKm7q/z/mTSJSQey1odiDzEkuaUuJ7DMIOsLNDORGeo+FuxaUwMyNIAfunZV38KXvRknD186xggbXvrtq0LhnXDRonXVW7EPSoKMhJ9wweAeUcjg1IPkJkEHm+a2OMYM/8U+CTTCCOrhY3nYT0Ptu4efA3lF/qCv/euuAj6kEzQN/iB0UgtaSfUj+/sH7G/4DbJIMAg==
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0CEBAAAMAjAs/QtT4uJii7AE4J8qAACAUwN2hAAK
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="0" width="32" height="896">
+   <properties>
+    <property name="map" value="level_3_deniran_caves_e_x2_y2"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="544" y="992" width="320" height="32">
+   <properties>
+    <property name="map" value="level_3_deniran_caves_e_x3_y3"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="0" y="0" width="544" height="32">
+   <properties>
+    <property name="map" value="level_3_deniran_caves_e_x3_y1"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="448" width="32" height="32"/>
+  <object name="from_north_0" x="704" y="992" width="32" height="32"/>
+  <object name="from_south_0" x="256" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

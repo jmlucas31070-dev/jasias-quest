@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="96" height="352"/>
+ </tileset>
+ <tileset firstgid="34" name="ground_rock_pebbles" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_pebbles.png" width="32" height="96"/>
+ </tileset>
+ <tileset firstgid="37" name="plant_tree_tree_darkgreen" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_tree_darkgreen.png" width="256" height="352"/>
+ </tileset>
+ <tileset firstgid="125" name="plant_grasses" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_grasses.png" width="96" height="64"/>
+ </tileset>
+ <tileset firstgid="131" name="plant_flower_daisy_white" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_white.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="139" name="item_corpse_skull_pale" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_skull_pale.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="141" name="item_statue_grey_stone" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_statue_grey_stone.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="145" name="logic_creature_animal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_animal.png" width="256" height="128"/>
+ </tileset>
+ <tileset firstgid="177" name="logic_item_mushroom" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_item_mushroom.png" width="192" height="32"/>
+ </tileset>
+ <tileset firstgid="183" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwwEJAAAMBKHj+4dej6HgqqmqqqqvHyPACAE=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYCAddBOQ9wRiLxLMqyfB7G4G+oJ6GrsFmxkTCPBJdSfDIAtTBhqFGwg4ALEjEDtRyQ5ywobU9D9U4qR+1A04QdsgcosjhfqVB3nerx+maaxuNF/hdVcdwygYbCADiMMH0P4CII4fwmW7MxC7kJgf6qnY5vGmkj+o0eYZaqB+NPvTNf3TIry9R3j4AwAxAhXf
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1jkOwjAQQNFchk1A2MMOVaAKSwdUwIE4M99dCmTG1lgWIiN9aVK5eRolScLMhfaU086yh5o7Hamgg2X/NK8v37ZpUov61KAa1S279ph3u5RST7Brz4wmlNFUsIeaE21pTRvLnlT+VafyH8+/MX8WmA/lX2o+lH+peW3/rua1/Zt3BzQUmtf2b8zPaSE0r+nfx7ymf2P+SjcH85r+jfkHPR3Ml/c2dRT8u5gv7yMaR/S/pNUP+/f556nuv75/3/uv6T+N7D/74/ufR77/hef9fwODu2iS
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYKA+2E4CpiUYqvZvJ8Af7OE/av9o+mcYjf8Raf/2UfsHxP7tZOJR+wfO7uFg//YR7v/RNDA48v9o+T+a/odiGTjQfgcAVuwjAQ==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1EENAAAMAjH04F8gKpbs0UogFxIu1AToHzQPgP+HRwZAigCp
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1jERAAAIxLD37wMBOMQBx8iQSOjUBP4qCYBFS6A5gOeFswEDigKt
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="0" width="32" height="672">
+   <properties>
+    <property name="map" value="level_0_semos_forest_s_x2_y2"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_1" type="newmap" x="0" y="800" width="32" height="64">
+   <properties>
+    <property name="map" value="level_0_semos_forest_s_x2_y2"/>
+    <property name="place" value="from_west_1"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="0" y="992" width="544" height="32">
+   <properties>
+    <property name="map" value="level_0_semos_forest_s_x3_y3"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="0" y="0" width="672" height="32">
+   <properties>
+    <property name="map" value="level_0_semos_forest_s_x3_y1"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="320" width="32" height="32"/>
+  <object name="from_east_1" x="0" y="832" width="32" height="32"/>
+  <object name="from_north_0" x="256" y="992" width="32" height="32"/>
+  <object name="from_south_0" x="320" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

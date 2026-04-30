@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="18" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="furniture_carpet_carpets" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_carpet_carpets.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="building_wall_int_blue_green" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_blue_green.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="building_wall_int_green_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_green_blue.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="furniture_chair_throne" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_chair_throne.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="furniture_chair_throne_small" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_chair_throne_small.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="furniture_kitchen_warmer" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_kitchen_warmer.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="furniture_table_grey_plain" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_table_grey_plain.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="furniture_table_grey_fancy" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_table_grey_fancy.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="9" name="furniture_chair_wooden_pale" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_chair_wooden_pale.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="10" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eNpjY2BgYBvFo3gUj+JRPIpH8SgeQRgA54QNgQ==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eNpjYMAP2BloB2hpNi0BGw4a5B8OIOYkoG4oAm4kv1GCuYCYhwI3UIp5B9BumP208j8PFA+U/4m1fzT+yQN8QMxPIRagoAzghbqBEsxPYTnERYAmVs0oGAUgAABhighX
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eNpjYBh6gBUHzQJlsxFQNwpGwSgYBaNgFIyCkQ0AeXcALg==
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eNrjYmBg4GLADfDJUQq4kPBAAXLs58JDcxGQp4b9A+V/LirhUftH7R+1f+jZP1jK31H7aVMHj0QMABDRCc8=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eNrjYmBg4GIYOMA1av+o/aP2j9o/av+o/aP2D4j93EDMMkCYD4j5qYwFSMAAgRUDuA==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eNrtwQEBAAAAgiD/r25IQAEAfBkJAAAB
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="18">
+  <object name="exit_east_0" type="newmap" x="992" y="32" width="32" height="480">
+   <properties>
+    <property name="map" value="interiors_ados_barracks_1_x1_y1"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="640" y="0" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_ados_barracks_1_x0_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="18">
+  <object name="from_west_0" x="992" y="256" width="32" height="32"/>
+  <object name="from_south_0" x="640" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="18"/>
+ <objectgroup name="Replace" width="32" height="18"/>
+</map>

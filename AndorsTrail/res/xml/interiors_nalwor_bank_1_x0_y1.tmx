@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="30" height="8" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="building_roof_red" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_roof_red.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="building_wall_int_wall_pale" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_wall_pale.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="building_wall_int_wall_purple" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_wall_purple.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="building_entrance_pale_red_ew" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_entrance_pale_red_ew.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="furniture_chair_stool" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_chair_stool.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="plant_bush_bushes" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_bush_bushes.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="item_chest_small" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_chest_small.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="item_chest_large" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_chest_large.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="9" name="item_documents_book" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_documents_book.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="10" name="building_fence_fence_wooden" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_fence_fence_wooden.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="11" name="item_armor_weapons_rack" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_armor_weapons_rack.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="12" name="plant_indoor_flowering_plant" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_indoor_flowering_plant.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="13" name="building_entrance_detail_ew" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_entrance_detail_ew.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="14" name="logic_creature_elf" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_elf.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="15" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="30" height="8">
+  <data encoding="base64" compression="zlib">
+   eNrjYGBg4BjFeDE7ELMAMSud7eUBYl4g5gNi4dF4GMVYMABFugeT
+  </data>
+ </layer>
+ <layer name="Objects" width="30" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYKANEEJjs9LIHj4g5oFiZHtB4vwE9IL08BJB49IrhMO/tATI9nJB/SgCxGJALENDdyDbKwDEwmgYV1izI2GYm0GAA41mx6KXE2qvKMMowAUAtJsCpA==
+  </data>
+ </layer>
+ <layer name="Above" width="30" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYBh4wAHEnETQgx1wAzEvEAtT0UyQeXwD4Bd+IBZgGAWDHQAA5acAuw==
+  </data>
+ </layer>
+ <layer name="Walkable" width="30" height="8">
+  <data encoding="base64" compression="zlib">
+   eNrjZ2Bg4GcgDfCjYVxqcLEJ6SXFXmx8BizmE9JLCsZlPrlhRY5/GYh0Hzn24nMLqfbiix8GEuKC1LAaKRgAwgMI2g==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="30" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjZWBg4GAgDbADMQsQs44QvZQASuyF6WODmkMve3mAmBeI+YCYn472igCxKBCLAbE4BfaC3M9JAuamgl4QzUQG5qJQLwC1dQLH
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="30" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgFo2AUDFUAAAPAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="30" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYKAfEGUYBaNgFFATAABJpAAW
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="30" height="8">
+  <object name="exit_north_0" type="newmap" x="768" y="0" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_nalwor_bank_1_x0_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_1" type="newmap" x="864" y="0" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_nalwor_bank_1_x0_y0"/>
+    <property name="place" value="from_north_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="30" height="8">
+  <object name="from_south_0" x="768" y="0" width="32" height="32"/>
+  <object name="from_south_1" x="864" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="30" height="8"/>
+ <objectgroup name="Replace" width="30" height="8"/>
+</map>

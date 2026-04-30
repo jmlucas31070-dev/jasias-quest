@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_brown_paving" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown_paving.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="building_wall_int_green_blue_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_green_blue_2.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="building_wall_int_blue_green" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_blue_green.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="building_wall_int_green_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_green_blue.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="logic_creature_mutant" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_mutant.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtljEKwDAIRYOby/f+t22HFkQktUu+kAxvCTWvaiTRMYYuRB5wY4vdGtwMP5xfSPm/uYOYP0h+f/6Yfjt+mt8a+NFg/iT05Av8YBZrbl1DPbL4GDtj9j/+O+9HYY+KI3Mi8Wb+Sg0rfaj0MfoZ9y/I9x/I8y/k/Nn9t83PnzWov5Hrv/P7jzV/h4PnAiHxJI0=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtljEKADAIAzPm/y8u3UqXWgQjRCGrhxpUAmChzqBASvbNh4hPMV/pgS58Dt/W/2zq/6pggv9b36vWaI5Mn6LzV/ffZf9y+Pb3D8b3p8P/6/7/qecwGm0tE+4a0Q==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtlEEKwCAMwArTKUPcYP//6yrsIlhv1UsCOUewrcgakhplH/Tp06c/4lCDs3XSb2/L6unsy2zQN/rl3wNPk9G/1cfZiz+mT58+N75zFdaNh718sHcEuw==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0DENAAAMA6D+9e+3HvYtAQkkAMAXVQAAHA1rGAAM
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="64" width="32" height="672">
+   <properties>
+    <property name="map" value="level_1_ados_city_s_x1_y1"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_east_1" type="newmap" x="992" y="800" width="32" height="64">
+   <properties>
+    <property name="map" value="level_1_ados_city_s_x1_y1"/>
+    <property name="place" value="from_east_1"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="896" y="0" width="96" height="32">
+   <properties>
+    <property name="map" value="level_1_ados_city_s_x0_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="384" width="32" height="32"/>
+  <object name="from_west_1" x="992" y="832" width="32" height="32"/>
+  <object name="from_south_0" x="928" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

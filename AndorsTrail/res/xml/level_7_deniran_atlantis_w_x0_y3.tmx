@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="terrain_grassland" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_grassland.png" width="256" height="352"/>
+ </tileset>
+ <tileset firstgid="89" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="96" height="352"/>
+ </tileset>
+ <tileset firstgid="122" name="plant_tree_tree_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_tree_blue.png" width="160" height="160"/>
+ </tileset>
+ <tileset firstgid="147" name="plant_tree_tree_darkgreen" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_tree_darkgreen.png" width="256" height="352"/>
+ </tileset>
+ <tileset firstgid="235" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1qEVACAQw9Dqjtj9B2EFDK/ARUR/G0vygbJZ08bv2inbKdu/+MHHxx/rG3+8b/z6/9zg89/4+O/4C7yLqCE=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtlrkOwjAQRFO69Pdy3/AvgQqouJsATQCJD2KKIEVWnHi9jq1IGelJbmxLs+NdR5G5EnAHD/CM7MQ5IwUv8AYfy/tdnFG3zuACruAW4H4XdeaoCTVqovK5+mZrU3VAF/RAHwwYudqCHdgT9g7BCIzBBEwZuTqAIzgR9s7AHCzAEqwsPd+AGKyzta+3nPdc9d9FbSmeq/67qC3Fc9V/29raem6T/zIJoucm+S/qFbp5JD3l1uc8KvKw7nlUlduy/4Dw0CvK/JceekWV/4I5s/7+63pFXPEWJHNmUfqGrhaCMbMofUNXC0nMe0glge9P2y9pq8D6AVAlpvQ=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1jEKACEMRNF//6vOJbbdyrUxfzUKAQvhGQJDAmRBzZ4I/vtNtZ+CQu4fef6mj+gj+mzid8u6P/hm3qWpn8Iy7a8/zNw75d+pfq4/zALLN3LK7H+n/Tfc/b+7/wA8j4HI
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrdlzsOAjEMRPcIaSLRIG2Zq/ITcCagAlo+zQI3YZptUBzFsU0Clp6UKqPMWE7Sdfrluno1BROjvS/gCm7gnjh7L9yDqgE8wBO8EvpBuEeL3udq91/KmdIOCvrcjJyidqnvoVLuTilziX5g9lVJzcAcLMASrApm7dhXpbUGG7BtZNbn6Es819DP8ZzKNqe80jli2Urn5w7swSGxtshg9PwITuCcWLf63on1LXUfeQP9WN9avBm0yht5nuO/pecc/31jmXDnGmduUFk4wVzjzA0qi9bvw0+/a+oPf/b3/EX9N03yYmU=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="0" width="32" height="64">
+   <properties>
+    <property name="map" value="level_7_deniran_atlantis_w_x1_y3"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_east_1" type="newmap" x="992" y="96" width="32" height="192">
+   <properties>
+    <property name="map" value="level_7_deniran_atlantis_w_x1_y3"/>
+    <property name="place" value="from_east_1"/>
+   </properties>
+  </object>
+  <object name="exit_east_2" type="newmap" x="992" y="576" width="32" height="256">
+   <properties>
+    <property name="map" value="level_7_deniran_atlantis_w_x1_y3"/>
+    <property name="place" value="from_east_2"/>
+   </properties>
+  </object>
+  <object name="exit_east_3" type="newmap" x="992" y="928" width="32" height="96">
+   <properties>
+    <property name="map" value="level_7_deniran_atlantis_w_x1_y3"/>
+    <property name="place" value="from_east_3"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="704" y="0" width="320" height="32">
+   <properties>
+    <property name="map" value="level_7_deniran_atlantis_w_x0_y2"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="32" width="32" height="32"/>
+  <object name="from_west_1" x="992" y="192" width="32" height="32"/>
+  <object name="from_west_2" x="992" y="704" width="32" height="32"/>
+  <object name="from_west_3" x="992" y="960" width="32" height="32"/>
+  <object name="from_south_0" x="864" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

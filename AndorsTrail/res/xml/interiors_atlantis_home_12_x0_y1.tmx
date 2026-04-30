@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="17" height="2" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="building_wall_int_grey" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_grey.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="ground_indoor_floor_tiles" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_indoor_floor_tiles.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="logic_portal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_portal.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="17" height="2">
+  <data encoding="base64" compression="zlib">
+   eNrjYGBg4BgEGABK6AER
+  </data>
+ </layer>
+ <layer name="Objects" width="17" height="2">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgcAAAAiAAB
+  </data>
+ </layer>
+ <layer name="Above" width="17" height="2">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgcAAAAiAAB
+  </data>
+ </layer>
+ <layer name="Walkable" width="17" height="2">
+  <data encoding="base64" compression="zlib">
+   eNpjYWBgYMGDGQjIUwsDACQYAIU=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="17" height="2">
+  <data encoding="base64" compression="zlib">
+   eNpLZ2BgyADiTDQcCMRBDBAQAsShWNRkAXE2EBcBcTEQl6DhGCCOhZoRD8QJWNSUAnEZEAMAflUNIQ==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="17" height="2">
+  <data encoding="base64" compression="zlib">
+   eNpjYMAP2BnoAwADYAAI
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="17" height="2">
+  <object name="exit_north_0" type="newmap" x="256" y="0" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_atlantis_home_12_x0_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="17" height="2">
+  <object name="from_south_0" x="256" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="17" height="2"/>
+ <objectgroup name="Replace" width="17" height="2"/>
+</map>

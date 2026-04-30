@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="8" height="8" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="building_wall_int_wall_pale" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_wall_pale.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="building_wall_int_wall_purple" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_wall_purple.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="ground_brown_paving" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown_paving.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="item_documents_books" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_documents_books.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="furniture_table_desk" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_table_desk.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="furniture_chair_wooden" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_chair_wooden.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="item_documents_kids_art_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_documents_kids_art_2.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYWBgYMGC2YCYGYfcYJLnwIG5oPKMeDAnEAMAivQBFA==
+  </data>
+ </layer>
+ <layer name="Objects" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYIAAdgYEQGbDAAcONgywkKCfECBFLaUAACsQADo=
+  </data>
+ </layer>
+ <layer name="Above" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYBjZAAABAAAB
+  </data>
+ </layer>
+ <layer name="Walkable" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYIAADgYE4EDCuAAHFj2U6CdXnlIMAGSAAQE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYIAAVgYEgLGFkMTYsbC5sOhBZ+PTL8BAe8ADpUWgtBiaPABJkACT
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYBjZAAABAAAB
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eNpjYBjZAAABAAAB
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="8" height="8">
+  <object name="exit_west_0" type="newmap" x="0" y="32" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_semos_school_0_x0_y1"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_1" type="newmap" x="0" y="96" width="32" height="96">
+   <properties>
+    <property name="map" value="interiors_semos_school_0_x0_y1"/>
+    <property name="place" value="from_west_1"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="0" y="0" width="64" height="32">
+   <properties>
+    <property name="map" value="interiors_semos_school_0_x1_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_1" type="newmap" x="96" y="0" width="64" height="32">
+   <properties>
+    <property name="map" value="interiors_semos_school_0_x1_y0"/>
+    <property name="place" value="from_north_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="8" height="8">
+  <object name="from_east_0" x="0" y="32" width="32" height="32"/>
+  <object name="from_east_1" x="0" y="128" width="32" height="32"/>
+  <object name="from_south_0" x="32" y="0" width="32" height="32"/>
+  <object name="from_south_1" x="128" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="8" height="8"/>
+ <objectgroup name="Replace" width="8" height="8"/>
+</map>

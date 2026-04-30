@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="logic_creature_demon" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_demon.png" width="224" height="32"/>
+ </tileset>
+ <tileset firstgid="8" name="logic_creature_elemental" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_elemental.png" width="256" height="64"/>
+ </tileset>
+ <tileset firstgid="24" name="logic_creature_huge_animal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_huge_animal.png" width="256" height="64"/>
+ </tileset>
+ <tileset firstgid="40" name="ground_fire_lava" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_fire_lava.png" width="96" height="288"/>
+ </tileset>
+ <tileset firstgid="67" name="terrain_ground_stone" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_ground_stone.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="71" name="ground_rock_red_crystal_small" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_red_crystal_small.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="72" name="ground_rock_rock_red" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_rock_red.png" width="64" height="160"/>
+ </tileset>
+ <tileset firstgid="82" name="item_corpse_skulls" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_skulls.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="98" name="terrain_stairs_stone" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_stairs_stone.png" width="96" height="192"/>
+ </tileset>
+ <tileset firstgid="116" name="terrain_wall_stone_red" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_wall_stone_red.png" width="256" height="288"/>
+ </tileset>
+ <tileset firstgid="188" name="logic_creature_angel" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_angel.png" width="192" height="32"/>
+ </tileset>
+ <tileset firstgid="194" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1LENACAMA0EvZ+8/EoyAEGCKL74M1yREUmYuFfyqT+QP9v9E+Pir7+J37xof3xf/HPz3/s4cPj5+zx84rxX9
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0ssJACAMBNF0ZzHGX+wf3Co0yDyY817WDAAAZFOVq/Zov6uhZsL9cmF/qVCbKwIAPnIAoFMFfA==
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1EEJAAAIBMGLp/0LaQWfwgxY4FhM4Kb22gxoC40A/g52Qq+vDPjUA2c=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrllksOACEIQ7n/sXqy2buBYrFONDFuiM/yNSIC4VlYTsV9uJCPxN7p/z/yVW926b6Jr9xO/Sp+p4fs6IexhpW1DzK3puOPwb6PAq/KZ2qKtc1y5TX+1Nxn+9FN/Kmef0L/a/zV51l9sPzu/5mZwTjAhyn+KNq7+Dv6YeZXeNP8Kf2q/3OH/wEk9KqD
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrll0EKgzAQRec4xYV4C6E9QulNQjZFd3VXr9D2lp1FAxKSODNOHKGBjyCR52Q+PwkAgAeb4X5PLf4J1RjyW1SXeN8X+ANqNFz/B2oy5D9RM/O7M+qi6D8w9n/tcSvw30r6GNfvlfhcb4XMkfIbpcyR8rtK6/8ieKVm/x1hrpSf8oiUP6xoOUrzRgI/9mrIfw1NBH7s1ZD/Gpp37P/WbDsSv1bm71G//zN+nDulzL0L+NzzMyfzlmfhHL9l7kc5/toeXqv/jlC7JX9L/b0xP/UPFP71QP3P8aX3GQ3+F7SLc/w=
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0kENACAMA8DyxQb+ReAMDYRlH+4EtEnT5M5Ir+4+8GF+t00AADxYJig3i3IO70EA8g==
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="0" width="32" height="96">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x2_y1"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_1" type="newmap" x="0" y="192" width="32" height="64">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x2_y1"/>
+    <property name="place" value="from_west_1"/>
+   </properties>
+  </object>
+  <object name="exit_west_2" type="newmap" x="0" y="288" width="32" height="64">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x2_y1"/>
+    <property name="place" value="from_west_2"/>
+   </properties>
+  </object>
+  <object name="exit_west_3" type="newmap" x="0" y="416" width="32" height="64">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x2_y1"/>
+    <property name="place" value="from_west_3"/>
+   </properties>
+  </object>
+  <object name="exit_west_4" type="newmap" x="0" y="576" width="32" height="64">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x2_y1"/>
+    <property name="place" value="from_west_4"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="0" y="992" width="32" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x3_y2"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_1" type="newmap" x="96" y="992" width="384" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x3_y2"/>
+    <property name="place" value="from_south_1"/>
+   </properties>
+  </object>
+  <object name="exit_south_2" type="newmap" x="512" y="992" width="96" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x3_y2"/>
+    <property name="place" value="from_south_2"/>
+   </properties>
+  </object>
+  <object name="exit_south_3" type="newmap" x="640" y="992" width="288" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x3_y2"/>
+    <property name="place" value="from_south_3"/>
+   </properties>
+  </object>
+  <object name="exit_south_4" type="newmap" x="960" y="992" width="32" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x3_y2"/>
+    <property name="place" value="from_south_4"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="0" y="0" width="32" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x3_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_1" type="newmap" x="64" y="0" width="928" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x3_y0"/>
+    <property name="place" value="from_north_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="32" width="32" height="32"/>
+  <object name="from_east_1" x="0" y="224" width="32" height="32"/>
+  <object name="from_east_2" x="0" y="320" width="32" height="32"/>
+  <object name="from_east_3" x="0" y="448" width="32" height="32"/>
+  <object name="from_east_4" x="0" y="608" width="32" height="32"/>
+  <object name="from_north_0" x="0" y="992" width="32" height="32"/>
+  <object name="from_north_1" x="288" y="992" width="32" height="32"/>
+  <object name="from_north_2" x="544" y="992" width="32" height="32"/>
+  <object name="from_north_3" x="768" y="992" width="32" height="32"/>
+  <object name="from_north_4" x="960" y="992" width="32" height="32"/>
+  <object name="from_south_0" x="0" y="0" width="32" height="32"/>
+  <object name="from_south_1" x="512" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

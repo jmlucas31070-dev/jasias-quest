@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="logic_portal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_portal.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="logic_creature_demon" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_demon.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="ground_brown_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown_2.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="building_decoration_rocks" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_decoration_rocks.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="plant_bush_large_green" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_bush_large_green.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="building_wall_int_clay" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_clay.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrjZGBg4ETDzDTCnETiUftH7R+1f9T+Ufupi6NG7R/U8c9MY0zI7oABtj981P5R+wfQ/sQBtH+g8/9o/Ttq/6j9g8N+WrkFm/kAZKAWPw==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt10ENAAAIxLB7gH/LgA3SJhOx5KfaOgAAAHgpzgCo/AAT
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtlMEKACAMQj36/1/cfUSwkjaYAy8detNCAuBGt8PDeUbq+c2P90zzH//DVP/mm29+fgfnX8NH4dvDfPOLuwcNus/9Z34HPpv4V2TCB0GQB0U7qPkLMGIL2Q==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtl8EKgDAIhr20Vau1qOfqWufe/yHysEEYQXOFHRT+y2B+qOgmwNVG4Ftzcx4yfCR+hTIoC+XG4dcxnpbBs/F+Cd+hOlQvFP8bZoT5oHzlKx8m1CzIB+H46Tz+Y/09asio05t8H7nLRzUND3K+ojblK1+A7+J82IX45/9eLcTX91f5Z37zk/gtoyfo7pjDT31Ie9Fk+KC7Y2DmzTHnAd0d7/gHcrgJfQ==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1sEJADAIA0BRuv/KHcGfiNwtEEw+RsAt6S5Y5amARsmXD34v7DTiA9vUAB0=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_south_0" type="newmap" x="352" y="992" width="480" height="32">
+   <properties>
+    <property name="map" value="level_2_semos_mine_w2_x0_y2"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="224" y="0" width="384" height="32">
+   <properties>
+    <property name="map" value="level_2_semos_mine_w2_x0_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_1" type="newmap" x="672" y="0" width="160" height="32">
+   <properties>
+    <property name="map" value="level_2_semos_mine_w2_x0_y0"/>
+    <property name="place" value="from_north_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_north_0" x="576" y="992" width="32" height="32"/>
+  <object name="from_south_0" x="416" y="0" width="32" height="32"/>
+  <object name="from_south_1" x="736" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

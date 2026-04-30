@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="ground_rock_pebbles" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_pebbles.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="item_blood_floor_stains_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_blood_floor_stains_2.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="item_corpse_skull_dark" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_skull_dark.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="logic_creature_animal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_animal.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="logic_creature_human" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_human.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtlzEOwCAMAzN48f8/3BdUgia2EergDXOWEhHCquKAsCAKhU3dkgFNpbgdPoJ8BPkI8hHkq3gI13yav3pe0XM7XtdccfA7fhr8PIDPQ/kw1P/n93pAPcMYzuB6h9T8r3e5ZtENfEWG1I7j/P9P8yczuHa/N/8DwSYaug==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0DENAAAMA6A+9W+5EnYvAQkkAFyqAACA5wZGJAAG
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtl8ENwCAMA/30/hN3g6oNxkelIuUHnDEBgiU5FHfNpTiV39IiQMO0UdyEBoH8Vc4KP7lOlT3fmWtP+rfv1la+vxlHvCu7+NM5aH7i3PljfIf5TQ8Ee6Dfg215YHgfDHtA/THI92ha/0xrkTQ/paFdkxH/rdM1XPlaFZE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNq1VwEKwzAILCpsrFuXsP3/reugBRFjoqaFULqk9c47TbYsc64qnum4w3Evy7XXuo+7Mf/Zx/sYr4sw1MF1n4kYNsbrq8yDosUMDJsR07pIYIjG5nGxwZdzRmXtjNjLwHex8RsFYwPjRUqcc57Hve3jKWoEJ/CWXoMG19Nvq4LDG1tyI8NrfF1x9AtZ19DR68yvlWNZc2uyt/LYj0FuZZLfObcy0I8pGL826poa3Ht7grfvVdFHyMj7FRisPaU4v0HBd6Hh90eCQwY7OnPINUCnBlbtlYCPvDmoivcw4COeA3Lsv7WzV0RzgAHc2tky64PMezC5nkd1wIQOmg8yOmBAh0wOQDlzeHtCDXhA5gAUDKNe8Jw9ev0Qg/8vohqsxvmGHBii8TUM0KgNC0NGgx6G0R6dyYGlBa9Lqzf83/8BzEUJkg==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1TENAAAIA7A9PPgXjAkuaB0sbCEB2NfH85UT82iP+g74v3CjlwNF5wAp
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="160" width="32" height="128">
+   <properties>
+    <property name="map" value="level_1_athor_island_x1_y1"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_east_1" type="newmap" x="992" y="704" width="32" height="224">
+   <properties>
+    <property name="map" value="level_1_athor_island_x1_y1"/>
+    <property name="place" value="from_east_1"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="576" y="992" width="224" height="32">
+   <properties>
+    <property name="map" value="level_1_athor_island_x0_y2"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="608" y="0" width="224" height="32">
+   <properties>
+    <property name="map" value="level_1_athor_island_x0_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="224" width="32" height="32"/>
+  <object name="from_west_1" x="992" y="800" width="32" height="32"/>
+  <object name="from_north_0" x="672" y="992" width="32" height="32"/>
+  <object name="from_south_0" x="704" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_indoor_black_hole" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_indoor_black_hole.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="ground_indoor_grey_skull" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_indoor_grey_skull.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="furniture_carpet_brown_rug" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_carpet_brown_rug.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="building_decoration_blue_green_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_decoration_blue_green_2.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="item_statue_blobcreature" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_statue_blobcreature.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="building_wall_int_grey" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_grey.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1DsOgCAQRdEJCUj4WNOzGPe/IyksZZioIwWvuBXFSYbkGSIyCxeZUisr+3ZQmewf8OHD/8W/e6+DjZLE7Zi7bCe4xZvKw/t/Ve8fN8W8wA+KRfjw4cNn/KzYLvBn7z98+Cv7JyXmHF8=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtyqENAAAIwDAUhv//BcsBBNMmc4sAAACAPzXlwcvWPLQAIw==
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0rsNADAIQ0F33n/jTEB+RBTkIblDOgRYksm3mRU+fnffxRb+/v1fFT4+Pj7+vZ+Zt4PP/9X6JzOuetl/nAH3Tg4P
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgFAwnE8GDxAXab26j9o/YPc/vDoXQkEEcBcR4SzqeD/UlQOmWAwtgESlsRKIsowaPl2Kj9o/aP2j9q/9C1nxWI2QbQfnYg5hiN/xFnPzsV1I6GP24AACp7DaI=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="128" width="32" height="192">
+   <properties>
+    <property name="map" value="level_6_kanmararn_city_x2_y0"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_1" type="newmap" x="0" y="416" width="32" height="608">
+   <properties>
+    <property name="map" value="level_6_kanmararn_city_x2_y0"/>
+    <property name="place" value="from_west_1"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="0" y="992" width="800" height="32">
+   <properties>
+    <property name="map" value="level_6_kanmararn_city_x3_y1"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="224" width="32" height="32"/>
+  <object name="from_east_1" x="0" y="704" width="32" height="32"/>
+  <object name="from_north_0" x="384" y="992" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

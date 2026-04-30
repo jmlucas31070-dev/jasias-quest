@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_brown" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown.png" width="160" height="32"/>
+ </tileset>
+ <tileset firstgid="6" name="logic_creature_amazon" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_amazon.png" width="256" height="64"/>
+ </tileset>
+ <tileset firstgid="22" name="item_blood_floor_stain" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_blood_floor_stain.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="23" name="item_corpse_skull_dark" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_skull_dark.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="25" name="ground_rock_rocks_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_rocks_2.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="29" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="96" height="160"/>
+ </tileset>
+ <tileset firstgid="44" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1qENADAMA8FIHsT7bxlSVqnUUfPg8aFYcVU5kE5e6hs/7hNtSqHd06OkrbCN/68vfHzub7XvAb4H+FP+ELprIAlq8Q==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1bENACAMxEAPlP3no0NMwL8UI13tUEAGmBCC7Ya+JG3xnlSXz3Ng/3a23R/79sve//j/fd9D6X7LHlafA6P7mzU=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgYoM4wsGCg7VcEYrkRHgaDIQ5GwSgYCUAFiFWRsDKd7dVCE9eEitPabq0BLt8kRst3MJAZgPSOK+7FRuvWUftHaPtSZoDCQGw0DgbMDUpIeLC5ZxQMLAAAZhMGvA==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0jERAAAIA7FO4N8xMjqQSPj7BAD4ZCWg9NnIAlB1kJAAFQ==
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="0" width="32" height="64">
+   <properties>
+    <property name="map" value="level_1_amazon_tunnel_x1_y2"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_east_1" type="newmap" x="992" y="416" width="32" height="448">
+   <properties>
+    <property name="map" value="level_1_amazon_tunnel_x1_y2"/>
+    <property name="place" value="from_east_1"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="992" y="0" width="32" height="32">
+   <properties>
+    <property name="map" value="level_1_amazon_tunnel_x0_y1"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="32" width="32" height="32"/>
+  <object name="from_west_1" x="992" y="640" width="32" height="32"/>
+  <object name="from_south_0" x="992" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

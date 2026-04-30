@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="building_castle" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_castle.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="furniture_light_iron_lamp" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_iron_lamp.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="furniture_light_flames" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_flames.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="building_stairs_stairs" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_stairs_stairs.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="item_armor_sword_rack" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_armor_sword_rack.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="furniture_other_stick" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_other_stick.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="logic_creature_human_imperial" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_human_imperial.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0zEKACAIQFE7T4On0vsfoaAtaEmoyD+8+augiogGWeeb9JP+Soa+0qf/QP/W/0f6872y7V/LYBLngRn8gT4AAMAJDbMGZkM=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBj8gBWI2ZDoUTAKRsHwA+h5mwmHOiYq2umKht2R5Jhx6GEe5vHgSgIeBaNgFIyCUTAKRsEoGAVDCwAAJLoEeQ==
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1MsJADAIBNE92n/FVmAO4ichE3hHGQSJlH9WQA/0o5lf9qd/Z1/0S/u2dAOn/yVqTvS39gcAAEAfB8XbGkE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYCAfFAHxLyj7HwP9AbL9Qoy0s4cdiDmQaGz2XwXiA1jwQTr4XwCP3wnFCwuF9isB7b7EQL79lPrfDGj/swGyfwUQT0FKA9gALdMlehocaPtB6RAZCzLS1/5rQKzMiIrVCNjvioRB+dudAvtfAbElIyq2ImA/ellRSETeZKFiGajCCMGXoHklGi1MCOEICu23YITgZ3jKUEL4MhXSOh8jZvolBVOa1pUYEXFBLlajwH4zaDxYEonNsWArGuf1UTAKRsEoGAWjYBRQBwAAWWs/2A==
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtyKENAAAIA7AJ/r+ZD5bgEK1sAvDPHB8AAOgWasAACQ==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0LkNACAQBLEN+fqvlwZOhCAkO5xwkrNRtBnglmUBj7WidVsAAL6zAZeWADM=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="0" width="32" height="352">
+   <properties>
+    <property name="map" value="interiors_kalavan_castle_1_x0_y1"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="0" y="0" width="192" height="32">
+   <properties>
+    <property name="map" value="interiors_kalavan_castle_1_x1_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="160" width="32" height="32"/>
+  <object name="from_south_0" x="96" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

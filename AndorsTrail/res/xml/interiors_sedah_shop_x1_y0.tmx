@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="8" height="30" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="building_wall_int_wall_pale" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_wall_pale.png" width="64" height="256"/>
+ </tileset>
+ <tileset firstgid="17" name="building_wall_int_wall_purple" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_wall_purple.png" width="64" height="320"/>
+ </tileset>
+ <tileset firstgid="37" name="item_armor_sword_rack" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_armor_sword_rack.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="41" name="furniture_bed_side_on" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_bed_side_on.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="43" name="furniture_chair_wooden_pale" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_chair_wooden_pale.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="47" name="furniture_shelve_dark_bookshelf_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_shelve_dark_bookshelf_2.png" width="96" height="64"/>
+ </tileset>
+ <tileset firstgid="53" name="plant_indoor_oriental_plant" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_indoor_oriental_plant.png" width="32" height="64"/>
+ </tileset>
+ <tileset firstgid="55" name="item_brush" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_brush.png" width="32" height="96"/>
+ </tileset>
+ <tileset firstgid="58" name="ground_greenground2" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_greenground2.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="60" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="8" height="30">
+  <data encoding="base64" compression="zlib">
+   eNqzZmBgsB7Fo3gUD0kMAC54N1E=
+  </data>
+ </layer>
+ <layer name="Objects" width="8" height="30">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgFgw2YYxHTB2IDIDYEYovRIBoFUAAAGSoBAA==
+  </data>
+ </layer>
+ <layer name="Above" width="8" height="30">
+  <data encoding="base64" compression="zlib">
+   eNpjYKAMqAKxGh4+wwg3fxRgAtPRIKAaAAC1ZwH4
+  </data>
+ </layer>
+ <layer name="Walkable" width="8" height="30">
+  <data encoding="base64" compression="zlib">
+   eNqzYWBgsKEA4wK41JGqf7CbP9AYm7sYqOj/gZC3GeLuxydP7fgHAG5lHYk=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="8" height="30">
+  <data encoding="base64" compression="zlib">
+   eNpjYmBgYMKBuYFYAgeWBmJmBtxAFCqvDsQaSOIwviiR+ge7+eI4sCRUnhEPZsYT9kxQeWLD3wiIjYHYBIgtqej/gZA3I0G/3hDznyYQa1Ep/XACMQBwZwhg
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="8" height="30">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgFo2AUDFUAAAPAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="8" height="30">
+  <object name="exit_west_0" type="newmap" x="0" y="64" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_sedah_shop_x0_y0"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_west_1" type="newmap" x="0" y="128" width="32" height="64">
+   <properties>
+    <property name="map" value="interiors_sedah_shop_x0_y0"/>
+    <property name="place" value="from_west_1"/>
+   </properties>
+  </object>
+  <object name="exit_west_2" type="newmap" x="0" y="224" width="32" height="64">
+   <properties>
+    <property name="map" value="interiors_sedah_shop_x0_y0"/>
+    <property name="place" value="from_west_2"/>
+   </properties>
+  </object>
+  <object name="exit_west_3" type="newmap" x="0" y="512" width="32" height="128">
+   <properties>
+    <property name="map" value="interiors_sedah_shop_x0_y0"/>
+    <property name="place" value="from_west_3"/>
+   </properties>
+  </object>
+  <object name="exit_west_4" type="newmap" x="0" y="800" width="32" height="96">
+   <properties>
+    <property name="map" value="interiors_sedah_shop_x0_y0"/>
+    <property name="place" value="from_west_4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="8" height="30">
+  <object name="from_east_0" x="0" y="64" width="32" height="32"/>
+  <object name="from_east_1" x="0" y="160" width="32" height="32"/>
+  <object name="from_east_2" x="0" y="256" width="32" height="32"/>
+  <object name="from_east_3" x="0" y="576" width="32" height="32"/>
+  <object name="from_east_4" x="0" y="832" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="8" height="30"/>
+ <objectgroup name="Replace" width="8" height="30"/>
+</map>

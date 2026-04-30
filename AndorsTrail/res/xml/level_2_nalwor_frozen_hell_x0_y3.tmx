@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_collision.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="2" name="ground_ground_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground_2.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="6" name="item_statue_swordsman" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_statue_swordsman.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="18" name="item_corpse_skeleton_hanging" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_skeleton_hanging.png" width="128" height="192"/>
+ </tileset>
+ <tileset firstgid="42" name="logic_creature_elemental" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_elemental.png" width="256" height="64"/>
+ </tileset>
+ <tileset firstgid="58" name="logic_creature_enormous_creature" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_enormous_creature.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="59" name="ground_ridge_ice" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ridge_ice.png" width="224" height="192"/>
+ </tileset>
+ <tileset firstgid="101" name="ground_ice_ice" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ice_ice.png" width="96" height="32"/>
+ </tileset>
+ <tileset firstgid="104" name="ground_water_water" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_water_water.png" width="96" height="256"/>
+ </tileset>
+ <tileset firstgid="128" name="ground_water_pool_icy" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_water_pool_icy.png" width="288" height="96"/>
+ </tileset>
+ <tileset firstgid="155" name="ground_rock_rocks_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_rocks_2.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="159" name="ground_ice_glacier" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ice_glacier.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="160" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtz7EJACAMRcE0jhpwbTfRwgFsAqJXHCl/XkZEXm4sreie7LfCH/Tr169fv379cI++/boPvG0CIMyoPA==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1bEJACAMRNGrFCLoSO6/lbdBGjGF/8Gvw1WRcuGG6ky3BADAW831wvv8XwAA7tsfbz9efwCx
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpbwEAYLIBiWoAFQ8B+WoJR+0ftH7V/1P5R+wev/SO9/hutf0ftH4n2L6CD+waz/aPpjz5l62j4j2z7BxIDAITTMME=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrzZyAMhIBYmIE2wJ8INWJALD6A9tMSYLNffIDtZxi1f9T+UftH7R+1HwzmQ/FA2T9a/46mf1q1EUbDHzdoAOKmAbR/EhBPGU3/Q9b+eUTk39H2/8ACdyD2AGL7AcJxQOw2gBgA5LcfEA==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal3" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0MEAAAAIBLADiiB/sCCq34awBNhoBQAAHCgFPBtb9QBn
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="0" width="32" height="992">
+   <properties>
+    <property name="map" value="level_2_nalwor_frozen_hell_x1_y3"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="32" y="0" width="256" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_frozen_hell_x0_y2"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_1" type="newmap" x="352" y="0" width="672" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_frozen_hell_x0_y2"/>
+    <property name="place" value="from_north_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="480" width="32" height="32"/>
+  <object name="from_south_0" x="160" y="0" width="32" height="32"/>
+  <object name="from_south_1" x="672" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

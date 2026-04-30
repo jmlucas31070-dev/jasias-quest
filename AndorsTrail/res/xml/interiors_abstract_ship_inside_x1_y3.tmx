@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="object_ship" tilewidth="32" tileheight="32">
+  <image source="../drawable/object_ship.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="2" name="furniture_table_table_wooden_brown" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_table_table_wooden_brown.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="3" name="furniture_light_lights_candle" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_lights_candle.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="4" name="furniture_chair_wooden_rustic" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_chair_wooden_rustic.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="5" name="furniture_kitchen_cabinets" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_kitchen_cabinets.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="6" name="item_pot_barrels_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_pot_barrels_1.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="7" name="furniture_carpet_black_grey" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_carpet_black_grey.png" width="0" height="0"/>
+ </tileset>
+ <tileset firstgid="8" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzaERACAMBLB3v/8Q7MkEGK6uEdFpkj6cTx3i9/v9W38AAJh2AbSZew0=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtkksKgDAMRIvaqm1V/ILe/6DOIgsXLSIEdTEPHtmEBDIxRo8aLorzOtjDAa5wk2plV65fixFOcIY7PKS2MCT6nfgVHsYP90fJQIsClherm34nN9DCXjJ1mZ9LZaCdqX8wt3k58yB3qQ0hhBBCCCHk75zsZAIE
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0aENwDAQBMF/kHLiVBCn/678kolJJDOTGWnxgYuAf9cS050RrXryzP5bu7360hcAAMC+AfwOAVo=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0zEKADAIQ9GMuf+Je4EKVlA7fOFNDqGGWpID0WT3EzozM2+ayo/uvJm/0fvP+WrIeu1juv/Ov1AdAwAAALg6mOYdKQ==
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYMAONgLxcQL4MJL6I0jiKxgoByD7rxPA2owI9deQxKll/3MC2BrJfhtGhDi17CcEfiOx/yCx6WU/N5L/eRhpYz8nEiYWUNN+NiSMDPQYaW8/B5r/uZDk7Rjp439swBdotx8Q+zPS1v7jZGJ6lT+4MDXsZweG7Q8G8vALhlEwCkbBKBgFo2AUjIJRMAqwAwCo1FPx
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_north_0" type="newmap" x="256" y="0" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_abstract_ship_inside_x1_y2"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_1" type="newmap" x="320" y="0" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_abstract_ship_inside_x1_y2"/>
+    <property name="place" value="from_north_1"/>
+   </properties>
+  </object>
+  <object name="exit_north_2" type="newmap" x="384" y="0" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_abstract_ship_inside_x1_y2"/>
+    <property name="place" value="from_north_2"/>
+   </properties>
+  </object>
+  <object name="exit_north_3" type="newmap" x="480" y="0" width="96" height="32">
+   <properties>
+    <property name="map" value="interiors_abstract_ship_inside_x1_y2"/>
+    <property name="place" value="from_north_3"/>
+   </properties>
+  </object>
+  <object name="exit_north_4" type="newmap" x="608" y="0" width="32" height="32">
+   <properties>
+    <property name="map" value="interiors_abstract_ship_inside_x1_y2"/>
+    <property name="place" value="from_north_4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_south_0" x="256" y="0" width="32" height="32"/>
+  <object name="from_south_1" x="320" y="0" width="32" height="32"/>
+  <object name="from_south_2" x="384" y="0" width="32" height="32"/>
+  <object name="from_south_3" x="512" y="0" width="32" height="32"/>
+  <object name="from_south_4" x="608" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

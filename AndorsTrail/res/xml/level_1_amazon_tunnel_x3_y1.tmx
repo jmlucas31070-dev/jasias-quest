@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_brown" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_brown.png" width="160" height="32"/>
+ </tileset>
+ <tileset firstgid="6" name="furniture_light_iron_lamp" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_iron_lamp.png" width="32" height="96"/>
+ </tileset>
+ <tileset firstgid="9" name="furniture_light_flames" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_flames.png" width="192" height="32"/>
+ </tileset>
+ <tileset firstgid="15" name="logic_creature_amazon" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_amazon.png" width="256" height="64"/>
+ </tileset>
+ <tileset firstgid="31" name="item_blood_floor_stain" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_blood_floor_stain.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="32" name="item_corpse_skull_dark" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_skull_dark.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="34" name="ground_rock_rocks_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_rocks_2.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="38" name="logic_creature_undead" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_undead.png" width="448" height="32"/>
+ </tileset>
+ <tileset firstgid="52" name="logic_creature_undead_skeleton" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_undead_skeleton.png" width="192" height="32"/>
+ </tileset>
+ <tileset firstgid="58" name="building_wall_int_sandstone" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_int_sandstone.png" width="96" height="160"/>
+ </tileset>
+ <tileset firstgid="73" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1cENwCAMA8BIXsv7z9UVSrHj0PbhJ7oAIbCqeDPYDDfyVZshc5LPsL1Sw+p6VR1Pa3b6CPqqXoE5SRthe6KP5vCQfST+TcVMx4D/e6cemqMwlT2iOEeX77g35zxU+Wj0u2fG77/TT7+/U+bPBbYZcYk=
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0sEJADAIBMH7CfZfcKoIEjPTgLBnclcF/tXD90tPPW3ybJsebuPfAWCfA8l5AF0=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtltENwCAIRFnv9l/IBVqjyPlsLAm/PBW4UxGhRM6GCjIgriDmaXyBfJrdO4uAzPAr32umhqNfIzWeWCQ/c/+RO6xEtd7eyK/uv2NGY2GeCN92aSvNd2ryLT72VmMnv7dDhI9mZ8ilxV/k7/KVn+/tP71/xD8+y28y/ayG
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrVllEKgzAQRPfTW7QWvIQhqemK3v9GjVBBZGuSyUZxYX4k+kJ2MyNRWvmgT9Ac1FBetUFMePkf9wm8u+y1D7IF/DFz/cJ7b1TCjvEfwjMm3Vr5XeJ6bb4LMhlnb0m/3Kaf5qDfNnJ/9tKYB05gzhXm4YjvQa/Q4kt3pgN8R+rZ/iynhDWo50l+dkaNoN/W6vEZhd6XRvB8AzK7hDyRZMH5T8lVxM9Xzy6d16YgTxzYk1p54oS+xf4f7Inz3wPM7fwOhXwuvKdT4T4Y9IaXkAeDIt8DecKK/LFiL2M5imYp0zXVXsynG/P/5ZwBvmMV9+wy98AVzsxlnEUO/wumpixy
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgFlAKB0SAYBaNgyADR0SCgOxCmUL/ZaPobBaNgFIyCUTAK4EB9NAhGAQUAAJ4bAKs=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_west_0" type="newmap" x="0" y="736" width="32" height="128">
+   <properties>
+    <property name="map" value="level_1_amazon_tunnel_x2_y1"/>
+    <property name="place" value="from_west_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_0" type="newmap" x="0" y="992" width="96" height="32">
+   <properties>
+    <property name="map" value="level_1_amazon_tunnel_x3_y2"/>
+    <property name="place" value="from_south_0"/>
+   </properties>
+  </object>
+  <object name="exit_south_1" type="newmap" x="416" y="992" width="32" height="32">
+   <properties>
+    <property name="map" value="level_1_amazon_tunnel_x3_y2"/>
+    <property name="place" value="from_south_1"/>
+   </properties>
+  </object>
+  <object name="exit_south_2" type="newmap" x="480" y="992" width="160" height="32">
+   <properties>
+    <property name="map" value="level_1_amazon_tunnel_x3_y2"/>
+    <property name="place" value="from_south_2"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="512" y="0" width="96" height="32">
+   <properties>
+    <property name="map" value="level_1_amazon_tunnel_x3_y0"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_1" type="newmap" x="640" y="0" width="192" height="32">
+   <properties>
+    <property name="map" value="level_1_amazon_tunnel_x3_y0"/>
+    <property name="place" value="from_north_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_east_0" x="0" y="800" width="32" height="32"/>
+  <object name="from_north_0" x="32" y="992" width="32" height="32"/>
+  <object name="from_north_1" x="416" y="992" width="32" height="32"/>
+  <object name="from_north_2" x="544" y="992" width="32" height="32"/>
+  <object name="from_south_0" x="544" y="0" width="32" height="32"/>
+  <object name="from_south_1" x="736" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>

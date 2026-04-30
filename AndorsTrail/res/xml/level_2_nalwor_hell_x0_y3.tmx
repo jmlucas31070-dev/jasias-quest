@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="logic_creature_enormous_creature" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_enormous_creature.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="2" name="logic_creature_elemental" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_elemental.png" width="256" height="64"/>
+ </tileset>
+ <tileset firstgid="18" name="ground_fire_lava" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_fire_lava.png" width="96" height="288"/>
+ </tileset>
+ <tileset firstgid="45" name="terrain_ground_stone" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_ground_stone.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="49" name="ground_ground_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground_2.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="53" name="ground_rock_red_crystal_small" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_red_crystal_small.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="54" name="item_corpse_skulls" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_skulls.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="70" name="item_statue_swordsman" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_statue_swordsman.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="82" name="terrain_wall_stone_red" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_wall_stone_red.png" width="256" height="288"/>
+ </tileset>
+ <tileset firstgid="154" name="ground_stone_floors" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_stone_floors.png" width="96" height="64"/>
+ </tileset>
+ <tileset firstgid="160" name="furniture_light_flames" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_flames.png" width="192" height="32"/>
+ </tileset>
+ <tileset firstgid="166" name="walkable_sentinel" tilewidth="32" tileheight="32">
+  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtz6ERACAMBMHvKCb1UiuUgAmDWLETmb9KUp9bRw/dm/89uEG/fv369evXDwC8sAGGJA9w
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0AENAAAIw7CrA/+OQAAKSJvMwBIA4FJb2wAAPDHwTACO
+  </data>
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpbxkAYLINiWoBlQ8B+WoJR+0ftH7V/1P5R+wev/SO9/hutf0ftH4n2L6OD+waz/aPpjz5l62j4j2z7BxIDAAYJMpU=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNqLYSAMvIDYm4E2IIYINX5A7D+A9tMSYLPfeoDtZxi1f9T+UftH7R+1HwwWAfGCAbR/tP4dTf/owHE0/GluvxAQiwyg/RJALDWa/oes/aZ45Jzw2G81Gv4jxv4EIA4eQAwAMGcavQ==
+  </data>
+ </layer>
+ <layer name="Above_stendhal" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Objects_stendhal2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0EENAAAIBKBzs39mQ6g/iEACbJQCAAAOtAKeDSZMAAY=
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+  <object name="exit_east_0" type="newmap" x="992" y="0" width="32" height="992">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x1_y3"/>
+    <property name="place" value="from_east_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_0" type="newmap" x="32" y="0" width="256" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x0_y2"/>
+    <property name="place" value="from_north_0"/>
+   </properties>
+  </object>
+  <object name="exit_north_1" type="newmap" x="352" y="0" width="672" height="32">
+   <properties>
+    <property name="map" value="level_2_nalwor_hell_x0_y2"/>
+    <property name="place" value="from_north_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32">
+  <object name="from_west_0" x="992" y="480" width="32" height="32"/>
+  <object name="from_south_0" x="160" y="0" width="32" height="32"/>
+  <object name="from_south_1" x="672" y="0" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Keys" width="32" height="32"/>
+ <objectgroup name="Replace" width="32" height="32"/>
+</map>
