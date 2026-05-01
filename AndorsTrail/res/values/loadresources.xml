@@ -3337,4 +3337,126 @@
     <overlay file="res/xml/castle_sunnys_bedroom_jq_overlay.xml" targetMap="castle_sunnys_bedroom"/>
     <overlay file="res/xml/castle_jasias_bedroom_jq_overlay.xml" targetMap="castle_jasias_bedroom"/>
 
+    <!-- ============================================================== -->
+    <!-- JASIAS QUEST - GRAND ADDITION PACK                             -->
+    <!-- Drop all files into jasias-quest matching the folder paths.    -->
+    <!-- ============================================================== -->
+
+    <!-- Core JSON data files for this addition pack -->
+    <resource type="json" file="res/raw/jqa_addition_items.json"/>
+    <resource type="json" file="res/raw/jqa_skills.json"/>
+    <resource type="json" file="res/raw/jqa_scholars.json"/>
+    <resource type="json" file="res/raw/jqa_guilds.json"/>
+    <resource type="json" file="res/raw/jqa_shops.json"/>
+    <resource type="json" file="res/raw/jqa_crafting.json"/>
+    <resource type="json" file="res/raw/jqa_loot_tables.json"/>
+    <resource type="json" file="res/raw/jqa_maps.json"/>
+    <resource type="json" file="res/raw/jqa_placements.json"/>
+    <resource type="json" file="res/raw/jqa_connections.json"/>
+    <resource type="json" file="res/raw/jqa_townspeople.json"/>
+    <resource type="json" file="res/raw/jqa_home_furnishings.json"/>
+    <resource type="json" file="res/raw/jqa_astral_logout.json"/>
+    <resource type="json" file="res/raw/jqa_quests.json"/>
+
+    <!-- TMX Maps (must be present in res/xml/) -->
+    <map ref="jqa_library_01"/>
+    <map ref="jqa_library_02"/>
+    <map ref="jqa_library_03"/>
+    <map ref="jqa_library_04"/>
+    <map ref="jqa_library_05"/>
+    <map ref="jqa_library_06"/>
+    <map ref="jqa_library_07"/>
+    <map ref="jqa_library_08"/>
+    <map ref="jqa_library_09"/>
+    <map ref="jqa_library_10"/>
+    <map ref="jqa_fighter_guild_hall"/>
+    <map ref="jqa_thief_guild_hall"/>
+    <map ref="jqa_mage_guild_hall"/>
+    <map ref="jqa_cleric_guild_hall"/>
+    <map ref="jqa_druid_grove_hall"/>
+    <map ref="jqa_template_loot_house"/>
+    <map ref="jqa_template_loot_house_wealthy"/>
+    <map ref="jqa_template_crafting_room"/>
+
+    <!-- Skills: crafting skills from scholar libraries -->
+    <skill ref="jqa_skill_foraging"/>
+    <skill ref="jqa_skill_mining"/>
+    <skill ref="jqa_skill_cooking"/>
+    <skill ref="jqa_skill_sewing"/>
+    <skill ref="jqa_skill_gardening"/>
+    <skill ref="jqa_skill_forging_weapons"/>
+    <skill ref="jqa_skill_forging_armor"/>
+
+    <!-- Skills: Fighter Guild (persistent across guild changes) -->
+    <skill ref="jqa_skill_fighter_bash"/>
+    <skill ref="jqa_skill_fighter_guild_forge"/>
+    <skill ref="jqa_skill_fighter_extra_attack"/>
+
+    <!-- Skills: Thief Guild (persistent across guild changes) -->
+    <skill ref="jqa_skill_thief_use_magic"/>
+    <skill ref="jqa_skill_thief_steal"/>
+    <skill ref="jqa_skill_thief_backstab"/>
+
+    <!-- Skills: Mage Guild -->
+    <skill ref="jqa_skill_mage_scribe"/>
+    <skill ref="jqa_skill_mage_brew"/>
+    <skill ref="jqa_skill_mage_craft_wand"/>
+
+    <!-- Skills: Cleric Guild -->
+    <skill ref="jqa_skill_cleric_scribe"/>
+    <skill ref="jqa_skill_cleric_brew"/>
+    <skill ref="jqa_skill_cleric_craft_wand"/>
+
+    <!-- Skills: Druid Guild -->
+    <skill ref="jqa_skill_druid_scribe"/>
+    <skill ref="jqa_skill_druid_brew"/>
+    <skill ref="jqa_skill_druid_craft_wand"/>
+
+    <!-- Guild Definitions -->
+    <guild ref="fighter_guild"/>
+    <guild ref="thief_guild"/>
+    <guild ref="mage_guild"/>
+    <guild ref="cleric_guild"/>
+    <guild ref="druid_guild"/>
+
+    <!-- NPCs: Scholars and Guild Masters -->
+    <npc ref="jqa_scholar_01"/>
+    <npc ref="jqa_scholar_02"/>
+    <npc ref="jqa_scholar_03"/>
+    <npc ref="jqa_scholar_04"/>
+    <npc ref="jqa_scholar_05"/>
+    <npc ref="jqa_scholar_06"/>
+    <npc ref="jqa_scholar_07"/>
+    <npc ref="jqa_scholar_08"/>
+    <npc ref="jqa_scholar_09"/>
+    <npc ref="jqa_scholar_10"/>
+    <npc ref="jqa_fighter_guildmaster"/>
+    <npc ref="jqa_thief_guildmaster"/>
+    <npc ref="jqa_mage_guildmaster"/>
+    <npc ref="jqa_cleric_guildmaster"/>
+    <npc ref="jqa_druid_guildmaster"/>
+    <npc ref="jqa_astral_gate_keeper"/>
+
+    <!-- NPCs: 200 pickpocketable townspeople -->
+    <!-- (All defined in jqa_townspeople.json, loaded via JSON resource above) -->
+
+    <!-- Shops -->
+    <shop ref="jqa_library_01_shop"/>
+    <shop ref="jqa_library_02_shop"/>
+    <shop ref="jqa_library_03_shop"/>
+    <shop ref="jqa_library_04_shop"/>
+    <shop ref="jqa_library_05_shop"/>
+    <shop ref="jqa_library_06_shop"/>
+    <shop ref="jqa_library_07_shop"/>
+    <shop ref="jqa_library_08_shop"/>
+    <shop ref="jqa_library_09_shop"/>
+    <shop ref="jqa_library_10_shop"/>
+    <shop ref="jqa_fighter_guild_shop"/>
+    <shop ref="jqa_mage_guild_shop"/>
+    <shop ref="jqa_cleric_guild_shop"/>
+    <shop ref="jqa_druid_guild_shop"/>
+    <shop ref="jqa_thief_guild_shop"/>
+    <shop ref="jqa_home_furnishings_shop"/>
+    <shop ref="jqa_adventurer_guild_shop"/>
+
 </resources>

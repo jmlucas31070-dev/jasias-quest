@@ -1,0 +1,68 @@
+[
+  {
+    "id": "jqa_quest_join_fighter_guild",
+    "name": "Trial of the Fighter",
+    "description": "The Fighter's Guild is seeking new recruits. Speak to Guildmaster Brogan to begin your trial.",
+    "stages": [
+      {"stage":1,"description":"Speak to Guildmaster Brogan at the Fighter's Guild Hall.","objective":{"type":"talk","npcId":"jqa_fighter_guildmaster"}},
+      {"stage":2,"description":"Defeat 5 enemies to prove your combat worth.","objective":{"type":"kill","count":5}},
+      {"stage":3,"description":"Return to Guildmaster Brogan.","objective":{"type":"talk","npcId":"jqa_fighter_guildmaster"},"reward":{"guildRank":"fighter_guild:1","gold":50}}
+    ]
+  },
+  {
+    "id": "jqa_quest_join_thief_guild",
+    "name": "The Shadow's Test",
+    "description": "The Thieves' Guild operates in the shadows. Find their hidden den and prove your worth.",
+    "stages": [
+      {"stage":1,"description":"Find the Thieves' Guild Den and speak to Shadowmaster Vex.","objective":{"type":"talk","npcId":"jqa_thief_guildmaster"}},
+      {"stage":2,"description":"Successfully pickpocket 3 townspeople.","objective":{"type":"steal","count":3}},
+      {"stage":3,"description":"Return to Shadowmaster Vex.","objective":{"type":"talk","npcId":"jqa_thief_guildmaster"},"reward":{"guildRank":"thief_guild:1","gold":60,"item":"jqa_pickpocket_tools"}}
+    ]
+  },
+  {
+    "id": "jqa_quest_join_mage_guild",
+    "name": "The Arcane Examination",
+    "description": "The Mage's Guild accepts only those of arcane aptitude. Speak to Archmage Seraphel.",
+    "stages": [
+      {"stage":1,"description":"Speak to Archmage Seraphel at the Mage's Guild Hall.","objective":{"type":"talk","npcId":"jqa_mage_guildmaster"}},
+      {"stage":2,"description":"Deliver a Mana Potion to Archmage Seraphel as proof of craft interest.","objective":{"type":"deliver","itemId":"jqa_potion_mana","npcId":"jqa_mage_guildmaster"},"reward":{"guildRank":"mage_guild:1","skill":"jqa_skill_mage_scribe","gold":40}}
+    ]
+  },
+  {
+    "id": "jqa_quest_join_cleric_guild",
+    "name": "The Test of Faith",
+    "description": "The Cleric's Guild seeks devout souls. Speak to High Priest Aldric.",
+    "stages": [
+      {"stage":1,"description":"Speak to High Priest Aldric at the Cleric's Guild Hall.","objective":{"type":"talk","npcId":"jqa_cleric_guildmaster"}},
+      {"stage":2,"description":"Bring a Minor Health Potion as an offering.","objective":{"type":"deliver","itemId":"jqa_potion_health_minor","npcId":"jqa_cleric_guildmaster"},"reward":{"guildRank":"cleric_guild:1","skill":"jqa_skill_cleric_scribe","gold":40}}
+    ]
+  },
+  {
+    "id": "jqa_quest_join_druid_circle",
+    "name": "The Grove's Call",
+    "description": "The Druid Circle seeks those attuned to nature. Find Elder Sylvara at the Druid Grove.",
+    "stages": [
+      {"stage":1,"description":"Speak to Elder Sylvara at the Druid Grove Hall.","objective":{"type":"talk","npcId":"jqa_druid_guildmaster"}},
+      {"stage":2,"description":"Bring 5 Wild Herbs as an offering to the grove.","objective":{"type":"deliver","itemId":"jqa_forage_herb","count":5,"npcId":"jqa_druid_guildmaster"},"reward":{"guildRank":"druid_guild:1","skill":"jqa_skill_druid_scribe","gold":40}}
+    ]
+  },
+  {
+    "id": "jqa_quest_master_smith",
+    "name": "The Master Smith's Challenge",
+    "description": "Prove your forging mastery. Scholar Ivar at the Grand Library of the Smith challenges you to forge a legendary blade.",
+    "stages": [
+      {"stage":1,"description":"Speak to Scholar Ivar at the Grand Library of the Smith.","objective":{"type":"talk","npcId":"jqa_scholar_09"}},
+      {"stage":2,"description":"Bring 4 Mithril Ingots to the forge.","objective":{"type":"gather","itemId":"jqa_ingot_mithril","count":4}},
+      {"stage":3,"description":"Forge the Mithril Sword and return it to Scholar Ivar.","objective":{"type":"craft","itemId":"jqa_sword_mithril"}},
+      {"stage":4,"description":"Return the Mithril Sword to Scholar Ivar.","objective":{"type":"deliver","itemId":"jqa_sword_mithril","npcId":"jqa_scholar_09"},"reward":{"gold":300,"skill":"jqa_skill_forging_weapons:rank3"}}
+    ]
+  },
+  {
+    "id": "jqa_quest_library_grand_tour",
+    "name": "The Scholar's Grand Tour",
+    "description": "Visit all 10 libraries and speak to each scholar. Knowledge is power.",
+    "stages": [
+      {"stage":1,"description":"Visit all 10 libraries and speak to each scholar.","objective":{"type":"talk_all","npcIds":["jqa_scholar_01","jqa_scholar_02","jqa_scholar_03","jqa_scholar_04","jqa_scholar_05","jqa_scholar_06","jqa_scholar_07","jqa_scholar_08","jqa_scholar_09","jqa_scholar_10"]},"reward":{"gold":150,"item":"jqa_library_book","quantity":5}}
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "astralBeastWorld": {
+    "description": "The Astral Beast World uses the same logout procedure as the MUD (Multi-User Dungeon area). Players must find the Astral Gate to safely leave.",
+    "logoutProcedure": {
+      "type": "mud_style",
+      "steps": [
+        {"step":1,"action":"Locate the Astral Gate NPC or object on the current map."},
+        {"step":2,"action":"Interact with the Astral Gate — a confirmation dialog appears: 'Do you wish to leave the Astral Realm and return to the mortal world?'"},
+        {"step":3,"action":"Selecting Yes triggers the logout sequence: screen fades, player is transported back to their last safe location."},
+        {"step":4,"action":"Selecting No dismisses the dialog and returns to gameplay."},
+        {"step":5,"action":"If the player is in combat, the gate is unavailable and a message reads: 'You cannot leave the Astral Realm while in combat.'"}
+      ],
+      "unsafeLogout": {
+        "penalty": "If the player closes the app without using the Astral Gate, they respawn at the Astral Realm entry point with a 10% experience penalty.",
+        "message": "You were pulled back to the mortal world unwillingly. The astral energies have drained some of your experience."
+      },
+      "astralGateNpc": {
+        "id": "jqa_astral_gate_keeper",
+        "name": "Astral Gate Keeper",
+        "description": "A luminous being of pure energy standing beside the shimmering astral gate.",
+        "greeting": "Traveller. The mortal world awaits beyond this gate. Shall I send you back?",
+        "options": [
+          {"label":"Yes, return me to the mortal world","action":"logout_to_safe_location"},
+          {"label":"No, I remain in the Astral Realm","action":"close"}
+        ]
+      }
+    }
+  }
+}

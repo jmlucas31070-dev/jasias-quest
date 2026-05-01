@@ -1,0 +1,58 @@
+{
+  "homeFurnishings": {
+    "description": "Items purchasable for in-game homes. Homes of 1 room or larger can have a computer and game console. The 4-room home also supports the writing desk, heavy cauldron, wand crafting table, and staff crafting table.",
+    "tiers": [
+      {
+        "homeSize": "1_room",
+        "availableFurnishings": [
+          {"itemId":"jqa_computer","shopId":"jqa_home_furnishings_shop","mapInteraction":"computer_terminal","description":"Mimics the computer from home.tmx. Browse world lore and send messages."},
+          {"itemId":"jqa_game_console","shopId":"jqa_home_furnishings_shop","mapInteraction":"game_console_terminal","description":"Mimics the game console from home.tmx. Play simple mini-games."}
+        ]
+      },
+      {
+        "homeSize": "2_room",
+        "availableFurnishings": [
+          {"itemId":"jqa_computer","shopId":"jqa_home_furnishings_shop","mapInteraction":"computer_terminal"},
+          {"itemId":"jqa_game_console","shopId":"jqa_home_furnishings_shop","mapInteraction":"game_console_terminal"}
+        ]
+      },
+      {
+        "homeSize": "3_room",
+        "availableFurnishings": [
+          {"itemId":"jqa_computer","shopId":"jqa_home_furnishings_shop","mapInteraction":"computer_terminal"},
+          {"itemId":"jqa_game_console","shopId":"jqa_home_furnishings_shop","mapInteraction":"game_console_terminal"}
+        ]
+      },
+      {
+        "homeSize": "4_room",
+        "availableFurnishings": [
+          {"itemId":"jqa_computer","shopId":"jqa_home_furnishings_shop","mapInteraction":"computer_terminal"},
+          {"itemId":"jqa_game_console","shopId":"jqa_home_furnishings_shop","mapInteraction":"game_console_terminal"},
+          {"itemId":"jqa_writing_desk","shopId":"jqa_home_furnishings_shop","mapInteraction":"writing_desk","requiredSkill":"jqa_skill_mage_scribe or jqa_skill_cleric_scribe or jqa_skill_druid_scribe","description":"Allows scroll scribing in the home."},
+          {"itemId":"jqa_heavy_cauldron","shopId":"jqa_home_furnishings_shop","mapInteraction":"cauldron","requiredSkill":"jqa_skill_mage_brew or jqa_skill_cleric_brew or jqa_skill_druid_brew","description":"Allows potion brewing in the home."},
+          {"itemId":"jqa_wand_crafting_table","shopId":"jqa_home_furnishings_shop","mapInteraction":"wand_crafting_table","requiredSkill":"jqa_skill_mage_craft_wand or jqa_skill_cleric_craft_wand or jqa_skill_druid_craft_wand","description":"Allows wand crafting in the home."},
+          {"itemId":"jqa_staff_crafting_table","shopId":"jqa_home_furnishings_shop","mapInteraction":"staff_crafting_table","requiredSkill":"jqa_skill_mage_craft_wand or jqa_skill_cleric_craft_wand or jqa_skill_druid_craft_wand","description":"Allows staff crafting in the home."}
+        ]
+      }
+    ],
+    "computerInteraction": {
+      "id": "computer_terminal",
+      "name": "Personal Computer",
+      "options": [
+        {"label":"Browse world lore","action":"show_lore"},
+        {"label":"Check quest log online","action":"show_quests"},
+        {"label":"Play a game","action":"launch_game_console"},
+        {"label":"Close","action":"close"}
+      ]
+    },
+    "gameConsoleInteraction": {
+      "id": "game_console_terminal",
+      "name": "Game Console",
+      "options": [
+        {"label":"Play Dungeon Crawler (mini-game)","action":"mini_game_dungeon"},
+        {"label":"Play Puzzle Quest (mini-game)","action":"mini_game_puzzle"},
+        {"label":"Turn off","action":"close"}
+      ]
+    }
+  }
+}
