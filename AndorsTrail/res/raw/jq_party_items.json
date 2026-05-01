@@ -1,0 +1,454 @@
+{
+  "items": [
+    {
+      "id": "jq_scroll_fireball",
+      "name": "Scroll of Fireball",
+      "description": "Conjures a blazing fireball that scorches all nearby foes.",
+      "iconID": "scroll_red",
+      "category": "scroll",
+      "subcategory": "spell_scroll",
+      "equipSlot": "ring",
+      "maxUses": 5,
+      "currentUses": 5,
+      "weight": 1,
+      "cost": 120,
+      "sellValue": 48,
+      "onUse": {
+        "type": "spell",
+        "spellId": "fireball",
+        "damage": "3d8",
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "consumable_equip"
+      ]
+    },
+    {
+      "id": "jq_scroll_frost",
+      "name": "Scroll of Frost Wave",
+      "description": "Unleashes a wave of freezing cold, slowing enemies.",
+      "iconID": "scroll_blue",
+      "category": "scroll",
+      "subcategory": "spell_scroll",
+      "equipSlot": "ring",
+      "maxUses": 6,
+      "currentUses": 6,
+      "weight": 1,
+      "cost": 100,
+      "sellValue": 40,
+      "onUse": {
+        "type": "spell",
+        "spellId": "frost",
+        "damage": "2d6",
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "consumable_equip"
+      ]
+    },
+    {
+      "id": "jq_scroll_lightning",
+      "name": "Scroll of Lightning Bolt",
+      "description": "A crackling bolt of lightning strikes your foe.",
+      "iconID": "scroll_yellow",
+      "category": "scroll",
+      "subcategory": "spell_scroll",
+      "equipSlot": "ring",
+      "maxUses": 4,
+      "currentUses": 4,
+      "weight": 1,
+      "cost": 150,
+      "sellValue": 60,
+      "onUse": {
+        "type": "spell",
+        "spellId": "lightning",
+        "damage": "4d6",
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "consumable_equip"
+      ]
+    },
+    {
+      "id": "jq_scroll_shield",
+      "name": "Scroll of Arcane Shield",
+      "description": "Creates a shimmering barrier that absorbs damage.",
+      "iconID": "scroll_silver",
+      "category": "scroll",
+      "subcategory": "spell_scroll",
+      "equipSlot": "ring",
+      "maxUses": 8,
+      "currentUses": 8,
+      "weight": 1,
+      "cost": 90,
+      "sellValue": 36,
+      "onUse": {
+        "type": "spell",
+        "spellId": "arcane_shield",
+        "damage": null,
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "consumable_equip"
+      ]
+    },
+    {
+      "id": "jq_scroll_haste",
+      "name": "Scroll of Haste",
+      "description": "Accelerates your movement and attack speed.",
+      "iconID": "scroll_green",
+      "category": "scroll",
+      "subcategory": "spell_scroll",
+      "equipSlot": "ring",
+      "maxUses": 5,
+      "currentUses": 5,
+      "weight": 1,
+      "cost": 130,
+      "sellValue": 52,
+      "onUse": {
+        "type": "spell",
+        "spellId": "haste",
+        "damage": null,
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "consumable_equip"
+      ]
+    },
+    {
+      "id": "jq_scroll_invisibility",
+      "name": "Scroll of Invisibility",
+      "description": "Renders you invisible to all but the sharpest eyes.",
+      "iconID": "scroll_dark",
+      "category": "scroll",
+      "subcategory": "spell_scroll",
+      "equipSlot": "ring",
+      "maxUses": 3,
+      "currentUses": 3,
+      "weight": 1,
+      "cost": 200,
+      "sellValue": 80,
+      "onUse": {
+        "type": "spell",
+        "spellId": "invisibility",
+        "damage": null,
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "consumable_equip"
+      ]
+    },
+    {
+      "id": "jq_scroll_recall_fighter",
+      "name": "Fighters Guild Recall Scroll",
+      "description": "Instantly teleports a Fighters Guild member back to their guild hall.",
+      "iconID": "scroll_recall",
+      "category": "scroll",
+      "subcategory": "recall_scroll",
+      "equipSlot": "ring",
+      "maxUses": 1,
+      "currentUses": 1,
+      "weight": 1,
+      "cost": 80,
+      "sellValue": 24,
+      "onUse": {
+        "type": "teleport",
+        "requiresGuildMembership": "fighter",
+        "failDamage": 10,
+        "failMessage": "The scroll rejects you and zaps you for 10 damage! Only guild members may use this.",
+        "targetMap": "jq_fighter_guild",
+        "targetX": 8,
+        "targetY": 5,
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "recall",
+        "guild_fighter"
+      ]
+    },
+    {
+      "id": "jq_scroll_recall_thief",
+      "name": "Thieves Guild Recall Scroll",
+      "description": "Instantly teleports a Thieves Guild member back to their guild hall.",
+      "iconID": "scroll_recall",
+      "category": "scroll",
+      "subcategory": "recall_scroll",
+      "equipSlot": "ring",
+      "maxUses": 1,
+      "currentUses": 1,
+      "weight": 1,
+      "cost": 80,
+      "sellValue": 24,
+      "onUse": {
+        "type": "teleport",
+        "requiresGuildMembership": "thief",
+        "failDamage": 10,
+        "failMessage": "The scroll rejects you and zaps you for 10 damage! Only guild members may use this.",
+        "targetMap": "jq_thief_guild",
+        "targetX": 8,
+        "targetY": 5,
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "recall",
+        "guild_thief"
+      ]
+    },
+    {
+      "id": "jq_scroll_recall_mage",
+      "name": "Mage's Guild Recall Scroll",
+      "description": "Instantly teleports a Mage's Guild member back to their guild hall.",
+      "iconID": "scroll_recall",
+      "category": "scroll",
+      "subcategory": "recall_scroll",
+      "equipSlot": "ring",
+      "maxUses": 1,
+      "currentUses": 1,
+      "weight": 1,
+      "cost": 80,
+      "sellValue": 24,
+      "onUse": {
+        "type": "teleport",
+        "requiresGuildMembership": "mage",
+        "failDamage": 10,
+        "failMessage": "The scroll rejects you and zaps you for 10 damage! Only guild members may use this.",
+        "targetMap": "jq_mage_guild",
+        "targetX": 8,
+        "targetY": 5,
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "recall",
+        "guild_mage"
+      ]
+    },
+    {
+      "id": "jq_scroll_recall_cleric",
+      "name": "Clerics Guild Recall Scroll",
+      "description": "Instantly teleports a Clerics Guild member back to their guild hall.",
+      "iconID": "scroll_recall",
+      "category": "scroll",
+      "subcategory": "recall_scroll",
+      "equipSlot": "ring",
+      "maxUses": 1,
+      "currentUses": 1,
+      "weight": 1,
+      "cost": 80,
+      "sellValue": 24,
+      "onUse": {
+        "type": "teleport",
+        "requiresGuildMembership": "cleric",
+        "failDamage": 10,
+        "failMessage": "The scroll rejects you and zaps you for 10 damage! Only guild members may use this.",
+        "targetMap": "jq_cleric_guild",
+        "targetX": 8,
+        "targetY": 5,
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "recall",
+        "guild_cleric"
+      ]
+    },
+    {
+      "id": "jq_scroll_recall_druid",
+      "name": "Druids Guild Recall Scroll",
+      "description": "Instantly teleports a Druids Guild member back to their guild hall.",
+      "iconID": "scroll_recall",
+      "category": "scroll",
+      "subcategory": "recall_scroll",
+      "equipSlot": "ring",
+      "maxUses": 1,
+      "currentUses": 1,
+      "weight": 1,
+      "cost": 80,
+      "sellValue": 24,
+      "onUse": {
+        "type": "teleport",
+        "requiresGuildMembership": "druid",
+        "failDamage": 10,
+        "failMessage": "The scroll rejects you and zaps you for 10 damage! Only guild members may use this.",
+        "targetMap": "jq_druid_guild",
+        "targetX": 8,
+        "targetY": 5,
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "recall",
+        "guild_druid"
+      ]
+    },
+    {
+      "id": "jq_scroll_recall_adventurer",
+      "name": "Adventurers Guild Recall Scroll",
+      "description": "Instantly teleports a Adventurers Guild member back to their guild hall.",
+      "iconID": "scroll_recall",
+      "category": "scroll",
+      "subcategory": "recall_scroll",
+      "equipSlot": "ring",
+      "maxUses": 1,
+      "currentUses": 1,
+      "weight": 1,
+      "cost": 50,
+      "sellValue": 15,
+      "onUse": {
+        "type": "teleport",
+        "requiresGuildMembership": null,
+        "failDamage": 0,
+        "failMessage": "The scroll rejects you and zaps you for 10 damage! Only guild members may use this.",
+        "targetMap": "jq_adventurer_guild",
+        "targetX": 8,
+        "targetY": 5,
+        "depleteOnUse": true,
+        "destroyAtZeroUses": true
+      },
+      "tags": [
+        "scroll",
+        "recall",
+        "guild_adventurer"
+      ]
+    },
+    {
+      "id": "jq_potion_healing_sm",
+      "name": "Small Healing Potion",
+      "iconID": "potion_red",
+      "category": "potion",
+      "weight": 1,
+      "cost": 30,
+      "sellValue": 12,
+      "onUse": {
+        "type": "consume",
+        "healHP": 15,
+        "curesPoison": false,
+        "restoresMana": 0,
+        "bonusAC": 0
+      },
+      "tags": [
+        "potion",
+        "consumable"
+      ]
+    },
+    {
+      "id": "jq_potion_healing_md",
+      "name": "Healing Potion",
+      "iconID": "potion_red_lg",
+      "category": "potion",
+      "weight": 1,
+      "cost": 75,
+      "sellValue": 30,
+      "onUse": {
+        "type": "consume",
+        "healHP": 40,
+        "curesPoison": false,
+        "restoresMana": 0,
+        "bonusAC": 0
+      },
+      "tags": [
+        "potion",
+        "consumable"
+      ]
+    },
+    {
+      "id": "jq_potion_healing_lg",
+      "name": "Greater Healing Potion",
+      "iconID": "potion_red_xl",
+      "category": "potion",
+      "weight": 1,
+      "cost": 150,
+      "sellValue": 60,
+      "onUse": {
+        "type": "consume",
+        "healHP": 80,
+        "curesPoison": false,
+        "restoresMana": 0,
+        "bonusAC": 0
+      },
+      "tags": [
+        "potion",
+        "consumable"
+      ]
+    },
+    {
+      "id": "jq_potion_antidote",
+      "name": "Antidote",
+      "iconID": "potion_green",
+      "category": "potion",
+      "weight": 1,
+      "cost": 45,
+      "sellValue": 18,
+      "onUse": {
+        "type": "consume",
+        "healHP": 0,
+        "curesPoison": true,
+        "restoresMana": 0,
+        "bonusAC": 0
+      },
+      "tags": [
+        "potion",
+        "consumable"
+      ]
+    },
+    {
+      "id": "jq_potion_clarity",
+      "name": "Potion of Clarity",
+      "iconID": "potion_blue",
+      "category": "potion",
+      "weight": 1,
+      "cost": 60,
+      "sellValue": 24,
+      "onUse": {
+        "type": "consume",
+        "healHP": 0,
+        "curesPoison": false,
+        "restoresMana": 30,
+        "bonusAC": 0
+      },
+      "tags": [
+        "potion",
+        "consumable"
+      ]
+    },
+    {
+      "id": "jq_potion_bless",
+      "name": "Potion of Blessing",
+      "iconID": "potion_gold",
+      "category": "potion",
+      "weight": 1,
+      "cost": 90,
+      "sellValue": 36,
+      "onUse": {
+        "type": "consume",
+        "healHP": 10,
+        "curesPoison": false,
+        "restoresMana": 0,
+        "bonusAC": 2
+      },
+      "tags": [
+        "potion",
+        "consumable"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "partySystem": {
+    "maxPartySize": 3,
+    "bonusPerMember": {
+      "maxHP": 5,
+      "attackBonus": 1,
+      "defenseBonus": 1,
+      "xpBonus": 0.05
+    },
+    "deathThresholds": {
+      "member3_dies_at_playerHP_pct": 0.3,
+      "member2_dies_at_playerHP_pct": 0.15,
+      "member1_dies_at_playerHP_pct": 0.01,
+      "deathOrder": "reverse_join_order",
+      "note": "Member 3 = most recently joined. Member 1 = first joined (last to die)."
+    },
+    "onMemberDeath": {
+      "healPlayerHP": "dying_member_maxHP * 0.5",
+      "message": "{member_name} falls in battle, sacrificing themselves to keep you alive!",
+      "removeMemberFromParty": true
+    },
+    "disbandOptions": {
+      "disbandAll": {
+        "accessible": "anywhere",
+        "action": "return_all_to_home_pub"
+      },
+      "dismissSingle": {
+        "accessible": "anywhere",
+        "action": "return_member_to_home_pub"
+      }
+    },
+    "npcReturn": {
+      "returnToSpawnPub": true,
+      "wanderNearPub": true
+    }
+  },
+  "guildSystem": {
+    "mutuallyExclusive": [
+      "fighter",
+      "thief",
+      "mage",
+      "cleric",
+      "druid"
+    ],
+    "adventurerGuildExempt": true,
+    "maxSpecialtyGuilds": 1,
+    "levelRetention": true,
+    "reducedBenefitsOnLeave": 0.5,
+    "canRejoin": true,
+    "fullBenefitsOnRejoin": true
+  }
+}

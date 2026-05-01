@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Jasias Quest Expansion Pack - Load Resources -->
+    <!-- Jasias Quest Expansion Pack - Load Resources -->
     <resource type="json" file="res/raw/jq_actors.json"/>
     <resource type="json" file="res/raw/jq_items2.json"/>
     <resource type="json" file="res/raw/jq_spells.json"/>
@@ -14,6 +14,101 @@
     <resource type="json" file="res/raw/jq_placements.json"/>
     <resource type="json" file="res/raw/jq_computer.json"/>
     <resource type="json" file="res/raw/jq_mud_logout.json"/>
+
+    <!-- Jasias Quest Additions Pack - Load Resources -->
+    <resource type="raw" name="monsterlist_trainer"/>
+    <resource type="raw" name="monsterlist_animals"/>
+    <resource type="raw" name="droplists_regions"/>
+    <resource type="raw" name="itemlist_forage"/>
+    <resource type="raw" name="itemlist_lockpicks"/>
+    <resource type="raw" name="itemlist_crafted"/>
+    <resource type="raw" name="actorconditions_mage"/>
+    <resource type="raw" name="actorconditions_cleric"/>
+    <resource type="raw" name="actorconditions_druid"/>
+    <resource type="raw" name="conversations_trainers"/>
+    <resource type="raw" name="conversations_door"/>
+    <resource type="raw" name="conversations_crafting"/>
+
+    <!-- Monster Lists (NPCs and Faction Members) -->
+    <monsterlist ref="monsterlist_human"/>
+    <monsterlist ref="monsterlist_halfelf"/>
+    <monsterlist ref="monsterlist_elf"/>
+    <monsterlist ref="monsterlist_woodelf"/>
+    <monsterlist ref="monsterlist_drowelf"/>
+    <monsterlist ref="monsterlist_seaelf"/>
+    <monsterlist ref="monsterlist_dwarf"/>
+    <monsterlist ref="monsterlist_goblin"/>
+    <monsterlist ref="monsterlist_hobgoblin"/>
+    <monsterlist ref="monsterlist_gnome"/>
+    <monsterlist ref="monsterlist_orc"/>
+    <monsterlist ref="monsterlist_ogre"/>
+    <monsterlist ref="monsterlist_halfling"/>
+    <monsterlist ref="monsterlist_dragon"/>
+
+    <!-- Conversations -->
+    <conversations ref="conversations_factions"/>
+
+    <!-- Quests and Scripts -->
+    <scripts ref="scripts_faction_quests"/>
+
+    <!-- Items -->
+    <items ref="items_faction"/>
+
+    <!-- Drop Lists -->
+    <droplists ref="droplists_faction"/>
+
+    <!-- Faction Definitions -->
+    <factions ref="factions"/>
+
+    <!-- Abilities and Spells -->
+    <abilities ref="abilities_faction"/>
+
+    <!-- Mage Tower NPCs -->
+    <monsterlist ref="monsterlist_magetowers"/>
+    <!-- Conversations -->
+    <conversations ref="conversations_magetowers"/>
+    <!-- Quests / Scripts -->
+    <scripts ref="scripts_magetower_quests"/>
+    <!-- Items (crystals, rewards, quest items) -->
+    <items ref="items_magetowers"/>
+    <!-- Drop Lists -->
+    <droplists ref="droplists_magetowers"/>
+
+    <!-- Party System Addon JSON Files -->
+    <string name="jq_party_actors">jq_party_actors</string>
+    <string name="jq_party_items">jq_party_items</string>
+    <string name="jq_party_quests">jq_party_quests</string>
+    <string name="jq_party_conversations">jq_party_conversations</string>
+    <string name="jq_party_areas">jq_party_areas</string>
+    <string name="jq_party_system">jq_party_system</string>
+    <!-- Pub map files -->
+    <string name="jq_pub_01">jq_pub_01</string>
+    <string name="jq_pub_02">jq_pub_02</string>
+    <string name="jq_pub_03">jq_pub_03</string>
+    <string name="jq_pub_04">jq_pub_04</string>
+    <string name="jq_pub_05">jq_pub_05</string>
+    <string name="jq_pub_06">jq_pub_06</string>
+    <string name="jq_pub_07">jq_pub_07</string>
+    <string name="jq_pub_08">jq_pub_08</string>
+    <string name="jq_pub_09">jq_pub_09</string>
+    <string name="jq_pub_10">jq_pub_10</string>
+    <string name="jq_pub_11">jq_pub_11</string>
+    <string name="jq_pub_12">jq_pub_12</string>
+    <string name="jq_pub_13">jq_pub_13</string>
+    <string name="jq_pub_14">jq_pub_14</string>
+    <string name="jq_pub_15">jq_pub_15</string>
+    <string name="jq_pub_16">jq_pub_16</string>
+    <string name="jq_pub_17">jq_pub_17</string>
+    <string name="jq_pub_18">jq_pub_18</string>
+    <string name="jq_pub_19">jq_pub_19</string>
+    <string name="jq_pub_20">jq_pub_20</string>
+    <!-- Guild hall map files -->
+    <string name="jq_adventurers_guild">jq_adventurers_guild</string>
+    <string name="jq_fighter_guild">jq_fighter_guild</string>
+    <string name="jq_thief_guild">jq_thief_guild</string>
+    <string name="jq_mage_guild">jq_mage_guild</string>
+    <string name="jq_cleric_guild">jq_cleric_guild</string>
+    <string name="jq_druid_guild">jq_druid_guild</string>
 
     <array name="loadresource_itemcategories">
         <item>@raw/itemcategories_1</item>

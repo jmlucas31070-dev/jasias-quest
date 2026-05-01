@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down"
+     width="12" height="10" tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="6" nextobjectid="3">
+ <tileset firstgid="1" source="tileset_interior.tsx"/>
+ <layer id="1" name="Ground" width="12" height="10">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+  </data>
+ </layer>
+ <layer id="2" name="Objects" width="12" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  </data>
+ </layer>
+ <objectgroup id="3" name="Interactions">
+  <object id="1" name="WritingDesk" type="interactable" x="96" y="96" width="32" height="32">
+   <properties>
+    <property name="conversationId" value="crafting_scroll_start"/>
+    <property name="guildRestriction" value="mage,cleric,druid"/>
+   </properties>
+  </object>
+  <object id="2" name="BrewingCauldron" type="interactable" x="256" y="96" width="32" height="32">
+   <properties>
+    <property name="conversationId" value="crafting_potion_start"/>
+    <property name="guildRestriction" value="mage,cleric,druid"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

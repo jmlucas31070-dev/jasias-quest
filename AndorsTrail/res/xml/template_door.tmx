@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down"
+     width="10" height="8" tilewidth="32" tileheight="32" infinite="0"
+     nextlayerid="4" nextobjectid="2">
+ <tileset firstgid="1" source="tileset_dungeon.tsx"/>
+ <layer id="1" name="Ground" width="10" height="8">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+  </data>
+ </layer>
+ <layer id="2" name="Objects" width="10" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  </data>
+ </layer>
+ <objectgroup id="3" name="Interactions">
+  <object id="1" name="LockedDoor" type="door" x="160" y="128" width="32" height="32">
+   <properties>
+    <property name="conversationId" value="door_approach"/>
+    <property name="isLocked" value="true"/>
+    <property name="destinationMapId" value="template_door_inner"/>
+    <property name="destinationX" value="5"/>
+    <property name="destinationY" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

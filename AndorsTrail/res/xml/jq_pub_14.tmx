@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down"
+     width="14" height="12" tilewidth="32" tileheight="32" infinite="0">
+  <properties>
+    <property name="colorFilter" value="none"/>
+    <property name="indoor" value="true"/>
+    <property name="lighting" value="day"/>
+    <property name="music" value="tavern_music"/>
+  </properties>
+  <tileset firstgid="1" name="AT-indoors" tilewidth="32" tileheight="32">
+    <image source="../drawable/at_indoors.png" width="320" height="640"/>
+  </tileset>
+  <layer id="1" name="Ground" width="14" height="12">
+    <data encoding="csv">
+36,37,37,37,37,37,37,37,37,37,37,37,37,38,
+53,1,1,1,1,1,1,1,1,1,1,1,1,53,
+53,1,1,1,1,1,1,1,1,1,1,1,1,53,
+53,1,1,1,1,1,1,1,1,1,1,1,1,53,
+53,1,1,1,1,1,1,1,1,1,1,1,1,53,
+53,1,1,1,1,1,1,1,1,1,1,1,1,53,
+53,1,1,1,1,1,1,1,1,1,1,1,1,53,
+53,1,1,1,1,1,1,1,1,1,1,1,1,53,
+53,1,1,1,1,1,1,1,1,1,1,1,1,53,
+53,1,1,1,1,1,1,1,1,1,1,1,1,53,
+53,1,1,1,1,1,1,1,1,1,1,1,1,53,
+52,37,37,37,37,37,37,17,37,37,37,37,37,54
+    </data>
+  </layer>
+  <objectgroup id="2" name="Spawn" color="#ff0000">
+    <object id="1" name="jq_innkeeper_14" type="jq_innkeeper_14" x="96" y="64" width="32" height="32">
+    </object>
+    <object id="2" name="jq_barkeep_14" type="jq_barkeep_14" x="288" y="64" width="32" height="32">
+    </object>
+    <object id="3" name="jq_party_14_01" type="jq_party_14_01" x="64" y="128" width="32" height="32">
+    </object>
+    <object id="4" name="jq_party_14_02" type="jq_party_14_02" x="128" y="128" width="32" height="32">
+    </object>
+    <object id="5" name="jq_party_14_03" type="jq_party_14_03" x="192" y="128" width="32" height="32">
+    </object>
+    <object id="6" name="jq_party_14_04" type="jq_party_14_04" x="256" y="128" width="32" height="32">
+    </object>
+    <object id="7" name="jq_party_14_05" type="jq_party_14_05" x="320" y="128" width="32" height="32">
+    </object>
+    <object id="8" name="jq_party_14_06" type="jq_party_14_06" x="64" y="224" width="32" height="32">
+    </object>
+    <object id="9" name="jq_party_14_07" type="jq_party_14_07" x="128" y="224" width="32" height="32">
+    </object>
+    <object id="10" name="jq_party_14_08" type="jq_party_14_08" x="192" y="224" width="32" height="32">
+    </object>
+    <object id="11" name="jq_party_14_09" type="jq_party_14_09" x="256" y="224" width="32" height="32">
+    </object>
+    <object id="12" name="jq_party_14_10" type="jq_party_14_10" x="320" y="224" width="32" height="32">
+    </object>
+    <object id="13" name="mapchange_exit_pub14" type="mapchange" x="192" y="320" width="32" height="32">
+      <properties>
+        <property name="map" value="jq_worldarea_01"/>
+        <property name="destx" value="10"/>
+        <property name="desty" value="5"/>
+      </properties>
+    </object>
+  </objectgroup>
+</map>

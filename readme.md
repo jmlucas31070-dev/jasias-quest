@@ -26,6 +26,17 @@ Asked AI to build a real estate option to buy homes with crafting abilities. Sew
 Asked AI to build 2 computers to jasia's bedroom (home) and sunny's bedroom that each have a game. Pokemon (renamed) and Nemesis and LPmud of the 2.4.5 flavor. Both are extremely bare bones and will need work. The skeleton for a full pokemon game with 9 regions, each with gyms, boss level, catching, evolution, shiny, variants, breeding, and an end game that will reset all the gyms is written.
 The Lpmud is a little more extensive in maps, but bare. The skeleton for logout from any room is there. So recall scrolls anyone???
 
+* **Version 4**:
+Asked AI for quite a bit:
+Content packs for trainers, region based animals, forage item pack, spells with scroll and potions.
+Added scroll/potion crafting for magic users, lockpicking for thief, and bash for fighter.
+Scroll is equiped as a ring and will disappear after total uses.
+Added 14 race faction war expansion.
+Added 10 mage towers and a quest.
+Fixed the guild system so player can only have one guild, but retains progress in others.
+Added an Adventurer's Guild with a party system where players can add up to 3 unique party members to finish quests.
+Added recall scrolls to all guilds and a zap if it's not your current guild, excluding adventuerer.
+
 * **Notes on AI**:
 Great for the bare bones stuff. Got a great skeleton to build with.
 Got to be careful with how you word things, AI is crazy.
