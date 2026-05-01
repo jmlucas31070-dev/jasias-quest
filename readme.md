@@ -36,6 +36,7 @@ Added 10 mage towers and a quest.
 Fixed the guild system so player can only have one guild, but retains progress in others.
 Added an Adventurer's Guild with a party system where players can add up to 3 unique party members to finish quests.
 Added recall scrolls to all guilds and a zap if it's not your current guild, excluding adventuerer.
+Removed all maps not in the overworld, and worked on guilds a bit more.
 
 * **Notes on AI**:
 Great for the bare bones stuff. Got a great skeleton to build with.
