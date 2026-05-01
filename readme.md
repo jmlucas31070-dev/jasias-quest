@@ -12,7 +12,7 @@ All bugs belong to me at this point. *wink*
 ## News/Updates
 
 * **Version 0**:
-All made from a script that I had an AI write. It compared this repo vs a repo of stendhal scr code, and produced Andor's Trail maps and tilesets.aThe maps are completely buggy and may. or may not have correct exits. That is a lot of Tiled Editor work on all the maps. The AT src code hasn't changed, but I'm sure no apk will load all the tilesets and maps, they are just for reference and some areas won't even be used, pruned to another directory for future expansions.
+All made from a script that I had an AI write. It compared this repo vs a repo of stendhal scr code, and produced Andor's Trail maps and tilesets. The maps are completely buggy and may. or may not have correct exits. That is a lot of Tiled Editor work on all the maps. The AT src code hasn't changed, but I'm sure no apk will load all the tilesets and maps, they are just for reference and some areas won't even be used, pruned to another directory for future expansions.
 
 * **Version 1**:
 Asked AI to build a foraging and mining ability. It built a skeleton room that I can overlay for both activities. Forage drops items and mining requires a pick axe weilded.
@@ -24,7 +24,7 @@ Asked AI to build a real estate option to buy homes with crafting abilities. Sew
 
 * **Version 3**:
 Asked AI to build 2 computers to jasia's bedroom (home) and sunny's bedroom that each have a game. Pokemon (renamed) and Nemesis and LPmud of the 2.4.5 flavor. Both are extremely bare bones and will need work. The skeleton for a full pokemon game with 9 regions, each with gyms, boss level, catching, evolution, shiny, variants, breeding, and an end game that will reset all the gyms is written.
-The Lpmud is a little more extensive in maps, but bare. The skeleton for logout from any room is there.
+The Lpmud is a little more extensive in maps, but bare. The skeleton for logout from any room is there. So recall scrolls anyone???
 
 * **Notes on AI**:
 Great for the bare bones stuff. Got a great skeleton to build with.
@@ -33,7 +33,7 @@ Guess the only bad side, is a lot of Tiled Editor work.
 Added all the files the AI produced in scripts directory.
 
 * **Updates and future**:
-Removed all stendgal levels ands interiors from maps and loadresourxes.
+Removed all stendgal levels and interiors from maps and loadresources.
 Unused maps in unused directory. Got it down to 3228 maps. Still needs more pruning.
 Working on the level 0 maps to ensure that main map will work and look proper. Then I can tackle the castle and the main story.
 
@@ -42,7 +42,7 @@ Working on the level 0 maps to ensure that main map will work and look proper. T
 For now, contact me here if you want to work on some of the maps. Check [here](https://stendhalgame.org/) for reference.
 Each of their maps is 128x128 tiles, so loads of open space to plop maps into at 32x32 tiles each.
 I need the 2 mountains for story content, and ados. Other than that I'm open to ideas.
-As you cab tell there are not many restrictions, ie.. computers in a castle.
+As you can tell there are not many restrictions, ie.. computers in a castle.
 
 ### Andor's Trail Content Studio
 A Win/Mac/Linux content creator/editor available [here](https://andorstrail.com/viewtopic.php?f=6&t=4806).
@@ -55,7 +55,7 @@ No downloads, just raw src code. Sorry.
 ## Authors
 
 It's all on these guys below. I'm an over-achiever at best.
-Added Stendhal spurce readme and license to repo.
+Added Stendhal source readme and license to repo.
 
 **Created &amp; originally programmed by Oskar Wiksten**
 
