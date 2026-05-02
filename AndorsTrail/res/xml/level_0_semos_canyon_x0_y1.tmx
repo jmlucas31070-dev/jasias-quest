@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="logic_collision" tilewidth="32" tileheight="32">
-  <image source="../drawable/logic_collision.png" width="512" height="256"/>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="1">
+ <tileset firstgid="1" name="logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="../drawable/logic_collision.png" width="32" height="32"/>
  </tileset>
- <tileset firstgid="2" name="ground_ground" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ground.png" width="512" height="256"/>
+ <tileset firstgid="2" name="ground_ground" tilewidth="32" tileheight="32" tilecount="33" columns="3">
+  <image source="../drawable/ground_ground.png" width="96" height="352"/>
  </tileset>
- <tileset firstgid="35" name="ground_ridge_earth_dark" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ridge_earth_dark.png" width="512" height="256"/>
+ <tileset firstgid="35" name="ground_ridge_earth_dark" tilewidth="32" tileheight="32" tilecount="96" columns="12">
+  <image source="../drawable/ground_ridge_earth_dark.png" width="384" height="256"/>
  </tileset>
- <tileset firstgid="131" name="ground_rock_huge_boulder" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_rock_huge_boulder.png" width="512" height="256"/>
+ <tileset firstgid="131" name="ground_rock_huge_boulder" tilewidth="32" tileheight="32" tilecount="20" columns="5">
+  <image source="../drawable/ground_rock_huge_boulder.png" width="160" height="128"/>
  </tileset>
- <tileset firstgid="151" name="ground_ladder_vertical_pale" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ladder_vertical_pale.png" width="512" height="256"/>
+ <tileset firstgid="151" name="ground_ladder_vertical_pale" tilewidth="32" tileheight="32" tilecount="5" columns="5">
+  <image source="../drawable/ground_ladder_vertical_pale.png" width="160" height="32"/>
  </tileset>
- <tileset firstgid="156" name="building_fence_wooden_brown_fence" tilewidth="32" tileheight="32">
-  <image source="../drawable/building_fence_wooden_brown_fence.png" width="512" height="256"/>
+ <tileset firstgid="156" name="building_fence_wooden_brown_fence" tilewidth="32" tileheight="32" tilecount="42" columns="7">
+  <image source="../drawable/building_fence_wooden_brown_fence.png" width="224" height="192"/>
  </tileset>
- <tileset firstgid="198" name="furniture_table_wooden_rectangular" tilewidth="32" tileheight="32">
-  <image source="../drawable/furniture_table_wooden_rectangular.png" width="512" height="256"/>
+ <tileset firstgid="198" name="furniture_table_wooden_rectangular" tilewidth="32" tileheight="32" tilecount="9" columns="3">
+  <image source="../drawable/furniture_table_wooden_rectangular.png" width="96" height="96"/>
  </tileset>
- <layer name="Ground" width="32" height="32">
+ <layer id="1" name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtzaENACAMAMHKrg4kwMh0AgQGc+LcJ58RkQAAAMCzVnoZn/6zrLIvzQGFXyMc
+   eJztzaENACAMAMHKrg4kwMh0AgQGc+LcJ58RkQAAAMCzVnoZn/6zrLIvzQGFXyMc
   </data>
  </layer>
- <layer name="Objects" width="32" height="32">
+ <layer id="2" name="Objects" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtzTsOABAQAFH3USgUXIQzKSjc2BaqTdCQKOYl0+3HGAAAAAAA/mQ3veaksCnOuaL26qXfWUqHvNTUbl/cHJ2sCKg=
+   eJztzTsOABAQAFH3USgUXIQzKSjc2BaqTdCQKOYl0+3HGAAAAAAA/mQ3veaksCnOuaL26qXfWUqHvNTUbl/cHJ2sCKg=
   </data>
  </layer>
- <layer name="Objects2" width="32" height="32">
+ <layer id="3" name="Objects2" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
- <layer name="Above" width="32" height="32">
+ <layer id="4" name="Above" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrt0AkNADAMxLBy7x7aOwAlMMmWQiBVAAAA8K9OK+100rVk9AD8FgKa
+   eJztzskJADAMBDH3nqvtbBdOQIL5TxUAAAD8a6SZVtrp9O486wL8FgKa
   </data>
  </layer>
- <layer name="Above2" width="32" height="32">
+ <layer id="5" name="Above2" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
- <layer name="Walkable" width="32" height="32">
+ <layer id="6" name="Walkable" width="32" height="32" visible="0">
   <data encoding="base64" compression="zlib">
-   eNrtziESAEAIAkD8/6evG/SKbXeGQoEEAAAA6OojGfrr7e1X9wAdQAAf
+   eJztzrEJAAAIAzD9/2l3QXRySqBboY0AAAAAujxk6n1sb7+6Ah1AAB8=
   </data>
  </layer>
- <objectgroup name="Mapevents" width="32" height="32">
- </objectgroup>
- <objectgroup name="Spawn" width="32" height="32"/>
- <objectgroup name="Keys" width="32" height="32"/>
- <objectgroup name="Replace" width="32" height="32"/>
+ <objectgroup id="7" name="Mapevents"/>
+ <objectgroup id="8" name="Spawn"/>
+ <objectgroup id="9" name="Keys"/>
+ <objectgroup id="10" name="Replace"/>
 </map>

@@ -1,68 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="object_boardwalk" tilewidth="32" tileheight="32">
-  <image source="../drawable/object_boardwalk.png" width="512" height="256"/>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="1">
+ <tileset firstgid="1" name="object_boardwalk" tilewidth="32" tileheight="32" tilecount="36" columns="6">
+  <image source="../drawable/object_boardwalk.png" width="192" height="192"/>
  </tileset>
- <tileset firstgid="37" name="item_weapon_cannon" tilewidth="32" tileheight="32">
-  <image source="../drawable/item_weapon_cannon.png" width="512" height="256"/>
+ <tileset firstgid="37" name="item_weapon_cannon" tilewidth="32" tileheight="32" tilecount="12" columns="3">
+  <image source="../drawable/item_weapon_cannon.png" width="96" height="128"/>
  </tileset>
- <tileset firstgid="49" name="logic_collision" tilewidth="32" tileheight="32">
-  <image source="../drawable/logic_collision.png" width="512" height="256"/>
+ <tileset firstgid="49" name="logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="../drawable/logic_collision.png" width="32" height="32"/>
  </tileset>
- <tileset firstgid="50" name="item_banners_flag" tilewidth="32" tileheight="32">
-  <image source="../drawable/item_banners_flag.png" width="512" height="256"/>
+ <tileset firstgid="50" name="item_banners_flag" tilewidth="32" tileheight="32" tilecount="12" columns="3">
+  <image source="../drawable/item_banners_flag.png" width="96" height="128"/>
  </tileset>
- <tileset firstgid="62" name="item_flagpole" tilewidth="32" tileheight="32">
-  <image source="../drawable/item_flagpole.png" width="512" height="256"/>
+ <tileset firstgid="62" name="item_flagpole" tilewidth="32" tileheight="32" tilecount="3" columns="1">
+  <image source="../drawable/item_flagpole.png" width="32" height="96"/>
  </tileset>
- <tileset firstgid="65" name="ground_ground" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ground.png" width="512" height="256"/>
+ <tileset firstgid="65" name="ground_ground" tilewidth="32" tileheight="32" tilecount="33" columns="3">
+  <image source="../drawable/ground_ground.png" width="96" height="352"/>
  </tileset>
- <tileset firstgid="98" name="item_ropes" tilewidth="32" tileheight="32">
-  <image source="../drawable/item_ropes.png" width="512" height="256"/>
+ <tileset firstgid="98" name="item_ropes" tilewidth="32" tileheight="32" tilecount="4" columns="2">
+  <image source="../drawable/item_ropes.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="102" name="object_row_boat" tilewidth="32" tileheight="32">
-  <image source="../drawable/object_row_boat.png" width="512" height="256"/>
+ <tileset firstgid="102" name="object_row_boat" tilewidth="32" tileheight="32" tilecount="30" columns="6">
+  <image source="../drawable/object_row_boat.png" width="192" height="160"/>
  </tileset>
- <tileset firstgid="132" name="object_ship" tilewidth="32" tileheight="32">
-  <image source="../drawable/object_ship.png" width="512" height="256"/>
+ <tileset firstgid="132" name="object_ship" tilewidth="32" tileheight="32" tilecount="368" columns="16">
+  <image source="../drawable/object_ship.png" width="512" height="736"/>
  </tileset>
- <tileset firstgid="500" name="building_stairs_wooden_ns" tilewidth="32" tileheight="32">
-  <image source="../drawable/building_stairs_wooden_ns.png" width="512" height="256"/>
+ <tileset firstgid="500" name="building_stairs_wooden_ns" tilewidth="32" tileheight="32" tilecount="105" columns="7">
+  <image source="../drawable/building_stairs_wooden_ns.png" width="224" height="480"/>
  </tileset>
- <layer name="Ground" width="32" height="32">
+ <layer id="1" name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtzTENAAAIA7DhAGH414MHPpIevTtJBgAASNeN3+/3f/gXDKsPzA==
+   eJztzTENAAAIA7DhAGH414MHPpIevTtJBgAASNeN3+/3f/gXDKsPzA==
   </data>
  </layer>
- <layer name="Objects" width="32" height="32">
+ <layer id="2" name="Objects" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNpjYBgF5ADbAbS7DYjbB9D+aUA8fQDtXwbEywfQ/m1AvH2A7D4KxMeA+DgQnxgA+68C8TUgvg7ENwbA709B6Z8Rgl/QOQxAfr+CZD8I3xggv9M7DLD5ndphkAbE6UCcQaTfqR0GOUCcC8R5WPyOy25apwNCfqd1OiDG75SEARMSZibT75SEAT778aV5aoUBLvufQP3ezkgaBoXBSyrY38JImr+RcSfj8LCfXDBqP/Xst0EyC1d8w4Az4/CzHwR8GQnbH8Q4Gv60Dn90oIskTu3whwEbPGbZosmR438A5T2Gjw==
+   eJztkt0NgjAUhanO4wbw5DMvDqE+qFMYiAvoBrqBTuDPAIIOoIlu4WmUpGlsgVJ6k4abfC8t6ZdzuEHQjclEhO4EpIT+NdgQ+rdgR+jfgwOR+whO4AwuBP4M5OAG7o7dPPsTJOzLK3DbAc9+FfwcVx3I2V138C+77Q7GYAKm0rkqu+0OZmAOFtJ5pnG3vQdl2dvegyrZm3TQE+hLd1WzN+lA59ftvK0OVP7HL3vK6sE7eFvwL2tkllkxP/ym0/nt+UPhLdX/LmbI/PPziVm5fyR871N+aj+fWPHeQDi33X8xoeatSLozyf8B5T2Gjw==
   </data>
  </layer>
- <layer name="Objects2" width="32" height="32">
+ <layer id="3" name="Objects2" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNpjYBgFo2AUjIJRMAqGFkgD4nQgzhgg+3OAOBeI80ZYOM8A4plQdiYQZwFxNoV2XGYkL5zzgbgAiAspsHsy42hewgV0gWGzGRo+KUSoJRWk4pFLBmJbEsy0ZaRN+hssAFf4b6ax21NpaDYs3IkJf3MsaswY6ec3WtjPQKL9vwfY/oH0fyUN7Sc3/6cwDG0AABsxFdY=
+   eJxjYBgFo2AUjIJRMAqGFkgD4nQgzhgg+3OAOBeI8wbIfnoB9HCeAcQzoexMIM4C4mwK7bjMiFsOXzjnA3EBEBdSYPdkPHaPdKALDJvN0PBJIUItqSAVj1wyENuSYCYpatEBvvQ3WACu8N9MY7fjiyNKASzciQl/cyxqzCj0Oyl+o4X9pACQ/b8H2H50QE/7K2loP7n5n1CZONgBABsxFdY=
   </data>
  </layer>
- <layer name="Above" width="32" height="32">
+ <layer id="4" name="Above" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNpjYBgFo2AUjALiQRcQdw+g/bOAePYA2j8FiKeO2j9q/wCBDiDuHC2GBgy0AHErHezZxcjAIMsIoYnBMLXDPf2PgoEByxixY3qCfiieAMX0Bq+BeD4QL6CTfT6MxOe/YDrFxUDlf/R0J0uH9Dfcwx8AAOMl9A==
+   eJxjYBgFo2AUjALiQRcQdw+g/bOAePYA2j8FiKeO2j9q/wCBDiDuHED7RzpoAeJWOtizi5GBQZYRQhODYWppDQY6/Y+CgQHLGLFjeoJ+KJ4AxfQGr4F4PhAvoJN9PljCF1f+C6ZTXAxU/kdPd7J0SH/DPfwBAOMl9A==
   </data>
  </layer>
- <layer name="Above2" width="32" height="32">
+ <layer id="5" name="Above2" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrt1DsOglAQhWEWZuL+EEUFGwygt1PZAOgGeGwAcDH8zU2InYV3EpmTfPXwODOep/k2a/0EGuH+rRb2zgG22CHEHgccETl6hhQZclxwhdE6avT+OI2PjeD8BGe9f2L3L8ZJ6N/fcMcDhcD8EhWeeAnMr9GgReew97b7PQaMeM924Jd7kH503/Z/vgNmIf3X+f+VCT2lL3U=
+   eJzt1D0OgkAQxfE9mIn38xNRGwyCdiIXULmA4gVUDuN/iw2xpHDG4LzkV78t3qxzlq4Zaj/A8tfx+xtoP0I4E0wxwxwRFoixFHpDii0y5NhhL9RtsfxKtP+fEcaK/Qk2wp32/7VZYa3Q63NAgSNKhf4TzrigUui/4oYad4G+sPuw/QeeeKFx7Q188w5S97n9sH8v3IDkHWju3/r7lTc9pS91
   </data>
  </layer>
- <layer name="Walkable" width="32" height="32">
+ <layer id="6" name="Walkable" width="32" height="32" visible="0">
   <data encoding="base64" compression="zlib">
-   eNrtlUEOgEAIA/ul/v9znryJSEC6q5D0sgk7UEIgAI5Go9FDnaFkq2pQ8q34A98LBZ+L9P52PRang4/A/iHxP5LeI8G3cj1GRQ1eHhKz2olfMftq/yM8Jb9iBzK3tsv/yFslnzd7z4s6vtZ/B58B/63bseP+HSoElkI=
+   eJztkjsOwDAIQ7lS7n+5Tl0iPqZBWFGx5KVReMbpEpE1Ho/HoF8x2awMTL6lP/AjMfjs3rvyWJwO/j7XY37JIMHdrE66Rdno+Sk/22n1/p38irf3ZlW+v8Zj8rU82QxI/8gOWb53T5uLfqvk7x1p/Ohfvnn/Dn50ZuXr7B9Vhv8AKgSWQg==
   </data>
  </layer>
- <objectgroup name="Mapevents" width="32" height="32">
- </objectgroup>
- <objectgroup name="Spawn" width="32" height="32"/>
- <objectgroup name="Keys" width="32" height="32"/>
- <objectgroup name="Replace" width="32" height="32"/>
+ <objectgroup id="7" name="Mapevents"/>
+ <objectgroup id="8" name="Spawn"/>
+ <objectgroup id="9" name="Keys"/>
+ <objectgroup id="10" name="Replace"/>
 </map>

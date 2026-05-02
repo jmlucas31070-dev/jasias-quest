@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="logic_collision" tilewidth="32" tileheight="32">
-  <image source="../drawable/logic_collision.png" width="512" height="256"/>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="1">
+ <tileset firstgid="1" name="logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="../drawable/logic_collision.png" width="32" height="32"/>
  </tileset>
- <tileset firstgid="2" name="terrain_desert" tilewidth="32" tileheight="32">
-  <image source="../drawable/terrain_desert.png" width="512" height="256"/>
+ <tileset firstgid="2" name="terrain_desert" tilewidth="32" tileheight="32" tilecount="88" columns="8">
+  <image source="../drawable/terrain_desert.png" width="256" height="352"/>
  </tileset>
- <tileset firstgid="90" name="ground_sand_2" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_sand_2.png" width="512" height="256"/>
+ <tileset firstgid="90" name="ground_sand_2" tilewidth="32" tileheight="32" tilecount="15" columns="5">
+  <image source="../drawable/ground_sand_2.png" width="160" height="96"/>
  </tileset>
- <tileset firstgid="105" name="plant_cactus_2" tilewidth="32" tileheight="32">
-  <image source="../drawable/plant_cactus_2.png" width="512" height="256"/>
+ <tileset firstgid="105" name="plant_cactus_2" tilewidth="32" tileheight="32" tilecount="10" columns="5">
+  <image source="../drawable/plant_cactus_2.png" width="160" height="64"/>
  </tileset>
- <tileset firstgid="115" name="plant_cactus" tilewidth="32" tileheight="32">
-  <image source="../drawable/plant_cactus.png" width="512" height="256"/>
+ <tileset firstgid="115" name="plant_cactus" tilewidth="32" tileheight="32" tilecount="2" columns="1">
+  <image source="../drawable/plant_cactus.png" width="32" height="64"/>
  </tileset>
- <tileset firstgid="117" name="plant_round_cactuses" tilewidth="32" tileheight="32">
-  <image source="../drawable/plant_round_cactuses.png" width="512" height="256"/>
+ <tileset firstgid="117" name="plant_round_cactuses" tilewidth="32" tileheight="32" tilecount="20" columns="10">
+  <image source="../drawable/plant_round_cactuses.png" width="320" height="64"/>
  </tileset>
- <layer name="Ground" width="32" height="32">
+ <layer id="1" name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrjZmBg4B7Fo3gUj2IknEKi+lggjhtA9yYBcfJovI3iUTyKR/EoHsV0walAnDYaDqN4tH04JDEAQOwvtw==
+   eJzt1qsRACAQQ8HzVyMIfv2XQCQWRWZ4Yl1EJioZEQkAh3GZL1If9m3SDXYDAOAHU5ZBD3jjH3raQOwvtw==
   </data>
  </layer>
- <layer name="Objects" width="32" height="32">
+ <layer id="2" name="Objects" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtlLEKwCAMRDMLdrCdtJP1+0r/f9JCCg6dYuFCzcGbXzjliCwW3bmsAnvbCXNaBZZJ48D+0FgZD/DHRmIC4IbcOJgIuqG/JYL/RAZ3QEo6cD/ahQXov92bcJf8R+5d+Af7bZTwuMvAFqQBpO63bZRQSE8qIrAKJw==
+   eJztlLsKgDAMRTsLOrROrZP1+8T/n2yggS4uSeR2yIE7hnNJHyE4ztw86ALOb/jZfnOjCzgOiAXsjy2pZwX4c0vpiYAOZ0vtyaAOYxfqgLwT1AG5A2KGHaDfpaV/A/rJvQvmLO4guw/BLP8FSRF2XwI//wVFEal77FAV0biteQEisAon
   </data>
  </layer>
- <layer name="Objects2" width="32" height="32">
+ <layer id="3" name="Objects2" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
- <layer name="Above" width="32" height="32">
+ <layer id="4" name="Above" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrt0rsKwCAMhWHxNlhftPj+ex0dxFRNF/t/cDYh4RhjgLFCBfztD90Tb22NE+KV92tnhppLSP5w5htxswO7MFNzh6T0b7HpcOaeguLtSB2mzv0AAIAzPOcdApg=
+   eJzt0sEKgCAQRdHBsoX1o9H/77VFEKRN6UgQ98DbKW8YFQHubV8PgG5427L1xVmXMigZjec7d/qUWcnSsfOJSdp24Co6LWcIlfdyMxw7LMn9J2/Uv9N2GOT6fwAAwD9E5x0CmA==
   </data>
  </layer>
- <layer name="Above2" width="32" height="32">
+ <layer id="5" name="Above2" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
- <layer name="Walkable" width="32" height="32">
+ <layer id="6" name="Walkable" width="32" height="32" visible="0">
   <data encoding="base64" compression="zlib">
-   eNrtlcEJADAMAnX/pbtCHqEnQcH3iQkoVVW23ArOdt7b3ujGQxPMTb4XTPMNsyc5/MnlsxnI33Pw/yfyVX758AYlbLBg9qYey+kBfg==
+   eJztkkEKADAIw+b/P70XDFSqddiA5wT1HCFmY+yAhXTtXLd989NuzDkMJ9KfcSIbEP5sA8rt6ahwyR/7A7a/oyXCdn9Fg/x7/VmYbkTDJC7L6QF+
   </data>
  </layer>
- <objectgroup name="Mapevents" width="32" height="32">
- </objectgroup>
- <objectgroup name="Spawn" width="32" height="32"/>
- <objectgroup name="Keys" width="32" height="32"/>
- <objectgroup name="Replace" width="32" height="32"/>
+ <objectgroup id="7" name="Mapevents"/>
+ <objectgroup id="8" name="Spawn"/>
+ <objectgroup id="9" name="Keys"/>
+ <objectgroup id="10" name="Replace"/>
 </map>

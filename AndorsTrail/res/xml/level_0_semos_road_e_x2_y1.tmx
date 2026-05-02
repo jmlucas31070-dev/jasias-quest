@@ -1,182 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="logic_collision" tilewidth="32" tileheight="32">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="1">
+ <tileset firstgid="1" name="logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
   <image source="../drawable/logic_collision.png" width="32" height="32"/>
  </tileset>
- <tileset firstgid="2" name="ground_ground" tilewidth="32" tileheight="32">
+ <tileset firstgid="2" name="ground_ground" tilewidth="32" tileheight="32" tilecount="33" columns="3">
   <image source="../drawable/ground_ground.png" width="96" height="352"/>
  </tileset>
- <tileset firstgid="35" name="ground_water_water" tilewidth="32" tileheight="32">
+ <tileset firstgid="35" name="ground_water_water" tilewidth="32" tileheight="32" tilecount="24" columns="3">
   <image source="../drawable/ground_water_water.png" width="96" height="256"/>
  </tileset>
- <tileset firstgid="59" name="plant_grasses" tilewidth="32" tileheight="32">
+ <tileset firstgid="59" name="plant_grasses" tilewidth="32" tileheight="32" tilecount="6" columns="3">
   <image source="../drawable/plant_grasses.png" width="96" height="64"/>
  </tileset>
- <tileset firstgid="65" name="ground_grass_edges" tilewidth="32" tileheight="32">
+ <tileset firstgid="65" name="ground_grass_edges" tilewidth="32" tileheight="32" tilecount="36" columns="12">
   <image source="../drawable/ground_grass_edges.png" width="384" height="96"/>
  </tileset>
- <tileset firstgid="101" name="plant_tree_tree_green" tilewidth="32" tileheight="32">
+ <tileset firstgid="101" name="plant_tree_tree_green" tilewidth="32" tileheight="32" tilecount="88" columns="8">
   <image source="../drawable/plant_tree_tree_green.png" width="256" height="352"/>
  </tileset>
- <tileset firstgid="189" name="ground_water_pool_grassy" tilewidth="32" tileheight="32">
+ <tileset firstgid="189" name="ground_water_pool_grassy" tilewidth="32" tileheight="32" tilecount="27" columns="9">
   <image source="../drawable/ground_water_pool_grassy.png" width="288" height="96"/>
  </tileset>
- <tileset firstgid="216" name="ground_water_water_corners" tilewidth="32" tileheight="32">
+ <tileset firstgid="216" name="ground_water_water_corners" tilewidth="32" tileheight="32" tilecount="12" columns="6">
   <image source="../drawable/ground_water_water_corners.png" width="192" height="64"/>
  </tileset>
- <tileset firstgid="228" name="plant_flower_daisy_blue" tilewidth="32" tileheight="32">
+ <tileset firstgid="228" name="plant_flower_daisy_blue" tilewidth="32" tileheight="32" tilecount="8" columns="2">
   <image source="../drawable/plant_flower_daisy_blue.png" width="64" height="128"/>
  </tileset>
- <tileset firstgid="236" name="ground_water_channels_grassy" tilewidth="32" tileheight="32">
+ <tileset firstgid="236" name="ground_water_channels_grassy" tilewidth="32" tileheight="32" tilecount="6" columns="3">
   <image source="../drawable/ground_water_channels_grassy.png" width="96" height="64"/>
  </tileset>
- <tileset firstgid="242" name="plant_flower_daisy_yellow" tilewidth="32" tileheight="32">
+ <tileset firstgid="242" name="plant_flower_daisy_yellow" tilewidth="32" tileheight="32" tilecount="8" columns="2">
   <image source="../drawable/plant_flower_daisy_yellow.png" width="64" height="128"/>
  </tileset>
- <tileset firstgid="250" name="plant_flower_daisy_white" tilewidth="32" tileheight="32">
+ <tileset firstgid="250" name="plant_flower_daisy_white" tilewidth="32" tileheight="32" tilecount="8" columns="2">
   <image source="../drawable/plant_flower_daisy_white.png" width="64" height="128"/>
  </tileset>
- <tileset firstgid="258" name="building_wall_wall_brown" tilewidth="32" tileheight="32">
+ <tileset firstgid="258" name="building_wall_wall_brown" tilewidth="32" tileheight="32" tilecount="12" columns="3">
   <image source="../drawable/building_wall_wall_brown.png" width="96" height="128"/>
  </tileset>
- <tileset firstgid="270" name="plant_bush_bushes" tilewidth="32" tileheight="32">
+ <tileset firstgid="270" name="plant_bush_bushes" tilewidth="32" tileheight="32" tilecount="10" columns="5">
   <image source="../drawable/plant_bush_bushes.png" width="160" height="64"/>
  </tileset>
- <tileset firstgid="280" name="plant_vine" tilewidth="32" tileheight="32">
+ <tileset firstgid="280" name="plant_vine" tilewidth="32" tileheight="32" tilecount="3" columns="1">
   <image source="../drawable/plant_vine.png" width="32" height="96"/>
  </tileset>
- <tileset firstgid="283" name="building_decoration_rocks_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="283" name="building_decoration_rocks_2" tilewidth="32" tileheight="32" tilecount="2" columns="1">
   <image source="../drawable/building_decoration_rocks_2.png" width="32" height="64"/>
  </tileset>
- <tileset firstgid="285" name="plant_stump_stump_green" tilewidth="32" tileheight="32">
+ <tileset firstgid="285" name="plant_stump_stump_green" tilewidth="32" tileheight="32" tilecount="4" columns="2">
   <image source="../drawable/plant_stump_stump_green.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="289" name="building_decoration_green_block" tilewidth="32" tileheight="32">
+ <tileset firstgid="289" name="building_decoration_green_block" tilewidth="32" tileheight="32" tilecount="4" columns="2">
   <image source="../drawable/building_decoration_green_block.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="293" name="plant_tree_tree_golden_small" tilewidth="32" tileheight="32">
+ <tileset firstgid="293" name="plant_tree_tree_golden_small" tilewidth="32" tileheight="32" tilecount="6" columns="2">
   <image source="../drawable/plant_tree_tree_golden_small.png" width="64" height="96"/>
  </tileset>
- <tileset firstgid="299" name="plant_flower_daisy_red" tilewidth="32" tileheight="32">
+ <tileset firstgid="299" name="plant_flower_daisy_red" tilewidth="32" tileheight="32" tilecount="8" columns="2">
   <image source="../drawable/plant_flower_daisy_red.png" width="64" height="128"/>
  </tileset>
- <tileset firstgid="307" name="plant_stump_stump_purple" tilewidth="32" tileheight="32">
+ <tileset firstgid="307" name="plant_stump_stump_purple" tilewidth="32" tileheight="32" tilecount="4" columns="2">
   <image source="../drawable/plant_stump_stump_purple.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="311" name="item_pot_dark_barrel" tilewidth="32" tileheight="32">
+ <tileset firstgid="311" name="item_pot_dark_barrel" tilewidth="32" tileheight="32" tilecount="2" columns="1">
   <image source="../drawable/item_pot_dark_barrel.png" width="32" height="64"/>
  </tileset>
- <tileset firstgid="313" name="ground_ladder_vertical_dark" tilewidth="32" tileheight="32">
+ <tileset firstgid="313" name="ground_ladder_vertical_dark" tilewidth="32" tileheight="32" tilecount="3" columns="3">
   <image source="../drawable/ground_ladder_vertical_dark.png" width="96" height="32"/>
  </tileset>
- <tileset firstgid="316" name="item_statue_green_stone" tilewidth="32" tileheight="32">
+ <tileset firstgid="316" name="item_statue_green_stone" tilewidth="32" tileheight="32" tilecount="12" columns="4">
   <image source="../drawable/item_statue_green_stone.png" width="128" height="96"/>
  </tileset>
- <tileset firstgid="328" name="item_statue_grey_stone" tilewidth="32" tileheight="32">
+ <tileset firstgid="328" name="item_statue_grey_stone" tilewidth="32" tileheight="32" tilecount="4" columns="2">
   <image source="../drawable/item_statue_grey_stone.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="332" name="ground_rock_pebbles" tilewidth="32" tileheight="32">
+ <tileset firstgid="332" name="ground_rock_pebbles" tilewidth="32" tileheight="32" tilecount="3" columns="1">
   <image source="../drawable/ground_rock_pebbles.png" width="32" height="96"/>
  </tileset>
- <tileset firstgid="335" name="item_corpse_huge_animal" tilewidth="32" tileheight="32">
+ <tileset firstgid="335" name="item_corpse_huge_animal" tilewidth="32" tileheight="32" tilecount="16" columns="2">
   <image source="../drawable/item_corpse_huge_animal.png" width="64" height="256"/>
  </tileset>
- <tileset firstgid="351" name="building_fence_fence_chunky" tilewidth="32" tileheight="32">
+ <tileset firstgid="351" name="building_fence_fence_chunky" tilewidth="32" tileheight="32" tilecount="21" columns="3">
   <image source="../drawable/building_fence_fence_chunky.png" width="96" height="224"/>
  </tileset>
- <tileset firstgid="372" name="building_roof_red" tilewidth="32" tileheight="32">
+ <tileset firstgid="372" name="building_roof_red" tilewidth="32" tileheight="32" tilecount="20" columns="5">
   <image source="../drawable/building_roof_red.png" width="160" height="128"/>
  </tileset>
- <tileset firstgid="392" name="building_decoration_banner" tilewidth="32" tileheight="32">
+ <tileset firstgid="392" name="building_decoration_banner" tilewidth="32" tileheight="32" tilecount="12" columns="1">
   <image source="../drawable/building_decoration_banner.png" width="32" height="384"/>
  </tileset>
- <tileset firstgid="404" name="building_door_closed" tilewidth="32" tileheight="32">
+ <tileset firstgid="404" name="building_door_closed" tilewidth="32" tileheight="32" tilecount="1" columns="1">
   <image source="../drawable/building_door_closed.png" width="32" height="32"/>
  </tileset>
- <tileset firstgid="405" name="building_window_window_right" tilewidth="32" tileheight="32">
+ <tileset firstgid="405" name="building_window_window_right" tilewidth="32" tileheight="32" tilecount="2" columns="2">
   <image source="../drawable/building_window_window_right.png" width="64" height="32"/>
  </tileset>
- <tileset firstgid="407" name="building_decoration_floor_sparkle" tilewidth="32" tileheight="32">
+ <tileset firstgid="407" name="building_decoration_floor_sparkle" tilewidth="32" tileheight="32" tilecount="18" columns="3">
   <image source="../drawable/building_decoration_floor_sparkle.png" width="96" height="192"/>
  </tileset>
- <tileset firstgid="425" name="object_well" tilewidth="32" tileheight="32">
+ <tileset firstgid="425" name="object_well" tilewidth="32" tileheight="32" tilecount="4" columns="2">
   <image source="../drawable/object_well.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="429" name="building_decoration_magician_banner" tilewidth="32" tileheight="32">
+ <tileset firstgid="429" name="building_decoration_magician_banner" tilewidth="32" tileheight="32" tilecount="3" columns="3">
   <image source="../drawable/building_decoration_magician_banner.png" width="96" height="32"/>
  </tileset>
- <tileset firstgid="432" name="building_decoration_chimney" tilewidth="32" tileheight="32">
+ <tileset firstgid="432" name="building_decoration_chimney" tilewidth="32" tileheight="32" tilecount="2" columns="1">
   <image source="../drawable/building_decoration_chimney.png" width="32" height="64"/>
  </tileset>
- <tileset firstgid="434" name="logic_item_sheepfood" tilewidth="32" tileheight="32">
+ <tileset firstgid="434" name="logic_item_sheepfood" tilewidth="32" tileheight="32" tilecount="1" columns="1">
   <image source="../drawable/logic_item_sheepfood.png" width="32" height="32"/>
  </tileset>
- <tileset firstgid="435" name="logic_creature_rodent" tilewidth="32" tileheight="32">
+ <tileset firstgid="435" name="logic_creature_rodent" tilewidth="32" tileheight="32" tilecount="8" columns="8">
   <image source="../drawable/logic_creature_rodent.png" width="256" height="32"/>
  </tileset>
- <tileset firstgid="443" name="logic_creature_animal" tilewidth="32" tileheight="32">
+ <tileset firstgid="443" name="logic_creature_animal" tilewidth="32" tileheight="32" tilecount="32" columns="8">
   <image source="../drawable/logic_creature_animal.png" width="256" height="128"/>
  </tileset>
- <tileset firstgid="475" name="logic_item_resources" tilewidth="32" tileheight="32">
+ <tileset firstgid="475" name="logic_item_resources" tilewidth="32" tileheight="32" tilecount="6" columns="6">
   <image source="../drawable/logic_item_resources.png" width="192" height="32"/>
  </tileset>
- <tileset firstgid="481" name="logic_protection" tilewidth="32" tileheight="32">
+ <tileset firstgid="481" name="logic_protection" tilewidth="32" tileheight="32" tilecount="2" columns="2">
   <image source="../drawable/logic_protection.png" width="64" height="32"/>
  </tileset>
- <tileset firstgid="483" name="ground_green_paving" tilewidth="32" tileheight="32">
+ <tileset firstgid="483" name="ground_green_paving" tilewidth="32" tileheight="32" tilecount="18" columns="3">
   <image source="../drawable/ground_green_paving.png" width="96" height="192"/>
  </tileset>
- <tileset firstgid="501" name="building_fence_palisade" tilewidth="32" tileheight="32">
+ <tileset firstgid="501" name="building_fence_palisade" tilewidth="32" tileheight="32" tilecount="84" columns="6">
   <image source="../drawable/building_fence_palisade.png" width="192" height="448"/>
  </tileset>
- <tileset firstgid="585" name="light_light_5x5" tilewidth="32" tileheight="32">
+ <tileset firstgid="585" name="light_light_5x5" tilewidth="32" tileheight="32" tilecount="25" columns="5">
   <image source="../drawable/light_light_5x5.png" width="160" height="160"/>
  </tileset>
- <tileset firstgid="610" name="light_door_light" tilewidth="32" tileheight="32">
+ <tileset firstgid="610" name="light_door_light" tilewidth="32" tileheight="32" tilecount="12" columns="3">
   <image source="../drawable/light_door_light.png" width="96" height="128"/>
  </tileset>
- <tileset firstgid="622" name="building_decoration_orbpedestal" tilewidth="32" tileheight="32">
+ <tileset firstgid="622" name="building_decoration_orbpedestal" tilewidth="32" tileheight="32" tilecount="2" columns="1">
   <image source="../drawable/building_decoration_orbpedestal.png" width="32" height="64"/>
  </tileset>
- <tileset firstgid="624" name="item_pot_wooden_crates" tilewidth="32" tileheight="32">
+ <tileset firstgid="624" name="item_pot_wooden_crates" tilewidth="32" tileheight="32" tilecount="6" columns="3">
   <image source="../drawable/item_pot_wooden_crates.png" width="96" height="64"/>
  </tileset>
- <tileset firstgid="630" name="logic_creature_fowl" tilewidth="32" tileheight="32">
+ <tileset firstgid="630" name="logic_creature_fowl" tilewidth="32" tileheight="32" tilecount="6" columns="6">
   <image source="../drawable/logic_creature_fowl.png" width="192" height="32"/>
  </tileset>
- <layer name="Ground" width="32" height="32">
+ <layer id="1" name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtwwEJAAAMBKGD7995PYaCq6aqqqq+fi2gDAE=
+   eJztwwEJAAAMBKGD7995PYaCq6aqqqq+fi2gDAE=
   </data>
  </layer>
- <layer name="Objects" width="32" height="32">
+ <layer id="2" name="Objects" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtV9EKgCAM1P+q//8Ra63+oKcSgoZsJEmb0A4ORJh3nEMmxBCAMD0QGOb96eQbrPEmVFKqafGRgcXZHLfI11Af1MMQdFD6aMmhBfOlvxjpo2fg+t6D3gPeA9UZ7ML6L/reg/4OaNxBMroHFGZ8TS8ozPgWWdC/gyXQWP8rDIr/Hkm/lxx6wsjsHSVEhhw=
+   eJztl1EKgCAQRPVedv+LVJt1g75KKFpiJNB0LR0YEEHnse7HSlopYu4fTMBuf9gdollfRncj+87EcDjZ293Ii8ZnOAdnMOE4QeyIIafGI38SyretBi2/9aB4DWrP/1IPrJ51LfmpJJ3/pR78az5/g9j59A0GPuPnZEFzMgnVgv8dJGWF81PJqHz/Hl9+CSqF41QH9jYlRIYc
   </data>
  </layer>
- <layer name="Objects2" width="32" height="32">
+ <layer id="3" name="Objects2" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrVVjsOwjAMjS/AWThAssLG7wRISHCNAl2AnZGZzwL0egwYqZGiyGnrNB9h6alpZWE7fn5GiHT2EWmtQGwRO8TecY5tB8QRcXKc+5oM8BsqkE/I+K66BuCXj0qYe8q7E38Q3zdPyagjd413xCNDXH1Hb0QVWSdiWBd9buKF9i8z6bP259oadWwF+fqzgXafK+IWaQ/Z8Uf4Pra+PREvq//KePbZAU31q0z3Dx13GzUvJVMnzfgAvNypeQnJP25vh8CPv7TmT3O4jfNtOs+dA7t3mvMu0zovPThP2Ynw89Uiqg+p93Ku/wHKU5Nkgho4/bwaPD/Xs2CeRc3/okF/psiDGfj1SfP/x/OL41wRu9uscY6xF1R84ltp50L4TCDsjpaR+OzDmy8y3kqK
+   eJzNVjsOwjAMTS7AWTgAXWHjdwIkJLhGgS7AzshcYOFzPQYc0QgTJY3dhoQnWU0jNy+On50KEQ/PiFwKOdgKbA22cYx/jS3YDmzvGLdFL8AaWSCfkPyuuDrS/Q2XIwRSnx0FqfmpMPdpaqAujtQxnsEuCXj1Gd3BHgS/fwOlP9fpQvsXDfnb9mftz8UC+thcft5j52cp/T4l2Im4Hnf/Jn8f3gfG3BXsJr7zn6FnmzugLv4YvcTGL4l3m61esP4pfRLzS4IWMGz1woXv/Dk56DL3rzAz6k9BadineV+f59aBmTuteRd0n6fy+M5R5w77Ne1FtjzEvpdT/QdkollPsp116Bg4+Syrp9L5QbxrAY8VlP5z4e4/I9DB2FOTrhi1/pXOj46x/s/B/QfHOAHuqY3fMleYe7H4DKu5UHc0Zx2OFpro5gUy3kqK
   </data>
  </layer>
- <layer name="Above" width="32" height="32">
+ <layer id="4" name="Above" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtls1OAjEUhTsvJok8i4ICQXRAQX4VdKX8zAadDTKJiT4lZ9HFUDptae/FjU2+5GQymdO05965QvCtB9AGHXCv0T3xv/56XYFrUDPoOqN/A9yCZoG+AzGjf1E+uzndZ/QfgCEYGfQKfIOlRSce/jPwAl4d9afhndTD/w28g3mB/gJbR515+F+AS1AJ1HWm/LvqmDj/x2qOGllY6mLgmXnXtQYflrpIibzOIiFK0f6zjcy2qUYyIv9zeJejw+dVS/5j5n/EDXP+Q2aYrpxhHgnzv9D0ds7Mq3enZl6nU0J/9f++YerzRUvXu6oMfT4k860T5NyW+d4JZqF8/k2zUCLviGNGXTvMQqm8oxbBjKruW82/bhbK5B1R9B/dvn8M7//maoTi/PsBNUJx/klAjVCcv28vHYMJeALPYOr5nR1nT63b
+   eJztlstOAkEQRWt+TBL5FkUFo6CAIr55rHzBBnAzQkKCX+mt6CTQ9tS0RdfOm5xwM5lQne7bNUVkpwvQBC3Q9viOYe1/hekQHIGq4GuG9Y9BA5zk+DNwblg/L5+Xa75rWP8a3IBbwY/AErwV+LGifh8MwDDQz4R33hX1n8AzeMnxH2Ae6BeK+ntgH1S29No7UpT/UK+9I1J//ou3uCOvJN8L9prMh2oCpiTfC03mfdpJiErJ5rOUvrMt3RFN5n3aRe1y8vv5Acn559xZfiNOyTb/RZJmGP5G8AxzRfHyz5l3e7tl5t2zczPv87Eyz3K/7ynZ9Pk8+XqXlHnLWSiTm/k62ed8Xb7Md8h+FmJl+ZdmIc4/n5HFjMr5L5qFOP98Rtm5bDOjuutOaTPzvlmI889nFKP/+Na9Et7//PmNtf/adcfaf20vjbX/2l56B+7BA3gEPeX/fAFnT63b
   </data>
  </layer>
- <layer name="Above2" width="32" height="32">
+ <layer id="5" name="Above2" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrt0DENAAAIBLGXS/AvAAMggKSdbr4EkjoaADZtAQC8M5ryATs=
+   eJztzqERAEAIBLErl/n+C6ABEK8wiVq5CSS1NABM3vUAAPCtAZryATs=
   </data>
  </layer>
- <layer name="Walkable" width="32" height="32">
+ <layer id="6" name="Walkable" width="32" height="32" visible="0">
   <data encoding="base64" compression="zlib">
-   eNrtltkNACAIQ+n+S7uBB7bUqCR8ksdRwQi9oeNO9gv82wzF84FZH58/7yfkqeq/qn4WPy7kK/f4bJyy7lE+MPPV7865I0/mV+xedPKo2PPY0Dzz1rjqH+nA/V918lf6DyNfpcfMTc7cNob+sXFbGfNzxjPm3wCmnwE7
+   eJztk0ESwCAIA+3/P91Tj4UQk+JoM+NN3RVkDH+uYHWyT+DvFnXNsv64e/TzdWsFT8e9lX1dfDYr8yueLHfGb/bdmY9z5hA+6sDWv7L3JD5acwWf6bki7JwrHR5e5OZkv/Ejh6/Sya/U3+GE8l3/Ef3/2QyhvKoDep7lV9J5XtH/G6afATs=
   </data>
  </layer>
- <objectgroup name="Mapevents" width="32" height="32">
- </objectgroup>
- <objectgroup name="Spawn" width="32" height="32"/>
- <objectgroup name="Keys" width="32" height="32"/>
- <objectgroup name="Replace" width="32" height="32"/>
+ <objectgroup id="7" name="Mapevents"/>
+ <objectgroup id="8" name="Spawn"/>
+ <objectgroup id="9" name="Keys"/>
+ <objectgroup id="10" name="Replace"/>
 </map>
