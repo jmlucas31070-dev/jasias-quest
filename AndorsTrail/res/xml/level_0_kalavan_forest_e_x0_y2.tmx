@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+  <image source="../drawable/ground_ground.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2" name="plant_tree_tree_green" tilewidth="32" tileheight="32">
-  <image source="../drawable/plant_tree_tree_green.png" width="0" height="0"/>
+ <tileset firstgid="34" name="logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_collision.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3" name="walkable_sentinel" tilewidth="32" tileheight="32">
-  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ <tileset firstgid="35" name="plant_tree_tree_green" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_tree_green.png" width="512" height="256"/>
  </tileset>
  <layer name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
@@ -15,6 +15,11 @@
   </data>
  </layer>
  <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0KERACAUw9C/C6AKCth/NToFNRG5i36qqumWU+C3O+6GvrnuRuiFP/74448//vjjjz/++OOPP/4f/gEB2rDh
+  </data>
+ </layer>
+ <layer name="Objects2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
@@ -24,22 +29,18 @@
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
- <layer name="Walkable" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtwwEJAAAMBKGD7995PYaCq6aqqqq+fi2gDAE=
-  </data>
- </layer>
- <layer name="Objects_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrt0LENACAQw8AXUAUqYP9ZyRSkcWHJ9amqpltOgd/uuBv65roboRf++OOPP/74448//vjjjz/++H/4B7vcLOE=
-  </data>
- </layer>
- <layer name="Objects_stendhal2" width="32" height="32">
+ <layer name="Above2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
- <objectgroup name="Mapevents" width="32" height="32"/>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwwEJAAAMBKHL8v1DrsdQcNVUVVXV1w9fz4gB
+  </data>
+ </layer>
+ <objectgroup name="Mapevents" width="32" height="32">
+ </objectgroup>
  <objectgroup name="Spawn" width="32" height="32"/>
  <objectgroup name="Keys" width="32" height="32"/>
  <objectgroup name="Replace" width="32" height="32"/>

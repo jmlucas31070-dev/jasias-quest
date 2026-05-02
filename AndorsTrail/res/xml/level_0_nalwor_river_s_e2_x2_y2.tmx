@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+  <image source="../drawable/ground_ground.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2" name="ground_water_pool" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_water_pool.png" width="0" height="0"/>
+ <tileset firstgid="34" name="ground_water_pool" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_water_pool.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3" name="walkable_sentinel" tilewidth="32" tileheight="32">
-  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ <tileset firstgid="106" name="ground_grass_edges" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_edges.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="142" name="ground_grass_corners" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_corners.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="166" name="building_wall_wood" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_wall_wood.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="182" name="plant_grasses" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_grasses.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="188" name="plant_flower_daisy_yellow" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_yellow.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="196" name="plant_flower_daisy_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_blue.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="204" name="building_door_door_w" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_door_door_w.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="210" name="building_door_door_e" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_door_door_e.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="216" name="logic_creature_animal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_animal.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="248" name="logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_collision.png" width="512" height="256"/>
  </tileset>
  <layer name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrt0DEKwDAMxVAPhUDs+583GTN0aI3zvWh4s0BuZmObxfynp6iZafvLAxcbDU0AAABAKZqaJ3VP1Y+PurrV/UhStjL9uGwBWc8sIg==
+   eNrt0KENwDAMBVHj2mNUyv4bJjAgoLWcb3Lg4ZPOzWwsTzH/6S1qZtp+eOBio6EJAAAAKEVTc6fuqfrxUVe3uh9JylamH5dN9rgsog==
   </data>
  </layer>
  <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0LEJACAMAMHMou4/oxaxt1BBvIOHdAmJOKOManbD3Ndy3nn/Si/+DAAAgH90zHAC/w==
+  </data>
+ </layer>
+ <layer name="Objects2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
@@ -24,32 +56,19 @@
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
- <layer name="Walkable" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtzbEJADAQxLCD23/nbJAiPCkeGVS7SZr5+uD37/YvAAAALHIAPxcLjw==
-  </data>
- </layer>
- <layer name="Objects_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrt0LEKACAIQEGp/v+ba7C9oYLoDh64KUacUUY1u2HuaznvvH+lF38GAADAPzquiQA/
-  </data>
- </layer>
- <layer name="Objects_stendhal2" width="32" height="32">
+ <layer name="Above2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzbEJADAQxLDbf+Irs0GK8KR4ZFDtJmnm64Pfv9u/AAAAsMgBmvS7Xg==
+  </data>
+ </layer>
  <objectgroup name="Mapevents" width="32" height="32">
-  <object name="exit_north_0" type="newmap" x="64" y="0" width="640" height="32">
-   <properties>
-    <property name="map" value="level_0_nalwor_river_s_e2_x2_y1"/>
-    <property name="place" value="from_north_0"/>
-   </properties>
-  </object>
  </objectgroup>
- <objectgroup name="Spawn" width="32" height="32">
-  <object name="from_south_0" x="384" y="0" width="32" height="32"/>
- </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32"/>
  <objectgroup name="Keys" width="32" height="32"/>
  <objectgroup name="Replace" width="32" height="32"/>
 </map>

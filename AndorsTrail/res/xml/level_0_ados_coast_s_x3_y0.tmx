@@ -1,29 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+  <image source="../drawable/ground_ground.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2" name="ground_grass_edges" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_grass_edges.png" width="0" height="0"/>
+ <tileset firstgid="34" name="ground_grass_edges" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_edges.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3" name="ground_water_pool" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_water_pool.png" width="0" height="0"/>
+ <tileset firstgid="70" name="ground_water_pool" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_water_pool.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4" name="ground_grass_corners" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_grass_corners.png" width="0" height="0"/>
+ <tileset firstgid="142" name="ground_grass_corners" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_corners.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5" name="ground_water_pool_deep" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_water_pool_deep.png" width="0" height="0"/>
+ <tileset firstgid="166" name="plant_grasses" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_grasses.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6" name="walkable_sentinel" tilewidth="32" tileheight="32">
-  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ <tileset firstgid="172" name="plant_flower_daisy_red" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_red.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="180" name="plant_flower_daisy_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_blue.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="188" name="item_corpse_huge_animal" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_corpse_huge_animal.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="204" name="logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_collision.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="205" name="ground_water_pool_deep" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_water_pool_deep.png" width="512" height="256"/>
  </tileset>
  <layer name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrV1ssKgCAURVERCunu///eahqVz+upwR4vjiIYQwjx0vaSNZSOeChW+C328mIj3k6F7e172Lmzx9Eu2U6Brfbtp37J3Xv4p7sW2jjYVDbKb7EZuD0N9G3Sdia+85xvIt8GpPR77h7x9r/7vWePeDvi7YhtxDZiG7HNw9/lLpz9xdHI+Sobsf2FdttSLBQ=
+   eNrV1ksOgCAQBFHC0qn73wrDkdStUfnI2LKo9UtDSIghhHhqecg6ynvcFBv8Hjs92Ii302B7+x526exxtGu2U2GrfZvUr7l7D/9w10obB5vGRvk9NgO354G+fbSdD995yTeRbwNS+m/uHvH22f23Z494O+LtiG3ENmIbsc3N3+UqnP3kaJR8lY3Y/kMbqHZJxA==
   </data>
  </layer>
  <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0kEOABAMRNG5DHuXaOOODste6IqKzkusf0YKzArWKs5b9eVCO43XnLbv2qf7Vls+bWejfevm4Xjzr27n38fcLo5dDbZZQURERNF0kWsJLA==
+  </data>
+ </layer>
+ <layer name="Objects2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
@@ -33,32 +50,19 @@
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
- <layer name="Walkable" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtzcEJADAMgMC83H/kzlAoSImC75u5i8ebdr5rI9s/+ORrPot9RB/JR9i0u7u7e+cHqx8VBw==
-  </data>
- </layer>
- <layer name="Objects_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrt0jEKACAMQ9FAtbve/7C6S+2kFZsHzp9IgVWDTXGe1ZcL7TpfD9q+a5/ue235tK1O+9bNI/DmX93Ov8+5XQK7JdnmAiIiIspmABPAAOQ=
-  </data>
- </layer>
- <layer name="Objects_stendhal2" width="32" height="32">
+ <layer name="Above2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzcEJADAMgMDsP5tDdYZCQUoUfN/MXTzetPNdG9n+wSdf81nsI/pIPsKm3d3d3Ts/q0rK6w==
+  </data>
+ </layer>
  <objectgroup name="Mapevents" width="32" height="32">
-  <object name="exit_west_0" type="newmap" x="0" y="0" width="32" height="512">
-   <properties>
-    <property name="map" value="level_0_ados_coast_s_x2_y0"/>
-    <property name="place" value="from_west_0"/>
-   </properties>
-  </object>
  </objectgroup>
- <objectgroup name="Spawn" width="32" height="32">
-  <object name="from_east_0" x="0" y="256" width="32" height="32"/>
- </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32"/>
  <objectgroup name="Keys" width="32" height="32"/>
  <objectgroup name="Replace" width="32" height="32"/>
 </map>

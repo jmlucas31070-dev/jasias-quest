@@ -1,70 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="plant_tree_tree_darkgreen" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="96" height="352"/>
+ </tileset>
+ <tileset firstgid="34" name="plant_grasses" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_grasses.png" width="96" height="64"/>
+ </tileset>
+ <tileset firstgid="40" name="plant_flower_daisy_yellow" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_yellow.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="48" name="plant_bush_bushes" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_bush_bushes.png" width="160" height="64"/>
+ </tileset>
+ <tileset firstgid="58" name="plant_flower_daisy_white" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_white.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="66" name="plant_tree_tree_darkgreen" tilewidth="32" tileheight="32">
   <image source="../drawable/plant_tree_tree_darkgreen.png" width="256" height="352"/>
  </tileset>
- <tileset firstgid="89" name="ground_ground_3" tilewidth="32" tileheight="32">
+ <tileset firstgid="154" name="logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_collision.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="155" name="ground_ground_3" tilewidth="32" tileheight="32">
   <image source="../drawable/ground_ground_3.png" width="160" height="32"/>
  </tileset>
- <tileset firstgid="94" name="ground_dry_grass" tilewidth="32" tileheight="32">
+ <tileset firstgid="160" name="ground_dry_grass" tilewidth="32" tileheight="32">
   <image source="../drawable/ground_dry_grass.png" width="288" height="192"/>
  </tileset>
- <tileset firstgid="148" name="walkable_sentinel" tilewidth="32" tileheight="32">
-  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ <tileset firstgid="214" name="ground_pothole" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_pothole.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="218" name="building_fence_palisade" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_fence_palisade.png" width="192" height="448"/>
+ </tileset>
+ <tileset firstgid="302" name="ground_dirt_mounds" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_dirt_mounds.png" width="96" height="96"/>
+ </tileset>
+ <tileset firstgid="311" name="furniture_table_square_pale" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_table_square_pale.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="312" name="logic_training_dummy" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_training_dummy.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="314" name="logic_portal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_portal.png" width="256" height="96"/>
+ </tileset>
+ <tileset firstgid="338" name="furniture_table_stone_desk" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_table_stone_desk.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="354" name="item_armor_weapons_for_walls" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_armor_weapons_for_walls.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="370" name="item_bullseye" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_bullseye.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="371" name="item_chest_chest_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_chest_chest_2.png" width="96" height="64"/>
+ </tileset>
+ <tileset firstgid="377" name="item_weapon_hanging_bows" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_weapon_hanging_bows.png" width="96" height="64"/>
+ </tileset>
+ <tileset firstgid="383" name="item_weapon_box_of_weapons" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_weapon_box_of_weapons.png" width="32" height="64"/>
+ </tileset>
+ <tileset firstgid="385" name="item_ropes" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_ropes.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="389" name="logic_protection" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_protection.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="391" name="logic_item_sign" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_item_sign.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="392" name="building_dojo" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_dojo.png" width="256" height="160"/>
+ </tileset>
+ <tileset firstgid="432" name="furniture_table_grey_long" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_table_grey_long.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="436" name="item_tools" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_tools.png" width="96" height="96"/>
+ </tileset>
+ <tileset firstgid="445" name="logic_area" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_area.png" width="64" height="32"/>
  </tileset>
  <layer name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrt1DERAAAIA7H6xBKiWXDRDJl/6XWTLAAANea190ff/qDs+w/amiyt
+   eNrt1DERAAAMAjH8e6ilaupSF2TI/AvHJlkAAGrMa++Pvv1B2fcfZoc0vA==
   </data>
  </layer>
  <layer name="Objects" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrt0DENAAAMA6BKqH+1VbFkB0ggAQAA4EoV8MQAOMAAEQ==
+   eNrtlLENgDAMBLNooAs9dLAAJRsBoiJKCftwBTPkkfiTTi5PduEQjDHGGGPMn9jxEPYzFnF/E94gv7MI+yfeov5acfeIDbbY44BX5d0Tdjji5PcjYRb3lw/9/gfOcRI0
+  </data>
+ </layer>
+ <layer name="Objects2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0DENAAAMA6BarH8zVbFkB0ggAQAA4EoV8MQA3kwAUg==
   </data>
  </layer>
  <layer name="Above" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtlCkOgEAQBBcQXIJLcKkFBQgkkv//iha7YV4wbWaSStp10qmMd85tYAeekA9wgouUE5CCjJRLUIGalDvQg4GUZ7CAlZS9+W/+m//mv/lv/pv/5r9Sjv7JTTT9j/7JTTT9j/7JTbScf91/DOdv0c9w/hH9DP/l/oyfn4Mi9DN+fgPa0M/4+SOYQv8H1/JacA==
+   eNrtlCkOgEAQBPdtgOASXIJLLShAIJE8nRa7YV4wbWaSStp10qmMd85tYAeekA9wgouUE5CCjJRLUIGalDvQg4GUZ7CAlZS9+W/+m//mv/lv/pv/5r9Sjv7JTTT9j/7JTTT9j/7JTbScf91/DOdv0c9w/hH9DP/l/oyfn4Mi9DN+fgPa0M/4+SOYQv8HVvhbtA==
+  </data>
+ </layer>
+ <layer name="Above2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt0rERgCAABEGaEyRAIVCg/0a8JoTkdubiTz4ESZIkSX84KFKik/Li/UIX3VSpLd5/6KVOg6aXkLb6AKQiBKI=
   </data>
  </layer>
  <layer name="Walkable" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtzaENAAAIA7D9r3cwVxAQFdVtkgIAALAqh2/8Z38f/QO3ZUgH
-  </data>
- </layer>
- <layer name="Objects_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtlLENgDAMBDNIoAs9dLAAJRMBoiJKCQtzBTPkkfiTTi5PduEQjDHGGGPMn9jxEPYzFnF/E94gv7MI+yfeov5acfeIDbbY44BX5d0Tdjji5PcjYRb3lw/9/gduVgsH
-  </data>
- </layer>
- <layer name="Above_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrt0rERgCAABEECQQIUAgX6r9RrQkhuZy7+5EOQJEmS9IeDIiU6KS/eL3TRTZXa4v2HXuo0aHoJaasPOY0A0w==
-  </data>
- </layer>
- <layer name="Objects_stendhal2" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eNrtzTENAAAIA7D5lzC1qCBw9OjdJikAAACrcvjGf/b30T+KTV+z
   </data>
  </layer>
  <objectgroup name="Mapevents" width="32" height="32">
-  <object name="exit_east_0" type="newmap" x="992" y="864" width="32" height="160">
-   <properties>
-    <property name="map" value="level_0_nalwor_forest_n_x3_y2"/>
-    <property name="place" value="from_east_0"/>
-   </properties>
-  </object>
-  <object name="exit_south_0" type="newmap" x="960" y="992" width="64" height="32">
-   <properties>
-    <property name="map" value="level_0_nalwor_forest_n_x2_y3"/>
-    <property name="place" value="from_south_0"/>
-   </properties>
-  </object>
  </objectgroup>
- <objectgroup name="Spawn" width="32" height="32">
-  <object name="from_west_0" x="992" y="928" width="32" height="32"/>
-  <object name="from_north_0" x="992" y="992" width="32" height="32"/>
- </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32"/>
  <objectgroup name="Keys" width="32" height="32"/>
  <objectgroup name="Replace" width="32" height="32"/>
 </map>

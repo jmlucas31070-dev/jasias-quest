@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+ <tileset firstgid="1" name="logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_collision.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2" name="ground_ridge_earth_pale" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ridge_earth_pale.png" width="0" height="0"/>
+ <tileset firstgid="2" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3" name="terrain_desert" tilewidth="32" tileheight="32">
-  <image source="../drawable/terrain_desert.png" width="0" height="0"/>
+ <tileset firstgid="35" name="ground_ridge_earth_pale" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ridge_earth_pale.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4" name="ground_sand_2" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_sand_2.png" width="0" height="0"/>
+ <tileset firstgid="131" name="ground_ridge_earth_dark" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ridge_earth_dark.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5" name="plant_cactus_2" tilewidth="32" tileheight="32">
-  <image source="../drawable/plant_cactus_2.png" width="0" height="0"/>
+ <tileset firstgid="227" name="terrain_desert" tilewidth="32" tileheight="32">
+  <image source="../drawable/terrain_desert.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6" name="walkable_sentinel" tilewidth="32" tileheight="32">
-  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ <tileset firstgid="315" name="plant_tree_tree_darkgreen" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_tree_darkgreen.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="403" name="ground_sand_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_sand_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="418" name="plant_cactus_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_cactus_2.png" width="512" height="256"/>
  </tileset>
  <layer name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNpjZWBgYMWDeWiMWQe5/ayj9o/aP0TsZwdiDhrYT4obeAnIs9HYfp4B9v9wtZ911H6q2803Gv7Dxn7u0fAHY0EgFhqG/h9s5T8p6Y0fiAVG219Dsv8xVOznHob+p7ZfqWU/NTEAR9knsw==
+   eNrt10sOgDAIBFBmw/03auLf+3kI8QJ+EoilzmJ2TR6QhrQqInqRPThauK/06SfxW4h08Pef1jCYPd74DeL8qPnTj6vhz/4Ezr8Wvwfnf2a1OWyor//S9v+b+zbb2QV8f2X8f2Txo/bfl/179+rle+YAfR+aoQ==
   </data>
  </layer>
  <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYMANrIHYhmHggDsQewBx8gDZHwzEIQMcBtaj9o+mwdE0MJoGR9PgqP2j9o/aP2o/3YE+EBsAcd6o34eF31czjsb7SLKf2PgeCXGPHhYA43wU8g==
+  </data>
+ </layer>
+ <layer name="Objects2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
@@ -33,67 +44,19 @@
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
- <layer name="Walkable" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrt1LENADAIA0Eq7z9yJqCMiMgxgB8eRFVfqdnKIz3g/83nYDaLfw428sM/Pj6+2f1de7/Gj7tvcw+fsQDx
-  </data>
- </layer>
- <layer name="Objects_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtkrENACAMw3pB2WGHHT5g5/93yAOsVAJH8myljdk5WRSLSxVNzCB/FyP4Bhk/G2QDbJAN4sePH//1uEhi0f2J7s7fv/I7uz/eYgMENwmO
-  </data>
- </layer>
- <layer name="Objects_stendhal2" width="32" height="32">
+ <layer name="Above2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt1NERADAEBFHXf9OpwGdGRp4CbllGVV+p2cojPeD/zedgNot/Djbywz8+Pr7Z/V17v8aPu29zD1KbACk=
+  </data>
+ </layer>
  <objectgroup name="Mapevents" width="32" height="32">
-  <object name="exit_east_0" type="newmap" x="992" y="0" width="32" height="448">
-   <properties>
-    <property name="map" value="level_0_sikhw_desert_w2_x3_y0"/>
-    <property name="place" value="from_east_0"/>
-   </properties>
-  </object>
-  <object name="exit_east_1" type="newmap" x="992" y="480" width="32" height="544">
-   <properties>
-    <property name="map" value="level_0_sikhw_desert_w2_x3_y0"/>
-    <property name="place" value="from_east_1"/>
-   </properties>
-  </object>
-  <object name="exit_west_0" type="newmap" x="0" y="0" width="32" height="1024">
-   <properties>
-    <property name="map" value="level_0_sikhw_desert_w2_x1_y0"/>
-    <property name="place" value="from_west_0"/>
-   </properties>
-  </object>
-  <object name="exit_south_0" type="newmap" x="0" y="992" width="192" height="32">
-   <properties>
-    <property name="map" value="level_0_sikhw_desert_w2_x2_y1"/>
-    <property name="place" value="from_south_0"/>
-   </properties>
-  </object>
-  <object name="exit_south_1" type="newmap" x="224" y="992" width="672" height="32">
-   <properties>
-    <property name="map" value="level_0_sikhw_desert_w2_x2_y1"/>
-    <property name="place" value="from_south_1"/>
-   </properties>
-  </object>
-  <object name="exit_south_2" type="newmap" x="928" y="992" width="96" height="32">
-   <properties>
-    <property name="map" value="level_0_sikhw_desert_w2_x2_y1"/>
-    <property name="place" value="from_south_2"/>
-   </properties>
-  </object>
  </objectgroup>
- <objectgroup name="Spawn" width="32" height="32">
-  <object name="from_west_0" x="992" y="224" width="32" height="32"/>
-  <object name="from_west_1" x="992" y="736" width="32" height="32"/>
-  <object name="from_east_0" x="0" y="512" width="32" height="32"/>
-  <object name="from_north_0" x="96" y="992" width="32" height="32"/>
-  <object name="from_north_1" x="544" y="992" width="32" height="32"/>
-  <object name="from_north_2" x="960" y="992" width="32" height="32"/>
- </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32"/>
  <objectgroup name="Keys" width="32" height="32"/>
  <objectgroup name="Replace" width="32" height="32"/>
 </map>

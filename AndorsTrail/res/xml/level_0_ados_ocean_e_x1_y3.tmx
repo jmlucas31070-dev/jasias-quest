@@ -1,83 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="object_boardwalk" tilewidth="32" tileheight="32">
-  <image source="../drawable/object_boardwalk.png" width="0" height="0"/>
+  <image source="../drawable/object_boardwalk.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2" name="ground_ground" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+ <tileset firstgid="37" name="item_weapon_cannon" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_weapon_cannon.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3" name="item_ropes" tilewidth="32" tileheight="32">
-  <image source="../drawable/item_ropes.png" width="0" height="0"/>
+ <tileset firstgid="49" name="logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_collision.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4" name="object_row_boat" tilewidth="32" tileheight="32">
-  <image source="../drawable/object_row_boat.png" width="0" height="0"/>
+ <tileset firstgid="50" name="item_banners_flag" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_banners_flag.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5" name="object_ship" tilewidth="32" tileheight="32">
-  <image source="../drawable/object_ship.png" width="0" height="0"/>
+ <tileset firstgid="62" name="item_flagpole" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_flagpole.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6" name="walkable_sentinel" tilewidth="32" tileheight="32">
-  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ <tileset firstgid="65" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="98" name="item_ropes" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_ropes.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="102" name="object_row_boat" tilewidth="32" tileheight="32">
+  <image source="../drawable/object_row_boat.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="132" name="object_ship" tilewidth="32" tileheight="32">
+  <image source="../drawable/object_ship.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="500" name="building_stairs_wooden_ns" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_stairs_wooden_ns.png" width="512" height="256"/>
  </tileset>
  <layer name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtzbEJACAAA7A+0OP92AtcRBA0Q+Y0SRfGph7i9/v9/j//Xr4BAF40AYBmmAk=
+   eNrtzjERACAMBMHHAcLiXw8KaDKpYIut7ypJXezVU5mhr6+vr/9nv/Mw2QYAeNEBu1IDWg==
   </data>
  </layer>
  <layer name="Objects" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNpjYEAAHUaGEQ18kPx/lU52hjCi0vS2nwWH+NUBjgt6208o/E2Q5Fmx6Gcd4v4faPvZGEbBQAAWEtXfpVP5NwpGAb3KHWQ8kIBQHqBUfjSfkR82LATkWSkIfyEkjA8QUieEpo5cNaN19CgYBSMDAAAbuwzI
+   eNpjYmBgYILi1YyoGARsoDQxwBmqtpMEPUxIeDcjKoYBXzTzZgDxTCBORRILQlJDrv3MQHyaEYHp7X9mJPGWQWI/tvDHBqgV/oPR/6SC4W7/TaDcLSC+zUg7+6dAzUjCouclUO4VEL/GYc9MKti/hILwX0kF+7cAzdgKxNtIwNuBeAcQ76SC/SBwFGjOMRLxCRLDDZ/9V4FmXQPi6yTgG1S0nx5g1P7BZT8bnTHPKB7RWAgtPQrhwYTUMaCpI0YNMSANiNPRxDKBOAuIs+mQR3OAOBeI85DE8oG4AIgLGUbBKBgF5AIAb4tMhg==
+  </data>
+ </layer>
+ <layer name="Objects2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYECA1YwMIxqcRvJ/CJ3C4jIjKk1v+5NxiIcMcFqgt/2Ewn8zEj8Fi/6UIe7/gbY/lWEUDARIJlF9DCNt8t1lxtG4GAX0B2xoeCABoTxAqfxoPiM/bJIJyKdQEP5CSBgfIKROCE0duWpwgYzRJDIKRsGwAgC67hOz
   </data>
  </layer>
  <layer name="Above" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNpjYCAdcAIxFwN9wFkS1F5hGAWj4T8KhgsQY0TlSzBiqkEXk2Sknv1qQLPUkbAGGh+bmCbjaLyNglEwCkbBKBgFo2AUjILBCwCz/gXs
+   eNpjYCAddABxJwN9gA8j8WqDGRlGwWj4j4JhAqaipafpWNIXutgMKqbBpUCzliHh5Wh8bGIrRvPAKBgFo2AUjIJRMApGwSgYxAAApR4N2A==
+  </data>
+ </layer>
+ <layer name="Above2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
  <layer name="Walkable" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtlkEOACEIA3vq/5/sB3YVkAiakvSi4kiNRCA/6JB1v6/9/9ZE+ZGz7dbPSc5JPhbjnju6yX8Y/V/5cXv9Xfks5PPg24vkZqkDv7p2iC9+A77nH+Sdx2Zffz1o6OvZ/lOSJKlIA2TEEIc=
-  </data>
- </layer>
- <layer name="Objects_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNpjYmBgYIJiHUZUDAJ7GYgHR6A0FyPxepiQsA0jKoaBc2h6JIFYCojZkMQuI7HJtZ8ZiH0YEZje/mdGEmcdJPZjC39sgFrhPxj9TyoY7vZHAeWigTiGkXb2i0LNYMaiJwsolw3EOTjskaKC/aoUhL8WFew3BZphBsTmJGALILYEYisq2A8CbkBz3EnEniSGGz77w4BmhQNxBAk4kor20wOM2j+47GejM+YZxSMaC6GlRyE8mJA6BjR1xKghBrCA2gNoYuxAzAHEnHTIo1xAzA0NLxjgBWI+IOZnGAWjYBSQCwCdfyTk
-  </data>
- </layer>
- <layer name="Above_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
-  </data>
- </layer>
- <layer name="Objects_stendhal2" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eNrtltENACEIQ7tS91/OBe4UkAiakvRHxSc1EoH8oEPW/b72/1sT5UfOtls/Jzkn+ViMe+7oJv9h9H/lx+31d+WzkM+Dby+Sm6UO/OraIb74Dfief5B3Hpt9/fWgoa9n+09JkqQiDRm+hvI=
   </data>
  </layer>
  <objectgroup name="Mapevents" width="32" height="32">
-  <object name="exit_west_0" type="newmap" x="0" y="640" width="32" height="64">
-   <properties>
-    <property name="map" value="level_0_ados_ocean_e_x0_y3"/>
-    <property name="place" value="from_west_0"/>
-   </properties>
-  </object>
-  <object name="exit_north_0" type="newmap" x="0" y="0" width="96" height="32">
-   <properties>
-    <property name="map" value="level_0_ados_ocean_e_x1_y2"/>
-    <property name="place" value="from_north_0"/>
-   </properties>
-  </object>
-  <object name="exit_north_1" type="newmap" x="224" y="0" width="448" height="32">
-   <properties>
-    <property name="map" value="level_0_ados_ocean_e_x1_y2"/>
-    <property name="place" value="from_north_1"/>
-   </properties>
-  </object>
  </objectgroup>
- <objectgroup name="Spawn" width="32" height="32">
-  <object name="from_east_0" x="0" y="672" width="32" height="32"/>
-  <object name="from_south_0" x="32" y="0" width="32" height="32"/>
-  <object name="from_south_1" x="448" y="0" width="32" height="32"/>
- </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32"/>
  <objectgroup name="Keys" width="32" height="32"/>
  <objectgroup name="Replace" width="32" height="32"/>
 </map>

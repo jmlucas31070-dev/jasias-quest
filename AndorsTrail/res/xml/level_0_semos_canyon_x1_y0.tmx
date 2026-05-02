@@ -1,82 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+ <tileset firstgid="1" name="logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_collision.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2" name="ground_ladder_vertical_pale" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ladder_vertical_pale.png" width="0" height="0"/>
+ <tileset firstgid="2" name="ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3" name="building_fence_wooden_brown_fence" tilewidth="32" tileheight="32">
-  <image source="../drawable/building_fence_wooden_brown_fence.png" width="0" height="0"/>
+ <tileset firstgid="35" name="ground_ridge_earth_dark" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ridge_earth_dark.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4" name="furniture_table_wooden_rectangular" tilewidth="32" tileheight="32">
-  <image source="../drawable/furniture_table_wooden_rectangular.png" width="0" height="0"/>
+ <tileset firstgid="131" name="ground_rock_huge_boulder" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_rock_huge_boulder.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5" name="walkable_sentinel" tilewidth="32" tileheight="32">
-  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ <tileset firstgid="151" name="ground_ladder_vertical_pale" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ladder_vertical_pale.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="156" name="building_fence_wooden_brown_fence" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_fence_wooden_brown_fence.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="198" name="furniture_table_wooden_rectangular" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_table_wooden_rectangular.png" width="512" height="256"/>
  </tileset>
  <layer name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtw8EJAAAMA6H7Zf+Nu0dRcNVUVVXV1w9VIBwB
+   eNrtw8EJAAAMA6F7Zv+Ju0dRcNVUVVXV1w9fACAB
   </data>
  </layer>
  <layer name="Objects" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtz8EJAAAIAzE3qPtPqw+3MIGDflsFAAAAv/SW23nyeQA66AAv
+   eNrtzTERACAMALH6dwAIggVPdMBDhyZ3P38EAAAVRjZ/y9/f37/pf2en+H+b/B975iIv
+  </data>
+ </layer>
+ <layer name="Objects2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtz8EJAAAIAzH3n6RuqQ+3MIGDflsFAAAAv/SW23nyeQDm4wH6
   </data>
  </layer>
  <layer name="Above" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtxrEJAAAIwDBH/f9hHX1ApwQKjQAAAIBfOdV67jUz0AAa
+   eNrtxjENAAAIwDD8uwClcGIArjZZsggAAAD4lVOt514DxVoB5Q==
   </data>
  </layer>
- <layer name="Walkable" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtzyESACAIRUHKv/+VrRZnLEJwNzGUB1UAAEzIYdbX19fv7qf5jlzuXvb3n3/5fwHwcwCc
-  </data>
- </layer>
- <layer name="Objects_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtzqERACAMBMEIiEn//YJA0UBEdmde30cAANBh3e231NfX1x/a7/jw92tI/wCjdQEe
-  </data>
- </layer>
- <layer name="Objects_stendhal2" width="32" height="32">
+ <layer name="Above2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtzyESACAIRUH+/S9ttThjEYK7iaE8qAIAYEIOs76+vn53P8135HL3sr///Mv/C3AUACA=
+  </data>
+ </layer>
  <objectgroup name="Mapevents" width="32" height="32">
-  <object name="exit_west_0" type="newmap" x="0" y="0" width="32" height="1024">
-   <properties>
-    <property name="map" value="level_0_semos_canyon_x0_y0"/>
-    <property name="place" value="from_west_0"/>
-   </properties>
-  </object>
-  <object name="exit_south_0" type="newmap" x="0" y="992" width="64" height="32">
-   <properties>
-    <property name="map" value="level_0_semos_canyon_x1_y1"/>
-    <property name="place" value="from_south_0"/>
-   </properties>
-  </object>
-  <object name="exit_south_1" type="newmap" x="96" y="992" width="64" height="32">
-   <properties>
-    <property name="map" value="level_0_semos_canyon_x1_y1"/>
-    <property name="place" value="from_south_1"/>
-   </properties>
-  </object>
-  <object name="exit_south_2" type="newmap" x="256" y="992" width="768" height="32">
-   <properties>
-    <property name="map" value="level_0_semos_canyon_x1_y1"/>
-    <property name="place" value="from_south_2"/>
-   </properties>
-  </object>
  </objectgroup>
- <objectgroup name="Spawn" width="32" height="32">
-  <object name="from_east_0" x="0" y="512" width="32" height="32"/>
-  <object name="from_north_0" x="32" y="992" width="32" height="32"/>
-  <object name="from_north_1" x="128" y="992" width="32" height="32"/>
-  <object name="from_north_2" x="640" y="992" width="32" height="32"/>
- </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32"/>
  <objectgroup name="Keys" width="32" height="32"/>
  <objectgroup name="Replace" width="32" height="32"/>
 </map>

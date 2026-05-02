@@ -3,14 +3,83 @@
  <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
   <image source="../drawable/ground_ground.png" width="96" height="352"/>
  </tileset>
- <tileset firstgid="34" name="plant_grasses" tilewidth="32" tileheight="32">
+ <tileset firstgid="34" name="ground_grass_edges" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_edges.png" width="384" height="96"/>
+ </tileset>
+ <tileset firstgid="70" name="ground_grass_corners" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_corners.png" width="192" height="128"/>
+ </tileset>
+ <tileset firstgid="94" name="plant_grasses" tilewidth="32" tileheight="32">
   <image source="../drawable/plant_grasses.png" width="96" height="64"/>
  </tileset>
- <tileset firstgid="40" name="plant_tree_tree_green" tilewidth="32" tileheight="32">
+ <tileset firstgid="100" name="plant_flower_daisy_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_blue.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="108" name="plant_flower_daisy_yellow" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_yellow.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="116" name="plant_flower_daisy_red" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_red.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="124" name="plant_flower_daisy_white" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_flower_daisy_white.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="132" name="logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_collision.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="133" name="plant_tree_tree_green" tilewidth="32" tileheight="32">
   <image source="../drawable/plant_tree_tree_green.png" width="256" height="352"/>
  </tileset>
- <tileset firstgid="128" name="walkable_sentinel" tilewidth="32" tileheight="32">
-  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ <tileset firstgid="221" name="object_tent" tilewidth="32" tileheight="32">
+  <image source="../drawable/object_tent.png" width="96" height="96"/>
+ </tileset>
+ <tileset firstgid="230" name="logic_item_herb" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_item_herb.png" width="160" height="32"/>
+ </tileset>
+ <tileset firstgid="235" name="logic_item_resources" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_item_resources.png" width="192" height="32"/>
+ </tileset>
+ <tileset firstgid="241" name="building_church" tilewidth="32" tileheight="32">
+  <image source="../drawable/building_church.png" width="256" height="224"/>
+ </tileset>
+ <tileset firstgid="297" name="logic_creature_albino_elf" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_albino_elf.png" width="160" height="32"/>
+ </tileset>
+ <tileset firstgid="302" name="item_statue_broken_green_column" tilewidth="32" tileheight="32">
+  <image source="../drawable/item_statue_broken_green_column.png" width="32" height="64"/>
+ </tileset>
+ <tileset firstgid="304" name="plant_tree_spruce" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_spruce.png" width="64" height="96"/>
+ </tileset>
+ <tileset firstgid="310" name="plant_tree_pine_snowy" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_pine_snowy.png" width="64" height="96"/>
+ </tileset>
+ <tileset firstgid="316" name="logic_creature_ent" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_ent.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="320" name="logic_item_mushroom" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_item_mushroom.png" width="192" height="32"/>
+ </tileset>
+ <tileset firstgid="326" name="plant_tree_tree_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_tree_blue.png" width="160" height="160"/>
+ </tileset>
+ <tileset firstgid="351" name="ground_pothole" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_pothole.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="355" name="logic_portal" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_portal.png" width="256" height="96"/>
+ </tileset>
+ <tileset firstgid="379" name="logic_creature_mythical_being" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_creature_mythical_being.png" width="256" height="96"/>
+ </tileset>
+ <tileset firstgid="403" name="furniture_light_roots_lamp" tilewidth="32" tileheight="32">
+  <image source="../drawable/furniture_light_roots_lamp.png" width="64" height="96"/>
+ </tileset>
+ <tileset firstgid="409" name="light_dim_light_7x5" tilewidth="32" tileheight="32">
+  <image source="../drawable/light_dim_light_7x5.png" width="224" height="160"/>
+ </tileset>
+ <tileset firstgid="444" name="light_light_5x5" tilewidth="32" tileheight="32">
+  <image source="../drawable/light_light_5x5.png" width="160" height="160"/>
  </tileset>
  <layer name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
@@ -19,55 +88,32 @@
  </layer>
  <layer name="Objects" width="32" height="32">
   <data encoding="base64" compression="zlib">
+   eNrtkzsKgDAQBfemezV/jbFWO2tL9UR5B3DDggaieQMDC9skGSJCCCGEEEJqYoUzXBLz3e4tTnjBzZjF2NXC7mz0pIkmdoej0ZebaAEdPGfI1UELfP8GtrCDPRwytrDuP8IAp5//iQjZsk2o
+  </data>
+ </layer>
+ <layer name="Objects2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
  <layer name="Above" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtlbsOwjAMRfs/vAZeA49CppIJAkwd+///wF0qoSokrnPTLFg60lVrZ7i2k6aqqhuwoPmhQ/9S9R08gAtoJ8zT6Au4AhPQRpCnrWtI/mvrWP5r6wyxB5qzLLEHmrNcgR2Yyn9JXk7/JXk5/S89/3//p/VfU8v0UlPL9FJTa8g90PhvC77DjtyDsXWxeIIXeJPe26GORUt+b4c6Fh35vR3r/3cfcsy/NNpM8y+NbsL5n4E5WIAlWCl7IbmzfLEGG7AFO7BP2IlYni8O4AhO4AzqhJ2I5aXE2LtJ6j97J3ot9Z+9E732ffsAH58CLQ==
+   eNrtlTsPwjAMhPvzeQ28Bh6FTCUTBJg69qdxSyVUhcR1Ls2CpU86tXaGs500VVXdgAXNDx36l6rv4AFcQDthnkZfwBWYgDaCPG1dQ/JfW8fyX1tniD3QnGWJPdCc5QrswFT+S/Jy+i/Jy+l/6fn/+z+t/5pappeaWqaXmlpD7oHGf1vwHXbkHoyti8UTvMCb9N4OdSxa8ns71LHoyO/tWP+/+5Bj/qXRZpp/aXQTzv8MzMECLMFK2QvJneWLNdiALdiBfcJOxPJ8cQBHcAJnUCfsRCwvJcbeTVL/2TvRa6n/7J3ote/bB8E2SY0=
+  </data>
+ </layer>
+ <layer name="Above2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
  <layer name="Walkable" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrt08ENACAIQ9GOzuhOYPDSovGbvMQTFcWSVAAAAECYNvtEbrcm83/v332GV/Jd/6PLc9/HSX3nW9zaf2ouFzw1yBA=
-  </data>
- </layer>
- <layer name="Objects_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNpjYBgFo2AUjIJRMApGwSgYBSMJRAFxBBBH4mFjk6MWKAHiUiBOxMFmwCE3UkA2kXFESZwo45ErJiKOhnKcKA+CeCDGDbSKB+VBGP7OQOwCxK5A7AbE7jSMC1z+9wFiXyD2G+Z5AgBbtCeP
-  </data>
- </layer>
- <layer name="Above_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
-  </data>
- </layer>
- <layer name="Objects_stendhal2" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
-  </data>
- </layer>
- <layer name="Objects_stendhal3" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
-  </data>
- </layer>
- <layer name="Above_stendhal2" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eNrt08ENACAIQ9EOz+BOYPDSovGbvMQTFcWSVAAAAECYNvtEbrcm83/v332GV/Jd/6PLc9/HSX3nW9zaf2ouFxWZ1lA=
   </data>
  </layer>
  <objectgroup name="Mapevents" width="32" height="32">
-  <object name="exit_south_0" type="newmap" x="0" y="992" width="480" height="32">
-   <properties>
-    <property name="map" value="level_0_fado_forest_se_x0_y3"/>
-    <property name="place" value="from_south_0"/>
-   </properties>
-  </object>
  </objectgroup>
- <objectgroup name="Spawn" width="32" height="32">
-  <object name="from_north_0" x="224" y="992" width="32" height="32"/>
- </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32"/>
  <objectgroup name="Keys" width="32" height="32"/>
  <objectgroup name="Replace" width="32" height="32"/>
 </map>

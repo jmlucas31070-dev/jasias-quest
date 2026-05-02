@@ -1,71 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="ground_ground" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ground.png" width="0" height="0"/>
+  <image source="../drawable/ground_ground.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2" name="ground_ground_2" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_ground_2.png" width="0" height="0"/>
+ <tileset firstgid="34" name="ground_ground_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_ground_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3" name="ground_grass_edges" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_grass_edges.png" width="0" height="0"/>
+ <tileset firstgid="38" name="ground_grass_edges" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_edges.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4" name="ground_grass_corners" tilewidth="32" tileheight="32">
-  <image source="../drawable/ground_grass_corners.png" width="0" height="0"/>
+ <tileset firstgid="74" name="ground_grass_corners" tilewidth="32" tileheight="32">
+  <image source="../drawable/ground_grass_corners.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5" name="plant_tree_tree_darkgreen" tilewidth="32" tileheight="32">
-  <image source="../drawable/plant_tree_tree_darkgreen.png" width="0" height="0"/>
+ <tileset firstgid="98" name="plant_tree_tree_darkgreen" tilewidth="32" tileheight="32">
+  <image source="../drawable/plant_tree_tree_darkgreen.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6" name="walkable_sentinel" tilewidth="32" tileheight="32">
-  <image source="../drawable/walkable_sentinel.png" width="32" height="32"/>
+ <tileset firstgid="186" name="logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/logic_collision.png" width="512" height="256"/>
  </tileset>
  <layer name="Ground" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrt1iEOADAQAkFCcv//cn19wzWsWD0SLMlEpc1V2p8F/svw8fHx8fv85P4k98/4+KV+8n8m/68/8Q/3HQ9+
+   eNrt1rENADAMAkHELt5/xfTpIxzxxddXgiWZqLS5SvuzwH8ZPj4+Pn6fn9yf5P4ZH7/UT/7P5P/1J/4BG45fXg==
   </data>
  </layer>
  <layer name="Objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBgFo2DkAi0krD3AbokcJG7QohEeaL+Zj9o/av+o/aP2j0D744HYedTu0TQ3av9onh+1ezTNQQEAahgMwQ==
+  </data>
+ </layer>
+ <layer name="Objects2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
  <layer name="Above" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eNrtlysOgDAQRNcAClAtCqoABdz/doxsSMqvZUfQl7xkRQNmM5k1ImJhBw1h7uEAHWke4QRn0uyzwBVuinOIApawejGfcXz/lBo2Ek+q78Rgyf8fJJPJZP4JM/8NOf97Yv6H+o8Wd/rPl8T0nxS0xP5z7P+MzuNI+3/V/7V2nrH/oXtBK+f9ndfe/7P7VyvnQ/fvDuIMF6s=
+   eNrtlzsKgDAQRPesaqVWiZWmUiv10E4ZhPhL3CnMgwdbBG2WYdaIiIUdNIS5hwN0pHmEE5xJs88CV7gpziEKWMLqxXzG8f1TathIPKm+E4Ml/3+QTCaT+SfM/Dfk/O+J+R/qP1rc6T9fEtN/UtAS+8+x/zM6jyPt/1X/19p5xv6H7gWtnPd3Xnv/z+5frZwP3b8788RlaQ==
   </data>
  </layer>
- <layer name="Walkable" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNpjY2BgYBvFA4ZxgYG2n1R3kWvGQABqhsdwdQO90tuo/aP2j9o/av9A2M82gu0faX4fTfOjeW4kp3u20Tw3muawYACzZhOB
-  </data>
- </layer>
- <layer name="Objects_stendhal" width="32" height="32">
-  <data encoding="base64" compression="zlib">
-   eNpjYBgFo2DkAnYkzDHAbhEeJG5gpxEeaL+JjNo/av+o/aP2j0D7JYFYYdTu0TQ3av9onh+1ezTNQQEAZGADmA==
-  </data>
- </layer>
- <layer name="Objects_stendhal2" width="32" height="32">
+ <layer name="Above2" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
+ <layer name="Walkable" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtk8ENACAMAtl/JKZzAX1ojCRyTfj2aAOWZBTTatL8XV+nOxJz8x+/eniVN/jw4cNP8F3Mb7udzNO55tybzpG5iQbad1yf
+  </data>
+ </layer>
  <objectgroup name="Mapevents" width="32" height="32">
-  <object name="exit_west_0" type="newmap" x="0" y="96" width="32" height="96">
-   <properties>
-    <property name="map" value="level_0_nalwor_forest_nw_x1_y1"/>
-    <property name="place" value="from_west_0"/>
-   </properties>
-  </object>
-  <object name="exit_south_0" type="newmap" x="704" y="992" width="96" height="32">
-   <properties>
-    <property name="map" value="level_0_nalwor_forest_nw_x2_y2"/>
-    <property name="place" value="from_south_0"/>
-   </properties>
-  </object>
  </objectgroup>
- <objectgroup name="Spawn" width="32" height="32">
-  <object name="from_east_0" x="0" y="128" width="32" height="32"/>
-  <object name="from_north_0" x="736" y="992" width="32" height="32"/>
- </objectgroup>
+ <objectgroup name="Spawn" width="32" height="32"/>
  <objectgroup name="Keys" width="32" height="32"/>
  <objectgroup name="Replace" width="32" height="32"/>
 </map>
