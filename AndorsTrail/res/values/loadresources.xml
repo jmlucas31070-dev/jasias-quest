@@ -1,33 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
     <!-- Jasias Quest Expansion Pack - Load Resources -->
-    <resource type="json" file="res/raw/jq_actors.json"/>
-    <resource type="json" file="res/raw/jq_items2.json"/>
-    <resource type="json" file="res/raw/jq_spells.json"/>
-    <resource type="json" file="res/raw/jq_shops.json"/>
-    <resource type="json" file="res/raw/jq_npcs.json"/>
-    <resource type="json" file="res/raw/jq_quests2.json"/>
+    <resource type="json" file="res/raw/monsterlist_jq_actors.json"/>
+    <resource type="json" file="res/raw/itemlist_jq2.json"/>
+    <resource type="json" file="res/raw/actorconditions_jq_spells.json"/>
+    <resource type="json" file="res/raw/itemlist_jq_shops.json"/>
+    <resource type="json" file="res/raw/monsterlist_jq_npcs.json"/>
+    <resource type="json" file="res/raw/questlist_jq2.json"/>
     <resource type="json" file="res/raw/jq_search_areas.json"/>
-    <resource type="json" file="res/raw/jq_inns.json"/>
+    <resource type="json" file="res/raw/conversationlist_jq_inns.json"/>
     <resource type="json" file="res/raw/jq_maps2.json"/>
     <resource type="json" file="res/raw/jq_connections.json"/>
     <resource type="json" file="res/raw/jq_placements.json"/>
     <resource type="json" file="res/raw/jq_computer.json"/>
-    <resource type="json" file="res/raw/jq_mud_logout.json"/>
+    <resource type="json" file="res/raw/conversationlist_jq_mud_logout.json"/>
 
     <!-- Jasias Quest Additions Pack - Load Resources -->
     <resource type="raw" name="monsterlist_trainer"/>
     <resource type="raw" name="monsterlist_animals"/>
-    <resource type="raw" name="droplists_regions"/>
+    <resource type="raw" name="droplist_regions"/>
     <resource type="raw" name="itemlist_forage"/>
     <resource type="raw" name="itemlist_lockpicks"/>
     <resource type="raw" name="itemlist_crafted"/>
     <resource type="raw" name="actorconditions_mage"/>
     <resource type="raw" name="actorconditions_cleric"/>
     <resource type="raw" name="actorconditions_druid"/>
-    <resource type="raw" name="conversations_trainers"/>
-    <resource type="raw" name="conversations_door"/>
-    <resource type="raw" name="conversations_crafting"/>
+    <resource type="raw" name="conversationlist_trainers"/>
+    <resource type="raw" name="conversationlist_door"/>
+    <resource type="raw" name="conversationlist_crafting"/>
 
     <!-- Monster Lists (NPCs and Faction Members) -->
     <monsterlist ref="monsterlist_human"/>
@@ -46,33 +46,33 @@
     <monsterlist ref="monsterlist_dragon"/>
 
     <!-- Conversations -->
-    <conversations ref="conversations_factions"/>
+    <conversations ref="conversationlist_factions"/>
 
     <!-- Quests and Scripts -->
-    <scripts ref="scripts_faction_quests"/>
+    <scripts ref="questlist_faction"/>
 
     <!-- Items -->
-    <items ref="items_faction"/>
+    <items ref="itemlist_faction"/>
 
     <!-- Drop Lists -->
-    <droplists ref="droplists_faction"/>
+    <droplists ref="droplist_faction"/>
 
     <!-- Faction Definitions -->
-    <factions ref="factions"/>
+    <factions ref="actorconditions_factions"/>
 
     <!-- Abilities and Spells -->
-    <abilities ref="abilities_faction"/>
+    <abilities ref="actorconditions_faction"/>
 
     <!-- Mage Tower NPCs -->
     <monsterlist ref="monsterlist_magetowers"/>
     <!-- Conversations -->
-    <conversations ref="conversations_magetowers"/>
+    <conversations ref="conversationlist_magetowers"/>
     <!-- Quests / Scripts -->
-    <scripts ref="scripts_magetower_quests"/>
+    <scripts ref="questlist_magetowers"/>
     <!-- Items (crystals, rewards, quest items) -->
-    <items ref="items_magetowers"/>
+    <items ref="itemlist_magetowers"/>
     <!-- Drop Lists -->
-    <droplists ref="droplists_magetowers"/>
+    <droplists ref="droplist_magetowers"/>
 
     <!-- Party System Addon JSON Files -->
     <string name="jq_party_actors">jq_party_actors</string>
@@ -114,64 +114,64 @@
         <item>@raw/itemcategories_1</item>
         <item>@raw/itemcategories_foraging</item>
         <item>@raw/itemcategories_guilds</item>
-        <item>@raw/jq_itemcategories</item>
-        <item>@raw/ab_itemcategories</item>
+        <item>@raw/itemcategories_jq</item>
+        <item>@raw/itemcategories_ab</item>
     </array>
     <array name="loadresource_actorconditions">
         <item>@raw/actorconditions_guilds</item>
-        <item>@raw/jq_actorconditions</item>
-        <item>@raw/jq_bank_actorconditions</item>
-        <item>@raw/ab_actorconditions</item>
+        <item>@raw/actorconditions_jq</item>
+        <item>@raw/actorconditions_jq_bank</item>
+        <item>@raw/actorconditions_ab</item>
     </array>
     <array name="loadresource_items">
         <item>@raw/itemlist_foraging</item>
         <item>@raw/itemlist_mining</item>
         <item>@raw/itemlist_guilds</item>
-        <item>@raw/westgate_items</item>
-        <item>@raw/westgate_cooking</item>
-        <item>@raw/westgate_garden</item>
-        <item>@raw/westgate_forge</item>
-        <item>@raw/castle_items</item>
-        <item>@raw/jq_items</item>
-        <item>@raw/jq_bank_items</item>
-        <item>@raw/ab_items</item>
+        <item>@raw/itemlist_westgate</item>
+        <item>@raw/itemlist_westgate_cooking</item>
+        <item>@raw/itemlist_westgate_garden</item>
+        <item>@raw/itemlist_westgate_forge</item>
+        <item>@raw/itemlist_castle</item>
+        <item>@raw/itemlist_jq</item>
+        <item>@raw/itemlist_jq_bank</item>
+        <item>@raw/itemlist_ab</item>
     </array>
     <array name="loadresource_droplists">
-        <item>@raw/droplists_foraging</item>
-        <item>@raw/droplists_mining</item>
-        <item>@raw/westgate_droplists</item>
-        <item>@raw/castle_droplists</item>
-        <item>@raw/jq_droplists</item>
-        <item>@raw/jq_bank_droplists</item>
-        <item>@raw/ab_droplists</item>
+        <item>@raw/droplist_foraging</item>
+        <item>@raw/droplist_mining</item>
+        <item>@raw/droplist_westgate</item>
+        <item>@raw/droplist_castle</item>
+        <item>@raw/droplist_jq</item>
+        <item>@raw/droplist_jq_bank</item>
+        <item>@raw/droplist_ab</item>
     </array>
     <array name="loadresource_quests">
         <item>@raw/questlist_guilds</item>
-        <item>@raw/westgate_quests</item>
-        <item>@raw/castle_quests</item>
-        <item>@raw/jq_quests</item>
-        <item>@raw/jq_bank_quests</item>
-        <item>@raw/ab_quests</item>
+        <item>@raw/questlist_westgate</item>
+        <item>@raw/questlist_castle</item>
+        <item>@raw/questlist_jq</item>
+        <item>@raw/questlist_jq_bank</item>
+        <item>@raw/questlist_ab</item>
     </array>
     <array name="loadresource_conversationlists">
         <item>@raw/conversationlist_foraging</item>
         <item>@raw/conversationlist_mining</item>
         <item>@raw/conversationlist_guilds</item>
-        <item>@raw/westgate_conversationlists</item>
-        <item>@raw/castle_conversationlists</item>
-        <item>@raw/jq_conversationlists</item>
-        <item>@raw/jq_bank_conversationlists</item>
-        <item>@raw/ab_conversationlists</item>
+        <item>@raw/conversationlist_westgate</item>
+        <item>@raw/conversationlist_castle</item>
+        <item>@raw/conversationlist_jq</item>
+        <item>@raw/conversationlist_jq_bank</item>
+        <item>@raw/conversationlist_ab</item>
     </array>
     <array name="loadresource_monsters">
         <item>@raw/monsterlist_foraging</item>
         <item>@raw/monsterlist_mining</item>
         <item>@raw/monsterlist_guilds</item>
-        <item>@raw/westgate_monsters</item>
-        <item>@raw/castle_monsters</item>
-        <item>@raw/jq_monsters</item>
-        <item>@raw/jq_bank_monsters</item>
-        <item>@raw/ab_monsters</item>
+        <item>@raw/monsterlist_westgate</item>
+        <item>@raw/monsterlist_castle</item>
+        <item>@raw/monsterlist_jq</item>
+        <item>@raw/monsterlist_jq_bank</item>
+        <item>@raw/monsterlist_ab</item>
     </array>
     <integer-array name="loadresource_maps">
         <item>@raw/westgate_maps</item>
@@ -3343,20 +3343,20 @@
     <!-- ============================================================== -->
 
     <!-- Core JSON data files for this addition pack -->
-    <resource type="json" file="res/raw/jqa_addition_items.json"/>
-    <resource type="json" file="res/raw/jqa_skills.json"/>
-    <resource type="json" file="res/raw/jqa_scholars.json"/>
-    <resource type="json" file="res/raw/jqa_guilds.json"/>
-    <resource type="json" file="res/raw/jqa_shops.json"/>
-    <resource type="json" file="res/raw/jqa_crafting.json"/>
-    <resource type="json" file="res/raw/jqa_loot_tables.json"/>
+    <resource type="json" file="res/raw/itemlist_jqa_addition.json"/>
+    <resource type="json" file="res/raw/actorconditions_jqa_skills.json"/>
+    <resource type="json" file="res/raw/monsterlist_jqa_scholars.json"/>
+    <resource type="json" file="res/raw/actorconditions_jqa_guilds.json"/>
+    <resource type="json" file="res/raw/itemlist_jqa_shops.json"/>
+    <resource type="json" file="res/raw/itemlist_jqa_crafting.json"/>
+    <resource type="json" file="res/raw/droplist_jqa.json"/>
     <resource type="json" file="res/raw/jqa_maps.json"/>
     <resource type="json" file="res/raw/jqa_placements.json"/>
     <resource type="json" file="res/raw/jqa_connections.json"/>
-    <resource type="json" file="res/raw/jqa_townspeople.json"/>
-    <resource type="json" file="res/raw/jqa_home_furnishings.json"/>
-    <resource type="json" file="res/raw/jqa_astral_logout.json"/>
-    <resource type="json" file="res/raw/jqa_quests.json"/>
+    <resource type="json" file="res/raw/monsterlist_jqa_townspeople.json"/>
+    <resource type="json" file="res/raw/itemlist_jqa_furnishings.json"/>
+    <resource type="json" file="res/raw/conversationlist_jqa_astral_logout.json"/>
+    <resource type="json" file="res/raw/questlist_jqa.json"/>
 
     <!-- TMX Maps (must be present in res/xml/) -->
     <map ref="jqa_library_01"/>
