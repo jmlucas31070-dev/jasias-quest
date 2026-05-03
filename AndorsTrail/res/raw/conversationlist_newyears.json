@@ -1,0 +1,102 @@
+[
+  {
+    "id": "conv_npc_new_years_baby",
+    "start": "node_start",
+    "nodes": [
+      {
+        "id": "node_start",
+        "text": "A round-cheeked baby in a white sash and tiny top hat toddles up to you. The sash reads '0'. It giggles and holds out a miniature party horn.",
+        "replies": [
+          { "text": "Happy New Year, little one!", "nextNode": "node_happy" },
+          { "text": "What are you doing here?",    "nextNode": "node_explain" },
+          { "text": "Goodbye.",                    "nextNode": null }
+        ]
+      },
+      {
+        "id": "node_happy",
+        "text": "The baby claps its tiny hands and blows the party horn with glee. A warm glow washes over you — the blessing of a fresh start.",
+        "replies": [
+          {
+            "text": "Thank you!",
+            "nextNode": null,
+            "giveActorCondition": "ac_newyears_blessing"
+          }
+        ]
+      },
+      {
+        "id": "node_explain",
+        "text": "The baby points skyward at invisible fireworks, then at you, then blows the party horn. It seems to be celebrating a new beginning.",
+        "replies": [
+          { "text": "Of course — Happy New Year!", "nextNode": "node_happy" },
+          { "text": "Goodbye.",                    "nextNode": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "door_key_only",
+    "start": "node_start",
+    "nodes": [
+      {
+        "id": "node_start",
+        "text": "A solid locked door. There is a keyhole — the right key would open it in an instant.",
+        "replies": [
+          {
+            "text": "Use my key.",
+            "nextNode": "node_unlock",
+            "requireItem": "REPLACE_KEY_ID"
+          },
+          {
+            "text": "Leave it.",
+            "nextNode": null
+          }
+        ]
+      },
+      {
+        "id": "node_unlock",
+        "text": "The key turns smoothly. The door swings open.",
+        "replies": [
+          {
+            "text": "Enter.",
+            "nextNode": null,
+            "teleport": true,
+            "destinationMapId": "REPLACE_INNER_MAP",
+            "destinationX": 16,
+            "destinationY": 15
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "door_guard_lock",
+    "start": "node_start",
+    "nodes": [
+      {
+        "id": "node_start",
+        "text": "This mechanism controls the lock on the nearby door.",
+        "replies": [
+          { "text": "Lock the door.",   "nextNode": "node_lock"   },
+          { "text": "Unlock the door.", "nextNode": "node_unlock" },
+          { "text": "Leave it.",        "nextNode": null          }
+        ]
+      },
+      {
+        "id": "node_lock",
+        "text": "You engage the locking mechanism. The door is now locked.",
+        "replies": [
+          { "text": "Done.", "nextNode": null, "setDoorLocked": true, "doorId": "LockedDoor" }
+        ]
+      },
+      {
+        "id": "node_unlock",
+        "text": "You disengage the lock. The door swings open.",
+        "replies": [
+          { "text": "Done.", "nextNode": null, "setDoorLocked": false, "doorId": "LockedDoor" }
+        ]
+      }
+    ]
+  }
+]
