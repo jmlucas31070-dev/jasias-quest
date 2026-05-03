@@ -11,7 +11,7 @@ https://discord.gg/ck8zGyANMb
 ## Contributing
 
 For now, contact me in discord if you want to work on some of the maps. 
-Check [here](https://github.com/jmlucas31070-dev/jasias-quest/stendhal.png) for reference.
+Check [here](https://github.com/jmlucas31070-dev/jasias-quest/blob/master/stendhal.png) for reference.
 Each of their maps is 128x128 tiles, so loads of open space to plop maps into at 32x32 tiles each.
 I need the 2 mountains for story content, and ados. Other than that I'm open to ideas.
 As you can tell there are not many restrictions, ie.. computers in a castle.
