@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
-  <properties>
-    <property name="musicID" value="music_event_general"/>
-    <property name="ambientLightOnEnter" value="255"/>
-    <property name="mapTitle" value="Harvest Moon Event"/>
-    <property name="eventID" value="harvest_moon"/>
-    <property name="layerSwapObjects" value="objects_harvest_moon"/>
-    <property name="layerSwapAbove" value="above_harvest_moon"/>
-  </properties>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="1">
  <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32" tilecount="160" columns="16">
   <image source="../drawable/map_bed_1.png" width="512" height="320"/>
  </tileset>
@@ -208,30 +200,129 @@
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
   </data>
  </layer>
-  <objectgroup name="Spawns">
-    <object id="1" name="npc_event_host" type="MonsterType" x="512" y="480" width="32" height="32">
-      <properties>
-        <property name="id" value="npc_event_host"/>
-        <property name="spawnGroup" value="spawngroup_event_host"/>
-      </properties>
-    </object>
-  </objectgroup>
-  <objectgroup name="Events">
-    <object id="100" name="event_harvest_moon_trigger" type="EventTrigger" x="0" y="0" width="1024" height="1024">
-      <properties>
-        <property name="id" value="event_harvest_moon_trigger"/>
-        <property name="type" value="layerReplace"/>
-        <property name="scriptID" value="layer_swap_harvest_moon"/>
-      </properties>
-    </object>
-    <object id="101" name="event_harvest_moon_spawn" type="EventTrigger" x="0" y="0" width="1024" height="1024">
-      <properties>
-        <property name="id" value="event_harvest_moon_spawn"/>
-        <property name="type" value="monsterSpawn"/>
-        <property name="scriptID" value="spawn_harvest_moon_monsters"/>
-      </properties>
-    </object>
-  </objectgroup>
-  <objectgroup name="Barriers">
-  </objectgroup>
+ <objectgroup id="5" name="Mapevents"/>
+
+ <objectgroup id="6" name="Spawn_beach" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="beach"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="7" name="Spawn_deepforest" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="deepforest"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="8" name="Spawn_desert" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="desert"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="9" name="Spawn_forest" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="forest"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="10" name="Spawn_forest" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="forest"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="11" name="Spawn_grassland" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="grassland"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="12" name="Spawn_hills" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="hills"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="13" name="Spawn_marsh" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="marsh"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="14" name="Spawn_mountain" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="mountain"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="15" name="Spawn_ocean" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="ocean"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="16" name="Spawn_tain_forest" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="rainforest"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="17" name="Spawn_river" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="river"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="18" name="Spawn_sea" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="sea"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="19" name="Spawn_shrubland" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="shrubland"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="20" name="Spawn_swamp" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="swamp"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="21" name="Spawn_tundra" x="1" y="1" width="31" height="31">
+  <properties>
+   <property name="spawnGroup" value="tundra"/>
+   <property name="isSpawnLayer" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="22" name="Keys_door">
+  <object id="1" name="LockedDoor" type="door" x="160" y="128" width="32" height="32">
+   <properties>
+    <property name="conversationId" value="door_approach"/>
+    <property name="isLocked" value="true"/>
+    <property name="destinationMapId" value="template_door_inner"/>
+    <property name="destinationX" value="5"/>
+    <property name="destinationY" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="Keys_crafting">
+  <object id="1" name="WritingDesk" type="interactable" x="96" y="96" width="32" height="32">
+   <properties>
+    <property name="conversationId" value="crafting_scroll_start"/>
+    <property name="guildRestriction" value="mage,cleric,druid"/>
+   </properties>
+  </object>
+  <object id="2" name="BrewingCauldron" type="interactable" x="256" y="96" width="32" height="32">
+   <properties>
+    <property name="conversationId" value="crafting_potion_start"/>
+    <property name="guildRestriction" value="mage,cleric,druid"/>
+   </properties>
+  </object>
+ </objectgroup>
+
+ <objectgroup id="25" name="Replace"/>
 </map>

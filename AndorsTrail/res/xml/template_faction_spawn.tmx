@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
   <properties>
-    <property name="musicID" value="music_death_dungeon"/>
-    <property name="ambientLightOnEnter" value="220"/>
-    <property name="mapTitle" value="Obsidian Tower — Second Floor"/>
-    <property name="floorNum" value="2"/>
-    <property name="towerNum" value="9"/>
-    <property name="towerTheme" value="death"/>
+    <property name="musicID" value="music_outdoor1"/>
+    <property name="ambientLightOnEnter" value="255"/>
+    <property name="mapTitle" value="Faction Spawn Area"/>
+    <property name="factionSpawnEnabled" value="true"/>
+    <property name="spawnResetHours" value="48"/>
   </properties>
  <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32">
   <image source="../drawable/map_bed_1.png" width="512" height="256"/>
@@ -209,56 +208,157 @@
   </data>
  </layer>
   <objectgroup name="Spawns">
-    <object id="1" name="npc_tower9_floor2_mage1" type="MonsterType" x="128" y="160" width="32" height="32">
+    <object id="1" name="npc_human_001" type="MonsterType" x="64" y="96" width="32" height="32">
       <properties>
-        <property name="id" value="npc_tower9_floor2_mage1"/>
-        <property name="spawnGroup" value="sg_tower9_fl2_1"/>
+        <property name="id" value="npc_human_001"/>
+        <property name="spawnGroup" value="spawngroup_human_area"/>
       </properties>
     </object>
-    <object id="2" name="npc_tower9_floor2_mage2" type="MonsterType" x="256" y="160" width="32" height="32">
+    <object id="2" name="npc_human_002" type="MonsterType" x="96" y="96" width="32" height="32">
       <properties>
-        <property name="id" value="npc_tower9_floor2_mage2"/>
-        <property name="spawnGroup" value="sg_tower9_fl2_2"/>
+        <property name="id" value="npc_human_002"/>
+        <property name="spawnGroup" value="spawngroup_human_area"/>
       </properties>
     </object>
-    <object id="3" name="npc_tower9_floor2_mage3" type="MonsterType" x="384" y="160" width="32" height="32">
+    <object id="3" name="npc_human_003" type="MonsterType" x="128" y="96" width="32" height="32">
       <properties>
-        <property name="id" value="npc_tower9_floor2_mage3"/>
-        <property name="spawnGroup" value="sg_tower9_fl2_3"/>
+        <property name="id" value="npc_human_003"/>
+        <property name="spawnGroup" value="spawngroup_human_area"/>
       </properties>
     </object>
-    <object id="4" name="npc_tower9_floor2_mage4" type="MonsterType" x="512" y="160" width="32" height="32">
+    <object id="4" name="npc_halfelf_001" type="MonsterType" x="192" y="96" width="32" height="32">
       <properties>
-        <property name="id" value="npc_tower9_floor2_mage4"/>
-        <property name="spawnGroup" value="sg_tower9_fl2_4"/>
+        <property name="id" value="npc_halfelf_001"/>
+        <property name="spawnGroup" value="spawngroup_halfelf_area"/>
       </properties>
     </object>
-    <object id="5" name="npc_tower9_floor2_mage5" type="MonsterType" x="128" y="288" width="32" height="32">
+    <object id="5" name="npc_halfelf_002" type="MonsterType" x="224" y="96" width="32" height="32">
       <properties>
-        <property name="id" value="npc_tower9_floor2_mage5"/>
-        <property name="spawnGroup" value="sg_tower9_fl2_5"/>
+        <property name="id" value="npc_halfelf_002"/>
+        <property name="spawnGroup" value="spawngroup_halfelf_area"/>
       </properties>
     </object>
-    <object id="6" name="npc_tower9_floor2_mage6" type="MonsterType" x="256" y="288" width="32" height="32">
+    <object id="6" name="npc_halfelf_003" type="MonsterType" x="256" y="96" width="32" height="32">
       <properties>
-        <property name="id" value="npc_tower9_floor2_mage6"/>
-        <property name="spawnGroup" value="sg_tower9_fl2_6"/>
+        <property name="id" value="npc_halfelf_003"/>
+        <property name="spawnGroup" value="spawngroup_halfelf_area"/>
+      </properties>
+    </object>
+    <object id="7" name="npc_elf_001" type="MonsterType" x="320" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_elf_001"/>
+        <property name="spawnGroup" value="spawngroup_elf_area"/>
+      </properties>
+    </object>
+    <object id="8" name="npc_elf_002" type="MonsterType" x="352" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_elf_002"/>
+        <property name="spawnGroup" value="spawngroup_elf_area"/>
+      </properties>
+    </object>
+    <object id="9" name="npc_elf_003" type="MonsterType" x="384" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_elf_003"/>
+        <property name="spawnGroup" value="spawngroup_elf_area"/>
+      </properties>
+    </object>
+    <object id="10" name="npc_woodelf_001" type="MonsterType" x="448" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_woodelf_001"/>
+        <property name="spawnGroup" value="spawngroup_woodelf_area"/>
+      </properties>
+    </object>
+    <object id="11" name="npc_woodelf_002" type="MonsterType" x="480" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_woodelf_002"/>
+        <property name="spawnGroup" value="spawngroup_woodelf_area"/>
+      </properties>
+    </object>
+    <object id="12" name="npc_woodelf_003" type="MonsterType" x="512" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_woodelf_003"/>
+        <property name="spawnGroup" value="spawngroup_woodelf_area"/>
+      </properties>
+    </object>
+    <object id="13" name="npc_drowelf_001" type="MonsterType" x="576" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_drowelf_001"/>
+        <property name="spawnGroup" value="spawngroup_drowelf_area"/>
+      </properties>
+    </object>
+    <object id="14" name="npc_drowelf_002" type="MonsterType" x="608" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_drowelf_002"/>
+        <property name="spawnGroup" value="spawngroup_drowelf_area"/>
+      </properties>
+    </object>
+    <object id="15" name="npc_drowelf_003" type="MonsterType" x="640" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_drowelf_003"/>
+        <property name="spawnGroup" value="spawngroup_drowelf_area"/>
+      </properties>
+    </object>
+    <object id="16" name="npc_seaelf_001" type="MonsterType" x="704" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_seaelf_001"/>
+        <property name="spawnGroup" value="spawngroup_seaelf_area"/>
+      </properties>
+    </object>
+    <object id="17" name="npc_seaelf_002" type="MonsterType" x="736" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_seaelf_002"/>
+        <property name="spawnGroup" value="spawngroup_seaelf_area"/>
+      </properties>
+    </object>
+    <object id="18" name="npc_seaelf_003" type="MonsterType" x="768" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_seaelf_003"/>
+        <property name="spawnGroup" value="spawngroup_seaelf_area"/>
+      </properties>
+    </object>
+    <object id="19" name="npc_dwarf_001" type="MonsterType" x="832" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_dwarf_001"/>
+        <property name="spawnGroup" value="spawngroup_dwarf_area"/>
+      </properties>
+    </object>
+    <object id="20" name="npc_dwarf_002" type="MonsterType" x="864" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_dwarf_002"/>
+        <property name="spawnGroup" value="spawngroup_dwarf_area"/>
+      </properties>
+    </object>
+    <object id="21" name="npc_dwarf_003" type="MonsterType" x="896" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_dwarf_003"/>
+        <property name="spawnGroup" value="spawngroup_dwarf_area"/>
+      </properties>
+    </object>
+    <object id="22" name="npc_goblin_001" type="MonsterType" x="960" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_goblin_001"/>
+        <property name="spawnGroup" value="spawngroup_goblin_area"/>
+      </properties>
+    </object>
+    <object id="23" name="npc_goblin_002" type="MonsterType" x="992" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_goblin_002"/>
+        <property name="spawnGroup" value="spawngroup_goblin_area"/>
+      </properties>
+    </object>
+    <object id="24" name="npc_goblin_003" type="MonsterType" x="0" y="96" width="32" height="32">
+      <properties>
+        <property name="id" value="npc_goblin_003"/>
+        <property name="spawnGroup" value="spawngroup_goblin_area"/>
       </properties>
     </object>
   </objectgroup>
   <objectgroup name="Events">
-    <object id="100" name="stairs_up_f2_t9" type="EventTrigger" x="512" y="32" width="32" height="32">
+    <object id="100" name="spawn_trigger_1" type="EventTrigger" x="0" y="0" width="1024" height="1024">
       <properties>
-        <property name="id" value="stairs_up_f2_t9"/>
-        <property name="type" value="mapTransition"/>
-        <property name="scriptID" value="tower_09_floor_03.tmx"/>
-      </properties>
-    </object>
-    <object id="101" name="stairs_down_f2_t9" type="EventTrigger" x="32" y="480" width="32" height="32">
-      <properties>
-        <property name="id" value="stairs_down_f2_t9"/>
-        <property name="type" value="mapTransition"/>
-        <property name="scriptID" value="tower_09_floor_01.tmx"/>
+        <property name="id" value="spawn_trigger_1"/>
+        <property name="type" value="factionAggression"/>
+        <property name="scriptID" value="faction_aggression_check"/>
       </properties>
     </object>
   </objectgroup>
