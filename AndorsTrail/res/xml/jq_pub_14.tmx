@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down"
-     width="14" height="12" tilewidth="32" tileheight="32" infinite="0">
-  <properties>
-    <property name="colorFilter" value="none"/>
-    <property name="indoor" value="true"/>
-    <property name="lighting" value="day"/>
-    <property name="music" value="tavern_music"/>
-  </properties>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="14" height="12" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9">
+ <properties>
+  <property name="colorFilter" value="none" />
+  <property name="indoor" value="true" />
+  <property name="lighting" value="day" />
+  <property name="music" value="tavern_music" />
+ </properties>
  <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32">
-  <image source="../drawable/map_bed_1.png" width="512" height="256"/>
+  <image source="../drawable/map_bed_1.png" width="512" height="256" />
  </tileset>
  <tileset firstgid="129" name="map_border_1" tilewidth="32" tileheight="32">
-  <image source="../drawable/map_border_1.png" width="512" height="256"/>
+  <image source="../drawable/map_border_1.png" width="512" height="256" />
  </tileset>
  <tileset firstgid="641" name="map_cavewall_1" tilewidth="32" tileheight="32">
-  <image source="../drawable/map_cavewall_1.png" width="576" height="192"/>
+  <image source="../drawable/map_cavewall_1.png" width="576" height="192" />
  </tileset>
  <tileset firstgid="1073" name="map_chair_table_1" tilewidth="32" tileheight="32">
-  <image source="../drawable/map_chair_table_1.png" width="512" height="256"/>
+  <image source="../drawable/map_chair_table_1.png" width="512" height="256" />
  </tileset>
  <tileset firstgid="1201" name="map_chair_table_2" tilewidth="32" tileheight="32">
-  <image source="../drawable/map_chair_table_2.png" width="512" height="256"/>
+  <image source="../drawable/map_chair_table_2.png" width="512" height="256" />
  </tileset>
  <tileset firstgid="1329" name="map_crate_1" tilewidth="32" tileheight="32">
-  <image source="../drawable/map_crate_1.png" width="512" height="256"/>
+  <image source="../drawable/map_crate_1.png" width="512" height="256" />
  </tileset>
  <tileset firstgid="1457" name="map_cupboard_1" tilewidth="32" tileheight="32">
-  <image source="../drawable/map_cupboard_1.png" width="512" height="256"/>
+  <image source="../drawable/map_cupboard_1.png" width="512" height="256" />
  </tileset>
  <tileset firstgid="1713" name="map_entrance_1" tilewidth="32" tileheight="32">
-  <image source="../drawable/map_entrance_1.png" width="512" height="256"/>
+  <image source="../drawable/map_entrance_1.png" width="512" height="256" />
  </tileset>
  <layer id="1" name="Ground" width="30" height="30">
   <data encoding="base64" compression="zlib">
@@ -51,37 +50,41 @@
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
   </data>
  </layer>
-  <objectgroup id="2" name="Spawn" color="#ff0000">
-    <object id="1" name="jq_innkeeper_14" type="jq_innkeeper_14" x="96" y="64" width="32" height="32">
+ <objectgroup id="5" name="Mapevents">
+  <object id="13" name="mapchange_exit_pub14" type="mapchange" x="192" y="320" width="32" height="32">
+   <properties>
+    <property name="map" value="jq_worldarea_01" />
+    <property name="destx" value="10" />
+    <property name="desty" value="5" />
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="Spawn" />
+ <objectgroup id="7" name="Keys">
+  <object id="1" name="jq_innkeeper_14" type="jq_innkeeper_14" x="96" y="64" width="32" height="32">
     </object>
-    <object id="2" name="jq_barkeep_14" type="jq_barkeep_14" x="288" y="64" width="32" height="32">
+  <object id="2" name="jq_barkeep_14" type="jq_barkeep_14" x="288" y="64" width="32" height="32">
     </object>
-    <object id="3" name="jq_party_14_01" type="jq_party_14_01" x="64" y="128" width="32" height="32">
+  <object id="3" name="jq_party_14_01" type="jq_party_14_01" x="64" y="128" width="32" height="32">
     </object>
-    <object id="4" name="jq_party_14_02" type="jq_party_14_02" x="128" y="128" width="32" height="32">
+  <object id="4" name="jq_party_14_02" type="jq_party_14_02" x="128" y="128" width="32" height="32">
     </object>
-    <object id="5" name="jq_party_14_03" type="jq_party_14_03" x="192" y="128" width="32" height="32">
+  <object id="5" name="jq_party_14_03" type="jq_party_14_03" x="192" y="128" width="32" height="32">
     </object>
-    <object id="6" name="jq_party_14_04" type="jq_party_14_04" x="256" y="128" width="32" height="32">
+  <object id="6" name="jq_party_14_04" type="jq_party_14_04" x="256" y="128" width="32" height="32">
     </object>
-    <object id="7" name="jq_party_14_05" type="jq_party_14_05" x="320" y="128" width="32" height="32">
+  <object id="7" name="jq_party_14_05" type="jq_party_14_05" x="320" y="128" width="32" height="32">
     </object>
-    <object id="8" name="jq_party_14_06" type="jq_party_14_06" x="64" y="224" width="32" height="32">
+  <object id="8" name="jq_party_14_06" type="jq_party_14_06" x="64" y="224" width="32" height="32">
     </object>
-    <object id="9" name="jq_party_14_07" type="jq_party_14_07" x="128" y="224" width="32" height="32">
+  <object id="9" name="jq_party_14_07" type="jq_party_14_07" x="128" y="224" width="32" height="32">
     </object>
-    <object id="10" name="jq_party_14_08" type="jq_party_14_08" x="192" y="224" width="32" height="32">
+  <object id="10" name="jq_party_14_08" type="jq_party_14_08" x="192" y="224" width="32" height="32">
     </object>
-    <object id="11" name="jq_party_14_09" type="jq_party_14_09" x="256" y="224" width="32" height="32">
+  <object id="11" name="jq_party_14_09" type="jq_party_14_09" x="256" y="224" width="32" height="32">
     </object>
-    <object id="12" name="jq_party_14_10" type="jq_party_14_10" x="320" y="224" width="32" height="32">
+  <object id="12" name="jq_party_14_10" type="jq_party_14_10" x="320" y="224" width="32" height="32">
     </object>
-    <object id="13" name="mapchange_exit_pub14" type="mapchange" x="192" y="320" width="32" height="32">
-      <properties>
-        <property name="map" value="jq_worldarea_01"/>
-        <property name="destx" value="10"/>
-        <property name="desty" value="5"/>
-      </properties>
-    </object>
-  </objectgroup>
+ </objectgroup>
+ <objectgroup id="8" name="Replace" />
 </map>

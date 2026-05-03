@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down"
-     width="20" height="14" tilewidth="32" tileheight="32" infinite="0">
-  <properties>
-    <property name="colorFilter" value="none"/>
-    <property name="indoor" value="true"/>
-    <property name="lighting" value="day"/>
-    <property name="music" value="tavern_music"/>
-  </properties>
-  <tileset firstgid="1" name="AT-indoors" tilewidth="32" tileheight="32">
-    <image source="../drawable/at_indoors.png" width="320" height="640"/>
-  </tileset>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="20" height="14" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9">
+ <properties>
+  <property name="colorFilter" value="none" />
+  <property name="indoor" value="true" />
+  <property name="lighting" value="day" />
+  <property name="music" value="tavern_music" />
+ </properties>
+ <tileset firstgid="1" name="AT-indoors" tilewidth="32" tileheight="32">
+  <image source="../drawable/at_indoors.png" width="320" height="640" />
+ </tileset>
  <layer id="1" name="Ground" width="30" height="30">
   <data encoding="base64" compression="zlib">
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
@@ -30,27 +29,31 @@
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
   </data>
  </layer>
-  <objectgroup id="2" name="Spawn" color="#ff0000">
-    <object id="1" name="jq_guildmaster" type="jq_guildmaster" x="288" y="96" width="32" height="32">
+ <objectgroup id="5" name="Mapevents">
+  <object id="6" name="mapchange_exit_guild" type="mapchange" x="288" y="384" width="32" height="32">
+   <properties>
+    <property name="map" value="jq_worldarea_01" />
+    <property name="destx" value="20" />
+    <property name="desty" value="5" />
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="Spawn" />
+ <objectgroup id="7" name="Keys">
+  <object id="1" name="jq_guildmaster" type="jq_guildmaster" x="288" y="96" width="32" height="32">
     </object>
-    <object id="2" name="jq_guild_cleric" type="jq_guild_cleric" x="96" y="96" width="32" height="32">
+  <object id="2" name="jq_guild_cleric" type="jq_guild_cleric" x="96" y="96" width="32" height="32">
     </object>
-    <object id="3" name="jq_guild_mage" type="jq_guild_mage" x="480" y="96" width="32" height="32">
+  <object id="3" name="jq_guild_mage" type="jq_guild_mage" x="480" y="96" width="32" height="32">
     </object>
-    <object id="4" name="jq_guild_scribe" type="jq_guild_scribe" x="288" y="192" width="32" height="32">
+  <object id="4" name="jq_guild_scribe" type="jq_guild_scribe" x="288" y="192" width="32" height="32">
     </object>
-    <object id="5" name="jq_trophy_case" type="jq_trophy_case" x="288" y="32" width="32" height="32">
-      <properties>
-        <property name="interaction" value="read"/>
-        <property name="stringID" value="jq_trophy_text_default"/>
-      </properties>
-    </object>
-    <object id="6" name="mapchange_exit_guild" type="mapchange" x="288" y="384" width="32" height="32">
-      <properties>
-        <property name="map" value="jq_worldarea_01"/>
-        <property name="destx" value="20"/>
-        <property name="desty" value="5"/>
-      </properties>
-    </object>
-  </objectgroup>
+  <object id="5" name="jq_trophy_case" type="jq_trophy_case" x="288" y="32" width="32" height="32">
+   <properties>
+    <property name="interaction" value="read" />
+    <property name="stringID" value="jq_trophy_text_default" />
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="Replace" />
 </map>
