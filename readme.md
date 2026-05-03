@@ -11,7 +11,7 @@ https://discord.gg/ck8zGyANMb
 ## Contributing
 
 For now, contact me in discord if you want to work on some of the maps. 
-Check [here](https://stendhalgame.org/) for reference.
+Check [here](https://github.com/jmlucas31070-dev/jasias-quest/stendhal.png) for reference.
 Each of their maps is 128x128 tiles, so loads of open space to plop maps into at 32x32 tiles each.
 I need the 2 mountains for story content, and ados. Other than that I'm open to ideas.
 As you can tell there are not many restrictions, ie.. computers in a castle.
@@ -147,9 +147,10 @@ This addition pack expands jasias-quest with:
 - **Template maps** for loot houses and crafting rooms
 
 * **Updates and future**:
-Removed all stendgal levels and interiors from maps and loadresources.
-Unused maps in unused directory. Got it down to 3228 maps. Still needs more pruning.
-Working on the level 0 maps to ensure that main map will work and look proper. Then I can tackle the castle and the main story.
+- Removed all stendgal levels and interiors from maps and loadresources.
+- Unused maps in unused directory. Got it down to 3228 maps. Still needs more pruning.
+- Working on the level 0 maps to ensure that main map will work and look proper. Then I can tackle the castle and the main story.
+- Removed over 800 maps. Finally got done normalizing maps that the AI mangled. Still some spawns and mapchanges on the wrong spawn layer, but they are blank maps so I can fix that when I create the maps. Next up: fix the castle so player has a place to start and integrate my terrains into the overworld maps. 
 
 ### Andor's Trail Content Studio
 A Win/Mac/Linux content creator/editor available [here](https://andorstrail.com/viewtopic.php?f=6&t=4806).
