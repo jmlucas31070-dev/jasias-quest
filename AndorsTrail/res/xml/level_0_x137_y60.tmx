@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="3">
+  <tileset firstgid="1" name="tileset_ground_ground" tilewidth="32" tileheight="32" tilecount="33" columns="3">
+    <image source="../drawable/tileset_ground_ground.png" width="96" height="352" />
+  </tileset>
+  <tileset firstgid="34" name="tileset_ground_ground_2" tilewidth="32" tileheight="32" tilecount="4" columns="4">
+    <image source="../drawable/tileset_ground_ground_2.png" width="128" height="32" />
+  </tileset>
+  <tileset firstgid="38" name="tileset_ground_grass_edges" tilewidth="32" tileheight="32" tilecount="36" columns="12">
+    <image source="../drawable/tileset_ground_grass_edges.png" width="384" height="96" />
+  </tileset>
+  <tileset firstgid="74" name="tileset_ground_grass_corners" tilewidth="32" tileheight="32" tilecount="24" columns="6">
+    <image source="../drawable/tileset_ground_grass_corners.png" width="192" height="128" />
+  </tileset>
+  <tileset firstgid="98" name="tileset_plant_tree_tree_darkgreen" tilewidth="32" tileheight="32" tilecount="88" columns="8">
+    <image source="../drawable/tileset_plant_tree_tree_darkgreen.png" width="256" height="352" />
+  </tileset>
+  <tileset firstgid="186" name="tileset_logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+    <image source="../drawable/tileset_logic_collision.png" width="32" height="32" />
+  </tileset>
+  <layer name="Ground" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJztzbENACAIBEDCLuy/oo2VMRHII8Z8cfWpiCgRkYNNHefN1xre9ax8d1f1ezp/ej0n+vWeyDdyot7oiXgzJ1++fN94szfizdyoN3oPPT4nBw==
+  </data>
+  </layer>
+  <layer name="Object" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALigCYQaw2AnRGjdlLdLi0opqed9A5TEDAdADuHe/oZtZM+YCDS7qi9o/bSCjgCcdyo3XQFpMQ1AKpfCTc=
+  </data>
+  </layer>
+  <layer name="Object2" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+  </data>
+  </layer>
+  <layer name="Above" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJy91LEKwkAQhOF7VpPKpFIrkypJpT600wiHcDC53ZkPBvYBfnYspVywARuN94xdscl8P7AbdjffK/bEFvN9YBu2m+8P9sLepvvH2XDN1fA/dbctilYZ2a2ysrtlZbTaI9pqL0WrjN5uo9TdtkR+bETkx0acbTiLs+Ga4vcynA3XFL+Xof7DLeo/3ML2nI3tORvTswLTs8IXuTT2eQ==
+  </data>
+  </layer>
+  <layer name="Above2" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+  </data>
+  </layer>
+  <layer name="Walkable" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJzt0DEKADAMQlFz/0t36lIodFHT4AfnR1IAKss+385hKt2z6R7bvKX21OaknzrdTrfG5LkK0+V2+XFcjel0mfZLLpdhM9wFDPYC+g==
+  </data>
+  </layer>
+  <objectgroup name="MapEvents">
+    <object id="1" name="south" type="mapExit" x="288" y="928" width="320" height="32">
+      <properties>
+        <property name="map" value="level_0_x137_y61" />
+        <property name="x" value="9" />
+        <property name="y" value="1" />
+      </properties>
+    </object>
+    <object id="2" name="east" type="mapExit" x="928" y="160" width="32" height="96">
+      <properties>
+        <property name="map" value="level_0_x138_y60" />
+        <property name="x" value="1" />
+        <property name="y" value="5" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>

@@ -1,0 +1,1884 @@
+{
+  "quests": [
+    {
+      "id": "quest_intro",
+      "name": "The World Awaits",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Find the rumour board in the town square and read the notices posted there.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 50
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 50
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "Speak to the Ranger Captain — she knows of dangers across all regions.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 100
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "forage_wild_grain",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 100
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_crafting",
+      "name": "The Crafter's Path",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Gather iron ingots from the forge and bring them to the Guild Armorer.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "mat_iron_ingot",
+              "quantity": 3
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 150
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 150
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed The Crafter's Path. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 300
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 300
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_forage",
+      "name": "Nature's Bounty",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Collect wild berries from the shrubland for the Grocer.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_wild_berries",
+              "quantity": 5
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 120
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 120
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed Nature's Bounty. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 240
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 240
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_faction",
+      "name": "Diplomatic Tensions",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Deliver street herbs to the Half-Elf Diplomat to help broker peace.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_street_herb",
+              "quantity": 3
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 180
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 180
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed Diplomatic Tensions. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 360
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 360
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_animals",
+      "name": "The Hunter's Mark",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Hunt rock boars and bring their tusks to the Ranger Captain.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "drop_boar_tusk",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 140
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 140
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed The Hunter's Mark. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 280
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 280
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_holiday",
+      "name": "Festival Preparations",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Retrieve a firework from the New Year Herald for the festival.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "ny_firework",
+              "quantity": 1
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 100
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 100
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed Festival Preparations. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 200
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 200
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_guilds",
+      "name": "Guild Allegiance",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Prove your loyalty by bringing steel ingots to the Fighters Guild Master.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "mat_steel_ingot",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 200
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 200
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed Guild Allegiance. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 400
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 400
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_scrolls",
+      "name": "The Mage's Request",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Bring mountain crystals to the Archmage for scroll crafting.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_mountain_crystal",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 160
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 160
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed The Mage's Request. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 320
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 320
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_cooking",
+      "name": "The Feast of Friends",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Gather apples from the garden for the Halfling Cook's legendary feast.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "food_raw_apple",
+              "quantity": 4
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 130
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 130
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed The Feast of Friends. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 260
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 260
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_clothing",
+      "name": "Threads of the Land",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Bring wool yarn to the Seamstress to clothe the village refugees.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "mat_wool_yarn",
+              "quantity": 3
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 120
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 120
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed Threads of the Land. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 240
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 240
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_history",
+      "name": "Echoes of the Deep",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Retrieve cave crystals for the Elf Sage's historical research.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_cave_crystal",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 170
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 170
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed Echoes of the Deep. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 340
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 340
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_darkness",
+      "name": "Shadow Rising",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Obtain void silk from the Void Spider of the dark cave for the Archmage.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "drop_void_silk",
+              "quantity": 1
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 220
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 220
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed Shadow Rising. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 440
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 440
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_branch_finale_prep",
+      "name": "Before the Last Stand",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Gather quenching oil to temper the final blade before the last battle.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "mat_quenching_oil",
+              "quantity": 3
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 250
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 250
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have completed Before the Last Stand. The world is grateful.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 500
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 500
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_closing",
+      "name": "The Final Gathering",
+      "stages": [
+        {
+          "id": 0,
+          "description": "The twelve paths are walked. Return to the Ranger Captain for the final reckoning.",
+          "requirements": [
+            {
+              "type": "questComplete",
+              "questID": "quest_branch_finale_prep"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 500
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "guild_master_sword",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 500
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have mastered every path this world has to offer. The legend of Jasia begins.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 1000
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1000
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_grassland",
+      "name": "Secrets of the Grassland",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Grassland and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_prairie_seed",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 80
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 80
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Grassland. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 160
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 160
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_shrubland",
+      "name": "Secrets of the Shrubland",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Shrubland and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_wild_berries",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 85
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 85
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Shrubland. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 170
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 170
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_swamp",
+      "name": "Secrets of the Swamp",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Swamp and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_swamp_root",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 90
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 90
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Swamp. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 180
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 180
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_marsh",
+      "name": "Secrets of the Marsh",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Marsh and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_marsh_reed",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 95
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 95
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Marsh. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 190
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 190
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_bog",
+      "name": "Secrets of the Bog",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Bog and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_peat_moss",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 100
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 100
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Bog. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 200
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 200
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_desert",
+      "name": "Secrets of the Desert",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Desert and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_cactus_pulp",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 105
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 105
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Desert. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 210
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 210
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_tundra",
+      "name": "Secrets of the Tundra",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Tundra and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_frozen_lichen",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 110
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 110
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Tundra. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 220
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 220
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_hills",
+      "name": "Secrets of the Hills",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Hills and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_hill_stone",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 115
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 115
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Hills. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 230
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 230
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_mountain",
+      "name": "Secrets of the Mountain",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Mountain and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_mountain_crystal",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 120
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 120
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Mountain. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 240
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 240
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_alpine",
+      "name": "Secrets of the Alpine",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Alpine and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_alpine_flower",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 125
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 125
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Alpine. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 250
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 250
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_volcano",
+      "name": "Secrets of the Volcano",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Volcano and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_obsidian_chip",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 130
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 130
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Volcano. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 260
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 260
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_river",
+      "name": "Secrets of the River",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the River and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_river_clay",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 135
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 135
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the River. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 270
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 270
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_lake",
+      "name": "Secrets of the Lake",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Lake and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_lake_pearl",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 140
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 140
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Lake. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 280
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 280
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_sea",
+      "name": "Secrets of the Sea",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Sea and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_sea_salt",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 145
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 145
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Sea. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 290
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 290
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_ocean",
+      "name": "Secrets of the Ocean",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Ocean and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_deep_coral",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 150
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 150
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Ocean. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 300
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 300
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_small_cave",
+      "name": "Secrets of the Small Cave",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Small Cave and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_cave_mushroom",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 155
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 155
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Small Cave. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 310
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 310
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_large_cave",
+      "name": "Secrets of the Large Cave",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Large Cave and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_cave_crystal",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 160
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 160
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Large Cave. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 320
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 320
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_dark_cave",
+      "name": "Secrets of the Dark Cave",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Dark Cave and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_void_dust",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 165
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 165
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Dark Cave. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 330
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 330
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_damp_cave",
+      "name": "Secrets of the Damp Cave",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Damp Cave and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_damp_spore",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 170
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 170
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Damp Cave. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 340
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 340
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_deep_cave",
+      "name": "Secrets of the Deep Cave",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Deep Cave and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_deep_ore_shard",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 175
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 175
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Deep Cave. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 350
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 350
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_hell",
+      "name": "Secrets of the Hell",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Hell and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_brimstone",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 180
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 180
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Hell. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 360
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 360
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_city",
+      "name": "Secrets of the City",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the City and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_street_herb",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 185
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 185
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the City. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 370
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 370
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    },
+    {
+      "id": "quest_region_farm",
+      "name": "Secrets of the Farm",
+      "stages": [
+        {
+          "id": 0,
+          "description": "Explore the Farm and bring back its unique forage ingredient.",
+          "requirements": [
+            {
+              "type": "inventoryRemove",
+              "itemID": "forage_wild_grain",
+              "quantity": 2
+            }
+          ],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 190
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 190
+            }
+          ],
+          "nextStageID": 1
+        },
+        {
+          "id": 1,
+          "description": "You have uncovered the secrets of the Farm. Your knowledge grows.",
+          "requirements": [],
+          "rewards": [
+            {
+              "type": "experience",
+              "quantity": 380
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 1
+            },
+            {
+              "type": "inventoryAdd",
+              "itemID": "gold",
+              "quantity": 380
+            }
+          ],
+          "nextStageID": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!--
+    template_jasia2.tmx — Andors Trail Jasia2 expansion template
+    30×30 tiles | tile=32×32 px | total=960×960 px
+
+    LAYER GUIDE
+    ══════════════════════════════════════════════════════
+    Standard tile layers:
+      Ground / Objects / Object2 / Above / Above2 / Walkable
+
+    Astral Beast layers:
+      Spawn_pokemon_npc    — Professor, Scholar, Elder, Breeder, Gym Leaders,
+                             Champions (×9), Elite Champions (×9), Grand Champion
+      Spawn_pokemon_<id>   — Wild beasts for each of 9 regions (full-map spans)
+      Spawn_pokemon        — Post-champion wild encounters (unlocked by quest)
+      Spawn_trainer_<id>   — 12 trainers per region (×9 regions = 108 trainers)
+
+    Mining layers:
+      Keys_mining          — Ore rock, Miner's Forge, Spellbinding Bench,
+                             Foraging Counter
+      Spawn_mining         — Old Miner, Storekeeper, 12 disgruntled + 12 lucky
+
+    Door/Lock layers:
+      Mapevents_door       — Lockable door, Mage/Cleric/Druid spell desks
+      Spawn_door           — Locksmith, 3 guild scroll suppliers
+
+    DATA FILES (place in assets/):
+      itemcategories_jasia2.json   — 18 categories
+      itemlist_jasia2.json         — 834 items (270 beast equips, 270 tokens,
+                                     30 hybrids, 4 spirit orbs, 60 mining
+                                     materials, 12 weapons, 24 rings,
+                                     4 lockpicks, 101 keys, 18 scroll supplies,
+                                     1 pick axe, misc)
+      actorconditions_jasia2.json  — 275 conditions (270 beast spells + 5 skills)
+      monsterlist_jasia2.json      — 470 monsters (270 beasts, 30 hybrids,
+                                     professor/scholar/elder/breeder,
+                                     9 gym leaders, 108 trainers, 9 champions,
+                                     9 elite champions, 1 grand champion,
+                                     26 mining NPCs, 4 door NPCs)
+      droplists_jasia2.json        — 310 droplists
+      conversationlist_jasia2.json — 371 conversations
+      questlist_jasia2.json        — 14 quests
+
+    BEAST CATCH MECHANIC (AT implementation notes):
+      Each beast has a conversation:  Fight / Catch (uses spirit orb) / Leave
+      Spirit Orb catch rates:         Basic=30%, Silver=60%, Gold=85%, Master=100%
+      Catch success → adds beast token + equip item via droplist to inventory
+      Evolution → talk to Scholar + pay gold (Base→Mid=100g, Mid→Final=300g)
+      Breeding → two tokens + 200g → random 1 of 30 hybrid beasts
+
+    DOOR MECHANIC (AT implementation notes):
+      Thief guild L3+: pick locks using 4 lockpick tiers (failure rate by type+level)
+      Fighter guild L1+: bash door (failure rate decreases with guild level)
+      Keys: 100 unique keys (key_door_001..100) + master key (works on any)
+      Mage/Cleric/Druid desks: write recall & door-pass scrolls
+      Recall scrolls: teleport to guild / adventurers guild / house / home
+
+    MINING MECHANIC:
+      Equip Pick Axe → interact with Ore Rock → drop mining materials
+      Fighter guild forge: better weapon quality than other guilds
+      Spellbinding bench: bind spells to scrolls/wands/staffs (mage/druid/cleric/thief)
+      Forage counter: rangers/druids/clerics convert forage to potions
+  -->
+<map version="1.0" orientation="orthogonal" width="30" height="30" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_bed_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="129" name="map_border_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_border_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="257" name="map_bridge_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_bridge_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="385" name="map_bridge_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_bridge_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="513" name="map_broken_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_broken_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="641" name="map_cavewall_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_cavewall_1.png" width="576" height="192"/>
+ </tileset>
+ <tileset firstgid="749" name="map_cavewall_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_cavewall_2.png" width="576" height="192"/>
+ </tileset>
+ <tileset firstgid="857" name="map_cavewall_3" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_cavewall_3.png" width="576" height="192"/>
+ </tileset>
+ <tileset firstgid="965" name="map_cavewall_4" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_cavewall_4.png" width="576" height="192"/>
+ </tileset>
+ <tileset firstgid="1073" name="map_chair_table_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_chair_table_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="1201" name="map_chair_table_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_chair_table_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="1329" name="map_crate_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_crate_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="1457" name="map_cupboard_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_cupboard_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="1585" name="map_curtain_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_curtain_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="1713" name="map_entrance_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_entrance_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="1841" name="map_entrance_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_entrance_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="1969" name="map_fence_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_fence_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="2097" name="map_fence_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_fence_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="2225" name="map_fence_3" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_fence_3.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="2353" name="map_fence_4" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_fence_4.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="2481" name="map_ground_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_ground_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="2609" name="map_ground_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_ground_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="2737" name="map_ground_3" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_ground_3.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="2865" name="map_ground_4" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_ground_4.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="2993" name="map_ground_5" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_ground_5.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="3121" name="map_ground_6" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_ground_6.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="3249" name="map_ground_7" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_ground_7.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="3377" name="map_ground_8" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_ground_8.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="3505" name="map_house_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_house_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="3633" name="map_house_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_house_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="3761" name="map_indoor_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_indoor_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="3889" name="map_indoor_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_indoor_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="4017" name="map_kitchen_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_kitchen_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="4145" name="map_outdoor_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_outdoor_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="4273" name="map_pillar_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_pillar_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="4401" name="map_pillar_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_pillar_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="4529" name="map_plant_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_plant_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="4657" name="map_plant_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_plant_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="4785" name="map_rock_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_rock_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="4913" name="map_rock_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_rock_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="5041" name="map_roof_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_roof_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="5169" name="map_roof_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_roof_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="5297" name="map_roof_3" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_roof_3.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="5425" name="map_shop_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_shop_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="5553" name="map_sign_ladder_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_sign_ladder_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="5681" name="map_table_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_table_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="5809" name="map_trail_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_trail_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="5937" name="map_transition_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_transition_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="6065" name="map_transition_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_transition_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="6193" name="map_transition_3" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_transition_3.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="6321" name="map_transition_4" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_transition_4.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="6449" name="map_transition_5" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_transition_5.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="6577" name="map_tree_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_tree_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="6705" name="map_tree_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_tree_2.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="6833" name="map_wall_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_wall_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="6961" name="map_wall_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_wall_2.png" width="480" height="256"/>
+ </tileset>
+ <tileset firstgid="7081" name="map_wall_3" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_wall_3.png" width="480" height="256"/>
+ </tileset>
+ <tileset firstgid="7201" name="map_wall_4" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_wall_4.png" width="480" height="256"/>
+ </tileset>
+ <tileset firstgid="7321" name="map_window_1" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_window_1.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="7449" name="map_window_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/map_window_2.png" width="512" height="256"/>
+ </tileset>
+ <layer name="Ground" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+  </data>
+ </layer>
+ <layer name="Objects" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+  </data>
+ </layer>
+ <layer name="Above" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+  </data>
+ </layer>
+ <layer name="Walkable" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+  </data>
+ </layer>
+
+   <!-- ═══════ ASTRAL BEAST OBJECT GROUPS ═══════ -->
+    <objectgroup name="Spawn_pokemon_npc" color="#22cc55" visible="1">
+      <object id="300" name="professor" x="160" y="160" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_professor"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="301" name="scholar" x="224" y="160" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_scholar"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="302" name="elder" x="288" y="160" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_elder"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="303" name="breeder" x="352" y="160" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_breeder"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="304" name="grand_champion" x="464" y="160" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_grand_champion"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_grand_champion"/>
+      </properties>
+    </object>
+    <object id="305" name="gym_leader_verdant" x="160" y="224" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_gym_leader_verdant"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_verdant"/>
+      </properties>
+    </object>
+    <object id="306" name="champion_verdant" x="224" y="224" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion_verdant"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_verdant"/>
+      </properties>
+    </object>
+    <object id="307" name="champion2_verdant" x="288" y="224" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion2_verdant"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_grand_champion"/>
+        <property name="condition" value="questComplete:quest_astral_master"/>
+      </properties>
+    </object>
+    <object id="308" name="gym_leader_crystal" x="160" y="256" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_gym_leader_crystal"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_crystal"/>
+      </properties>
+    </object>
+    <object id="309" name="champion_crystal" x="224" y="256" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion_crystal"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_crystal"/>
+      </properties>
+    </object>
+    <object id="310" name="champion2_crystal" x="288" y="256" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion2_crystal"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_grand_champion"/>
+        <property name="condition" value="questComplete:quest_astral_master"/>
+      </properties>
+    </object>
+    <object id="311" name="gym_leader_volcanic" x="160" y="288" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_gym_leader_volcanic"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_volcanic"/>
+      </properties>
+    </object>
+    <object id="312" name="champion_volcanic" x="224" y="288" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion_volcanic"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_volcanic"/>
+      </properties>
+    </object>
+    <object id="313" name="champion2_volcanic" x="288" y="288" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion2_volcanic"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_grand_champion"/>
+        <property name="condition" value="questComplete:quest_astral_master"/>
+      </properties>
+    </object>
+    <object id="314" name="gym_leader_ocean" x="160" y="320" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_gym_leader_ocean"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_ocean"/>
+      </properties>
+    </object>
+    <object id="315" name="champion_ocean" x="224" y="320" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion_ocean"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_ocean"/>
+      </properties>
+    </object>
+    <object id="316" name="champion2_ocean" x="288" y="320" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion2_ocean"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_grand_champion"/>
+        <property name="condition" value="questComplete:quest_astral_master"/>
+      </properties>
+    </object>
+    <object id="317" name="gym_leader_tundra" x="160" y="352" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_gym_leader_tundra"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_tundra"/>
+      </properties>
+    </object>
+    <object id="318" name="champion_tundra" x="224" y="352" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion_tundra"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_tundra"/>
+      </properties>
+    </object>
+    <object id="319" name="champion2_tundra" x="288" y="352" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion2_tundra"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_grand_champion"/>
+        <property name="condition" value="questComplete:quest_astral_master"/>
+      </properties>
+    </object>
+    <object id="320" name="gym_leader_desert" x="160" y="384" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_gym_leader_desert"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_desert"/>
+      </properties>
+    </object>
+    <object id="321" name="champion_desert" x="224" y="384" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion_desert"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_desert"/>
+      </properties>
+    </object>
+    <object id="322" name="champion2_desert" x="288" y="384" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion2_desert"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_grand_champion"/>
+        <property name="condition" value="questComplete:quest_astral_master"/>
+      </properties>
+    </object>
+    <object id="323" name="gym_leader_storm" x="160" y="416" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_gym_leader_storm"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_storm"/>
+      </properties>
+    </object>
+    <object id="324" name="champion_storm" x="224" y="416" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion_storm"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_storm"/>
+      </properties>
+    </object>
+    <object id="325" name="champion2_storm" x="288" y="416" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion2_storm"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_grand_champion"/>
+        <property name="condition" value="questComplete:quest_astral_master"/>
+      </properties>
+    </object>
+    <object id="326" name="gym_leader_shadow" x="160" y="448" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_gym_leader_shadow"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_shadow"/>
+      </properties>
+    </object>
+    <object id="327" name="champion_shadow" x="224" y="448" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion_shadow"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_shadow"/>
+      </properties>
+    </object>
+    <object id="328" name="champion2_shadow" x="288" y="448" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion2_shadow"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_grand_champion"/>
+        <property name="condition" value="questComplete:quest_astral_master"/>
+      </properties>
+    </object>
+    <object id="329" name="gym_leader_celestial" x="160" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_gym_leader_celestial"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_celestial"/>
+      </properties>
+    </object>
+    <object id="330" name="champion_celestial" x="224" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion_celestial"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_champion_celestial"/>
+      </properties>
+    </object>
+    <object id="331" name="champion2_celestial" x="288" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_champion2_celestial"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="questID" value="quest_grand_champion"/>
+        <property name="condition" value="questComplete:quest_astral_master"/>
+      </properties>
+    </object>
+    </objectgroup>
+
+    <objectgroup name="Spawn_pokemon" color="#44dd77" visible="1">
+      <object id="386" name="post_champ_verdant_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_leafpup"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_verdant"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="387" name="post_champ_verdant_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_leafling"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_verdant"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="388" name="post_champ_crystal_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_shardpup"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_crystal"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="389" name="post_champ_crystal_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_shardling"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_crystal"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="390" name="post_champ_volcanic_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_emberpup"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_volcanic"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="391" name="post_champ_volcanic_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_emberling"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_volcanic"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="392" name="post_champ_ocean_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_tidepup"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_ocean"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="393" name="post_champ_ocean_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_tideling"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_ocean"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="394" name="post_champ_tundra_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_frostpup"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_tundra"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="395" name="post_champ_tundra_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_frosting"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_tundra"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="396" name="post_champ_desert_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_sandpup"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_desert"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="397" name="post_champ_desert_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_sandling"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_desert"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="398" name="post_champ_storm_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_thunderpup"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_storm"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="399" name="post_champ_storm_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_thunderling"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_storm"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="400" name="post_champ_shadow_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_voidpup"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_shadow"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="401" name="post_champ_shadow_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_voiding"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_shadow"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="402" name="post_champ_celestial_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_starpup"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_celestial"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    <object id="403" name="post_champ_celestial_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_starling"/>
+        <property name="spawnchance" value="10"/>
+        <property name="maxAlive" value="4"/>
+        <property name="condition" value="questComplete:quest_champion_celestial"/>
+        <property name="note" value="Only spawns after region champion is beaten"/>
+      </properties>
+    </object>
+    </objectgroup>
+
+    <objectgroup name="Spawn_pokemon_verdant" color="#44bb66" visible="1">
+      <object id="332" name="wild_verdant_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_leafpup"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="verdant"/>
+        <property name="note" value="Spans entire map — wild Verdant Forest encounter"/>
+      </properties>
+    </object>
+    <object id="333" name="wild_verdant_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_leafling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="verdant"/>
+        <property name="note" value="Spans entire map — wild Verdant Forest encounter"/>
+      </properties>
+    </object>
+    <object id="334" name="wild_verdant_2" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_leafrex"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="verdant"/>
+        <property name="note" value="Spans entire map — wild Verdant Forest encounter"/>
+      </properties>
+    </object>
+    <object id="335" name="wild_verdant_3" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_fernkit"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="verdant"/>
+        <property name="note" value="Spans entire map — wild Verdant Forest encounter"/>
+      </properties>
+    </object>
+    <object id="336" name="wild_verdant_4" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_fernwick"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="verdant"/>
+        <property name="note" value="Spans entire map — wild Verdant Forest encounter"/>
+      </properties>
+    </object>
+    <object id="337" name="wild_verdant_5" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_ferngard"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="verdant"/>
+        <property name="note" value="Spans entire map — wild Verdant Forest encounter"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_pokemon_crystal" color="#44bb66" visible="1">
+      <object id="338" name="wild_crystal_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_shardpup"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="crystal"/>
+        <property name="note" value="Spans entire map — wild Crystal Caverns encounter"/>
+      </properties>
+    </object>
+    <object id="339" name="wild_crystal_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_shardling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="crystal"/>
+        <property name="note" value="Spans entire map — wild Crystal Caverns encounter"/>
+      </properties>
+    </object>
+    <object id="340" name="wild_crystal_2" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_shardmind"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="crystal"/>
+        <property name="note" value="Spans entire map — wild Crystal Caverns encounter"/>
+      </properties>
+    </object>
+    <object id="341" name="wild_crystal_3" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_gemkit"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="crystal"/>
+        <property name="note" value="Spans entire map — wild Crystal Caverns encounter"/>
+      </properties>
+    </object>
+    <object id="342" name="wild_crystal_4" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_gemwick"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="crystal"/>
+        <property name="note" value="Spans entire map — wild Crystal Caverns encounter"/>
+      </properties>
+    </object>
+    <object id="343" name="wild_crystal_5" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_gemstone"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="crystal"/>
+        <property name="note" value="Spans entire map — wild Crystal Caverns encounter"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_pokemon_volcanic" color="#44bb66" visible="1">
+      <object id="344" name="wild_volcanic_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_emberpup"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="volcanic"/>
+        <property name="note" value="Spans entire map — wild Volcanic Peaks encounter"/>
+      </properties>
+    </object>
+    <object id="345" name="wild_volcanic_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_emberling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="volcanic"/>
+        <property name="note" value="Spans entire map — wild Volcanic Peaks encounter"/>
+      </properties>
+    </object>
+    <object id="346" name="wild_volcanic_2" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_emberlord"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="volcanic"/>
+        <property name="note" value="Spans entire map — wild Volcanic Peaks encounter"/>
+      </properties>
+    </object>
+    <object id="347" name="wild_volcanic_3" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_ashkit"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="volcanic"/>
+        <property name="note" value="Spans entire map — wild Volcanic Peaks encounter"/>
+      </properties>
+    </object>
+    <object id="348" name="wild_volcanic_4" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_ashwick"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="volcanic"/>
+        <property name="note" value="Spans entire map — wild Volcanic Peaks encounter"/>
+      </properties>
+    </object>
+    <object id="349" name="wild_volcanic_5" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_ashguard"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="volcanic"/>
+        <property name="note" value="Spans entire map — wild Volcanic Peaks encounter"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_pokemon_ocean" color="#44bb66" visible="1">
+      <object id="350" name="wild_ocean_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_tidepup"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="ocean"/>
+        <property name="note" value="Spans entire map — wild Ocean Depths encounter"/>
+      </properties>
+    </object>
+    <object id="351" name="wild_ocean_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_tideling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="ocean"/>
+        <property name="note" value="Spans entire map — wild Ocean Depths encounter"/>
+      </properties>
+    </object>
+    <object id="352" name="wild_ocean_2" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_tidequeen"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="ocean"/>
+        <property name="note" value="Spans entire map — wild Ocean Depths encounter"/>
+      </properties>
+    </object>
+    <object id="353" name="wild_ocean_3" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_coralkit"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="ocean"/>
+        <property name="note" value="Spans entire map — wild Ocean Depths encounter"/>
+      </properties>
+    </object>
+    <object id="354" name="wild_ocean_4" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_coralwick"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="ocean"/>
+        <property name="note" value="Spans entire map — wild Ocean Depths encounter"/>
+      </properties>
+    </object>
+    <object id="355" name="wild_ocean_5" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_coraldepth"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="ocean"/>
+        <property name="note" value="Spans entire map — wild Ocean Depths encounter"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_pokemon_tundra" color="#44bb66" visible="1">
+      <object id="356" name="wild_tundra_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_frostpup"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="tundra"/>
+        <property name="note" value="Spans entire map — wild Frozen Tundra encounter"/>
+      </properties>
+    </object>
+    <object id="357" name="wild_tundra_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_frosting"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="tundra"/>
+        <property name="note" value="Spans entire map — wild Frozen Tundra encounter"/>
+      </properties>
+    </object>
+    <object id="358" name="wild_tundra_2" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_frostlord"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="tundra"/>
+        <property name="note" value="Spans entire map — wild Frozen Tundra encounter"/>
+      </properties>
+    </object>
+    <object id="359" name="wild_tundra_3" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_icekit"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="tundra"/>
+        <property name="note" value="Spans entire map — wild Frozen Tundra encounter"/>
+      </properties>
+    </object>
+    <object id="360" name="wild_tundra_4" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_iceling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="tundra"/>
+        <property name="note" value="Spans entire map — wild Frozen Tundra encounter"/>
+      </properties>
+    </object>
+    <object id="361" name="wild_tundra_5" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_iceguard"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="tundra"/>
+        <property name="note" value="Spans entire map — wild Frozen Tundra encounter"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_pokemon_desert" color="#44bb66" visible="1">
+      <object id="362" name="wild_desert_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_sandpup"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="desert"/>
+        <property name="note" value="Spans entire map — wild Desert Sands encounter"/>
+      </properties>
+    </object>
+    <object id="363" name="wild_desert_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_sandling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="desert"/>
+        <property name="note" value="Spans entire map — wild Desert Sands encounter"/>
+      </properties>
+    </object>
+    <object id="364" name="wild_desert_2" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_sandlord"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="desert"/>
+        <property name="note" value="Spans entire map — wild Desert Sands encounter"/>
+      </properties>
+    </object>
+    <object id="365" name="wild_desert_3" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_dunekit"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="desert"/>
+        <property name="note" value="Spans entire map — wild Desert Sands encounter"/>
+      </properties>
+    </object>
+    <object id="366" name="wild_desert_4" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_duneling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="desert"/>
+        <property name="note" value="Spans entire map — wild Desert Sands encounter"/>
+      </properties>
+    </object>
+    <object id="367" name="wild_desert_5" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_duneguard"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="desert"/>
+        <property name="note" value="Spans entire map — wild Desert Sands encounter"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_pokemon_storm" color="#44bb66" visible="1">
+      <object id="368" name="wild_storm_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_thunderpup"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="storm"/>
+        <property name="note" value="Spans entire map — wild Storm Highlands encounter"/>
+      </properties>
+    </object>
+    <object id="369" name="wild_storm_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_thunderling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="storm"/>
+        <property name="note" value="Spans entire map — wild Storm Highlands encounter"/>
+      </properties>
+    </object>
+    <object id="370" name="wild_storm_2" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_thunderlord"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="storm"/>
+        <property name="note" value="Spans entire map — wild Storm Highlands encounter"/>
+      </properties>
+    </object>
+    <object id="371" name="wild_storm_3" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_stormkit"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="storm"/>
+        <property name="note" value="Spans entire map — wild Storm Highlands encounter"/>
+      </properties>
+    </object>
+    <object id="372" name="wild_storm_4" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_storming"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="storm"/>
+        <property name="note" value="Spans entire map — wild Storm Highlands encounter"/>
+      </properties>
+    </object>
+    <object id="373" name="wild_storm_5" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_stormguard"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="storm"/>
+        <property name="note" value="Spans entire map — wild Storm Highlands encounter"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_pokemon_shadow" color="#44bb66" visible="1">
+      <object id="374" name="wild_shadow_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_voidpup"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="shadow"/>
+        <property name="note" value="Spans entire map — wild Shadow Realm encounter"/>
+      </properties>
+    </object>
+    <object id="375" name="wild_shadow_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_voiding"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="shadow"/>
+        <property name="note" value="Spans entire map — wild Shadow Realm encounter"/>
+      </properties>
+    </object>
+    <object id="376" name="wild_shadow_2" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_voidlord"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="shadow"/>
+        <property name="note" value="Spans entire map — wild Shadow Realm encounter"/>
+      </properties>
+    </object>
+    <object id="377" name="wild_shadow_3" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_darkkit"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="shadow"/>
+        <property name="note" value="Spans entire map — wild Shadow Realm encounter"/>
+      </properties>
+    </object>
+    <object id="378" name="wild_shadow_4" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_darkling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="6"/>
+        <property name="region" value="shadow"/>
+        <property name="note" value="Spans entire map — wild Shadow Realm encounter"/>
+      </properties>
+    </object>
+    <object id="379" name="wild_shadow_5" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_darkmaster"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="shadow"/>
+        <property name="note" value="Spans entire map — wild Shadow Realm encounter"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_pokemon_celestial" color="#44bb66" visible="1">
+      <object id="380" name="wild_celestial_0" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_starpup"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="celestial"/>
+        <property name="note" value="Spans entire map — wild Celestial Skies encounter"/>
+      </properties>
+    </object>
+    <object id="381" name="wild_celestial_1" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_starling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="celestial"/>
+        <property name="note" value="Spans entire map — wild Celestial Skies encounter"/>
+      </properties>
+    </object>
+    <object id="382" name="wild_celestial_2" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_starlord"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="celestial"/>
+        <property name="note" value="Spans entire map — wild Celestial Skies encounter"/>
+      </properties>
+    </object>
+    <object id="383" name="wild_celestial_3" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_celestikin"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="celestial"/>
+        <property name="note" value="Spans entire map — wild Celestial Skies encounter"/>
+      </properties>
+    </object>
+    <object id="384" name="wild_celestial_4" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_celestiling"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="4"/>
+        <property name="region" value="celestial"/>
+        <property name="note" value="Spans entire map — wild Celestial Skies encounter"/>
+      </properties>
+    </object>
+    <object id="385" name="wild_celestial_5" x="0" y="0" width="960" height="960">
+      <properties>
+        <property name="monsterID" value="beast_celestilord"/>
+        <property name="spawnchance" value="15"/>
+        <property name="maxAlive" value="5"/>
+        <property name="region" value="celestial"/>
+        <property name="note" value="Spans entire map — wild Celestial Skies encounter"/>
+      </properties>
+    </object>
+    </objectgroup>
+
+    <objectgroup name="Spawn_trainer_verdant" color="#cc6600" visible="1">
+      <object id="404" name="trainer_verdant_1" x="0" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="405" name="trainer_verdant_2" x="160" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="406" name="trainer_verdant_3" x="320" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="407" name="trainer_verdant_4" x="480" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="408" name="trainer_verdant_5" x="640" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="409" name="trainer_verdant_6" x="800" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="410" name="trainer_verdant_7" x="0" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="411" name="trainer_verdant_8" x="160" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="412" name="trainer_verdant_9" x="320" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="413" name="trainer_verdant_10" x="480" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="414" name="trainer_verdant_11" x="640" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="415" name="trainer_verdant_12" x="800" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_verdant_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_trainer_crystal" color="#cc6600" visible="1">
+      <object id="416" name="trainer_crystal_1" x="0" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="417" name="trainer_crystal_2" x="160" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="418" name="trainer_crystal_3" x="320" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="419" name="trainer_crystal_4" x="480" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="420" name="trainer_crystal_5" x="640" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="421" name="trainer_crystal_6" x="800" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="422" name="trainer_crystal_7" x="0" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="423" name="trainer_crystal_8" x="160" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="424" name="trainer_crystal_9" x="320" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="425" name="trainer_crystal_10" x="480" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="426" name="trainer_crystal_11" x="640" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="427" name="trainer_crystal_12" x="800" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_crystal_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_trainer_volcanic" color="#cc6600" visible="1">
+      <object id="428" name="trainer_volcanic_1" x="0" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="429" name="trainer_volcanic_2" x="160" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="430" name="trainer_volcanic_3" x="320" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="431" name="trainer_volcanic_4" x="480" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="432" name="trainer_volcanic_5" x="640" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="433" name="trainer_volcanic_6" x="800" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="434" name="trainer_volcanic_7" x="0" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="435" name="trainer_volcanic_8" x="160" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="436" name="trainer_volcanic_9" x="320" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="437" name="trainer_volcanic_10" x="480" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="438" name="trainer_volcanic_11" x="640" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="439" name="trainer_volcanic_12" x="800" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_volcanic_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_trainer_ocean" color="#cc6600" visible="1">
+      <object id="440" name="trainer_ocean_1" x="0" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="441" name="trainer_ocean_2" x="160" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="442" name="trainer_ocean_3" x="320" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="443" name="trainer_ocean_4" x="480" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="444" name="trainer_ocean_5" x="640" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="445" name="trainer_ocean_6" x="800" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="446" name="trainer_ocean_7" x="0" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="447" name="trainer_ocean_8" x="160" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="448" name="trainer_ocean_9" x="320" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="449" name="trainer_ocean_10" x="480" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="450" name="trainer_ocean_11" x="640" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="451" name="trainer_ocean_12" x="800" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_ocean_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_trainer_tundra" color="#cc6600" visible="1">
+      <object id="452" name="trainer_tundra_1" x="0" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="453" name="trainer_tundra_2" x="160" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="454" name="trainer_tundra_3" x="320" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="455" name="trainer_tundra_4" x="480" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="456" name="trainer_tundra_5" x="640" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="457" name="trainer_tundra_6" x="800" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="458" name="trainer_tundra_7" x="0" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="459" name="trainer_tundra_8" x="160" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="460" name="trainer_tundra_9" x="320" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="461" name="trainer_tundra_10" x="480" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="462" name="trainer_tundra_11" x="640" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="463" name="trainer_tundra_12" x="800" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_tundra_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_trainer_desert" color="#cc6600" visible="1">
+      <object id="464" name="trainer_desert_1" x="0" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="465" name="trainer_desert_2" x="160" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="466" name="trainer_desert_3" x="320" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="467" name="trainer_desert_4" x="480" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="468" name="trainer_desert_5" x="640" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="469" name="trainer_desert_6" x="800" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="470" name="trainer_desert_7" x="0" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="471" name="trainer_desert_8" x="160" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="472" name="trainer_desert_9" x="320" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="473" name="trainer_desert_10" x="480" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="474" name="trainer_desert_11" x="640" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="475" name="trainer_desert_12" x="800" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_desert_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_trainer_storm" color="#cc6600" visible="1">
+      <object id="476" name="trainer_storm_1" x="0" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="477" name="trainer_storm_2" x="160" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="478" name="trainer_storm_3" x="320" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="479" name="trainer_storm_4" x="480" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="480" name="trainer_storm_5" x="640" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="481" name="trainer_storm_6" x="800" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="482" name="trainer_storm_7" x="0" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="483" name="trainer_storm_8" x="160" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="484" name="trainer_storm_9" x="320" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="485" name="trainer_storm_10" x="480" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="486" name="trainer_storm_11" x="640" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="487" name="trainer_storm_12" x="800" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_storm_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_trainer_shadow" color="#cc6600" visible="1">
+      <object id="488" name="trainer_shadow_1" x="0" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="489" name="trainer_shadow_2" x="160" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="490" name="trainer_shadow_3" x="320" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="491" name="trainer_shadow_4" x="480" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="492" name="trainer_shadow_5" x="640" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="493" name="trainer_shadow_6" x="800" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="494" name="trainer_shadow_7" x="0" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="495" name="trainer_shadow_8" x="160" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="496" name="trainer_shadow_9" x="320" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="497" name="trainer_shadow_10" x="480" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="498" name="trainer_shadow_11" x="640" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="499" name="trainer_shadow_12" x="800" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_shadow_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    </objectgroup>
+  <objectgroup name="Spawn_trainer_celestial" color="#cc6600" visible="1">
+      <object id="500" name="trainer_celestial_1" x="0" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="501" name="trainer_celestial_2" x="160" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="502" name="trainer_celestial_3" x="320" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="503" name="trainer_celestial_4" x="480" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="504" name="trainer_celestial_5" x="640" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="505" name="trainer_celestial_6" x="800" y="480" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="506" name="trainer_celestial_7" x="0" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="507" name="trainer_celestial_8" x="160" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="508" name="trainer_celestial_9" x="320" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="509" name="trainer_celestial_10" x="480" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="510" name="trainer_celestial_11" x="640" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    <object id="511" name="trainer_celestial_12" x="800" y="544" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_trainer_celestial_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Has conversation: battle or leave"/>
+      </properties>
+    </object>
+    </objectgroup>
+
+   <!-- ═══════ MINING OBJECT GROUPS ═══════ -->
+    <objectgroup name="Keys_mining" color="#cc8800" visible="1">
+      <object id="512" name="ore_rock" x="160" y="640" width="32" height="32">
+      <properties>
+        <property name="interactionType" value="mining_rock"/>
+        <property name="requiredEquip" value="tool_pick_axe"/>
+        <property name="droplistID" value="dl_npc_gold"/>
+        <property name="note" value="Mine for crystals/gems/ores/ingots/junk — see droplists_jasia2.json"/>
+      </properties>
+    </object>
+    <object id="513" name="miners_forge" x="256" y="640" width="64" height="64">
+      <properties>
+        <property name="interactionType" value="crafting_forge"/>
+        <property name="guildRestriction" value="fighter"/>
+        <property name="note" value="Fighter guild: better weapon quality. Others: standard quality. Crafts 12 weapons + 24 rings."/>
+      </properties>
+    </object>
+    <object id="514" name="spellbind_bench" x="384" y="640" width="64" height="64">
+      <properties>
+        <property name="interactionType" value="spellbinding"/>
+        <property name="guildRestriction" value="mage,druid,cleric,thief"/>
+        <property name="note" value="Bind known spells permanently into scrolls/wands/staffs. Equip restricted by guild."/>
+      </properties>
+    </object>
+    <object id="515" name="forage_counter" x="512" y="640" width="64" height="64">
+      <properties>
+        <property name="interactionType" value="forage_crafting"/>
+        <property name="guildRestriction" value="ranger,druid,cleric"/>
+        <property name="note" value="Convert forage items to potions/tinctures/ointments"/>
+      </properties>
+    </object>
+    </objectgroup>
+
+    <objectgroup name="Spawn_mining" color="#ddaa00" visible="1">
+      <object id="516" name="old_miner" x="160" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_old_miner"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="517" name="general_store" x="224" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_general_store"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="518" name="miner_dis_1" x="288" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="519" name="miner_dis_2" x="320" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="520" name="miner_dis_3" x="352" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="521" name="miner_dis_4" x="384" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="522" name="miner_dis_5" x="416" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="523" name="miner_dis_6" x="448" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="524" name="miner_dis_7" x="288" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="525" name="miner_dis_8" x="320" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="526" name="miner_dis_9" x="352" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="527" name="miner_dis_10" x="384" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="528" name="miner_dis_11" x="416" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="529" name="miner_dis_12" x="448" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_dis_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="530" name="miner_for_1" x="480" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_1"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="531" name="miner_for_2" x="512" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_2"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="532" name="miner_for_3" x="544" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_3"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="533" name="miner_for_4" x="576" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_4"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="534" name="miner_for_5" x="608" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_5"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="535" name="miner_for_6" x="640" y="704" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_6"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="536" name="miner_for_7" x="480" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_7"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="537" name="miner_for_8" x="512" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_8"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="538" name="miner_for_9" x="544" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_9"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="539" name="miner_for_10" x="576" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_10"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="540" name="miner_for_11" x="608" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_11"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="541" name="miner_for_12" x="640" y="736" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_miner_for_12"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    </objectgroup>
+
+   <!-- ═══════ DOOR/LOCK OBJECT GROUPS ═══════ -->
+    <objectgroup name="Mapevents_door" color="#cc0044" visible="1">
+      <object id="542" name="door_locked" x="160" y="800" width="32" height="32">
+      <properties>
+        <property name="interactionType" value="door"/>
+        <property name="locked" value="true"/>
+        <property name="thiefUnlock_crude_L3" value="failRate:60"/>
+        <property name="thiefUnlock_iron_L3" value="failRate:40"/>
+        <property name="thiefUnlock_steel_L3" value="failRate:20"/>
+        <property name="thiefUnlock_master_L3" value="failRate:5"/>
+        <property name="thiefUnlock_crude_L4" value="failRate:45"/>
+        <property name="thiefUnlock_iron_L4" value="failRate:25"/>
+        <property name="thiefUnlock_steel_L4" value="failRate:10"/>
+        <property name="thiefUnlock_master_L4" value="failRate:2"/>
+        <property name="fighterBash_L1" value="failRate:60"/>
+        <property name="fighterBash_L2" value="failRate:40"/>
+        <property name="fighterBash_L3" value="failRate:20"/>
+        <property name="fighterBash_L4" value="failRate:5"/>
+        <property name="keyID" value="key_door_001"/>
+        <property name="masterKeyID" value="key_master"/>
+        <property name="note" value="Lock/unlock/open/close. Thief picks (guild L3+). Fighter bashes (guild L1+). Key/master opens always."/>
+      </properties>
+    </object>
+    <object id="543" name="mage_desk" x="256" y="800" width="32" height="32">
+      <properties>
+        <property name="interactionType" value="spell_desk"/>
+        <property name="guildRestriction" value="mage"/>
+        <property name="note" value="Write scrolls for Arcane Door Pass, Mage Guild Recall, Home Recall, House Recall, Adventurers Recall"/>
+      </properties>
+    </object>
+    <object id="544" name="cleric_desk" x="320" y="800" width="32" height="32">
+      <properties>
+        <property name="interactionType" value="spell_desk"/>
+        <property name="guildRestriction" value="cleric"/>
+        <property name="note" value="Write scrolls for Divine Door Pass, Cleric Guild Recall, Home Recall, House Recall, Adventurers Recall"/>
+      </properties>
+    </object>
+    <object id="545" name="druid_desk" x="384" y="800" width="32" height="32">
+      <properties>
+        <property name="interactionType" value="spell_desk"/>
+        <property name="guildRestriction" value="druid"/>
+        <property name="note" value="Write scrolls for Nature Door Pass, Druid Guild Recall, Home Recall, House Recall, Adventurers Recall"/>
+      </properties>
+    </object>
+    </objectgroup>
+
+    <objectgroup name="Spawn_door" color="#ff3366" visible="1">
+      <object id="546" name="locksmith" x="160" y="864" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_lockpick_seller"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+        <property name="note" value="Sells lockpicks + key-making supplies. Thief guild L3+ can make keys (higher L = better success)."/>
+      </properties>
+    </object>
+    <object id="547" name="mage_supplier" x="256" y="864" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_mage_supplier"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="548" name="cleric_supplier" x="320" y="864" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_cleric_supplier"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    <object id="549" name="druid_supplier" x="384" y="864" width="32" height="32">
+      <properties>
+        <property name="monsterID" value="npc_druid_supplier"/>
+        <property name="spawnchance" value="100"/>
+        <property name="maxAlive" value="1"/>
+      </properties>
+    </object>
+    </objectgroup>
+
+  </map>
