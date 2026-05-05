@@ -390,15 +390,14 @@ def build_at_tmx(layer_tiles: dict, registry: TilesetRegistry,
         obj = ET.SubElement(og_el, "object")
         obj.set("id",     str(i + 1))
         obj.set("name",   ex["name"])
-        obj.set("type",   "mapExit")
+        obj.set("type",   "mapchange")
         obj.set("x",      str(ex["x"] * TILE_PX))
         obj.set("y",      str(ex["y"] * TILE_PX))
         obj.set("width",  str(ex["w"] * TILE_PX))
         obj.set("height", str(ex["h"] * TILE_PX))
         props = ET.SubElement(obj, "properties")
         for k, v in [("map", ex["target_map"]),
-                     ("x",   str(ex["target_x"])),
-                     ("y",   str(ex["target_y"]))]:
+                     ("place", ex["place"])]:
             p = ET.SubElement(props, "property")
             p.set("name",  k)
             p.set("value", str(v))
@@ -425,18 +424,19 @@ def _consecutive_groups(positions):
 def generate_exits(map_id: str, walkable_tiles: list,
                    all_map_ids: set, neighbor_fn) -> list:
     W, H = AT_MAP_WIDTH, AT_MAP_HEIGHT
+    opposite = {"north": "south", "south": "north", "west": "east", "east": "west"}
     edges = {
         "north": ([x for x in range(W) if tile_at(walkable_tiles, x, 0,   W) == 0],
-                  lambda s, l: (s, 0,   l, 1), lambda s, l: (s, H-2)),
+                  lambda s, l: (s, 0,   l, 1)),
         "south": ([x for x in range(W) if tile_at(walkable_tiles, x, H-1, W) == 0],
-                  lambda s, l: (s, H-1, l, 1), lambda s, l: (s, 1)),
+                  lambda s, l: (s, H-1, l, 1)),
         "west":  ([y for y in range(H) if tile_at(walkable_tiles, 0,   y, W) == 0],
-                  lambda s, l: (0,   s, 1, l), lambda s, l: (W-2, s)),
+                  lambda s, l: (0,   s, 1, l)),
         "east":  ([y for y in range(H) if tile_at(walkable_tiles, W-1, y, W) == 0],
-                  lambda s, l: (W-1, s, 1, l), lambda s, l: (1, s)),
+                  lambda s, l: (W-1, s, 1, l)),
     }
     exits = []
-    for direction, (open_pos, rect_fn, target_fn) in edges.items():
+    for direction, (open_pos, rect_fn) in edges.items():
         if not open_pos:
             continue
         nbr = neighbor_fn(map_id, direction)
@@ -445,13 +445,11 @@ def generate_exits(map_id: str, walkable_tiles: list,
         for i, (start, length) in enumerate(_consecutive_groups(open_pos)):
             suffix = "" if i == 0 else str(i + 1)
             ex, ey, ew, eh = rect_fn(start, length)
-            tx, ty = target_fn(start, length)
             exits.append({
                 "name":       direction + suffix,
                 "x": ex, "y": ey, "w": ew, "h": eh,
                 "target_map": nbr,
-                "target_x":   tx,
-                "target_y":   ty,
+                "place":      opposite[direction] + (suffix if suffix else ""),
             })
     return exits
 
