@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="3">
+  <tileset firstgid="1" name="tileset_ground_ground" tilewidth="32" tileheight="32" tilecount="33" columns="3">
+    <image source="../drawable/tileset_ground_ground.png" width="96" height="352" />
+  </tileset>
+  <tileset firstgid="34" name="tileset_ground_water_pool" tilewidth="32" tileheight="32" tilecount="72" columns="3">
+    <image source="../drawable/tileset_ground_water_pool.png" width="96" height="768" />
+  </tileset>
+  <tileset firstgid="106" name="tileset_plant_tree_tree_darkgreen" tilewidth="32" tileheight="32" tilecount="88" columns="8">
+    <image source="../drawable/tileset_plant_tree_tree_darkgreen.png" width="256" height="352" />
+  </tileset>
+  <tileset firstgid="194" name="tileset_ground_grass_edges" tilewidth="32" tileheight="32" tilecount="36" columns="12">
+    <image source="../drawable/tileset_ground_grass_edges.png" width="384" height="96" />
+  </tileset>
+  <tileset firstgid="230" name="tileset_ground_grass_corners" tilewidth="32" tileheight="32" tilecount="24" columns="6">
+    <image source="../drawable/tileset_ground_grass_corners.png" width="192" height="128" />
+  </tileset>
+  <tileset firstgid="254" name="tileset_plant_flower_daisy_white" tilewidth="32" tileheight="32" tilecount="8" columns="2">
+    <image source="../drawable/tileset_plant_flower_daisy_white.png" width="64" height="128" />
+  </tileset>
+  <tileset firstgid="262" name="tileset_plant_grasses" tilewidth="32" tileheight="32" tilecount="6" columns="3">
+    <image source="../drawable/tileset_plant_grasses.png" width="96" height="64" />
+  </tileset>
+  <tileset firstgid="268" name="tileset_ground_pothole" tilewidth="32" tileheight="32" tilecount="4" columns="4">
+    <image source="../drawable/tileset_ground_pothole.png" width="128" height="32" />
+  </tileset>
+  <tileset firstgid="272" name="tileset_logic_item_resources" tilewidth="32" tileheight="32" tilecount="6" columns="6">
+    <image source="../drawable/tileset_logic_item_resources.png" width="192" height="32" />
+  </tileset>
+  <tileset firstgid="278" name="tileset_logic_creature_elf" tilewidth="32" tileheight="32" tilecount="16" columns="8">
+    <image source="../drawable/tileset_logic_creature_elf.png" width="256" height="64" />
+  </tileset>
+  <tileset firstgid="294" name="tileset_logic_item_mushroom" tilewidth="32" tileheight="32" tilecount="6" columns="6">
+    <image source="../drawable/tileset_logic_item_mushroom.png" width="192" height="32" />
+  </tileset>
+  <tileset firstgid="300" name="tileset_logic_portal" tilewidth="32" tileheight="32" tilecount="24" columns="8">
+    <image source="../drawable/tileset_logic_portal.png" width="256" height="96" />
+  </tileset>
+  <tileset firstgid="324" name="tileset_logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+    <image source="../drawable/tileset_logic_collision.png" width="32" height="32" />
+  </tileset>
+  <layer name="Ground" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJztzjEKACAMxdBPR+9/4K4iChbaCpLhzYlJMgAAAOAzY/Kq29leu9XtXe9Gdy/az+pE+9Xd04cDvUwKCQ==
+  </data>
+  </layer>
+  <layer name="Object" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAoGP+gA4jYgbsfCpiWYAMR9QNyPhT1SwFogXgfEs4B4NhDPAeL1eNjkmIUNbAXibUC8HYgXE8HGB3CZNRRBKwPuvIDO76Sy3bjyAiV5g4mRmi5EBceg+DjtrMALvg4xuzlIjIujDJDwxWb3MRyYkvCA2feFDL0wNxFjP7qbybGPEvtpAdDjBNkdAAUUSO4=
+  </data>
+  </layer>
+  <layer name="Object2" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+  </data>
+  </layer>
+  <layer name="Above" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJztkrEOglAQBPd7EY2AFqAWoBVSIdJZ+p9uSXHJkbCvMLlJJtnikmsmB5DRHc2NfaIlrcTbu7vShl7E27t70I7exdu7G2hPn+Lt3U10pC/x9u6s1hTbu4ueo+fo+X97tnjTGWl7tvggfc8WX6TveQt7eoDf85EWG38tOWN9z7Xw7w3re26Ff4MgCJT8AL+8C0U=
+  </data>
+  </layer>
+  <layer name="Above2" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+  </data>
+  </layer>
+  <layer name="Walkable" width="30" height="30">
+    <data encoding="base64" compression="zlib">
+   eJztzaENAAAMw7D2/6fHxwbGHMk4TVIAAN7sfH8+vr6+dwM3GANB
+  </data>
+  </layer>
+  <objectgroup name="MapEvents">
+    <object id="1" name="south" type="mapExit" x="0" y="928" width="256" height="32">
+      <properties>
+        <property name="map" value="0_ados_mountain_n2_w2_x4_y3" />
+        <property name="x" value="0" />
+        <property name="y" value="1" />
+      </properties>
+    </object>
+    <object id="2" name="west" type="mapExit" x="0" y="736" width="32" height="224">
+      <properties>
+        <property name="map" value="0_ados_mountain_n2_w2_x3_y2" />
+        <property name="x" value="28" />
+        <property name="y" value="23" />
+      </properties>
+    </object>
+  </objectgroup>
+</map>
