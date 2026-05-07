@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="4">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="5">
   <tileset firstgid="1" name="tileset_logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
     <image source="../drawable/tileset_logic_collision.png" width="32" height="32" />
   </tileset>
@@ -24,6 +24,9 @@
   <tileset firstgid="413" name="tileset_ground_sand_2" tilewidth="32" tileheight="32" tilecount="15" columns="5">
     <image source="../drawable/tileset_ground_sand_2.png" width="160" height="96" />
   </tileset>
+  <tileset firstgid="428" name="tileset_building_fire_tower" tilewidth="32" tileheight="32" tilecount="252" columns="9">
+    <image source="../drawable/tileset_building_fire_tower.png" width="288" height="896" />
+  </tileset>
   <layer name="Ground" width="30" height="30">
     <data encoding="base64" compression="zlib">
    eJx7w8DA8GYUw/ESRvLksOEVQPUrSdQzikcxrfECYJpcOADpcinQzmWj+WEU0xGDymxSy+1RjD88B9oNwxkvJxC+o22KUTyKRzGtMACk0zoN
@@ -46,28 +49,34 @@
   </layer>
   <layer name="Above2" width="30" height="30">
     <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+   eJztzWc313EAxuH/8SoUlYwGKllpKBlJaSAzNFFRFJmVyigNs6lF1tt0PfAKHN9nv/uc6+n9icV2dvFxsdgudpNAInvYyz6S4nY4uLX9fpNJIZU0DnCQQxwO1E33m0EmRzjKMbI4Tnagbo7fXPLI5wQFnOQUpwN1z/gt5CznKOI8xZRQGqhb5vcC5VykgktcppIrgbpX/V7jOlVUU8MNaqkL1K3320AjTdykmRZauRWoe9vvHe5yj/u00U4HDwJ1H/p9RCddPOYJ3fTwNFD3md9e+nhOPwMMMsRwoO6I3xe85BWjvOYNbxkL1B33O8Ek73jPFB/4yKdA3c9+p5lhljnmWeALXwN1v/n9zg9+ssgvfvOHv4G6//wuscx/VlhljXU2AnWjRYsWLVq07WwTi2U22Q==
   </data>
   </layer>
   <layer name="Walkable" width="30" height="30">
     <data encoding="base64" compression="zlib">
-   eJztzjEBAAAMAiDXv/RieAgJSAAAaLp2AJj1EpAAAg==
+   eJxjYKA+YMSDaQlG7R3e9uKymx5g1N5Re0ftHfr2orNHwSgYTGA0XY6CUTAKBgoAAJeVAFY=
   </data>
   </layer>
   <objectgroup name="MapEvents">
-    <object id="1" name="north" type="mapchange" x="0" y="0" width="960" height="32">
+    <object id="1" name="north" type="mapchange" x="0" y="0" width="672" height="32">
       <properties>
         <property name="map" value="0_deniran_forest_n2_w_x0_y1" />
         <property name="place" value="south" />
       </properties>
     </object>
-    <object id="2" name="south" type="mapchange" x="0" y="928" width="960" height="32">
+    <object id="2" name="north2" type="mapchange" x="896" y="0" width="64" height="32">
+      <properties>
+        <property name="map" value="0_deniran_forest_n2_w_x0_y1" />
+        <property name="place" value="south2" />
+      </properties>
+    </object>
+    <object id="3" name="south" type="mapchange" x="0" y="928" width="960" height="32">
       <properties>
         <property name="map" value="0_deniran_forest_n2_w_x0_y3" />
         <property name="place" value="north" />
       </properties>
     </object>
-    <object id="3" name="east" type="mapchange" x="928" y="0" width="32" height="960">
+    <object id="4" name="east" type="mapchange" x="928" y="0" width="32" height="960">
       <properties>
         <property name="map" value="0_ados_mountain_n2_w2_x0_y2" />
         <property name="place" value="west" />

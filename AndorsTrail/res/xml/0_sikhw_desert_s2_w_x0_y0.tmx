@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="5">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="6">
   <tileset firstgid="1" name="tileset_logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
     <image source="../drawable/tileset_logic_collision.png" width="32" height="32" />
   </tileset>
@@ -24,6 +24,9 @@
   <tileset firstgid="413" name="tileset_ground_sand_2" tilewidth="32" tileheight="32" tilecount="15" columns="5">
     <image source="../drawable/tileset_ground_sand_2.png" width="160" height="96" />
   </tileset>
+  <tileset firstgid="428" name="tileset_building_fire_tower" tilewidth="32" tileheight="32" tilecount="252" columns="9">
+    <image source="../drawable/tileset_building_fire_tower.png" width="288" height="896" />
+  </tileset>
   <layer name="Ground" width="30" height="30">
     <data encoding="base64" compression="zlib">
    eJx7w8DA8GYUj+JhjBcwMjAsZKS/vUuBdi4bAHtH8eDFq4DpYfVomhjFo3jY4vlUzt+j9dcoHsWjmB4YANgjOtE=
@@ -46,12 +49,12 @@
   </layer>
   <layer name="Above2" width="30" height="30">
     <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+   eJztzUVObVEARcH7Hu4O8+/j7vpxd3e3j7sWCVM4DZK7k+ruFUXx4sWLFy9evHh/a5WJKKqimhpqqaOeBhoTYbpNfptpoZU22umgk65A3W6/PfTSRz8D/GOQoUDdYb8jjDLGOBNMMsV0oO6M31nmmGeBRZZYZiVQd9XvGutssMkW2+ywG6i753efAw454pgTTjkL1D33e8El/7nimhtuuQvUvff7wCNPPPPCK2+8B+p++P3k6+c/GUUJkqSQSloyTDfdbwaZZJFNDrnkkR+oW+C3kCKKKaGUMsqp+O1+A0EiR6c=
   </data>
   </layer>
   <layer name="Walkable" width="30" height="30">
     <data encoding="base64" compression="zlib">
-   eJzt0jENAAAIBLHHv2kmFDAQklbBDZcAALBV1wG84xnG5QsNFdAABA==
+   eJztz0EKAAAEAEH+/2lXiZNQ2i0nZSJCRERERN30qXXtqpsLc9KOdzN3+u/KxN2x/W7LjLYBaCwANQ==
   </data>
   </layer>
   <objectgroup name="MapEvents">
@@ -61,19 +64,25 @@
         <property name="place" value="south" />
       </properties>
     </object>
-    <object id="2" name="south" type="mapchange" x="0" y="928" width="960" height="32">
+    <object id="2" name="south" type="mapchange" x="0" y="928" width="672" height="32">
       <properties>
         <property name="map" value="0_deniran_forest_n2_w_x0_y2" />
         <property name="place" value="north" />
       </properties>
     </object>
-    <object id="3" name="east" type="mapchange" x="928" y="0" width="32" height="896">
+    <object id="3" name="south2" type="mapchange" x="896" y="928" width="64" height="32">
+      <properties>
+        <property name="map" value="0_deniran_forest_n2_w_x0_y2" />
+        <property name="place" value="north2" />
+      </properties>
+    </object>
+    <object id="4" name="east" type="mapchange" x="928" y="0" width="32" height="896">
       <properties>
         <property name="map" value="0_ados_mountain_n2_w2_x0_y1" />
         <property name="place" value="west" />
       </properties>
     </object>
-    <object id="4" name="east2" type="mapchange" x="928" y="928" width="32" height="32">
+    <object id="5" name="east2" type="mapchange" x="928" y="928" width="32" height="32">
       <properties>
         <property name="map" value="0_ados_mountain_n2_w2_x0_y1" />
         <property name="place" value="west2" />

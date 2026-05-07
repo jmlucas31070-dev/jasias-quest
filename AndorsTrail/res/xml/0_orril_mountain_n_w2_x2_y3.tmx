@@ -30,26 +30,26 @@
   <tileset firstgid="208" name="tileset_ground_rock_rocks_2" tilewidth="32" tileheight="32" tilecount="4" columns="2">
     <image source="../drawable/tileset_ground_rock_rocks_2.png" width="64" height="64" />
   </tileset>
-  <tileset firstgid="212" name="tileset_logic_creature_animal" tilewidth="32" tileheight="32" tilecount="32" columns="8">
-    <image source="../drawable/tileset_logic_creature_animal.png" width="256" height="128" />
-  </tileset>
-  <tileset firstgid="244" name="tileset_logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <tileset firstgid="212" name="tileset_logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
     <image source="../drawable/tileset_logic_collision.png" width="32" height="32" />
   </tileset>
-  <tileset firstgid="245" name="tileset_plant_tree_taller_trees" tilewidth="32" tileheight="32" tilecount="32" columns="8">
+  <tileset firstgid="213" name="tileset_plant_tree_taller_trees" tilewidth="32" tileheight="32" tilecount="32" columns="8">
     <image source="../drawable/tileset_plant_tree_taller_trees.png" width="256" height="128" />
   </tileset>
-  <tileset firstgid="277" name="tileset_plant_tree_spruce" tilewidth="32" tileheight="32" tilecount="6" columns="2">
+  <tileset firstgid="245" name="tileset_plant_tree_spruce" tilewidth="32" tileheight="32" tilecount="6" columns="2">
     <image source="../drawable/tileset_plant_tree_spruce.png" width="64" height="96" />
   </tileset>
-  <tileset firstgid="283" name="tileset_plant_bush_bush_mult_colored" tilewidth="32" tileheight="32" tilecount="6" columns="3">
+  <tileset firstgid="251" name="tileset_plant_bush_bush_mult_colored" tilewidth="32" tileheight="32" tilecount="6" columns="3">
     <image source="../drawable/tileset_plant_bush_bush_mult_colored.png" width="96" height="64" />
   </tileset>
-  <tileset firstgid="289" name="tileset_plant_tree_pine_tree" tilewidth="32" tileheight="32" tilecount="20" columns="4">
+  <tileset firstgid="257" name="tileset_plant_tree_pine_tree" tilewidth="32" tileheight="32" tilecount="20" columns="4">
     <image source="../drawable/tileset_plant_tree_pine_tree.png" width="128" height="160" />
   </tileset>
-  <tileset firstgid="309" name="tileset_plant_tree_pine_tree_1" tilewidth="32" tileheight="32" tilecount="20" columns="4">
+  <tileset firstgid="277" name="tileset_plant_tree_pine_tree_1" tilewidth="32" tileheight="32" tilecount="20" columns="4">
     <image source="../drawable/tileset_plant_tree_pine_tree_1.png" width="128" height="160" />
+  </tileset>
+  <tileset firstgid="297" name="tileset_building_wizards_tower" tilewidth="32" tileheight="32" tilecount="252" columns="9">
+    <image source="../drawable/tileset_building_wizards_tower.png" width="288" height="896" />
   </tileset>
   <layer name="Ground" width="30" height="30">
     <data encoding="base64" compression="zlib">
@@ -58,7 +58,7 @@
   </layer>
   <layer name="Object" width="30" height="30">
     <data encoding="base64" compression="zlib">
-   eJxjYBgYoDJA9uICRmTqE2ZkYBBhpL+9lIJRewef3W7AdOSOlpYkgXwpCtIXvYERA23Dmh8YFgJ0CA9BoB1CWOy5RHuriQa4whlbOgIBXH6ilr20BgNh71AoN3DqB8a1MRnxPZziF1deoCdAjwfkMpLe7SBywniwtdVIBcMpPQ9GOwfabnrYi60cGerxiy1fAwDF7goY
+   eJxjYBgYoDJA9uICRmTq+wzEXwbAXkrBqL2Dz241RgYGdUZUsZ9A/IvaDqIhMGKgbVi/B+IPNDQfBj4C8Scs4pfoYDexAFc4Y0tHIIDLT9Syl9ZgIOwdCuUGLiAETAPCWNIBre0lF9DCXlx5gZ4APR6Qy0h6t4PICePB1lYjFQyn9DwY7Rxou+lhL7ZyZKjHL7Z8DQBzphFO
   </data>
   </layer>
   <layer name="Object2" width="30" height="30">
@@ -68,7 +68,7 @@
   </layer>
   <layer name="Above" width="30" height="30">
     <data encoding="base64" compression="zlib">
-   eJztlscOgkAQhkFNrFfL1d7LgWjs9f1fx3LRj4SYCREisrte+JOPLMky/w4zu2BZapW2LStjKw76hYp4lv7ga1Jz8lsYznGJ3wrWsDHovcVrB3s4CN8y44rGdRyJfYIzXIRPlXEtxPcKN33LeusOD3H/dC8R38cvfWQzPyWeyTLORYgR1kf+nKTyzC3EqHdQH7ny56RSQX3kKm5OKlTHvwFNaBlcSxuvDnShZ9C3j9cAhjASvrrP1DGxJzCFmecj94KJOjheXLkXTNZB7oWgOujWpzqYlvMn30T6lfyb6VfYNzWRGr0Aw7IaFg==
+   eJztljcPwjAQRhN6hyEC0ev//zuUhSpRV8rIixSkU0QiArZZ8qQ3ZPB9ts6XxLLUssWd4pqfcMbLH3JNUrctq2GbzWyS18I2dgxmd8nqYR8HIveKN425Q7JGOMaJyL3jI2TdFGca9/VijgvxvMRVxBrf3KM1bsTzHg8R1ofdI/+ZJEc8RcjxE3SPXPxnUknQPXL59UwqsNlTApOYMjjXabIymMWcwdw8WQUsYknk6n6nlqldwSrWvBw5Cyb64Hh15SyY7IOchaA+6OZdH0zj/Ck3Rj/xv5l+wr6pMWp4AtsSHuM=
   </data>
   </layer>
   <layer name="Above2" width="30" height="30">

@@ -1,1437 +1,1376 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!--
-    template_jasia.tmx — Andors Trail custom map template
-    Generated for the Jasia campaign expansion.
-    Map size: 30×30 tiles (each tile = 32×32 px = 960×960 px total)
-
-    LAYER GUIDE
-    ═══════════
-    Tile layers (visual):
-      Ground             — base terrain
-      Objects            — ground-level objects (default season/time)
-      Object2            — additional ground objects
-      Above              — above-player objects
-      Above2             — additional above objects
-      Walkable           — walkability mask (non-zero = blocked)
-      Objects_<holiday>  — holiday-specific object replacements (6 holidays)
-      Above_<holiday>    — holiday above-layer variants
-      Walkable_<holiday> — holiday walkability variants
-      Objects_<event>    — event-specific object replacements (4 events)
-      Above_<event>      — event above-layer variants
-
-    Object groups (game logic):
-      Mapevents     — map entry/exit triggers and event areas
-      Spawn         — standard NPC/monster spawns
-      Keys          — interactive objects (doors, chests, signs)
-      Replace       — layer swap triggers (season, day/night)
-      Spawn_animal  — biome-based animal spawns (25 species, 23 regions)
-      Keys_forage   — forageable item hotspots (23 biome regions)
-      Spawn_faction — D&D-faction NPCs (friendly/neutral/hostile to wood elf)
-      Replace_holiday_<id> — activate holiday tile-layer swap by date range
-      Spawn_holiday_<id>   — spawn holiday NPCs during date range
-      Replace_event_<id>   — activate event tile-layer swap by quest trigger
-      Spawn_event_<id>     — spawn event NPCs during event
-      Keys_crafting   — loom / stove / garden / forge interaction points
-      Spawn_crafting  — crafting NPC spawns
-      Keys_guild      — fighters forge / writing desk / altar / rangers board
-      Spawn_guild     — guild NPC spawns
-      Keys_quest      — rumour board, quest signs, closing quest marker
-  -->
-<map version="1.0" orientation="orthogonal" width="30" height="30" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32">
-  <image source="../drawable/map_bed_1.png" width="512" height="256"/>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="37" nextobjectid="1">
+ <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32" tilecount="160" columns="16">
+  <image source="../drawable/map_bed_1.png" width="512" height="320"/>
  </tileset>
- <tileset firstgid="129" name="map_border_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="161" name="map_border_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_border_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="257" name="map_bridge_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="289" name="map_bridge_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_bridge_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="385" name="map_bridge_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="417" name="map_bridge_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_bridge_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="513" name="map_broken_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="545" name="map_broken_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_broken_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="641" name="map_cavewall_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="673" name="map_cavewall_1" tilewidth="32" tileheight="32" tilecount="108" columns="18">
   <image source="../drawable/map_cavewall_1.png" width="576" height="192"/>
  </tileset>
- <tileset firstgid="749" name="map_cavewall_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="781" name="map_cavewall_2" tilewidth="32" tileheight="32" tilecount="108" columns="18">
   <image source="../drawable/map_cavewall_2.png" width="576" height="192"/>
  </tileset>
- <tileset firstgid="857" name="map_cavewall_3" tilewidth="32" tileheight="32">
+ <tileset firstgid="889" name="map_cavewall_3" tilewidth="32" tileheight="32" tilecount="108" columns="18">
   <image source="../drawable/map_cavewall_3.png" width="576" height="192"/>
  </tileset>
- <tileset firstgid="965" name="map_cavewall_4" tilewidth="32" tileheight="32">
+ <tileset firstgid="997" name="map_cavewall_4" tilewidth="32" tileheight="32" tilecount="108" columns="18">
   <image source="../drawable/map_cavewall_4.png" width="576" height="192"/>
  </tileset>
- <tileset firstgid="1073" name="map_chair_table_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="1105" name="map_chair_table_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_chair_table_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="1201" name="map_chair_table_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="1233" name="map_chair_table_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_chair_table_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="1329" name="map_crate_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="1361" name="map_crate_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_crate_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="1457" name="map_cupboard_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="1489" name="map_cupboard_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_cupboard_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="1585" name="map_curtain_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="1617" name="map_curtain_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_curtain_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="1713" name="map_entrance_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="1745" name="map_entrance_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_entrance_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="1841" name="map_entrance_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="1873" name="map_entrance_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_entrance_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="1969" name="map_fence_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="2001" name="map_fence_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_fence_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2097" name="map_fence_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="2129" name="map_fence_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_fence_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2225" name="map_fence_3" tilewidth="32" tileheight="32">
+ <tileset firstgid="2257" name="map_fence_3" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_fence_3.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2353" name="map_fence_4" tilewidth="32" tileheight="32">
+ <tileset firstgid="2385" name="map_fence_4" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_fence_4.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2481" name="map_ground_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="2513" name="map_ground_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_ground_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2609" name="map_ground_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="2641" name="map_ground_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_ground_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2737" name="map_ground_3" tilewidth="32" tileheight="32">
+ <tileset firstgid="2769" name="map_ground_3" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_ground_3.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2865" name="map_ground_4" tilewidth="32" tileheight="32">
+ <tileset firstgid="2897" name="map_ground_4" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_ground_4.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="2993" name="map_ground_5" tilewidth="32" tileheight="32">
+ <tileset firstgid="3025" name="map_ground_5" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_ground_5.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3121" name="map_ground_6" tilewidth="32" tileheight="32">
+ <tileset firstgid="3153" name="map_ground_6" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_ground_6.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3249" name="map_ground_7" tilewidth="32" tileheight="32">
+ <tileset firstgid="3281" name="map_ground_7" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_ground_7.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3377" name="map_ground_8" tilewidth="32" tileheight="32">
+ <tileset firstgid="3409" name="map_ground_8" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_ground_8.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3505" name="map_house_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="3537" name="map_house_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_house_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3633" name="map_house_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="3665" name="map_house_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_house_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3761" name="map_indoor_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="3793" name="map_indoor_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_indoor_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="3889" name="map_indoor_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="3921" name="map_indoor_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_indoor_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4017" name="map_kitchen_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="4049" name="map_kitchen_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_kitchen_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4145" name="map_outdoor_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="4177" name="map_outdoor_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_outdoor_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4273" name="map_pillar_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="4305" name="map_pillar_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_pillar_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4401" name="map_pillar_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="4433" name="map_pillar_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_pillar_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4529" name="map_plant_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="4561" name="map_plant_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_plant_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4657" name="map_plant_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="4689" name="map_plant_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_plant_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4785" name="map_rock_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="4817" name="map_rock_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_rock_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="4913" name="map_rock_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="4945" name="map_rock_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_rock_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5041" name="map_roof_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="5073" name="map_roof_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_roof_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5169" name="map_roof_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="5201" name="map_roof_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_roof_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5297" name="map_roof_3" tilewidth="32" tileheight="32">
+ <tileset firstgid="5329" name="map_roof_3" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_roof_3.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5425" name="map_shop_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="5457" name="map_shop_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_shop_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5553" name="map_sign_ladder_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="5585" name="map_sign_ladder_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_sign_ladder_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5681" name="map_table_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="5713" name="map_table_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_table_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5809" name="map_trail_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="5841" name="map_trail_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_trail_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="5937" name="map_transition_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="5969" name="map_transition_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_transition_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6065" name="map_transition_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="6097" name="map_transition_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_transition_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6193" name="map_transition_3" tilewidth="32" tileheight="32">
+ <tileset firstgid="6225" name="map_transition_3" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_transition_3.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6321" name="map_transition_4" tilewidth="32" tileheight="32">
+ <tileset firstgid="6353" name="map_transition_4" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_transition_4.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6449" name="map_transition_5" tilewidth="32" tileheight="32">
+ <tileset firstgid="6481" name="map_transition_5" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_transition_5.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6577" name="map_tree_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="6609" name="map_tree_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_tree_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6705" name="map_tree_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="6737" name="map_tree_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_tree_2.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6833" name="map_wall_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="6865" name="map_wall_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_wall_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="6961" name="map_wall_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="6993" name="map_wall_2" tilewidth="32" tileheight="32" tilecount="120" columns="15">
   <image source="../drawable/map_wall_2.png" width="480" height="256"/>
  </tileset>
- <tileset firstgid="7081" name="map_wall_3" tilewidth="32" tileheight="32">
+ <tileset firstgid="7113" name="map_wall_3" tilewidth="32" tileheight="32" tilecount="120" columns="15">
   <image source="../drawable/map_wall_3.png" width="480" height="256"/>
  </tileset>
- <tileset firstgid="7201" name="map_wall_4" tilewidth="32" tileheight="32">
+ <tileset firstgid="7233" name="map_wall_4" tilewidth="32" tileheight="32" tilecount="120" columns="15">
   <image source="../drawable/map_wall_4.png" width="480" height="256"/>
  </tileset>
- <tileset firstgid="7321" name="map_window_1" tilewidth="32" tileheight="32">
+ <tileset firstgid="7353" name="map_window_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_window_1.png" width="512" height="256"/>
  </tileset>
- <tileset firstgid="7449" name="map_window_2" tilewidth="32" tileheight="32">
+ <tileset firstgid="7481" name="map_window_2" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_window_2.png" width="512" height="256"/>
  </tileset>
- <layer name="Ground" width="30" height="30">
+ <layer id="1" name="Ground" width="30" height="30">
   <data encoding="base64" compression="zlib">
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
   </data>
  </layer>
- <layer name="Objects" width="30" height="30">
+ <layer id="2" name="Objects" width="30" height="30">
   <data encoding="base64" compression="zlib">
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
   </data>
  </layer>
- <layer name="Above" width="30" height="30">
+ <layer id="3" name="Above" width="30" height="30">
   <data encoding="base64" compression="zlib">
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
   </data>
  </layer>
- <layer name="Walkable" width="30" height="30">
+ <layer id="4" name="Walkable" width="30" height="30">
   <data encoding="base64" compression="zlib">
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
   </data>
  </layer>
-
-   <!-- ═══════ STANDARD OBJECT GROUPS ═══════ -->
-    <objectgroup name="Mapevents" color="#ff0000" visible="1">
-      <object id="200" name="entry_default" x="464" y="928" width="32" height="32">
-        <properties>
-          <property name="targetMap" value="worldmap"/>
-          <property name="targetX" value="15"/>
-          <property name="targetY" value="29"/>
-          <property name="direction" value="south"/>
-        </properties>
-      </object>
-    </objectgroup>
-
-    <objectgroup name="Spawn" color="#00ff00" visible="1">
-      <object id="201" name="spawn_woodelf_ranger" x="464" y="464" width="32" height="32">
-        <properties>
-          <property name="monsterID" value="npc_woodelf_ranger"/>
-          <property name="spawnchance" value="100"/>
-          <property name="maxAlive" value="1"/>
-        </properties>
-      </object>
-    </objectgroup>
-
-    <objectgroup name="Keys" color="#0000ff" visible="1">
-      <object id="202" name="chest_basic" x="160" y="160" width="32" height="32">
-        <properties>
-          <property name="droplistID" value="dl_npc_gold"/>
-          <property name="keyItemID" value=""/>
-        </properties>
-      </object>
-    </objectgroup>
-
-    <objectgroup name="Replace" color="#ff00ff" visible="1">
-      <object id="203" name="replace_placeholder" x="0" y="0" width="960" height="960">
-        <properties>
-          <property name="replaceLayerID" value="Objects"/>
-          <property name="withLayerID" value="Objects_christmas"/>
-          <property name="note" value="Example: use Replace_holiday_christmas instead"/>
-        </properties>
-      </object>
-    </objectgroup>
-
-   <!-- ═══════ ANIMAL SPAWNS (biome-aware) ═══════ -->
-    <objectgroup name="Spawn_animal" color="#22bb44" visible="1">
-      <object id="1" name="spawn_grassland_0" x="0" y="0" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_savanna_lion"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="grassland"/>
-      </properties>
-    </object>
-    <object id="2" name="spawn_grassland_1" x="0" y="0" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_brush_hare"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="grassland"/>
-      </properties>
-    </object>
-    <object id="3" name="spawn_shrubland_0" x="192" y="0" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_brush_hare"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="shrubland"/>
-      </properties>
-    </object>
-    <object id="4" name="spawn_shrubland_1" x="192" y="0" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_hillside_lynx"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="shrubland"/>
-      </properties>
-    </object>
-    <object id="5" name="spawn_swamp_0" x="384" y="0" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_bog_serpent"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="swamp"/>
-      </properties>
-    </object>
-    <object id="6" name="spawn_swamp_1" x="384" y="0" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_marsh_croc"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="swamp"/>
-      </properties>
-    </object>
-    <object id="7" name="spawn_marsh_0" x="576" y="0" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_marsh_croc"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="marsh"/>
-      </properties>
-    </object>
-    <object id="8" name="spawn_marsh_1" x="576" y="0" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_reed_crane"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="marsh"/>
-      </properties>
-    </object>
-    <object id="9" name="spawn_bog_0" x="768" y="0" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_peat_toad"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="bog"/>
-      </properties>
-    </object>
-    <object id="10" name="spawn_bog_1" x="768" y="0" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_bog_serpent"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="bog"/>
-      </properties>
-    </object>
-    <object id="11" name="spawn_desert_0" x="0" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_sand_scorpion"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="desert"/>
-      </properties>
-    </object>
-    <object id="12" name="spawn_desert_1" x="0" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_savanna_lion"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="desert"/>
-      </properties>
-    </object>
-    <object id="13" name="spawn_tundra_0" x="192" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_frost_wolf"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="tundra"/>
-      </properties>
-    </object>
-    <object id="14" name="spawn_tundra_1" x="192" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_snow_hare"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="tundra"/>
-      </properties>
-    </object>
-    <object id="15" name="spawn_hills_0" x="384" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_rock_boar"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="hills"/>
-      </properties>
-    </object>
-    <object id="16" name="spawn_hills_1" x="384" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_hillside_lynx"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="hills"/>
-      </properties>
-    </object>
-    <object id="17" name="spawn_mountain_0" x="576" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_stone_eagle"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="mountain"/>
-      </properties>
-    </object>
-    <object id="18" name="spawn_mountain_1" x="576" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_rock_boar"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="mountain"/>
-      </properties>
-    </object>
-    <object id="19" name="spawn_alpine_0" x="768" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_snow_hare"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="alpine"/>
-      </properties>
-    </object>
-    <object id="20" name="spawn_alpine_1" x="768" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_frost_wolf"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="alpine"/>
-      </properties>
-    </object>
-    <object id="21" name="spawn_alpine_2" x="768" y="128" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_stone_eagle"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="alpine"/>
-      </properties>
-    </object>
-    <object id="22" name="spawn_volcano_0" x="0" y="256" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_lava_salamander"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="volcano"/>
-      </properties>
-    </object>
-    <object id="23" name="spawn_volcano_1" x="0" y="256" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_infernal_hound"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="volcano"/>
-      </properties>
-    </object>
-    <object id="24" name="spawn_river_0" x="192" y="256" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_river_otter"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="river"/>
-      </properties>
-    </object>
-    <object id="25" name="spawn_river_1" x="192" y="256" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_lake_bass"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="river"/>
-      </properties>
-    </object>
-    <object id="26" name="spawn_lake_0" x="384" y="256" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_lake_bass"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="lake"/>
-      </properties>
-    </object>
-    <object id="27" name="spawn_lake_1" x="384" y="256" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_river_otter"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="lake"/>
-      </properties>
-    </object>
-    <object id="28" name="spawn_sea_0" x="576" y="256" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_sea_drake"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="sea"/>
-      </properties>
-    </object>
-    <object id="29" name="spawn_sea_1" x="576" y="256" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_lake_bass"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="sea"/>
-      </properties>
-    </object>
-    <object id="30" name="spawn_ocean_0" x="768" y="256" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_deep_leviathan"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="ocean"/>
-      </properties>
-    </object>
-    <object id="31" name="spawn_ocean_1" x="768" y="256" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_sea_drake"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="ocean"/>
-      </properties>
-    </object>
-    <object id="32" name="spawn_small_cave_0" x="0" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_cave_bat"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="small_cave"/>
-      </properties>
-    </object>
-    <object id="33" name="spawn_small_cave_1" x="0" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_blind_wurm"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="small_cave"/>
-      </properties>
-    </object>
-    <object id="34" name="spawn_large_cave_0" x="192" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_cave_troll"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="large_cave"/>
-      </properties>
-    </object>
-    <object id="35" name="spawn_large_cave_1" x="192" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_cave_bat"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="large_cave"/>
-      </properties>
-    </object>
-    <object id="36" name="spawn_dark_cave_0" x="384" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_void_spider"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="dark_cave"/>
-      </properties>
-    </object>
-    <object id="37" name="spawn_dark_cave_1" x="384" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_cave_troll"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="dark_cave"/>
-      </properties>
-    </object>
-    <object id="38" name="spawn_damp_cave_0" x="576" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_fungal_crab"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="damp_cave"/>
-      </properties>
-    </object>
-    <object id="39" name="spawn_damp_cave_1" x="576" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_cave_bat"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="damp_cave"/>
-      </properties>
-    </object>
-    <object id="40" name="spawn_damp_cave_2" x="576" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_blind_wurm"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="damp_cave"/>
-      </properties>
-    </object>
-    <object id="41" name="spawn_deep_cave_0" x="768" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_blind_wurm"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="deep_cave"/>
-      </properties>
-    </object>
-    <object id="42" name="spawn_deep_cave_1" x="768" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_void_spider"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="deep_cave"/>
-      </properties>
-    </object>
-    <object id="43" name="spawn_deep_cave_2" x="768" y="384" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_deep_leviathan"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="deep_cave"/>
-      </properties>
-    </object>
-    <object id="44" name="spawn_hell_0" x="0" y="512" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_infernal_hound"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="hell"/>
-      </properties>
-    </object>
-    <object id="45" name="spawn_hell_1" x="0" y="512" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_lava_salamander"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="hell"/>
-      </properties>
-    </object>
-    <object id="46" name="spawn_city_0" x="192" y="512" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_street_rat"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="city"/>
-      </properties>
-    </object>
-    <object id="47" name="spawn_farm_0" x="384" y="512" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_farmyard_boar"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="farm"/>
-      </properties>
-    </object>
-    <object id="48" name="spawn_farm_1" x="384" y="512" width="192" height="128">
-      <properties>
-        <property name="monsterID" value="animal_street_rat"/>
-        <property name="spawnchance" value="25"/>
-        <property name="maxAlive" value="3"/>
-        <property name="region" value="farm"/>
-      </properties>
-    </object>
-    </objectgroup>
-
-   <!-- ═══════ FORAGE HOTSPOTS (biome-aware) ═══════ -->
-    <objectgroup name="Keys_forage" color="#44bb22" visible="1">
-      <object id="49" name="forage_grassland" x="64" y="64" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_grassland"/>
-        <property name="region" value="grassland"/>
-      </properties>
-    </object>
-    <object id="50" name="forage_shrubland" x="224" y="64" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_shrubland"/>
-        <property name="region" value="shrubland"/>
-      </properties>
-    </object>
-    <object id="51" name="forage_swamp" x="384" y="64" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_swamp"/>
-        <property name="region" value="swamp"/>
-      </properties>
-    </object>
-    <object id="52" name="forage_marsh" x="544" y="64" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_marsh"/>
-        <property name="region" value="marsh"/>
-      </properties>
-    </object>
-    <object id="53" name="forage_bog" x="704" y="64" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_bog"/>
-        <property name="region" value="bog"/>
-      </properties>
-    </object>
-    <object id="54" name="forage_desert" x="864" y="64" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_desert"/>
-        <property name="region" value="desert"/>
-      </properties>
-    </object>
-    <object id="55" name="forage_tundra" x="64" y="224" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_tundra"/>
-        <property name="region" value="tundra"/>
-      </properties>
-    </object>
-    <object id="56" name="forage_hills" x="224" y="224" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_hills"/>
-        <property name="region" value="hills"/>
-      </properties>
-    </object>
-    <object id="57" name="forage_mountain" x="384" y="224" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_mountain"/>
-        <property name="region" value="mountain"/>
-      </properties>
-    </object>
-    <object id="58" name="forage_alpine" x="544" y="224" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_alpine"/>
-        <property name="region" value="alpine"/>
-      </properties>
-    </object>
-    <object id="59" name="forage_volcano" x="704" y="224" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_volcano"/>
-        <property name="region" value="volcano"/>
-      </properties>
-    </object>
-    <object id="60" name="forage_river" x="864" y="224" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_river"/>
-        <property name="region" value="river"/>
-      </properties>
-    </object>
-    <object id="61" name="forage_lake" x="64" y="384" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_lake"/>
-        <property name="region" value="lake"/>
-      </properties>
-    </object>
-    <object id="62" name="forage_sea" x="224" y="384" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_sea"/>
-        <property name="region" value="sea"/>
-      </properties>
-    </object>
-    <object id="63" name="forage_ocean" x="384" y="384" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_ocean"/>
-        <property name="region" value="ocean"/>
-      </properties>
-    </object>
-    <object id="64" name="forage_small_cave" x="544" y="384" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_small_cave"/>
-        <property name="region" value="small_cave"/>
-      </properties>
-    </object>
-    <object id="65" name="forage_large_cave" x="704" y="384" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_large_cave"/>
-        <property name="region" value="large_cave"/>
-      </properties>
-    </object>
-    <object id="66" name="forage_dark_cave" x="864" y="384" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_dark_cave"/>
-        <property name="region" value="dark_cave"/>
-      </properties>
-    </object>
-    <object id="67" name="forage_damp_cave" x="64" y="544" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_damp_cave"/>
-        <property name="region" value="damp_cave"/>
-      </properties>
-    </object>
-    <object id="68" name="forage_deep_cave" x="224" y="544" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_deep_cave"/>
-        <property name="region" value="deep_cave"/>
-      </properties>
-    </object>
-    <object id="69" name="forage_hell" x="384" y="544" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_hell"/>
-        <property name="region" value="hell"/>
-      </properties>
-    </object>
-    <object id="70" name="forage_city" x="544" y="544" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_city"/>
-        <property name="region" value="city"/>
-      </properties>
-    </object>
-    <object id="71" name="forage_farm" x="704" y="544" width="32" height="32">
-      <properties>
-        <property name="droplistID" value="dl_forage_farm"/>
-        <property name="region" value="farm"/>
-      </properties>
-    </object>
-    </objectgroup>
-
-   <!-- ═══════ FACTION NPC SPAWNS ═══════ -->
-   <!-- friendly=elf/half-elf/human/halfling/gnome  neutral=dwarf  hostile=drow/goblin/orc/ogre -->
-    <objectgroup name="Spawn_faction" color="#cc8800" visible="1">
-      <object id="72" name="faction_friendly_0" x="0" y="0" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_human_merchant"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="friendly"/>
-      </properties>
-    </object>
-    <object id="73" name="faction_friendly_1" x="64" y="0" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_halfelf_scout"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="friendly"/>
-      </properties>
-    </object>
-    <object id="74" name="faction_friendly_2" x="128" y="0" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_elf_archer"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="friendly"/>
-      </properties>
-    </object>
-    <object id="75" name="faction_friendly_3" x="192" y="0" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_woodelf_ranger"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="friendly"/>
-      </properties>
-    </object>
-    <object id="76" name="faction_friendly_4" x="256" y="0" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_halfling_cook"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="friendly"/>
-      </properties>
-    </object>
-    <object id="77" name="faction_friendly_5" x="0" y="64" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_gnome_tinker"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="friendly"/>
-      </properties>
-    </object>
-    <object id="78" name="faction_friendly_6" x="64" y="64" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_halfelf_diplomat"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="friendly"/>
-      </properties>
-    </object>
-    <object id="79" name="faction_friendly_7" x="128" y="64" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_elf_sage"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="friendly"/>
-      </properties>
-    </object>
-    <object id="80" name="faction_friendly_8" x="192" y="64" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_halfelf_wanderer"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="friendly"/>
-      </properties>
-    </object>
-    <object id="81" name="faction_friendly_9" x="256" y="64" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_gnome_illus"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="friendly"/>
-      </properties>
-    </object>
-    <object id="82" name="faction_neutral_0" x="320" y="0" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_human_guard"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="neutral"/>
-      </properties>
-    </object>
-    <object id="83" name="faction_neutral_1" x="384" y="0" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_seaelf_fisher"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="neutral"/>
-      </properties>
-    </object>
-    <object id="84" name="faction_neutral_2" x="448" y="0" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_dwarf_blacksmith"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="neutral"/>
-      </properties>
-    </object>
-    <object id="85" name="faction_neutral_3" x="512" y="0" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_mtndwarf_miner"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="neutral"/>
-      </properties>
-    </object>
-    <object id="86" name="faction_neutral_4" x="576" y="0" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_halfling_thief"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="neutral"/>
-      </properties>
-    </object>
-    <object id="87" name="faction_hostile_0" x="0" y="320" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_drowelf_rogue"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="hostile"/>
-      </properties>
-    </object>
-    <object id="88" name="faction_hostile_1" x="64" y="320" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_drowelf_priestess"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="hostile"/>
-      </properties>
-    </object>
-    <object id="89" name="faction_hostile_2" x="128" y="320" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_darkdwarf_forge"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="hostile"/>
-      </properties>
-    </object>
-    <object id="90" name="faction_hostile_3" x="192" y="320" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_goblin_scout"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="hostile"/>
-      </properties>
-    </object>
-    <object id="91" name="faction_hostile_4" x="256" y="320" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_goblin_shaman"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="hostile"/>
-      </properties>
-    </object>
-    <object id="92" name="faction_hostile_5" x="0" y="384" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_hobgoblin_warrior"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="hostile"/>
-      </properties>
-    </object>
-    <object id="93" name="faction_hostile_6" x="64" y="384" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_hobgoblin_archer"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="hostile"/>
-      </properties>
-    </object>
-    <object id="94" name="faction_hostile_7" x="128" y="384" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_orc_berserker"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="hostile"/>
-      </properties>
-    </object>
-    <object id="95" name="faction_hostile_8" x="192" y="384" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_orc_warchief"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="hostile"/>
-      </properties>
-    </object>
-    <object id="96" name="faction_hostile_9" x="256" y="384" width="64" height="64">
-      <properties>
-        <property name="monsterID" value="npc_ogre_brute"/>
-        <property name="spawnchance" value="20"/>
-        <property name="maxAlive" value="1"/>
-        <property name="faction" value="hostile"/>
-      </properties>
-    </object>
-    </objectgroup>
-
-   <!-- ═══════ HOLIDAY LAYERS ═══════ -->
-    <objectgroup name="Replace_holiday_newyear" color="#ff6688" visible="1">
-      <object id="97" name="replace_newyear" x="0" y="0" width="960" height="960">
-      <properties>
-        <property name="replaceLayerID" value="Objects"/>
-        <property name="withLayerID" value="Objects_newyear"/>
-        <property name="startDate" value="101"/>
-        <property name="endDate" value="115"/>
-        <property name="holiday" value="New Year"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_holiday_newyear" color="#ff88aa" visible="1">
-      <object id="103" name="spawn_newyear_npc" x="464" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_ny_herald"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="startDate" value="101"/>
-        <property name="endDate" value="115"/>
-      </properties>
-    </object>
-    </objectgroup>
-  <objectgroup name="Replace_holiday_easter" color="#ff6688" visible="1">
-      <object id="98" name="replace_easter" x="0" y="0" width="960" height="960">
-      <properties>
-        <property name="replaceLayerID" value="Objects"/>
-        <property name="withLayerID" value="Objects_easter"/>
-        <property name="startDate" value="401"/>
-        <property name="endDate" value="420"/>
-        <property name="holiday" value="Easter"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_holiday_easter" color="#ff88aa" visible="1">
-      <object id="104" name="spawn_easter_npc" x="464" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_easter_bunny"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="startDate" value="401"/>
-        <property name="endDate" value="420"/>
-      </properties>
-    </object>
-    </objectgroup>
-  <objectgroup name="Replace_holiday_julyfourth" color="#ff6688" visible="1">
-      <object id="99" name="replace_julyfourth" x="0" y="0" width="960" height="960">
-      <properties>
-        <property name="replaceLayerID" value="Objects"/>
-        <property name="withLayerID" value="Objects_julyfourth"/>
-        <property name="startDate" value="701"/>
-        <property name="endDate" value="706"/>
-        <property name="holiday" value="July Fourth"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_holiday_julyfourth" color="#ff88aa" visible="1">
-      <object id="105" name="spawn_julyfourth_npc" x="464" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_july4_patriot"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="startDate" value="701"/>
-        <property name="endDate" value="706"/>
-      </properties>
-    </object>
-    </objectgroup>
-  <objectgroup name="Replace_holiday_halloween" color="#ff6688" visible="1">
-      <object id="100" name="replace_halloween" x="0" y="0" width="960" height="960">
-      <properties>
-        <property name="replaceLayerID" value="Objects"/>
-        <property name="withLayerID" value="Objects_halloween"/>
-        <property name="startDate" value="1001"/>
-        <property name="endDate" value="1031"/>
-        <property name="holiday" value="Halloween"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_holiday_halloween" color="#ff88aa" visible="1">
-      <object id="106" name="spawn_halloween_npc" x="464" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_halloween_witch"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="startDate" value="1001"/>
-        <property name="endDate" value="1031"/>
-      </properties>
-    </object>
-    </objectgroup>
-  <objectgroup name="Replace_holiday_thanksgiving" color="#ff6688" visible="1">
-      <object id="101" name="replace_thanksgiving" x="0" y="0" width="960" height="960">
-      <properties>
-        <property name="replaceLayerID" value="Objects"/>
-        <property name="withLayerID" value="Objects_thanksgiving"/>
-        <property name="startDate" value="1122"/>
-        <property name="endDate" value="1128"/>
-        <property name="holiday" value="Thanksgiving"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_holiday_thanksgiving" color="#ff88aa" visible="1">
-      <object id="107" name="spawn_thanksgiving_npc" x="464" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_thanksgiving_god"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="startDate" value="1122"/>
-        <property name="endDate" value="1128"/>
-      </properties>
-    </object>
-    </objectgroup>
-  <objectgroup name="Replace_holiday_christmas" color="#ff6688" visible="1">
-      <object id="102" name="replace_christmas" x="0" y="0" width="960" height="960">
-      <properties>
-        <property name="replaceLayerID" value="Objects"/>
-        <property name="withLayerID" value="Objects_christmas"/>
-        <property name="startDate" value="1218"/>
-        <property name="endDate" value="1231"/>
-        <property name="holiday" value="Christmas"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_holiday_christmas" color="#ff88aa" visible="1">
-      <object id="108" name="spawn_christmas_npc" x="464" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_xmas_father"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="startDate" value="1218"/>
-        <property name="endDate" value="1231"/>
-      </properties>
-    </object>
-    </objectgroup>
-
-   <!-- ═══════ EVENT LAYERS ═══════ -->
-    <objectgroup name="Replace_event_birthday" color="#aa44ff" visible="1">
-      <object id="109" name="replace_birthday" x="0" y="0" width="960" height="960">
-      <properties>
-        <property name="replaceLayerID" value="Objects"/>
-        <property name="withLayerID" value="Objects_birthday"/>
-        <property name="eventType" value="Birthday"/>
-        <property name="triggerQuestID" value="quest_region_city"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_event_birthday" color="#cc66ff" visible="1">
-      <object id="113" name="spawn_birthday_npc1" x="400" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_bday_planner"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="eventType" value="Birthday"/>
-      </properties>
-    </object>
-    <object id="114" name="spawn_birthday_npc2" x="560" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_bday_bard"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="eventType" value="Birthday"/>
-      </properties>
-    </object>
-    </objectgroup>
-  <objectgroup name="Replace_event_graduation" color="#aa44ff" visible="1">
-      <object id="110" name="replace_graduation" x="0" y="0" width="960" height="960">
-      <properties>
-        <property name="replaceLayerID" value="Objects"/>
-        <property name="withLayerID" value="Objects_graduation"/>
-        <property name="eventType" value="Graduation"/>
-        <property name="triggerQuestID" value="quest_region_city"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_event_graduation" color="#cc66ff" visible="1">
-      <object id="115" name="spawn_graduation_npc1" x="400" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_grad_master"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="eventType" value="Graduation"/>
-      </properties>
-    </object>
-    <object id="116" name="spawn_graduation_npc2" x="560" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_grad_mentor"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="eventType" value="Graduation"/>
-      </properties>
-    </object>
-    </objectgroup>
-  <objectgroup name="Replace_event_wedding" color="#aa44ff" visible="1">
-      <object id="111" name="replace_wedding" x="0" y="0" width="960" height="960">
-      <properties>
-        <property name="replaceLayerID" value="Objects"/>
-        <property name="withLayerID" value="Objects_wedding"/>
-        <property name="eventType" value="Wedding"/>
-        <property name="triggerQuestID" value="quest_region_city"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_event_wedding" color="#cc66ff" visible="1">
-      <object id="117" name="spawn_wedding_npc1" x="400" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_wedding_planner"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="eventType" value="Wedding"/>
-      </properties>
-    </object>
-    <object id="118" name="spawn_wedding_npc2" x="560" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_wedding_priest"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="eventType" value="Wedding"/>
-      </properties>
-    </object>
-    </objectgroup>
-  <objectgroup name="Replace_event_funeral" color="#aa44ff" visible="1">
-      <object id="112" name="replace_funeral" x="0" y="0" width="960" height="960">
-      <properties>
-        <property name="replaceLayerID" value="Objects"/>
-        <property name="withLayerID" value="Objects_funeral"/>
-        <property name="eventType" value="Funeral"/>
-        <property name="triggerQuestID" value="quest_region_city"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_event_funeral" color="#cc66ff" visible="1">
-      <object id="119" name="spawn_funeral_npc1" x="400" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_funeral_director"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="eventType" value="Funeral"/>
-      </properties>
-    </object>
-    <object id="120" name="spawn_funeral_npc2" x="560" y="464" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_grief_counselor"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-        <property name="eventType" value="Funeral"/>
-      </properties>
-    </object>
-    </objectgroup>
-
-   <!-- ═══════ CRAFTING STATIONS ═══════ -->
-    <objectgroup name="Keys_crafting" color="#ff9900" visible="1">
-      <object id="121" name="loom" x="160" y="160" width="32" height="32">
-      <properties>
-        <property name="interactionType" value="loom"/>
-        <property name="npcID" value="npc_seamstress"/>
-        <property name="requiredItems" value="mat_cotton_bolt,mat_wool_yarn,mat_linen_thread,mat_silk_spool,mat_hemp_fiber"/>
-      </properties>
-    </object>
-    <object id="122" name="stove" x="320" y="160" width="32" height="32">
-      <properties>
-        <property name="interactionType" value="stove"/>
-        <property name="npcID" value="npc_butcher"/>
-        <property name="requiredItems" value="food_raw_carrot,food_raw_potato,food_raw_apple"/>
-      </properties>
-    </object>
-    <object id="123" name="garden" x="480" y="160" width="32" height="32">
-      <properties>
-        <property name="interactionType" value="garden"/>
-        <property name="npcID" value="npc_farmer"/>
-        <property name="requiredItems" value="seed_apple,seed_carrot,seed_wheat"/>
-      </properties>
-    </object>
-    <object id="124" name="forge" x="640" y="160" width="32" height="32">
-      <properties>
-        <property name="interactionType" value="forge"/>
-        <property name="npcID" value="npc_dwarf_blacksmith"/>
-        <property name="requiredItems" value="mat_iron_ingot,mat_coal,mat_whetstone"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_crafting" color="#ffbb00" visible="1">
-      <object id="125" name="spawn_seamstress" x="160" y="224" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_seamstress"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-      </properties>
-    </object>
-    <object id="126" name="spawn_butcher" x="320" y="224" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_butcher"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-      </properties>
-    </object>
-    <object id="127" name="spawn_grocer" x="448" y="224" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_grocer"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-      </properties>
-    </object>
-    <object id="128" name="spawn_farmer" x="640" y="224" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_farmer"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-      </properties>
-    </object>
-    </objectgroup>
-
-   <!-- ═══════ GUILD FACILITIES ═══════ -->
-    <objectgroup name="Keys_guild" color="#0099ff" visible="1">
-      <object id="129" name="fighters_forge" x="160" y="480" width="64" height="64">
-      <properties>
-        <property name="interactionType" value="guild_shop"/>
-        <property name="requiredLevel" value="3"/>
-        <property name="npcID" value="npc_guild_fighter_master"/>
-        <property name="shopType" value="weapons_shields"/>
-      </properties>
-    </object>
-    <object id="130" name="writing_desk" x="320" y="480" width="64" height="64">
-      <properties>
-        <property name="interactionType" value="guild_shop"/>
-        <property name="npcID" value="npc_guild_archmage"/>
-        <property name="shopType" value="scrolls_offensive"/>
-      </properties>
-    </object>
-    <object id="131" name="temple_altar" x="480" y="480" width="64" height="64">
-      <properties>
-        <property name="interactionType" value="guild_shop"/>
-        <property name="npcID" value="npc_guild_high_priest"/>
-        <property name="shopType" value="scrolls_defensive"/>
-      </properties>
-    </object>
-    <object id="132" name="rangers_board" x="640" y="480" width="64" height="64">
-      <properties>
-        <property name="interactionType" value="guild_quest"/>
-        <property name="npcID" value="npc_guild_ranger_cap"/>
-        <property name="shopType" value="forage_quests"/>
-      </properties>
-    </object>
-    </objectgroup>
-    <objectgroup name="Spawn_guild" color="#00bbff" visible="1">
-      <object id="133" name="spawn_guild_fighter" x="160" y="512" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_guild_fighter_master"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-      </properties>
-    </object>
-    <object id="134" name="spawn_guild_armorer" x="240" y="512" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_guild_armorer"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-      </properties>
-    </object>
-    <object id="135" name="spawn_guild_mage" x="320" y="512" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_guild_archmage"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-      </properties>
-    </object>
-    <object id="136" name="spawn_guild_priest" x="480" y="512" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_guild_high_priest"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-      </properties>
-    </object>
-    <object id="137" name="spawn_guild_ranger" x="640" y="512" width="32" height="32">
-      <properties>
-        <property name="monsterID" value="npc_guild_ranger_cap"/>
-        <property name="spawnchance" value="100"/>
-        <property name="maxAlive" value="1"/>
-      </properties>
-    </object>
-    </objectgroup>
-
-   <!-- ═══════ QUEST MARKERS ═══════ -->
-    <objectgroup name="Keys_quest" color="#ff44ff" visible="1">
-      <object id="138" name="rumour_board" x="464" y="160" width="32" height="32">
-      <properties>
-        <property name="interactionType" value="quest_board"/>
-        <property name="questID" value="quest_intro"/>
-        <property name="signText" value="Notice Board: Adventures Wanted — speak to the Ranger Captain."/>
-      </properties>
-    </object>
-    <object id="139" name="quest_sign_1" x="192" y="480" width="32" height="32">
-      <properties>
-        <property name="interactionType" value="quest_sign"/>
-        <property name="questID" value="quest_branch_animals"/>
-        <property name="signText" value="The Ranger Captain seeks hunters. Bring beast trophies for reward."/>
-      </properties>
-    </object>
-    <object id="140" name="quest_sign_2" x="288" y="480" width="32" height="32">
-      <properties>
-        <property name="interactionType" value="quest_sign"/>
-        <property name="questID" value="quest_branch_forage"/>
-        <property name="signText" value="The Grocer needs forage ingredients. Explore the wilds."/>
-      </properties>
-    </object>
-    <object id="141" name="quest_sign_3" x="384" y="480" width="32" height="32">
-      <properties>
-        <property name="interactionType" value="quest_sign"/>
-        <property name="questID" value="quest_branch_crafting"/>
-        <property name="signText" value="The Guild Armorer requires iron ingots. Visit the forge."/>
-      </properties>
-    </object>
-    <object id="142" name="closing_sign" x="464" y="640" width="32" height="32">
-      <properties>
-        <property name="interactionType" value="quest_sign"/>
-        <property name="questID" value="quest_closing"/>
-        <property name="signText" value="The twelve paths are complete. The Ranger Captain awaits your final report."/>
-      </properties>
-    </object>
-    </objectgroup>
-
-  </map>
+ <objectgroup color="#ff0000" id="5" name="Mapevents" visible="0">
+  <object id="200" name="entry_default" x="464" y="928" width="32" height="32">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="targetMap" value="worldmap"/>
+    <property name="targetX" value="15"/>
+    <property name="targetY" value="29"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#00ff00" id="6" name="Spawn" visible="0">
+  <object id="201" name="spawn_woodelf_ranger" x="464" y="464" width="32" height="32">
+   <properties>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_woodelf_ranger"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#0000ff" id="7" name="Keys" visible="0">
+  <object id="202" name="chest_basic" x="160" y="160" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_npc_gold"/>
+    <property name="keyItemID" value=""/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff00ff" id="8" name="Replace" visible="0">
+  <object id="203" name="replace_placeholder" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="note" value="Example: use Replace_holiday_christmas instead"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="withLayerID" value="Objects_christmas"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#22bb44" id="9" name="Spawn_animal" visible="0">
+  <object id="1" name="spawn_grassland_0" x="0" y="0" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_savanna_lion"/>
+    <property name="region" value="grassland"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="2" name="spawn_grassland_1" x="0" y="0" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_brush_hare"/>
+    <property name="region" value="grassland"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="3" name="spawn_shrubland_0" x="192" y="0" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_brush_hare"/>
+    <property name="region" value="shrubland"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="4" name="spawn_shrubland_1" x="192" y="0" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_hillside_lynx"/>
+    <property name="region" value="shrubland"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="5" name="spawn_swamp_0" x="384" y="0" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_bog_serpent"/>
+    <property name="region" value="swamp"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="6" name="spawn_swamp_1" x="384" y="0" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_marsh_croc"/>
+    <property name="region" value="swamp"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="7" name="spawn_marsh_0" x="576" y="0" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_marsh_croc"/>
+    <property name="region" value="marsh"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="8" name="spawn_marsh_1" x="576" y="0" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_reed_crane"/>
+    <property name="region" value="marsh"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="9" name="spawn_bog_0" x="768" y="0" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_peat_toad"/>
+    <property name="region" value="bog"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="10" name="spawn_bog_1" x="768" y="0" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_bog_serpent"/>
+    <property name="region" value="bog"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="11" name="spawn_desert_0" x="0" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_sand_scorpion"/>
+    <property name="region" value="desert"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="12" name="spawn_desert_1" x="0" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_savanna_lion"/>
+    <property name="region" value="desert"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="13" name="spawn_tundra_0" x="192" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_frost_wolf"/>
+    <property name="region" value="tundra"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="14" name="spawn_tundra_1" x="192" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_snow_hare"/>
+    <property name="region" value="tundra"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="15" name="spawn_hills_0" x="384" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_rock_boar"/>
+    <property name="region" value="hills"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="16" name="spawn_hills_1" x="384" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_hillside_lynx"/>
+    <property name="region" value="hills"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="17" name="spawn_mountain_0" x="576" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_stone_eagle"/>
+    <property name="region" value="mountain"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="18" name="spawn_mountain_1" x="576" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_rock_boar"/>
+    <property name="region" value="mountain"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="19" name="spawn_alpine_0" x="768" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_snow_hare"/>
+    <property name="region" value="alpine"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="20" name="spawn_alpine_1" x="768" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_frost_wolf"/>
+    <property name="region" value="alpine"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="21" name="spawn_alpine_2" x="768" y="128" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_stone_eagle"/>
+    <property name="region" value="alpine"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="22" name="spawn_volcano_0" x="0" y="256" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_lava_salamander"/>
+    <property name="region" value="volcano"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="23" name="spawn_volcano_1" x="0" y="256" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_infernal_hound"/>
+    <property name="region" value="volcano"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="24" name="spawn_river_0" x="192" y="256" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_river_otter"/>
+    <property name="region" value="river"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="25" name="spawn_river_1" x="192" y="256" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_lake_bass"/>
+    <property name="region" value="river"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="26" name="spawn_lake_0" x="384" y="256" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_lake_bass"/>
+    <property name="region" value="lake"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="27" name="spawn_lake_1" x="384" y="256" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_river_otter"/>
+    <property name="region" value="lake"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="28" name="spawn_sea_0" x="576" y="256" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_sea_drake"/>
+    <property name="region" value="sea"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="29" name="spawn_sea_1" x="576" y="256" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_lake_bass"/>
+    <property name="region" value="sea"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="30" name="spawn_ocean_0" x="768" y="256" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_deep_leviathan"/>
+    <property name="region" value="ocean"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="31" name="spawn_ocean_1" x="768" y="256" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_sea_drake"/>
+    <property name="region" value="ocean"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="32" name="spawn_small_cave_0" x="0" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_cave_bat"/>
+    <property name="region" value="small_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="33" name="spawn_small_cave_1" x="0" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_blind_wurm"/>
+    <property name="region" value="small_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="34" name="spawn_large_cave_0" x="192" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_cave_troll"/>
+    <property name="region" value="large_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="35" name="spawn_large_cave_1" x="192" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_cave_bat"/>
+    <property name="region" value="large_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="36" name="spawn_dark_cave_0" x="384" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_void_spider"/>
+    <property name="region" value="dark_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="37" name="spawn_dark_cave_1" x="384" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_cave_troll"/>
+    <property name="region" value="dark_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="38" name="spawn_damp_cave_0" x="576" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_fungal_crab"/>
+    <property name="region" value="damp_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="39" name="spawn_damp_cave_1" x="576" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_cave_bat"/>
+    <property name="region" value="damp_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="40" name="spawn_damp_cave_2" x="576" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_blind_wurm"/>
+    <property name="region" value="damp_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="41" name="spawn_deep_cave_0" x="768" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_blind_wurm"/>
+    <property name="region" value="deep_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="42" name="spawn_deep_cave_1" x="768" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_void_spider"/>
+    <property name="region" value="deep_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="43" name="spawn_deep_cave_2" x="768" y="384" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_deep_leviathan"/>
+    <property name="region" value="deep_cave"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="44" name="spawn_hell_0" x="0" y="512" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_infernal_hound"/>
+    <property name="region" value="hell"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="45" name="spawn_hell_1" x="0" y="512" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_lava_salamander"/>
+    <property name="region" value="hell"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="46" name="spawn_city_0" x="192" y="512" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_street_rat"/>
+    <property name="region" value="city"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="47" name="spawn_farm_0" x="384" y="512" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_farmyard_boar"/>
+    <property name="region" value="farm"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+  <object id="48" name="spawn_farm_1" x="384" y="512" width="192" height="128">
+   <properties>
+    <property name="maxAlive" value="3"/>
+    <property name="monsterID" value="animal_street_rat"/>
+    <property name="region" value="farm"/>
+    <property name="spawnchance" value="25"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#44bb22" id="10" name="Keys_forage" visible="0">
+  <object id="49" name="forage_grassland" x="64" y="64" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_grassland"/>
+    <property name="region" value="grassland"/>
+   </properties>
+  </object>
+  <object id="50" name="forage_shrubland" x="224" y="64" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_shrubland"/>
+    <property name="region" value="shrubland"/>
+   </properties>
+  </object>
+  <object id="51" name="forage_swamp" x="384" y="64" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_swamp"/>
+    <property name="region" value="swamp"/>
+   </properties>
+  </object>
+  <object id="52" name="forage_marsh" x="544" y="64" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_marsh"/>
+    <property name="region" value="marsh"/>
+   </properties>
+  </object>
+  <object id="53" name="forage_bog" x="704" y="64" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_bog"/>
+    <property name="region" value="bog"/>
+   </properties>
+  </object>
+  <object id="54" name="forage_desert" x="864" y="64" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_desert"/>
+    <property name="region" value="desert"/>
+   </properties>
+  </object>
+  <object id="55" name="forage_tundra" x="64" y="224" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_tundra"/>
+    <property name="region" value="tundra"/>
+   </properties>
+  </object>
+  <object id="56" name="forage_hills" x="224" y="224" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_hills"/>
+    <property name="region" value="hills"/>
+   </properties>
+  </object>
+  <object id="57" name="forage_mountain" x="384" y="224" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_mountain"/>
+    <property name="region" value="mountain"/>
+   </properties>
+  </object>
+  <object id="58" name="forage_alpine" x="544" y="224" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_alpine"/>
+    <property name="region" value="alpine"/>
+   </properties>
+  </object>
+  <object id="59" name="forage_volcano" x="704" y="224" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_volcano"/>
+    <property name="region" value="volcano"/>
+   </properties>
+  </object>
+  <object id="60" name="forage_river" x="864" y="224" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_river"/>
+    <property name="region" value="river"/>
+   </properties>
+  </object>
+  <object id="61" name="forage_lake" x="64" y="384" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_lake"/>
+    <property name="region" value="lake"/>
+   </properties>
+  </object>
+  <object id="62" name="forage_sea" x="224" y="384" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_sea"/>
+    <property name="region" value="sea"/>
+   </properties>
+  </object>
+  <object id="63" name="forage_ocean" x="384" y="384" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_ocean"/>
+    <property name="region" value="ocean"/>
+   </properties>
+  </object>
+  <object id="64" name="forage_small_cave" x="544" y="384" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_small_cave"/>
+    <property name="region" value="small_cave"/>
+   </properties>
+  </object>
+  <object id="65" name="forage_large_cave" x="704" y="384" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_large_cave"/>
+    <property name="region" value="large_cave"/>
+   </properties>
+  </object>
+  <object id="66" name="forage_dark_cave" x="864" y="384" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_dark_cave"/>
+    <property name="region" value="dark_cave"/>
+   </properties>
+  </object>
+  <object id="67" name="forage_damp_cave" x="64" y="544" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_damp_cave"/>
+    <property name="region" value="damp_cave"/>
+   </properties>
+  </object>
+  <object id="68" name="forage_deep_cave" x="224" y="544" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_deep_cave"/>
+    <property name="region" value="deep_cave"/>
+   </properties>
+  </object>
+  <object id="69" name="forage_hell" x="384" y="544" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_hell"/>
+    <property name="region" value="hell"/>
+   </properties>
+  </object>
+  <object id="70" name="forage_city" x="544" y="544" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_city"/>
+    <property name="region" value="city"/>
+   </properties>
+  </object>
+  <object id="71" name="forage_farm" x="704" y="544" width="32" height="32">
+   <properties>
+    <property name="droplistID" value="dl_forage_farm"/>
+    <property name="region" value="farm"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#cc8800" id="11" name="Spawn_faction" visible="0">
+  <object id="72" name="faction_friendly_0" x="0" y="0" width="64" height="64">
+   <properties>
+    <property name="faction" value="friendly"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_human_merchant"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="73" name="faction_friendly_1" x="64" y="0" width="64" height="64">
+   <properties>
+    <property name="faction" value="friendly"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_halfelf_scout"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="74" name="faction_friendly_2" x="128" y="0" width="64" height="64">
+   <properties>
+    <property name="faction" value="friendly"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_elf_archer"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="75" name="faction_friendly_3" x="192" y="0" width="64" height="64">
+   <properties>
+    <property name="faction" value="friendly"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_woodelf_ranger"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="76" name="faction_friendly_4" x="256" y="0" width="64" height="64">
+   <properties>
+    <property name="faction" value="friendly"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_halfling_cook"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="77" name="faction_friendly_5" x="0" y="64" width="64" height="64">
+   <properties>
+    <property name="faction" value="friendly"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_gnome_tinker"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="78" name="faction_friendly_6" x="64" y="64" width="64" height="64">
+   <properties>
+    <property name="faction" value="friendly"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_halfelf_diplomat"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="79" name="faction_friendly_7" x="128" y="64" width="64" height="64">
+   <properties>
+    <property name="faction" value="friendly"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_elf_sage"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="80" name="faction_friendly_8" x="192" y="64" width="64" height="64">
+   <properties>
+    <property name="faction" value="friendly"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_halfelf_wanderer"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="81" name="faction_friendly_9" x="256" y="64" width="64" height="64">
+   <properties>
+    <property name="faction" value="friendly"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_gnome_illus"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="82" name="faction_neutral_0" x="320" y="0" width="64" height="64">
+   <properties>
+    <property name="faction" value="neutral"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_human_guard"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="83" name="faction_neutral_1" x="384" y="0" width="64" height="64">
+   <properties>
+    <property name="faction" value="neutral"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_seaelf_fisher"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="84" name="faction_neutral_2" x="448" y="0" width="64" height="64">
+   <properties>
+    <property name="faction" value="neutral"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_dwarf_blacksmith"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="85" name="faction_neutral_3" x="512" y="0" width="64" height="64">
+   <properties>
+    <property name="faction" value="neutral"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_mtndwarf_miner"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="86" name="faction_neutral_4" x="576" y="0" width="64" height="64">
+   <properties>
+    <property name="faction" value="neutral"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_halfling_thief"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="87" name="faction_hostile_0" x="0" y="320" width="64" height="64">
+   <properties>
+    <property name="faction" value="hostile"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_drowelf_rogue"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="88" name="faction_hostile_1" x="64" y="320" width="64" height="64">
+   <properties>
+    <property name="faction" value="hostile"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_drowelf_priestess"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="89" name="faction_hostile_2" x="128" y="320" width="64" height="64">
+   <properties>
+    <property name="faction" value="hostile"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_darkdwarf_forge"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="90" name="faction_hostile_3" x="192" y="320" width="64" height="64">
+   <properties>
+    <property name="faction" value="hostile"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_goblin_scout"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="91" name="faction_hostile_4" x="256" y="320" width="64" height="64">
+   <properties>
+    <property name="faction" value="hostile"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_goblin_shaman"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="92" name="faction_hostile_5" x="0" y="384" width="64" height="64">
+   <properties>
+    <property name="faction" value="hostile"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_hobgoblin_warrior"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="93" name="faction_hostile_6" x="64" y="384" width="64" height="64">
+   <properties>
+    <property name="faction" value="hostile"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_hobgoblin_archer"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="94" name="faction_hostile_7" x="128" y="384" width="64" height="64">
+   <properties>
+    <property name="faction" value="hostile"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_orc_berserker"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="95" name="faction_hostile_8" x="192" y="384" width="64" height="64">
+   <properties>
+    <property name="faction" value="hostile"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_orc_warchief"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+  <object id="96" name="faction_hostile_9" x="256" y="384" width="64" height="64">
+   <properties>
+    <property name="faction" value="hostile"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_ogre_brute"/>
+    <property name="spawnchance" value="20"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff6688" id="12" name="Replace_holiday_newyear" visible="0">
+  <object id="97" name="replace_newyear" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="endDate" value="115"/>
+    <property name="holiday" value="New Year"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="startDate" value="101"/>
+    <property name="withLayerID" value="Objects_newyear"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff88aa" id="13" name="Spawn_holiday_newyear" visible="0">
+  <object id="103" name="spawn_newyear_npc" x="464" y="464" width="32" height="32">
+   <properties>
+    <property name="endDate" value="115"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_ny_herald"/>
+    <property name="spawnchance" value="100"/>
+    <property name="startDate" value="101"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff6688" id="14" name="Replace_holiday_easter" visible="0">
+  <object id="98" name="replace_easter" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="endDate" value="420"/>
+    <property name="holiday" value="Easter"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="startDate" value="401"/>
+    <property name="withLayerID" value="Objects_easter"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff88aa" id="15" name="Spawn_holiday_easter" visible="0">
+  <object id="104" name="spawn_easter_npc" x="464" y="464" width="32" height="32">
+   <properties>
+    <property name="endDate" value="420"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_easter_bunny"/>
+    <property name="spawnchance" value="100"/>
+    <property name="startDate" value="401"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff6688" id="16" name="Replace_holiday_julyfourth" visible="0">
+  <object id="99" name="replace_julyfourth" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="endDate" value="706"/>
+    <property name="holiday" value="July Fourth"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="startDate" value="701"/>
+    <property name="withLayerID" value="Objects_julyfourth"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff88aa" id="17" name="Spawn_holiday_julyfourth" visible="0">
+  <object id="105" name="spawn_julyfourth_npc" x="464" y="464" width="32" height="32">
+   <properties>
+    <property name="endDate" value="706"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_july4_patriot"/>
+    <property name="spawnchance" value="100"/>
+    <property name="startDate" value="701"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff6688" id="18" name="Replace_holiday_halloween" visible="0">
+  <object id="100" name="replace_halloween" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="endDate" value="1031"/>
+    <property name="holiday" value="Halloween"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="startDate" value="1001"/>
+    <property name="withLayerID" value="Objects_halloween"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff88aa" id="19" name="Spawn_holiday_halloween" visible="0">
+  <object id="106" name="spawn_halloween_npc" x="464" y="464" width="32" height="32">
+   <properties>
+    <property name="endDate" value="1031"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_halloween_witch"/>
+    <property name="spawnchance" value="100"/>
+    <property name="startDate" value="1001"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff6688" id="20" name="Replace_holiday_thanksgiving" visible="0">
+  <object id="101" name="replace_thanksgiving" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="endDate" value="1128"/>
+    <property name="holiday" value="Thanksgiving"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="startDate" value="1122"/>
+    <property name="withLayerID" value="Objects_thanksgiving"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff88aa" id="21" name="Spawn_holiday_thanksgiving" visible="0">
+  <object id="107" name="spawn_thanksgiving_npc" x="464" y="464" width="32" height="32">
+   <properties>
+    <property name="endDate" value="1128"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_thanksgiving_god"/>
+    <property name="spawnchance" value="100"/>
+    <property name="startDate" value="1122"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff6688" id="22" name="Replace_holiday_christmas" visible="0">
+  <object id="102" name="replace_christmas" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="endDate" value="1231"/>
+    <property name="holiday" value="Christmas"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="startDate" value="1218"/>
+    <property name="withLayerID" value="Objects_christmas"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff88aa" id="23" name="Spawn_holiday_christmas" visible="0">
+  <object id="108" name="spawn_christmas_npc" x="464" y="464" width="32" height="32">
+   <properties>
+    <property name="endDate" value="1231"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_xmas_father"/>
+    <property name="spawnchance" value="100"/>
+    <property name="startDate" value="1218"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#aa44ff" id="24" name="Replace_event_birthday" visible="0">
+  <object id="109" name="replace_birthday" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="eventType" value="Birthday"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="triggerQuestID" value="quest_region_city"/>
+    <property name="withLayerID" value="Objects_birthday"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#cc66ff" id="25" name="Spawn_event_birthday" visible="0">
+  <object id="113" name="spawn_birthday_npc1" x="400" y="464" width="32" height="32">
+   <properties>
+    <property name="eventType" value="Birthday"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_bday_planner"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="114" name="spawn_birthday_npc2" x="560" y="464" width="32" height="32">
+   <properties>
+    <property name="eventType" value="Birthday"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_bday_bard"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#aa44ff" id="26" name="Replace_event_graduation" visible="0">
+  <object id="110" name="replace_graduation" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="eventType" value="Graduation"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="triggerQuestID" value="quest_region_city"/>
+    <property name="withLayerID" value="Objects_graduation"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#cc66ff" id="27" name="Spawn_event_graduation" visible="0">
+  <object id="115" name="spawn_graduation_npc1" x="400" y="464" width="32" height="32">
+   <properties>
+    <property name="eventType" value="Graduation"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_grad_master"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="116" name="spawn_graduation_npc2" x="560" y="464" width="32" height="32">
+   <properties>
+    <property name="eventType" value="Graduation"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_grad_mentor"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#aa44ff" id="28" name="Replace_event_wedding" visible="0">
+  <object id="111" name="replace_wedding" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="eventType" value="Wedding"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="triggerQuestID" value="quest_region_city"/>
+    <property name="withLayerID" value="Objects_wedding"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#cc66ff" id="29" name="Spawn_event_wedding" visible="0">
+  <object id="117" name="spawn_wedding_npc1" x="400" y="464" width="32" height="32">
+   <properties>
+    <property name="eventType" value="Wedding"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_wedding_planner"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="118" name="spawn_wedding_npc2" x="560" y="464" width="32" height="32">
+   <properties>
+    <property name="eventType" value="Wedding"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_wedding_priest"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#aa44ff" id="30" name="Replace_event_funeral" visible="0">
+  <object id="112" name="replace_funeral" x="0" y="0" width="960" height="960">
+   <properties>
+    <property name="eventType" value="Funeral"/>
+    <property name="replaceLayerID" value="Objects"/>
+    <property name="triggerQuestID" value="quest_region_city"/>
+    <property name="withLayerID" value="Objects_funeral"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#cc66ff" id="31" name="Spawn_event_funeral" visible="0">
+  <object id="119" name="spawn_funeral_npc1" x="400" y="464" width="32" height="32">
+   <properties>
+    <property name="eventType" value="Funeral"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_funeral_director"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="120" name="spawn_funeral_npc2" x="560" y="464" width="32" height="32">
+   <properties>
+    <property name="eventType" value="Funeral"/>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_grief_counselor"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff9900" id="32" name="Keys_crafting" visible="0">
+  <object id="121" name="loom" x="160" y="160" width="32" height="32">
+   <properties>
+    <property name="interactionType" value="loom"/>
+    <property name="npcID" value="npc_seamstress"/>
+    <property name="requiredItems" value="mat_cotton_bolt,mat_wool_yarn,mat_linen_thread,mat_silk_spool,mat_hemp_fiber"/>
+   </properties>
+  </object>
+  <object id="122" name="stove" x="320" y="160" width="32" height="32">
+   <properties>
+    <property name="interactionType" value="stove"/>
+    <property name="npcID" value="npc_butcher"/>
+    <property name="requiredItems" value="food_raw_carrot,food_raw_potato,food_raw_apple"/>
+   </properties>
+  </object>
+  <object id="123" name="garden" x="480" y="160" width="32" height="32">
+   <properties>
+    <property name="interactionType" value="garden"/>
+    <property name="npcID" value="npc_farmer"/>
+    <property name="requiredItems" value="seed_apple,seed_carrot,seed_wheat"/>
+   </properties>
+  </object>
+  <object id="124" name="forge" x="640" y="160" width="32" height="32">
+   <properties>
+    <property name="interactionType" value="forge"/>
+    <property name="npcID" value="npc_dwarf_blacksmith"/>
+    <property name="requiredItems" value="mat_iron_ingot,mat_coal,mat_whetstone"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ffbb00" id="33" name="Spawn_crafting" visible="0">
+  <object id="125" name="spawn_seamstress" x="160" y="224" width="32" height="32">
+   <properties>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_seamstress"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="126" name="spawn_butcher" x="320" y="224" width="32" height="32">
+   <properties>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_butcher"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="127" name="spawn_grocer" x="448" y="224" width="32" height="32">
+   <properties>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_grocer"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="128" name="spawn_farmer" x="640" y="224" width="32" height="32">
+   <properties>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_farmer"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#0099ff" id="34" name="Keys_guild" visible="0">
+  <object id="129" name="fighters_forge" x="160" y="480" width="64" height="64">
+   <properties>
+    <property name="interactionType" value="guild_shop"/>
+    <property name="npcID" value="npc_guild_fighter_master"/>
+    <property name="requiredLevel" value="3"/>
+    <property name="shopType" value="weapons_shields"/>
+   </properties>
+  </object>
+  <object id="130" name="writing_desk" x="320" y="480" width="64" height="64">
+   <properties>
+    <property name="interactionType" value="guild_shop"/>
+    <property name="npcID" value="npc_guild_archmage"/>
+    <property name="shopType" value="scrolls_offensive"/>
+   </properties>
+  </object>
+  <object id="131" name="temple_altar" x="480" y="480" width="64" height="64">
+   <properties>
+    <property name="interactionType" value="guild_shop"/>
+    <property name="npcID" value="npc_guild_high_priest"/>
+    <property name="shopType" value="scrolls_defensive"/>
+   </properties>
+  </object>
+  <object id="132" name="rangers_board" x="640" y="480" width="64" height="64">
+   <properties>
+    <property name="interactionType" value="guild_quest"/>
+    <property name="npcID" value="npc_guild_ranger_cap"/>
+    <property name="shopType" value="forage_quests"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#00bbff" id="35" name="Spawn_guild" visible="0">
+  <object id="133" name="spawn_guild_fighter" x="160" y="512" width="32" height="32">
+   <properties>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_guild_fighter_master"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="134" name="spawn_guild_armorer" x="240" y="512" width="32" height="32">
+   <properties>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_guild_armorer"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="135" name="spawn_guild_mage" x="320" y="512" width="32" height="32">
+   <properties>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_guild_archmage"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="136" name="spawn_guild_priest" x="480" y="512" width="32" height="32">
+   <properties>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_guild_high_priest"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+  <object id="137" name="spawn_guild_ranger" x="640" y="512" width="32" height="32">
+   <properties>
+    <property name="maxAlive" value="1"/>
+    <property name="monsterID" value="npc_guild_ranger_cap"/>
+    <property name="spawnchance" value="100"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff44ff" id="36" name="Keys_quest" visible="0">
+  <object id="138" name="rumour_board" x="464" y="160" width="32" height="32">
+   <properties>
+    <property name="interactionType" value="quest_board"/>
+    <property name="questID" value="quest_intro"/>
+    <property name="signText" value="Notice Board: Adventures Wanted — speak to the Ranger Captain."/>
+   </properties>
+  </object>
+  <object id="139" name="quest_sign_1" x="192" y="480" width="32" height="32">
+   <properties>
+    <property name="interactionType" value="quest_sign"/>
+    <property name="questID" value="quest_branch_animals"/>
+    <property name="signText" value="The Ranger Captain seeks hunters. Bring beast trophies for reward."/>
+   </properties>
+  </object>
+  <object id="140" name="quest_sign_2" x="288" y="480" width="32" height="32">
+   <properties>
+    <property name="interactionType" value="quest_sign"/>
+    <property name="questID" value="quest_branch_forage"/>
+    <property name="signText" value="The Grocer needs forage ingredients. Explore the wilds."/>
+   </properties>
+  </object>
+  <object id="141" name="quest_sign_3" x="384" y="480" width="32" height="32">
+   <properties>
+    <property name="interactionType" value="quest_sign"/>
+    <property name="questID" value="quest_branch_crafting"/>
+    <property name="signText" value="The Guild Armorer requires iron ingots. Visit the forge."/>
+   </properties>
+  </object>
+  <object id="142" name="closing_sign" x="464" y="640" width="32" height="32">
+   <properties>
+    <property name="interactionType" value="quest_sign"/>
+    <property name="questID" value="quest_closing"/>
+    <property name="signText" value="The twelve paths are complete. The Ranger Captain awaits your final report."/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
