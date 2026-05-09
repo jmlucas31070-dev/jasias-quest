@@ -1,140 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="12">
-  <tileset firstgid="1" name="tileset_logic_collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
-    <image source="../drawable/tileset_logic_collision.png" width="32" height="32" />
-  </tileset>
-  <tileset firstgid="2" name="tileset_ground_ground" tilewidth="32" tileheight="32" tilecount="33" columns="3">
-    <image source="../drawable/tileset_ground_ground.png" width="96" height="352" />
-  </tileset>
-  <tileset firstgid="35" name="tileset_ground_ridge_earth_pale" tilewidth="32" tileheight="32" tilecount="96" columns="12">
-    <image source="../drawable/tileset_ground_ridge_earth_pale.png" width="384" height="256" />
-  </tileset>
-  <tileset firstgid="131" name="tileset_ground_ridge_earth_dark" tilewidth="32" tileheight="32" tilecount="96" columns="12">
-    <image source="../drawable/tileset_ground_ridge_earth_dark.png" width="384" height="256" />
-  </tileset>
-  <tileset firstgid="227" name="tileset_ground_ladder_horizontal_dark" tilewidth="32" tileheight="32" tilecount="3" columns="1">
-    <image source="../drawable/tileset_ground_ladder_horizontal_dark.png" width="32" height="96" />
-  </tileset>
-  <tileset firstgid="230" name="tileset_plant_tree_tree_darkgreen" tilewidth="32" tileheight="32" tilecount="88" columns="8">
-    <image source="../drawable/tileset_plant_tree_tree_darkgreen.png" width="256" height="352" />
-  </tileset>
-  <tileset firstgid="318" name="tileset_plant_stump_stump_pale_purple" tilewidth="32" tileheight="32" tilecount="4" columns="2">
-    <image source="../drawable/tileset_plant_stump_stump_pale_purple.png" width="64" height="64" />
-  </tileset>
-  <tileset firstgid="322" name="tileset_plant_stump_hollow_logs" tilewidth="32" tileheight="32" tilecount="6" columns="3">
-    <image source="../drawable/tileset_plant_stump_hollow_logs.png" width="96" height="64" />
-  </tileset>
-  <tileset firstgid="328" name="tileset_plant_flower_daisy_yellow" tilewidth="32" tileheight="32" tilecount="8" columns="2">
-    <image source="../drawable/tileset_plant_flower_daisy_yellow.png" width="64" height="128" />
-  </tileset>
-  <tileset firstgid="336" name="tileset_plant_flower_daisy_blue" tilewidth="32" tileheight="32" tilecount="8" columns="2">
-    <image source="../drawable/tileset_plant_flower_daisy_blue.png" width="64" height="128" />
-  </tileset>
-  <tileset firstgid="344" name="tileset_plant_bush_leafy_2" tilewidth="32" tileheight="32" tilecount="12" columns="6">
-    <image source="../drawable/tileset_plant_bush_leafy_2.png" width="192" height="64" />
-  </tileset>
-  <tileset firstgid="356" name="tileset_ground_rock_pebbles" tilewidth="32" tileheight="32" tilecount="3" columns="1">
-    <image source="../drawable/tileset_ground_rock_pebbles.png" width="32" height="96" />
-  </tileset>
-  <tileset firstgid="359" name="tileset_building_fence_fence_chunky" tilewidth="32" tileheight="32" tilecount="21" columns="3">
-    <image source="../drawable/tileset_building_fence_fence_chunky.png" width="96" height="224" />
-  </tileset>
-  <layer name="Ground" width="30" height="30">
-    <data encoding="base64" compression="zlib">
-   eJztzbENADAIA7BI8P/N7RXA4MGzO0l/NWzj3HwBAACueYayCpE=
+<!DOCTYPE map SYSTEM "https://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" nextobjectid="11">
+ <tileset firstgid="1" name="tileset_logic_collision" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_logic_collision.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="2" name="tileset_ground_ground" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_ground_ground.png" width="96" height="352"/>
+ </tileset>
+ <tileset firstgid="35" name="tileset_ground_ridge_earth_pale" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_ground_ridge_earth_pale.png" width="384" height="256"/>
+ </tileset>
+ <tileset firstgid="131" name="tileset_ground_ridge_earth_dark" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_ground_ridge_earth_dark.png" width="384" height="256"/>
+ </tileset>
+ <tileset firstgid="227" name="tileset_ground_ladder_horizontal_dark" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_ground_ladder_horizontal_dark.png" width="32" height="96"/>
+ </tileset>
+ <tileset firstgid="230" name="tileset_plant_tree_tree_darkgreen" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_plant_tree_tree_darkgreen.png" width="256" height="352"/>
+ </tileset>
+ <tileset firstgid="318" name="tileset_plant_stump_stump_pale_purple" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_plant_stump_stump_pale_purple.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="322" name="tileset_plant_stump_hollow_logs" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_plant_stump_hollow_logs.png" width="96" height="64"/>
+ </tileset>
+ <tileset firstgid="328" name="tileset_plant_flower_daisy_yellow" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_plant_flower_daisy_yellow.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="336" name="tileset_plant_flower_daisy_blue" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_plant_flower_daisy_blue.png" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="344" name="tileset_plant_bush_leafy_2" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_plant_bush_leafy_2.png" width="192" height="64"/>
+ </tileset>
+ <tileset firstgid="356" name="tileset_ground_rock_pebbles" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_ground_rock_pebbles.png" width="32" height="96"/>
+ </tileset>
+ <tileset firstgid="359" name="tileset_building_fence_fence_chunky" tilewidth="32" tileheight="32">
+  <image source="../drawable/tileset_building_fence_fence_chunky.png" width="96" height="224"/>
+ </tileset>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwwEJAAAMBKGD7995PYaCq6aqqqq+fi2gDAE=
   </data>
-  </layer>
-  <layer name="Object" width="30" height="30">
-    <data encoding="base64" compression="zlib">
-   eJyLZ2Bg8AJibwbcwImRgcGZEY8CEoEm0Cw7IB0GxOHUM5YgMGQk7FdaAXx+DccTtqCw0gJibSDWISIOYOphIIkURyIBUFgZAbExEJsQYS9M/XAG6GFLLEgC6kmmIGxoGbZhNDLXFWiuG5lmw8JZDIjFgVgCizn48kUCkJ9Iht2wcJYDYnkgVsBiBqn5YjADfyT3o4c5vQB6mI8koElH//oh2WWIZi8p5RpyniS2TsIFSCnXkPMkqXmPnuGMDED+w1aWEcOmVtgihxsxbErKtYEM51EwOAG+ti29AaltaWqBodRmAABTbRfq
+ </layer>
+ <layer name="Object" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNpjYBh8IJwRt5wmUE4LiLWBWIeRsFkw9dQChkCzjIDYGIhNGIlXP5IApWGeBNSbzEh5HNEShNHYfFeg+W6MlIW/GBCLA7EEmfkpAchPZCQ//OWAWB6IFRipl5+GAvBnJC8uaAFIiYvRcon6wI+RcLlEiruQ0xGxdSA1y0vkdERqnh2I8CfkT+TwJIZNrTDHFp7EsCkpJ0fLolFAizb5QJfn1M6TtOoLjILB3S4YLOnIhZE6/kEGuPwGACv1FzU=
   </data>
-  </layer>
-  <layer name="Object2" width="30" height="30">
-    <data encoding="base64" compression="zlib">
-   eJxjYBgFo4B4kMY40C4YGSCVEYJHwSgYBaNgFAwNkDJaZo+CUTAKhigAAAvVAZk=
+ </layer>
+ <layer name="Object2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrt17EJADAMA7Dk1zb/nxBKxq6FLhL4AS/GEbxQqYOfdk4A4Fg2AQBf89JyXAIA
   </data>
-  </layer>
-  <layer name="Above" width="30" height="30">
-    <data encoding="base64" compression="zlib">
-   eJztlk0OwiAQhelGXamom6qbqol38uf+t1AfiyZkKOSNFDTRL5lk2g4MvDBTjHkP2xizgq1hm0YXfybiY7QYu4XtYHtinj5+Aptm5O0w9gA7wk7EPH38HLbIyMsgtXX+A++fZdMG2s5G0JlBarskdb7h+z1jbVZqO6Czti4YGJ21dcHA6Jyqiwuer5lrCTSvxFh9Q0vNvhHDfihvK/IO9TXW19ReJ2JT9ZbytbUndU7VW8pn/0n+/oL/cayvCT+nr7n91dLWx+21lrY+8jzXQp7nP99NiTsDQ4k7A4P2Lv3r1DwfL7GRHxQ=
+ </layer>
+ <layer name="Above" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtV8sKwkAM3FzUk7bqRe2lKvhPPv7/L9QRLCwl+4jdRMQODKTbZaGTTDZ1ToaWnNuDB/BI+fvn4AKserEGapy7BFfg6R3fsf54vezFGtjg3C04AafgLBJrIKV5Sv8r1m80XP+Q5n7s52pN9vp3e3dgQ/b6x/x0xvOFynjBsv4ludDGN/qPJBeW4HIR6pe5scSzXC6kfvVjqWdD+kv86se5d2BM/05Pl9kvh/RJ7ju1NU/pr615Tv1bIVT/I34TGrPLJ/VccnbR/BcY8R91VAtnhdJ1xPV5S49wfd7SI9w9G5rhnu9bMds=
   </data>
-  </layer>
-  <layer name="Above2" width="30" height="30">
-    <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+ </layer>
+ <layer name="Above2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eNrtwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
-  </layer>
-  <layer name="Walkable" width="30" height="30">
-    <data encoding="base64" compression="zlib">
-   eJztlUsKwCAMBV/uf+luXJRgNL+mghmQip+M2qAAQKNI7PqtEPtWQYjtxTqXkOfUxshw8liWsdm5ovVVeCXnzpv5L048Z21b1EmLMV+7s+Jb11BFdV7N3Lcx2/Mq9733j2YdkVLlBXxOPveGs327PXWvr2k0/PnO9Bsn8wCkdwC6
+ </layer>
+ <layer name="Walkable" width="32" height="32" visible="0">
+  <data encoding="base64" compression="zlib">
+   eNrtlUsKADEIQ839Lz2bWXbA1Gg6UEHoouX5iTaCN7zO3l/5Ljv7HmI+m38HX8Ht5KPIV8TmzJ/lr2JR6HPHp2MIcy+6DWZ+fNR6kl/Z3929qM6MIn8IZ3aCHyL2VM1PiiFTz8xZrf8w7aJr/zYY++jWsjv/q6NzdcTuWuVeZP6tBzwCARQ=
   </data>
-  </layer>
-  <objectgroup name="MapEvents">
-    <object id="1" name="north" type="mapchange" x="0" y="0" width="32" height="32">
-      <properties>
-        <property name="map" value="0_ados_mountain_n2_w2_x0_y1" />
-        <property name="place" value="south" />
-      </properties>
-    </object>
-    <object id="2" name="north2" type="mapchange" x="96" y="0" width="192" height="32">
-      <properties>
-        <property name="map" value="0_ados_mountain_n2_w2_x0_y1" />
-        <property name="place" value="south2" />
-      </properties>
-    </object>
-    <object id="3" name="north3" type="mapchange" x="352" y="0" width="576" height="32">
-      <properties>
-        <property name="map" value="0_ados_mountain_n2_w2_x0_y1" />
-        <property name="place" value="south3" />
-      </properties>
-    </object>
-    <object id="4" name="south" type="mapchange" x="0" y="928" width="960" height="32">
-      <properties>
-        <property name="map" value="0_ados_mountain_n2_w2_x0_y3" />
-        <property name="place" value="north" />
-      </properties>
-    </object>
-    <object id="5" name="west" type="mapchange" x="0" y="0" width="32" height="64">
-      <properties>
-        <property name="map" value="0_deniran_forest_n2_w_x0_y2" />
-        <property name="place" value="east" />
-      </properties>
-    </object>
-    <object id="6" name="west2" type="mapchange" x="0" y="128" width="32" height="512">
-      <properties>
-        <property name="map" value="0_deniran_forest_n2_w_x0_y2" />
-        <property name="place" value="east2" />
-      </properties>
-    </object>
-    <object id="7" name="west3" type="mapchange" x="0" y="672" width="32" height="288">
-      <properties>
-        <property name="map" value="0_deniran_forest_n2_w_x0_y2" />
-        <property name="place" value="east3" />
-      </properties>
-    </object>
-    <object id="8" name="east" type="mapchange" x="928" y="416" width="32" height="64">
-      <properties>
-        <property name="map" value="0_ados_mountain_n2_w2_x1_y2" />
-        <property name="place" value="west" />
-      </properties>
-    </object>
-    <object id="9" name="east2" type="mapchange" x="928" y="512" width="32" height="64">
-      <properties>
-        <property name="map" value="0_ados_mountain_n2_w2_x1_y2" />
-        <property name="place" value="west2" />
-      </properties>
-    </object>
-    <object id="10" name="east3" type="mapchange" x="928" y="608" width="32" height="64">
-      <properties>
-        <property name="map" value="0_ados_mountain_n2_w2_x1_y2" />
-        <property name="place" value="west3" />
-      </properties>
-    </object>
-    <object id="11" name="east4" type="mapchange" x="928" y="704" width="32" height="256">
-      <properties>
-        <property name="map" value="0_ados_mountain_n2_w2_x1_y2" />
-        <property name="place" value="west4" />
-      </properties>
-    </object>
-  </objectgroup>
+ </layer>
+ <objectgroup name="Mapevents">
+  <object name="north" type="mapchange" id="1" x="0" y="0" width="416" height="32">
+   <properties>
+    <property name="map" value="0_kalavan_castle_w_x1_y0"/>
+    <property name="place" value="south"/>
+   </properties>
+  </object>
+  <object name="north2" type="mapchange" id="2" x="480" y="0" width="320" height="32">
+   <properties>
+    <property name="map" value="0_kalavan_castle_w_x1_y0"/>
+    <property name="place" value="south2"/>
+   </properties>
+  </object>
+  <object name="south" type="mapchange" id="3" x="0" y="992" width="64" height="32">
+   <properties>
+    <property name="map" value="0_kalavan_castle_w_x1_y2"/>
+    <property name="place" value="north"/>
+   </properties>
+  </object>
+  <object name="south2" type="mapchange" id="4" x="128" y="992" width="32" height="32">
+   <properties>
+    <property name="map" value="0_kalavan_castle_w_x1_y2"/>
+    <property name="place" value="north2"/>
+   </properties>
+  </object>
+  <object name="south3" type="mapchange" id="5" x="192" y="992" width="480" height="32">
+   <properties>
+    <property name="map" value="0_kalavan_castle_w_x1_y2"/>
+    <property name="place" value="north3"/>
+   </properties>
+  </object>
+  <object name="south4" type="mapchange" id="6" x="896" y="992" width="128" height="32">
+   <properties>
+    <property name="map" value="0_kalavan_castle_w_x1_y2"/>
+    <property name="place" value="north4"/>
+   </properties>
+  </object>
+  <object name="west" type="mapchange" id="7" x="0" y="0" width="32" height="256">
+   <properties>
+    <property name="map" value="0_kalavan_castle_w_x0_y1"/>
+    <property name="place" value="east"/>
+   </properties>
+  </object>
+  <object name="west2" type="mapchange" id="8" x="0" y="288" width="32" height="256">
+   <properties>
+    <property name="map" value="0_kalavan_castle_w_x0_y1"/>
+    <property name="place" value="east2"/>
+   </properties>
+  </object>
+  <object name="west3" type="mapchange" id="9" x="0" y="640" width="32" height="384">
+   <properties>
+    <property name="map" value="0_kalavan_castle_w_x0_y1"/>
+    <property name="place" value="east3"/>
+   </properties>
+  </object>
+  <object name="east" type="mapchange" id="10" x="992" y="672" width="32" height="352">
+   <properties>
+    <property name="map" value="0_kalavan_castle_x0_y1"/>
+    <property name="place" value="west"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>
