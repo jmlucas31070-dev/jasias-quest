@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="26">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="32" tileheight="32" infinite="0" nextlayerid="22" nextobjectid="22">
  <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_bed_1.png" width="512" height="256"/>
  </tileset>
@@ -221,100 +221,11 @@
   </data>
  </layer>
  <objectgroup id="9" name="Mapevents" visible="0"/>
- <objectgroup id="10" name="Spawn">
-  <object id="1" name="npc_timekeeper_new_years" type="spawn" x="96" y="96" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_timekeeper_new_years"/>
-    <property name="phrase" value="conv_timekeeper"/>
-   </properties>
-  </object>
-  <object id="2" name="npc_timekeeper_easter" type="spawn" x="96" y="144" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_timekeeper_easter"/>
-    <property name="phrase" value="conv_timekeeper"/>
-   </properties>
-  </object>
-  <object id="3" name="npc_timekeeper_fourth_july" type="spawn" x="96" y="192" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_timekeeper_fourth_july"/>
-    <property name="phrase" value="conv_timekeeper"/>
-   </properties>
-  </object>
-  <object id="4" name="npc_timekeeper_halloween" type="spawn" x="96" y="240" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_timekeeper_halloween"/>
-    <property name="phrase" value="conv_timekeeper"/>
-   </properties>
-  </object>
-  <object id="5" name="npc_timekeeper_thanksgiving" type="spawn" x="96" y="288" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_timekeeper_thanksgiving"/>
-    <property name="phrase" value="conv_timekeeper"/>
-   </properties>
-  </object>
-  <object id="6" name="npc_timekeeper_christmas" type="spawn" x="96" y="336" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_timekeeper_christmas"/>
-    <property name="phrase" value="conv_timekeeper"/>
-   </properties>
-  </object>
-  <object id="7" name="npc_timekeeper" type="spawn" x="64" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_timekeeper"/>
-    <property name="phrase" value="conv_timekeeper"/>
-   </properties>
-  </object>
-  <object id="8" name="npc_event_birthday" type="spawn" x="96" y="500" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_event_birthday"/>
-    <property name="phrase" value="conv_event_npc_birthday"/>
-   </properties>
-  </object>
-  <object id="9" name="npc_event_planner_birthday" type="spawn" x="128" y="500" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_event_planner_birthday"/>
-    <property name="phrase" value="conv_event_planner_birthday"/>
-   </properties>
-  </object>
-  <object id="10" name="npc_event_graduation" type="spawn" x="96" y="548" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_event_graduation"/>
-    <property name="phrase" value="conv_event_npc_graduation"/>
-   </properties>
-  </object>
-  <object id="11" name="npc_event_planner_graduation" type="spawn" x="128" y="548" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_event_planner_graduation"/>
-    <property name="phrase" value="conv_event_planner_graduation"/>
-   </properties>
-  </object>
-  <object id="12" name="npc_event_wedding" type="spawn" x="96" y="596" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_event_wedding"/>
-    <property name="phrase" value="conv_event_npc_wedding"/>
-   </properties>
-  </object>
-  <object id="13" name="npc_event_planner_wedding" type="spawn" x="128" y="596" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_event_planner_wedding"/>
-    <property name="phrase" value="conv_event_planner_wedding"/>
-   </properties>
-  </object>
-  <object id="14" name="npc_event_funeral" type="spawn" x="96" y="644" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_event_funeral"/>
-    <property name="phrase" value="conv_event_npc_funeral"/>
-   </properties>
-  </object>
-  <object id="15" name="npc_event_planner_funeral" type="spawn" x="128" y="644" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_event_planner_funeral"/>
-    <property name="phrase" value="conv_event_planner_funeral"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="11" name="Keys" visible="0">
-  <object id="16" name="holiday_trigger_new_years" type="key" x="32" y="32" width="32" height="32">
+ <objectgroup id="10" name="Spawn"/>
+ <objectgroup id="11" name="Keys" visible="0"/>
+ <objectgroup id="12" name="Replace" visible="0"/>
+ <objectgroup id="13" name="Keys_holiday_new_years">
+  <object id="1" name="holiday_trigger_new_years" type="key" x="32" y="32" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_holiday_replace_new_years"/>
     <property name="replaceLayer_Objects" value="Objects_new_years"/>
@@ -325,7 +236,9 @@
     <property name="weeksAfter" value="1"/>
    </properties>
   </object>
-  <object id="17" name="holiday_trigger_easter" type="key" x="32" y="64" width="32" height="32">
+ </objectgroup>
+ <objectgroup id="14" name="Keys_holiday_easter">
+  <object id="2" name="holiday_trigger_easter" type="key" x="32" y="64" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_holiday_replace_easter"/>
     <property name="replaceLayer_Objects" value="Objects_easter"/>
@@ -336,7 +249,9 @@
     <property name="weeksAfter" value="1"/>
    </properties>
   </object>
-  <object id="18" name="holiday_trigger_fourth_july" type="key" x="32" y="96" width="32" height="32">
+ </objectgroup>
+ <objectgroup id="15" name="Keys_holiday_fourth_july">
+  <object id="3" name="holiday_trigger_fourth_july" type="key" x="32" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_holiday_replace_fourth_july"/>
     <property name="replaceLayer_Objects" value="Objects_fourth_july"/>
@@ -347,7 +262,9 @@
     <property name="weeksAfter" value="1"/>
    </properties>
   </object>
-  <object id="19" name="holiday_trigger_halloween" type="key" x="32" y="128" width="32" height="32">
+ </objectgroup>
+ <objectgroup id="16" name="Keys_holiday_halloween">
+  <object id="4" name="holiday_trigger_halloween" type="key" x="32" y="128" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_holiday_replace_halloween"/>
     <property name="replaceLayer_Objects" value="Objects_halloween"/>
@@ -358,7 +275,9 @@
     <property name="weeksAfter" value="1"/>
    </properties>
   </object>
-  <object id="20" name="holiday_trigger_thanksgiving" type="key" x="32" y="160" width="32" height="32">
+ </objectgroup>
+ <objectgroup id="17" name="Keys_holiday_thanksgiving">
+  <object id="5" name="holiday_trigger_thanksgiving" type="key" x="32" y="160" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_holiday_replace_thanksgiving"/>
     <property name="replaceLayer_Objects" value="Objects_thanksgiving"/>
@@ -369,7 +288,9 @@
     <property name="weeksAfter" value="1"/>
    </properties>
   </object>
-  <object id="21" name="holiday_trigger_christmas" type="key" x="32" y="192" width="32" height="32">
+ </objectgroup>
+ <objectgroup id="18" name="Keys_holiday_christmas">
+  <object id="6" name="holiday_trigger_christmas" type="key" x="32" y="192" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_holiday_replace_christmas"/>
     <property name="replaceLayer_Objects" value="Objects_christmas"/>
@@ -381,29 +302,97 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="12" name="Replace" visible="0">
-  <object id="22" name="event_trigger_birthday" type="key" x="32" y="96" width="32" height="32">
+ <objectgroup id="19" name="Spawn_holiday">
+  <object id="7" name="npc_timekeeper_new_years" type="spawn" x="96" y="96" width="32" height="32">
    <properties>
-    <property name="phrase" value="conv_event_replace_birthday"/>
-    <property name="duration" value="24h"/>
+    <property name="spawngroup" value="npc_timekeeper_new_years"/>
+    <property name="phrase" value="conv_timekeeper"/>
    </properties>
   </object>
-  <object id="23" name="event_trigger_graduation" type="key" x="32" y="128" width="32" height="32">
+  <object id="8" name="npc_timekeeper_easter" type="spawn" x="96" y="144" width="32" height="32">
    <properties>
-    <property name="phrase" value="conv_event_replace_graduation"/>
-    <property name="duration" value="24h"/>
+    <property name="spawngroup" value="npc_timekeeper_easter"/>
+    <property name="phrase" value="conv_timekeeper"/>
    </properties>
   </object>
-  <object id="24" name="event_trigger_wedding" type="key" x="32" y="160" width="32" height="32">
+  <object id="9" name="npc_timekeeper_fourth_july" type="spawn" x="96" y="192" width="32" height="32">
    <properties>
-    <property name="phrase" value="conv_event_replace_wedding"/>
-    <property name="duration" value="24h"/>
+    <property name="spawngroup" value="npc_timekeeper_fourth_july"/>
+    <property name="phrase" value="conv_timekeeper"/>
    </properties>
   </object>
-  <object id="25" name="event_trigger_funeral" type="key" x="32" y="192" width="32" height="32">
+  <object id="10" name="npc_timekeeper_halloween" type="spawn" x="96" y="240" width="32" height="32">
    <properties>
-    <property name="phrase" value="conv_event_replace_funeral"/>
-    <property name="duration" value="24h"/>
+    <property name="spawngroup" value="npc_timekeeper_halloween"/>
+    <property name="phrase" value="conv_timekeeper"/>
+   </properties>
+  </object>
+  <object id="11" name="npc_timekeeper_thanksgiving" type="spawn" x="96" y="288" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_timekeeper_thanksgiving"/>
+    <property name="phrase" value="conv_timekeeper"/>
+   </properties>
+  </object>
+  <object id="12" name="npc_timekeeper_christmas" type="spawn" x="96" y="336" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_timekeeper_christmas"/>
+    <property name="phrase" value="conv_timekeeper"/>
+   </properties>
+  </object>
+  <object id="13" name="npc_timekeeper" type="spawn" x="64" y="64" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_timekeeper"/>
+    <property name="phrase" value="conv_timekeeper"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="20" name="Spawn_events">
+  <object id="14" name="npc_event_birthday" type="spawn" x="96" y="500" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_event_birthday"/>
+    <property name="phrase" value="conv_event_npc_birthday"/>
+   </properties>
+  </object>
+  <object id="15" name="npc_event_planner_birthday" type="spawn" x="128" y="500" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_event_planner_birthday"/>
+    <property name="phrase" value="conv_event_planner_birthday"/>
+   </properties>
+  </object>
+  <object id="16" name="npc_event_graduation" type="spawn" x="96" y="548" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_event_graduation"/>
+    <property name="phrase" value="conv_event_npc_graduation"/>
+   </properties>
+  </object>
+  <object id="17" name="npc_event_planner_graduation" type="spawn" x="128" y="548" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_event_planner_graduation"/>
+    <property name="phrase" value="conv_event_planner_graduation"/>
+   </properties>
+  </object>
+  <object id="18" name="npc_event_wedding" type="spawn" x="96" y="596" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_event_wedding"/>
+    <property name="phrase" value="conv_event_npc_wedding"/>
+   </properties>
+  </object>
+  <object id="19" name="npc_event_planner_wedding" type="spawn" x="128" y="596" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_event_planner_wedding"/>
+    <property name="phrase" value="conv_event_planner_wedding"/>
+   </properties>
+  </object>
+  <object id="20" name="npc_event_funeral" type="spawn" x="96" y="644" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_event_funeral"/>
+    <property name="phrase" value="conv_event_npc_funeral"/>
+   </properties>
+  </object>
+  <object id="21" name="npc_event_planner_funeral" type="spawn" x="128" y="644" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_event_planner_funeral"/>
+    <property name="phrase" value="conv_event_planner_funeral"/>
    </properties>
   </object>
  </objectgroup>

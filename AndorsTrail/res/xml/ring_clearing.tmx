@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="35">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="16" nextobjectid="21">
  <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_bed_1.png" width="512" height="256"/>
  </tileset>
@@ -221,186 +221,116 @@
   </data>
  </layer>
  <objectgroup id="9" name="Mapevents" visible="0"/>
- <objectgroup id="10" name="Spawn">
-  <object id="1" name="npc_ring_guard" type="spawn" x="96" y="160" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_ring_guard"/>
-    <property name="phrase" value="conv_ring_guard"/>
-   </properties>
-  </object>
-  <object id="2" name="monster_ring_forest_0" type="spawn" x="64" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_0"/>
-   </properties>
-  </object>
-  <object id="3" name="monster_ring_forest_1" type="spawn" x="96" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_1"/>
-   </properties>
-  </object>
-  <object id="4" name="monster_ring_forest_2" type="spawn" x="128" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_2"/>
-   </properties>
-  </object>
-  <object id="5" name="monster_ring_forest_3" type="spawn" x="160" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_3"/>
-   </properties>
-  </object>
-  <object id="6" name="monster_ring_forest_4" type="spawn" x="192" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_4"/>
-   </properties>
-  </object>
-  <object id="7" name="monster_ring_forest_5" type="spawn" x="224" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_5"/>
-   </properties>
-  </object>
-  <object id="8" name="monster_ring_forest_6" type="spawn" x="256" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_6"/>
-   </properties>
-  </object>
-  <object id="9" name="monster_ring_forest_7" type="spawn" x="288" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_7"/>
-   </properties>
-  </object>
-  <object id="10" name="monster_ring_forest_8" type="spawn" x="320" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_8"/>
-   </properties>
-  </object>
-  <object id="11" name="monster_ring_forest_9" type="spawn" x="352" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_9"/>
-   </properties>
-  </object>
-  <object id="12" name="monster_ring_forest_10" type="spawn" x="384" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_10"/>
-   </properties>
-  </object>
-  <object id="13" name="monster_ring_forest_11" type="spawn" x="416" y="200" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_ring_forest_11"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="11" name="Keys" visible="0">
-  <object id="14" name="ring_search" type="key" x="96" y="96" width="32" height="32">
+ <objectgroup id="10" name="Spawn"/>
+ <objectgroup id="11" name="Keys" visible="0"/>
+ <objectgroup id="12" name="Replace" visible="0"/>
+ <objectgroup id="13" name="Keys_ring_clearing" color="#ffdd00">
+  <object id="1" name="ring_search" type="key" x="96" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_sunny_ring_search"/>
    </properties>
   </object>
-  <object id="15" name="sign_north" type="key" x="128" y="64" width="32" height="32">
+  <object id="2" name="sign_north" type="key" x="128" y="64" width="32" height="32">
    <properties>
     <property name="phrase" value="sign"/>
     <property name="text" value="North: Drow Village"/>
    </properties>
   </object>
-  <object id="16" name="sign_south" type="key" x="128" y="128" width="32" height="32">
+  <object id="3" name="sign_south" type="key" x="128" y="128" width="32" height="32">
    <properties>
     <property name="phrase" value="sign"/>
     <property name="text" value="South: Rocket Pad"/>
    </properties>
   </object>
-  <object id="17" name="sign_east" type="key" x="160" y="96" width="32" height="32">
+  <object id="4" name="sign_east" type="key" x="160" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="sign"/>
     <property name="text" value="East: Forest"/>
    </properties>
   </object>
-  <object id="18" name="sign_west" type="key" x="96" y="96" width="32" height="32">
+  <object id="5" name="sign_west" type="key" x="96" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="sign"/>
     <property name="text" value="West: Lake"/>
    </properties>
   </object>
-  <object id="19" name="tent_exit_clear_1" type="key" x="192" y="96" width="32" height="32">
-   <properties>
-    <property name="phrase" value="conv_tent_exit"/>
-    <property name="linkTo" value="tent_exit_2"/>
-   </properties>
-  </object>
-  <object id="20" name="tent_exit_clear_2" type="key" x="224" y="96" width="32" height="32">
-   <properties>
-    <property name="phrase" value="conv_tent_exit"/>
-    <property name="linkTo" value="tent_exit_1"/>
-   </properties>
-  </object>
-  <object id="21" name="rocket_c_red_1" type="key" x="256" y="96" width="32" height="32">
+  <object id="6" name="rocket_c_red_1" type="key" x="256" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_red"/>
    </properties>
   </object>
-  <object id="22" name="rocket_c_red_2" type="key" x="256" y="128" width="32" height="32">
+  <object id="7" name="rocket_c_red_2" type="key" x="256" y="128" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_red"/>
    </properties>
   </object>
-  <object id="23" name="rocket_c_orange_1" type="key" x="288" y="96" width="32" height="32">
+  <object id="8" name="rocket_c_orange_1" type="key" x="288" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_orange"/>
    </properties>
   </object>
-  <object id="24" name="rocket_c_orange_2" type="key" x="288" y="128" width="32" height="32">
+  <object id="9" name="rocket_c_orange_2" type="key" x="288" y="128" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_orange"/>
    </properties>
   </object>
-  <object id="25" name="rocket_c_yellow_1" type="key" x="320" y="96" width="32" height="32">
+  <object id="10" name="rocket_c_yellow_1" type="key" x="320" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_yellow"/>
    </properties>
   </object>
-  <object id="26" name="rocket_c_yellow_2" type="key" x="320" y="128" width="32" height="32">
+  <object id="11" name="rocket_c_yellow_2" type="key" x="320" y="128" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_yellow"/>
    </properties>
   </object>
-  <object id="27" name="rocket_c_green_1" type="key" x="352" y="96" width="32" height="32">
+  <object id="12" name="rocket_c_green_1" type="key" x="352" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_green"/>
    </properties>
   </object>
-  <object id="28" name="rocket_c_green_2" type="key" x="352" y="128" width="32" height="32">
+  <object id="13" name="rocket_c_green_2" type="key" x="352" y="128" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_green"/>
    </properties>
   </object>
-  <object id="29" name="rocket_c_blue_1" type="key" x="384" y="96" width="32" height="32">
+  <object id="14" name="rocket_c_blue_1" type="key" x="384" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_blue"/>
    </properties>
   </object>
-  <object id="30" name="rocket_c_blue_2" type="key" x="384" y="128" width="32" height="32">
+  <object id="15" name="rocket_c_blue_2" type="key" x="384" y="128" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_blue"/>
    </properties>
   </object>
-  <object id="31" name="rocket_c_indigo_1" type="key" x="416" y="96" width="32" height="32">
+  <object id="16" name="rocket_c_indigo_1" type="key" x="416" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_indigo"/>
    </properties>
   </object>
-  <object id="32" name="rocket_c_indigo_2" type="key" x="416" y="128" width="32" height="32">
+  <object id="17" name="rocket_c_indigo_2" type="key" x="416" y="128" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_indigo"/>
    </properties>
   </object>
-  <object id="33" name="rocket_c_violet_1" type="key" x="448" y="96" width="32" height="32">
+  <object id="18" name="rocket_c_violet_1" type="key" x="448" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_violet"/>
    </properties>
   </object>
-  <object id="34" name="rocket_c_violet_2" type="key" x="448" y="128" width="32" height="32">
+  <object id="19" name="rocket_c_violet_2" type="key" x="448" y="128" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_rocket_violet"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="12" name="Replace" visible="0"/>
+ <objectgroup id="14" name="Spawn_ring_clearing" color="#aaddff">
+  <object id="20" name="npc_ring_guard" type="spawn" x="96" y="160" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="npc_ring_guard"/>
+    <property name="phrase" value="conv_ring_guard"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

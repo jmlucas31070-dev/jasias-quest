@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="9">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="17" nextobjectid="8">
  <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_bed_1.png" width="512" height="256"/>
  </tileset>
@@ -220,7 +220,11 @@
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
   </data>
  </layer>
- <objectgroup id="9" name="Mapevents" visible="0">
+ <objectgroup id="9" name="Mapevents" visible="0"/>
+ <objectgroup id="10" name="Spawn"/>
+ <objectgroup id="11" name="Keys" visible="0"/>
+ <objectgroup id="12" name="Replace" visible="0"/>
+ <objectgroup id="13" name="Objects_house_small" color="#aabbcc">
   <object id="1" name="house_console" type="key" x="64" y="64" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_game_console"/>
@@ -239,6 +243,8 @@
     <property name="requiresItem" value="item_deed_small_home"/>
    </properties>
   </object>
+ </objectgroup>
+ <objectgroup id="14" name="Objects_house_mid" color="#88aacc">
   <object id="4" name="house_garden" type="key" x="160" y="64" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_garden"/>
@@ -251,6 +257,8 @@
     <property name="requiresItem" value="item_deed_mid_home"/>
    </properties>
   </object>
+ </objectgroup>
+ <objectgroup id="15" name="Objects_house_large" color="#6688cc">
   <object id="6" name="house_forge1" type="key" x="224" y="64" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_smithing_forge"/>
@@ -264,15 +272,4 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="10" name="Spawn">
-  <object id="8" name="npc_butler" type="spawn" x="64" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_butler"/>
-    <property name="phrase" value="conv_npc_butler"/>
-    <property name="requiresItem" value="item_deed_luxury_home"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="11" name="Keys" visible="0"/>
- <objectgroup id="12" name="Replace" visible="0"/>
 </map>

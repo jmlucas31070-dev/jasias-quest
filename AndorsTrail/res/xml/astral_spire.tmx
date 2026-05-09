@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="10">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="16" nextobjectid="9">
  <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_bed_1.png" width="512" height="256"/>
  </tileset>
@@ -220,58 +220,54 @@
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
   </data>
  </layer>
- <objectgroup id="9" name="Mapevents" visible="0">
+ <objectgroup id="9" name="Mapevents" visible="0"/>
+ <objectgroup id="10" name="Spawn"/>
+ <objectgroup id="11" name="Keys" visible="0"/>
+ <objectgroup id="12" name="Replace" visible="0"/>
+ <objectgroup id="13" name="Objects_astral" color="#8800ff">
   <object id="1" name="astral_logout_scroll" type="key" x="96" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_logout_scroll"/>
     <property name="giveItem" value="item_logout_scroll"/>
    </properties>
   </object>
-  <object id="2" name="astral_exit" type="key" x="128" y="96" width="32" height="32">
-   <properties>
-    <property name="phrase" value="conv_astral_exit"/>
-    <property name="mapChangeToSaved" value="console_room"/>
-   </properties>
-  </object>
-  <object id="3" name="astral_pokemon_ban" type="key" x="32" y="32" width="32" height="32">
+  <object id="2" name="astral_pokemon_ban" type="key" x="32" y="32" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_prevent_overworld"/>
     <property name="trigger" value="onEnter"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="10" name="Spawn">
-  <object id="4" name="monster_beast_meadow_florabit_t1" type="spawn" x="64" y="160" width="32" height="32">
+ <objectgroup id="14" name="Spawn_astral" color="#9900ff">
+  <object id="3" name="monster_beast_meadow_meadow_sprite_t1" type="spawn" x="64" y="160" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_meadow_florabit_t1"/>
+    <property name="spawngroup" value="monster_beast_meadow_meadow_sprite_t1"/>
    </properties>
   </object>
-  <object id="5" name="monster_beast_meadow_grashop_t1" type="spawn" x="96" y="160" width="32" height="32">
+  <object id="4" name="monster_beast_meadow_clover_fox_t1" type="spawn" x="96" y="160" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_meadow_grashop_t1"/>
+    <property name="spawngroup" value="monster_beast_meadow_clover_fox_t1"/>
    </properties>
   </object>
-  <object id="6" name="monster_beast_forest_timbergrub_t1" type="spawn" x="128" y="160" width="32" height="32">
+  <object id="5" name="monster_beast_forest_forest_sprite_t1" type="spawn" x="128" y="160" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_forest_timbergrub_t1"/>
+    <property name="spawngroup" value="monster_beast_forest_forest_sprite_t1"/>
    </properties>
   </object>
-  <object id="7" name="monster_beast_forest_oakling_t1" type="spawn" x="160" y="160" width="32" height="32">
+  <object id="6" name="monster_beast_forest_thornback_boar_t1" type="spawn" x="160" y="160" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_forest_oakling_t1"/>
+    <property name="spawngroup" value="monster_beast_forest_thornback_boar_t1"/>
    </properties>
   </object>
-  <object id="8" name="monster_beast_mountain_peakscale_t1" type="spawn" x="192" y="160" width="32" height="32">
+  <object id="7" name="monster_beast_mountain_rock_sprite_t1" type="spawn" x="192" y="160" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_mountain_peakscale_t1"/>
+    <property name="spawngroup" value="monster_beast_mountain_rock_sprite_t1"/>
    </properties>
   </object>
-  <object id="9" name="monster_beast_mountain_stonecrest_t1" type="spawn" x="224" y="160" width="32" height="32">
+  <object id="8" name="monster_beast_mountain_granite_golem_t1" type="spawn" x="224" y="160" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_mountain_stonecrest_t1"/>
+    <property name="spawngroup" value="monster_beast_mountain_granite_golem_t1"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="11" name="Keys" visible="0"/>
- <objectgroup id="12" name="Replace" visible="0"/>
 </map>

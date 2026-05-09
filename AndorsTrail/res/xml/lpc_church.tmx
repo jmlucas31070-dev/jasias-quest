@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="11">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="16" nextobjectid="10">
  <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_bed_1.png" width="512" height="256"/>
  </tileset>
@@ -220,65 +220,61 @@
    eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
   </data>
  </layer>
- <objectgroup id="9" name="Mapevents" visible="0">
+ <objectgroup id="9" name="Mapevents" visible="0"/>
+ <objectgroup id="10" name="Spawn"/>
+ <objectgroup id="11" name="Keys" visible="0"/>
+ <objectgroup id="12" name="Replace" visible="0"/>
+ <objectgroup id="13" name="Objects_church" color="#ff8800">
   <object id="1" name="church_logout" type="key" x="96" y="96" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_logout_scroll"/>
     <property name="giveItem" value="item_logout_scroll"/>
    </properties>
   </object>
-  <object id="2" name="church_exit" type="key" x="128" y="96" width="32" height="32">
-   <properties>
-    <property name="phrase" value="conv_church_exit"/>
-    <property name="mapChangeToSaved" value="computer_room"/>
-   </properties>
-  </object>
-  <object id="3" name="church_pokemon_ban" type="key" x="32" y="32" width="32" height="32">
+  <object id="2" name="church_pokemon_ban" type="key" x="32" y="32" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_prevent_overworld"/>
     <property name="trigger" value="onEnter"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="10" name="Spawn">
-  <object id="4" name="npc_church_priest" type="spawn" x="64" y="128" width="32" height="32">
+ <objectgroup id="14" name="Spawn_church" color="#ff9900">
+  <object id="3" name="npc_church_priest" type="spawn" x="64" y="128" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_church_priest"/>
     <property name="phrase" value="conv_church_priest"/>
    </properties>
   </object>
-  <object id="5" name="npc_church_monk" type="spawn" x="96" y="128" width="32" height="32">
+  <object id="4" name="npc_church_monk" type="spawn" x="96" y="128" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_church_monk"/>
     <property name="phrase" value="conv_church_monk"/>
    </properties>
   </object>
-  <object id="6" name="monster_lloth_guard_0" type="spawn" x="160" y="200" width="32" height="32">
+  <object id="5" name="monster_lloth_guard_0" type="spawn" x="160" y="200" width="32" height="32">
    <properties>
     <property name="spawngroup" value="monster_lloth_guard_0"/>
    </properties>
   </object>
-  <object id="7" name="monster_lloth_guard_1" type="spawn" x="192" y="200" width="32" height="32">
+  <object id="6" name="monster_lloth_guard_1" type="spawn" x="192" y="200" width="32" height="32">
    <properties>
     <property name="spawngroup" value="monster_lloth_guard_1"/>
    </properties>
   </object>
-  <object id="8" name="monster_lloth_guard_2" type="spawn" x="224" y="200" width="32" height="32">
+  <object id="7" name="monster_lloth_guard_2" type="spawn" x="224" y="200" width="32" height="32">
    <properties>
     <property name="spawngroup" value="monster_lloth_guard_2"/>
    </properties>
   </object>
-  <object id="9" name="monster_lloth_guard_3" type="spawn" x="256" y="200" width="32" height="32">
+  <object id="8" name="monster_lloth_guard_3" type="spawn" x="256" y="200" width="32" height="32">
    <properties>
     <property name="spawngroup" value="monster_lloth_guard_3"/>
    </properties>
   </object>
-  <object id="10" name="monster_lloth_guard_4" type="spawn" x="288" y="200" width="32" height="32">
+  <object id="9" name="monster_lloth_guard_4" type="spawn" x="288" y="200" width="32" height="32">
    <properties>
     <property name="spawngroup" value="monster_lloth_guard_4"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="11" name="Keys" visible="0"/>
- <objectgroup id="12" name="Replace" visible="0"/>
 </map>

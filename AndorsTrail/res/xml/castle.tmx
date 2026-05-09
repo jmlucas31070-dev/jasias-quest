@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="37">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="15" nextobjectid="11">
  <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_bed_1.png" width="512" height="256"/>
  </tileset>
@@ -221,7 +221,10 @@
   </data>
  </layer>
  <objectgroup id="9" name="Mapevents" visible="0"/>
- <objectgroup id="10" name="Spawn">
+ <objectgroup id="10" name="Spawn"/>
+ <objectgroup id="11" name="Keys" visible="0"/>
+ <objectgroup id="12" name="Replace" visible="0"/>
+ <objectgroup id="13" name="Spawn_castle" color="#884400">
   <object id="1" name="npc_ozzy" type="spawn" x="64" y="64" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_ozzy"/>
@@ -240,186 +243,47 @@
     <property name="phrase" value="conv_npc_guard_captain"/>
    </properties>
   </object>
-  <object id="4" name="npc_pickpocket_0" type="spawn" x="160" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="5" name="npc_pickpocket_0" type="spawn" x="192" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="6" name="npc_pickpocket_0" type="spawn" x="224" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="7" name="npc_pickpocket_0" type="spawn" x="256" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="8" name="npc_pickpocket_0" type="spawn" x="288" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="9" name="npc_pickpocket_0" type="spawn" x="320" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="10" name="npc_pickpocket_0" type="spawn" x="352" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="11" name="npc_pickpocket_0" type="spawn" x="384" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="12" name="npc_pickpocket_0" type="spawn" x="416" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="13" name="npc_pickpocket_0" type="spawn" x="448" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="14" name="npc_pickpocket_0" type="spawn" x="480" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="15" name="npc_pickpocket_0" type="spawn" x="512" y="64" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="16" name="npc_head_cook" type="spawn" x="64" y="96" width="32" height="32">
+  <object id="4" name="npc_head_cook" type="spawn" x="64" y="96" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_head_cook"/>
     <property name="phrase" value="conv_npc_head_cook"/>
    </properties>
   </object>
-  <object id="17" name="npc_librarian" type="spawn" x="96" y="96" width="32" height="32">
+  <object id="5" name="npc_librarian" type="spawn" x="96" y="96" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_librarian"/>
     <property name="phrase" value="conv_npc_librarian"/>
    </properties>
   </object>
-  <object id="18" name="npc_gardener" type="spawn" x="128" y="96" width="32" height="32">
+  <object id="6" name="npc_gardener" type="spawn" x="128" y="96" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_gardener"/>
     <property name="phrase" value="conv_npc_gardener"/>
    </properties>
   </object>
-  <object id="19" name="npc_castle_guest_1" type="spawn" x="160" y="96" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_castle_guest_1"/>
-    <property name="phrase" value="conv_npc_castle_guest_1"/>
-   </properties>
-  </object>
-  <object id="20" name="npc_castle_guest_2" type="spawn" x="192" y="96" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_castle_guest_2"/>
-    <property name="phrase" value="conv_npc_castle_guest_2"/>
-   </properties>
-  </object>
-  <object id="21" name="npc_gate_guard" type="spawn" x="224" y="96" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_gate_guard"/>
-    <property name="phrase" value="conv_npc_gate_guard"/>
-   </properties>
-  </object>
-  <object id="22" name="npc_servant_1" type="spawn" x="64" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_servant_1"/>
-    <property name="phrase" value="conv_npc_servant_1"/>
-   </properties>
-  </object>
-  <object id="23" name="npc_servant_2" type="spawn" x="96" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_servant_2"/>
-    <property name="phrase" value="conv_npc_servant_2"/>
-   </properties>
-  </object>
-  <object id="24" name="npc_servant_3" type="spawn" x="128" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_servant_3"/>
-    <property name="phrase" value="conv_npc_servant_3"/>
-   </properties>
-  </object>
-  <object id="25" name="npc_prison_warden" type="spawn" x="160" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_prison_warden"/>
-    <property name="phrase" value="conv_npc_prison_warden"/>
-   </properties>
-  </object>
-  <object id="26" name="npc_pickpocket_0" type="spawn" x="192" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="27" name="npc_pickpocket_0" type="spawn" x="224" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="28" name="npc_pickpocket_0" type="spawn" x="256" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="29" name="npc_pickpocket_0" type="spawn" x="256" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="30" name="npc_pickpocket_0" type="spawn" x="288" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="31" name="npc_pickpocket_0" type="spawn" x="320" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="32" name="npc_pickpocket_0" type="spawn" x="352" y="128" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="npc_pickpocket_0"/>
-   </properties>
-  </object>
-  <object id="33" name="npc_castle_weaponer" type="spawn" x="64" y="160" width="32" height="32">
+  <object id="7" name="npc_castle_weaponer" type="spawn" x="64" y="128" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_castle_weaponer"/>
     <property name="phrase" value="conv_castle_weaponer"/>
    </properties>
   </object>
-  <object id="34" name="npc_castle_armorer" type="spawn" x="96" y="160" width="32" height="32">
+  <object id="8" name="npc_castle_armorer" type="spawn" x="96" y="128" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_castle_armorer"/>
     <property name="phrase" value="conv_castle_armorer"/>
    </properties>
   </object>
-  <object id="35" name="npc_castle_alchemist" type="spawn" x="128" y="160" width="32" height="32">
+  <object id="9" name="npc_castle_alchemist" type="spawn" x="128" y="128" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_castle_alchemist"/>
     <property name="phrase" value="conv_castle_alchemist"/>
    </properties>
   </object>
-  <object id="36" name="npc_timekeeper" type="spawn" x="160" y="160" width="32" height="32">
+  <object id="10" name="npc_timekeeper" type="spawn" x="160" y="128" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_timekeeper"/>
     <property name="phrase" value="conv_timekeeper"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="11" name="Keys" visible="0"/>
- <objectgroup id="12" name="Replace" visible="0"/>
 </map>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="80" height="80" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="182">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="80" height="80" tilewidth="32" tileheight="32" infinite="0" nextlayerid="26" nextobjectid="179">
  <tileset firstgid="1" name="map_bed_1" tilewidth="32" tileheight="32" tilecount="128" columns="16">
   <image source="../drawable/map_bed_1.png" width="512" height="256"/>
  </tileset>
@@ -221,29 +221,32 @@
   </data>
  </layer>
  <objectgroup id="9" name="Mapevents" visible="0"/>
- <objectgroup id="10" name="Spawn">
+ <objectgroup id="10" name="Spawn"/>
+ <objectgroup id="11" name="Keys" visible="0"/>
+ <objectgroup id="12" name="Replace" visible="0"/>
+ <objectgroup id="13" name="Spawn_pokemon_npc" color="#00ffaa">
   <object id="1" name="npc_beast_professor" type="spawn" x="64" y="64" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_beast_professor"/>
-    <property name="phrase" value="conv_beast_professor"/>
+    <property name="phrase" value="conv_npc_beast_professor"/>
    </properties>
   </object>
   <object id="2" name="npc_beast_scholar" type="spawn" x="96" y="64" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_beast_scholar"/>
-    <property name="phrase" value="conv_beast_scholar"/>
+    <property name="phrase" value="conv_npc_beast_scholar"/>
    </properties>
   </object>
   <object id="3" name="npc_beast_elder" type="spawn" x="128" y="64" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_beast_elder"/>
-    <property name="phrase" value="conv_beast_elder"/>
+    <property name="phrase" value="conv_npc_beast_elder"/>
    </properties>
   </object>
   <object id="4" name="npc_beast_breeder" type="spawn" x="160" y="64" width="32" height="32">
    <properties>
     <property name="spawngroup" value="npc_beast_breeder"/>
-    <property name="phrase" value="conv_beast_breeder"/>
+    <property name="phrase" value="conv_npc_beast_breeder"/>
    </properties>
   </object>
   <object id="5" name="monster_grand_champion" type="spawn" x="192" y="64" width="32" height="32">
@@ -954,308 +957,309 @@
     <property name="phrase" value="conv_trainer_shadow_11"/>
    </properties>
   </object>
-  <object id="123" name="monster_beast_meadow_florabit_t1" type="spawn" x="64" y="300" width="32" height="32">
+ </objectgroup>
+ <objectgroup id="14" name="Spawn_pokemon_meadow" color="#00cc88">
+  <object id="123" name="monster_beast_meadow_meadow_sprite_t1" type="spawn" x="64" y="300" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_meadow_florabit_t1"/>
+    <property name="spawngroup" value="monster_beast_meadow_meadow_sprite_t1"/>
    </properties>
   </object>
-  <object id="124" name="monster_beast_meadow_grashop_t1" type="spawn" x="64" y="332" width="32" height="32">
+  <object id="124" name="monster_beast_meadow_clover_fox_t1" type="spawn" x="64" y="332" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_meadow_grashop_t1"/>
+    <property name="spawngroup" value="monster_beast_meadow_clover_fox_t1"/>
    </properties>
   </object>
-  <object id="125" name="monster_beast_meadow_meadowpuff_t1" type="spawn" x="64" y="364" width="32" height="32">
+  <object id="125" name="monster_beast_meadow_sunpetal_deer_t1" type="spawn" x="64" y="364" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_meadow_meadowpuff_t1"/>
+    <property name="spawngroup" value="monster_beast_meadow_sunpetal_deer_t1"/>
    </properties>
   </object>
-  <object id="126" name="monster_beast_meadow_dawnfang_t1" type="spawn" x="64" y="396" width="32" height="32">
+  <object id="126" name="monster_beast_meadow_wind_bunny_t1" type="spawn" x="64" y="396" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_meadow_dawnfang_t1"/>
+    <property name="spawngroup" value="monster_beast_meadow_wind_bunny_t1"/>
    </properties>
   </object>
-  <object id="127" name="monster_beast_meadow_sunsprite_t1" type="spawn" x="64" y="428" width="32" height="32">
+  <object id="127" name="monster_beast_meadow_grass_cub_t1" type="spawn" x="64" y="428" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_meadow_sunsprite_t1"/>
+    <property name="spawngroup" value="monster_beast_meadow_grass_cub_t1"/>
    </properties>
   </object>
-  <object id="128" name="monster_beast_meadow_pollenite_t1" type="spawn" x="64" y="460" width="32" height="32">
+  <object id="128" name="monster_beast_meadow_dew_beetle_t1" type="spawn" x="64" y="460" width="32" height="32">
    <properties>
-    <property name="spawngroup" value="monster_beast_meadow_pollenite_t1"/>
-   </properties>
-  </object>
-  <object id="129" name="monster_beast_forest_timbergrub_t1" type="spawn" x="96" y="300" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_forest_timbergrub_t1"/>
-   </properties>
-  </object>
-  <object id="130" name="monster_beast_forest_oakling_t1" type="spawn" x="96" y="332" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_forest_oakling_t1"/>
-   </properties>
-  </object>
-  <object id="131" name="monster_beast_forest_ferntail_t1" type="spawn" x="96" y="364" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_forest_ferntail_t1"/>
-   </properties>
-  </object>
-  <object id="132" name="monster_beast_forest_mosswhisk_t1" type="spawn" x="96" y="396" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_forest_mosswhisk_t1"/>
-   </properties>
-  </object>
-  <object id="133" name="monster_beast_forest_barkboar_t1" type="spawn" x="96" y="428" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_forest_barkboar_t1"/>
-   </properties>
-  </object>
-  <object id="134" name="monster_beast_forest_leafdrift_t1" type="spawn" x="96" y="460" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_forest_leafdrift_t1"/>
-   </properties>
-  </object>
-  <object id="135" name="monster_beast_mountain_peakscale_t1" type="spawn" x="128" y="300" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_mountain_peakscale_t1"/>
-   </properties>
-  </object>
-  <object id="136" name="monster_beast_mountain_stonecrest_t1" type="spawn" x="128" y="332" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_mountain_stonecrest_t1"/>
-   </properties>
-  </object>
-  <object id="137" name="monster_beast_mountain_granitehorn_t1" type="spawn" x="128" y="364" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_mountain_granitehorn_t1"/>
-   </properties>
-  </object>
-  <object id="138" name="monster_beast_mountain_cliffling_t1" type="spawn" x="128" y="396" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_mountain_cliffling_t1"/>
-   </properties>
-  </object>
-  <object id="139" name="monster_beast_mountain_boulderback_t1" type="spawn" x="128" y="428" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_mountain_boulderback_t1"/>
-   </properties>
-  </object>
-  <object id="140" name="monster_beast_mountain_ridgewing_t1" type="spawn" x="128" y="460" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_mountain_ridgewing_t1"/>
-   </properties>
-  </object>
-  <object id="141" name="monster_beast_ocean_tidecrest_t1" type="spawn" x="160" y="300" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_ocean_tidecrest_t1"/>
-   </properties>
-  </object>
-  <object id="142" name="monster_beast_ocean_waveling_t1" type="spawn" x="160" y="332" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_ocean_waveling_t1"/>
-   </properties>
-  </object>
-  <object id="143" name="monster_beast_ocean_deepfin_t1" type="spawn" x="160" y="364" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_ocean_deepfin_t1"/>
-   </properties>
-  </object>
-  <object id="144" name="monster_beast_ocean_saltmaw_t1" type="spawn" x="160" y="396" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_ocean_saltmaw_t1"/>
-   </properties>
-  </object>
-  <object id="145" name="monster_beast_ocean_coralsnap_t1" type="spawn" x="160" y="428" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_ocean_coralsnap_t1"/>
-   </properties>
-  </object>
-  <object id="146" name="monster_beast_ocean_abyssting_t1" type="spawn" x="160" y="460" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_ocean_abyssting_t1"/>
-   </properties>
-  </object>
-  <object id="147" name="monster_beast_volcanic_emberclaw_t1" type="spawn" x="192" y="300" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_volcanic_emberclaw_t1"/>
-   </properties>
-  </object>
-  <object id="148" name="monster_beast_volcanic_magmabit_t1" type="spawn" x="192" y="332" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_volcanic_magmabit_t1"/>
-   </properties>
-  </object>
-  <object id="149" name="monster_beast_volcanic_ashwing_t1" type="spawn" x="192" y="364" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_volcanic_ashwing_t1"/>
-   </properties>
-  </object>
-  <object id="150" name="monster_beast_volcanic_cindertail_t1" type="spawn" x="192" y="396" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_volcanic_cindertail_t1"/>
-   </properties>
-  </object>
-  <object id="151" name="monster_beast_volcanic_scorchscale_t1" type="spawn" x="192" y="428" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_volcanic_scorchscale_t1"/>
-   </properties>
-  </object>
-  <object id="152" name="monster_beast_volcanic_pyrestone_t1" type="spawn" x="192" y="460" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_volcanic_pyrestone_t1"/>
-   </properties>
-  </object>
-  <object id="153" name="monster_beast_arctic_frostbite_t1" type="spawn" x="224" y="300" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_arctic_frostbite_t1"/>
-   </properties>
-  </object>
-  <object id="154" name="monster_beast_arctic_glacierling_t1" type="spawn" x="224" y="332" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_arctic_glacierling_t1"/>
-   </properties>
-  </object>
-  <object id="155" name="monster_beast_arctic_snowfang_t1" type="spawn" x="224" y="364" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_arctic_snowfang_t1"/>
-   </properties>
-  </object>
-  <object id="156" name="monster_beast_arctic_blizzardmaw_t1" type="spawn" x="224" y="396" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_arctic_blizzardmaw_t1"/>
-   </properties>
-  </object>
-  <object id="157" name="monster_beast_arctic_icewing_t1" type="spawn" x="224" y="428" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_arctic_icewing_t1"/>
-   </properties>
-  </object>
-  <object id="158" name="monster_beast_arctic_coldstone_t1" type="spawn" x="224" y="460" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_arctic_coldstone_t1"/>
-   </properties>
-  </object>
-  <object id="159" name="monster_beast_swamp_murkjaw_t1" type="spawn" x="256" y="300" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_swamp_murkjaw_t1"/>
-   </properties>
-  </object>
-  <object id="160" name="monster_beast_swamp_bogslide_t1" type="spawn" x="256" y="332" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_swamp_bogslide_t1"/>
-   </properties>
-  </object>
-  <object id="161" name="monster_beast_swamp_swampfang_t1" type="spawn" x="256" y="364" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_swamp_swampfang_t1"/>
-   </properties>
-  </object>
-  <object id="162" name="monster_beast_swamp_mirelung_t1" type="spawn" x="256" y="396" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_swamp_mirelung_t1"/>
-   </properties>
-  </object>
-  <object id="163" name="monster_beast_swamp_mosscrawl_t1" type="spawn" x="256" y="428" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_swamp_mosscrawl_t1"/>
-   </properties>
-  </object>
-  <object id="164" name="monster_beast_swamp_marshwhisk_t1" type="spawn" x="256" y="460" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_swamp_marshwhisk_t1"/>
-   </properties>
-  </object>
-  <object id="165" name="monster_beast_sky_cloudrift_t1" type="spawn" x="288" y="300" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_sky_cloudrift_t1"/>
-   </properties>
-  </object>
-  <object id="166" name="monster_beast_sky_galeborn_t1" type="spawn" x="288" y="332" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_sky_galeborn_t1"/>
-   </properties>
-  </object>
-  <object id="167" name="monster_beast_sky_stormwing_t1" type="spawn" x="288" y="364" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_sky_stormwing_t1"/>
-   </properties>
-  </object>
-  <object id="168" name="monster_beast_sky_tempestclaw_t1" type="spawn" x="288" y="396" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_sky_tempestclaw_t1"/>
-   </properties>
-  </object>
-  <object id="169" name="monster_beast_sky_squallbit_t1" type="spawn" x="288" y="428" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_sky_squallbit_t1"/>
-   </properties>
-  </object>
-  <object id="170" name="monster_beast_sky_cycloneback_t1" type="spawn" x="288" y="460" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_sky_cycloneback_t1"/>
-   </properties>
-  </object>
-  <object id="171" name="monster_beast_shadow_duskfang_t1" type="spawn" x="320" y="300" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_shadow_duskfang_t1"/>
-   </properties>
-  </object>
-  <object id="172" name="monster_beast_shadow_voidling_t1" type="spawn" x="320" y="332" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_shadow_voidling_t1"/>
-   </properties>
-  </object>
-  <object id="173" name="monster_beast_shadow_shadowclaw_t1" type="spawn" x="320" y="364" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_shadow_shadowclaw_t1"/>
-   </properties>
-  </object>
-  <object id="174" name="monster_beast_shadow_darkwhisk_t1" type="spawn" x="320" y="396" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_shadow_darkwhisk_t1"/>
-   </properties>
-  </object>
-  <object id="175" name="monster_beast_shadow_umbramaw_t1" type="spawn" x="320" y="428" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_shadow_umbramaw_t1"/>
-   </properties>
-  </object>
-  <object id="176" name="monster_beast_shadow_noctscale_t1" type="spawn" x="320" y="460" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_shadow_noctscale_t1"/>
-   </properties>
-  </object>
-  <object id="177" name="monster_beast_meadow_florabit_t1" type="spawn" x="64" y="500" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_meadow_florabit_t1"/>
-    <property name="requiresCondition" value="gym_meadow_complete"/>
-   </properties>
-  </object>
-  <object id="178" name="monster_beast_forest_timbergrub_t1" type="spawn" x="96" y="500" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_forest_timbergrub_t1"/>
-    <property name="requiresCondition" value="gym_forest_complete"/>
-   </properties>
-  </object>
-  <object id="179" name="monster_beast_mountain_peakscale_t1" type="spawn" x="128" y="500" width="32" height="32">
-   <properties>
-    <property name="spawngroup" value="monster_beast_mountain_peakscale_t1"/>
-    <property name="requiresCondition" value="gym_mountain_complete"/>
+    <property name="spawngroup" value="monster_beast_meadow_dew_beetle_t1"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="11" name="Keys" visible="0">
-  <object id="180" name="pokemon_ban_zone" type="key" x="32" y="32" width="32" height="32">
+ <objectgroup id="15" name="Spawn_pokemon_forest" color="#00cc88">
+  <object id="129" name="monster_beast_forest_forest_sprite_t1" type="spawn" x="96" y="300" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_forest_forest_sprite_t1"/>
+   </properties>
+  </object>
+  <object id="130" name="monster_beast_forest_thornback_boar_t1" type="spawn" x="96" y="332" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_forest_thornback_boar_t1"/>
+   </properties>
+  </object>
+  <object id="131" name="monster_beast_forest_treant_cub_t1" type="spawn" x="96" y="364" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_forest_treant_cub_t1"/>
+   </properties>
+  </object>
+  <object id="132" name="monster_beast_forest_mossy_lizard_t1" type="spawn" x="96" y="396" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_forest_mossy_lizard_t1"/>
+   </properties>
+  </object>
+  <object id="133" name="monster_beast_forest_bark_beetle_t1" type="spawn" x="96" y="428" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_forest_bark_beetle_t1"/>
+   </properties>
+  </object>
+  <object id="134" name="monster_beast_forest_root_snake_t1" type="spawn" x="96" y="460" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_forest_root_snake_t1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="16" name="Spawn_pokemon_mountain" color="#00cc88">
+  <object id="135" name="monster_beast_mountain_rock_sprite_t1" type="spawn" x="128" y="300" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_mountain_rock_sprite_t1"/>
+   </properties>
+  </object>
+  <object id="136" name="monster_beast_mountain_granite_golem_t1" type="spawn" x="128" y="332" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_mountain_granite_golem_t1"/>
+   </properties>
+  </object>
+  <object id="137" name="monster_beast_mountain_ice_gryphon_t1" type="spawn" x="128" y="364" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_mountain_ice_gryphon_t1"/>
+   </properties>
+  </object>
+  <object id="138" name="monster_beast_mountain_mountain_goat_spirit_t1" type="spawn" x="128" y="396" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_mountain_mountain_goat_spirit_t1"/>
+   </properties>
+  </object>
+  <object id="139" name="monster_beast_mountain_storm_eagle_t1" type="spawn" x="128" y="428" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_mountain_storm_eagle_t1"/>
+   </properties>
+  </object>
+  <object id="140" name="monster_beast_mountain_crystal_wolf_t1" type="spawn" x="128" y="460" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_mountain_crystal_wolf_t1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="17" name="Spawn_pokemon_ocean" color="#00cc88">
+  <object id="141" name="monster_beast_ocean_ocean_sprite_t1" type="spawn" x="160" y="300" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_ocean_ocean_sprite_t1"/>
+   </properties>
+  </object>
+  <object id="142" name="monster_beast_ocean_deep_shark_t1" type="spawn" x="160" y="332" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_ocean_deep_shark_t1"/>
+   </properties>
+  </object>
+  <object id="143" name="monster_beast_ocean_coral_crab_t1" type="spawn" x="160" y="364" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_ocean_coral_crab_t1"/>
+   </properties>
+  </object>
+  <object id="144" name="monster_beast_ocean_tide_serpent_t1" type="spawn" x="160" y="396" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_ocean_tide_serpent_t1"/>
+   </properties>
+  </object>
+  <object id="145" name="monster_beast_ocean_pearl_turtle_t1" type="spawn" x="160" y="428" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_ocean_pearl_turtle_t1"/>
+   </properties>
+  </object>
+  <object id="146" name="monster_beast_ocean_storm_whale_t1" type="spawn" x="160" y="460" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_ocean_storm_whale_t1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="18" name="Spawn_pokemon_volcanic" color="#00cc88">
+  <object id="147" name="monster_beast_volcanic_lava_sprite_t1" type="spawn" x="192" y="300" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_volcanic_lava_sprite_t1"/>
+   </properties>
+  </object>
+  <object id="148" name="monster_beast_volcanic_ember_lizard_t1" type="spawn" x="192" y="332" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_volcanic_ember_lizard_t1"/>
+   </properties>
+  </object>
+  <object id="149" name="monster_beast_volcanic_magma_crab_t1" type="spawn" x="192" y="364" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_volcanic_magma_crab_t1"/>
+   </properties>
+  </object>
+  <object id="150" name="monster_beast_volcanic_flame_toad_t1" type="spawn" x="192" y="396" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_volcanic_flame_toad_t1"/>
+   </properties>
+  </object>
+  <object id="151" name="monster_beast_volcanic_ash_wolf_t1" type="spawn" x="192" y="428" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_volcanic_ash_wolf_t1"/>
+   </properties>
+  </object>
+  <object id="152" name="monster_beast_volcanic_cinder_hawk_t1" type="spawn" x="192" y="460" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_volcanic_cinder_hawk_t1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="19" name="Spawn_pokemon_arctic" color="#00cc88">
+  <object id="153" name="monster_beast_arctic_frost_sprite_t1" type="spawn" x="224" y="300" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_arctic_frost_sprite_t1"/>
+   </properties>
+  </object>
+  <object id="154" name="monster_beast_arctic_snow_wolf_t1" type="spawn" x="224" y="332" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_arctic_snow_wolf_t1"/>
+   </properties>
+  </object>
+  <object id="155" name="monster_beast_arctic_ice_bear_t1" type="spawn" x="224" y="364" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_arctic_ice_bear_t1"/>
+   </properties>
+  </object>
+  <object id="156" name="monster_beast_arctic_blizzard_hawk_t1" type="spawn" x="224" y="396" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_arctic_blizzard_hawk_t1"/>
+   </properties>
+  </object>
+  <object id="157" name="monster_beast_arctic_glacier_tortoise_t1" type="spawn" x="224" y="428" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_arctic_glacier_tortoise_t1"/>
+   </properties>
+  </object>
+  <object id="158" name="monster_beast_arctic_tundra_fox_t1" type="spawn" x="224" y="460" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_arctic_tundra_fox_t1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="20" name="Spawn_pokemon_swamp" color="#00cc88">
+  <object id="159" name="monster_beast_swamp_bog_sprite_t1" type="spawn" x="256" y="300" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_swamp_bog_sprite_t1"/>
+   </properties>
+  </object>
+  <object id="160" name="monster_beast_swamp_mire_serpent_t1" type="spawn" x="256" y="332" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_swamp_mire_serpent_t1"/>
+   </properties>
+  </object>
+  <object id="161" name="monster_beast_swamp_mud_toad_t1" type="spawn" x="256" y="364" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_swamp_mud_toad_t1"/>
+   </properties>
+  </object>
+  <object id="162" name="monster_beast_swamp_swamp_fox_t1" type="spawn" x="256" y="396" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_swamp_swamp_fox_t1"/>
+   </properties>
+  </object>
+  <object id="163" name="monster_beast_swamp_marsh_hawk_t1" type="spawn" x="256" y="428" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_swamp_marsh_hawk_t1"/>
+   </properties>
+  </object>
+  <object id="164" name="monster_beast_swamp_peat_bear_t1" type="spawn" x="256" y="460" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_swamp_peat_bear_t1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="21" name="Spawn_pokemon_sky" color="#00cc88">
+  <object id="165" name="monster_beast_sky_cloud_sprite_t1" type="spawn" x="288" y="300" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_sky_cloud_sprite_t1"/>
+   </properties>
+  </object>
+  <object id="166" name="monster_beast_sky_storm_gryphon_t1" type="spawn" x="288" y="332" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_sky_storm_gryphon_t1"/>
+   </properties>
+  </object>
+  <object id="167" name="monster_beast_sky_wind_drake_t1" type="spawn" x="288" y="364" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_sky_wind_drake_t1"/>
+   </properties>
+  </object>
+  <object id="168" name="monster_beast_sky_thunder_hawk_t1" type="spawn" x="288" y="396" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_sky_thunder_hawk_t1"/>
+   </properties>
+  </object>
+  <object id="169" name="monster_beast_sky_gale_fox_t1" type="spawn" x="288" y="428" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_sky_gale_fox_t1"/>
+   </properties>
+  </object>
+  <object id="170" name="monster_beast_sky_cirrus_whale_t1" type="spawn" x="288" y="460" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_sky_cirrus_whale_t1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="22" name="Spawn_pokemon_shadow" color="#00cc88">
+  <object id="171" name="monster_beast_shadow_shadow_sprite_t1" type="spawn" x="320" y="300" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_shadow_shadow_sprite_t1"/>
+   </properties>
+  </object>
+  <object id="172" name="monster_beast_shadow_dark_fox_t1" type="spawn" x="320" y="332" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_shadow_dark_fox_t1"/>
+   </properties>
+  </object>
+  <object id="173" name="monster_beast_shadow_nightmare_cub_t1" type="spawn" x="320" y="364" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_shadow_nightmare_cub_t1"/>
+   </properties>
+  </object>
+  <object id="174" name="monster_beast_shadow_void_serpent_t1" type="spawn" x="320" y="396" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_shadow_void_serpent_t1"/>
+   </properties>
+  </object>
+  <object id="175" name="monster_beast_shadow_eclipse_hawk_t1" type="spawn" x="320" y="428" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_shadow_eclipse_hawk_t1"/>
+   </properties>
+  </object>
+  <object id="176" name="monster_beast_shadow_phantom_bear_t1" type="spawn" x="320" y="460" width="32" height="32">
+   <properties>
+    <property name="spawngroup" value="monster_beast_shadow_phantom_bear_t1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="23" name="Keys_prevent_pokemon" color="#ff0000">
+  <object id="177" name="pokemon_ban_zone" type="key" x="32" y="32" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_prevent_pokemon"/>
     <property name="trigger" value="onEnter"/>
    </properties>
   </object>
-  <object id="181" name="overworld_ban_zone" type="key" x="64" y="32" width="32" height="32">
+ </objectgroup>
+ <objectgroup id="24" name="Keys_prevent_overworld" color="#0000ff">
+  <object id="178" name="overworld_ban_zone" type="key" x="64" y="32" width="32" height="32">
    <properties>
     <property name="phrase" value="conv_prevent_overworld"/>
     <property name="trigger" value="onEnter"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="12" name="Replace" visible="0"/>
 </map>
