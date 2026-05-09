@@ -1,59 +1,150 @@
-{
-  "holidays": [
-    {
-      "id": "new_years",
-      "name": "New Year's",
-      "monthDay": "01-01",
-      "weeksBefore": 1,
-      "weeksAfter": 1,
-      "theme": "festive"
-    },
-    {
-      "id": "easter",
-      "name": "Easter",
-      "monthDay": "04-09",
-      "weeksBefore": 1,
-      "weeksAfter": 1,
-      "theme": "spring"
-    },
-    {
-      "id": "fourth_july",
-      "name": "Fourth of July",
-      "monthDay": "07-04",
-      "weeksBefore": 1,
-      "weeksAfter": 1,
-      "theme": "patriotic"
-    },
-    {
-      "id": "halloween",
-      "name": "Halloween",
-      "monthDay": "10-31",
-      "weeksBefore": 1,
-      "weeksAfter": 1,
-      "theme": "spooky"
-    },
-    {
-      "id": "thanksgiving",
-      "name": "Thanksgiving",
-      "monthDay": "11-23",
-      "weeksBefore": 1,
-      "weeksAfter": 1,
-      "theme": "harvest"
-    },
-    {
-      "id": "christmas",
-      "name": "Christmas",
-      "monthDay": "12-25",
-      "weeksBefore": 1,
-      "weeksAfter": 1,
-      "theme": "winter"
-    }
-  ],
-  "events": [
-    "birthday",
-    "graduation",
-    "wedding",
-    "funeral"
-  ],
-  "note": "Timekeeper NPC handles all holidays. conv_timekeeper branches by date condition."
-}
+[
+  {
+    "id": "ac_holiday_active_new_years",
+    "iconID": "actorconditions_1:93",
+    "name": "@string/actorcondition_ac_holiday_active_new_years",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_quest_done_new_years",
+    "iconID": "actorconditions_1:93",
+    "name": "@string/actorcondition_ac_holiday_quest_done_new_years",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_gift_given_new_years",
+    "iconID": "actorconditions_1:60",
+    "name": "@string/actorcondition_ac_holiday_gift_given_new_years",
+    "category": "spiritual"
+  },
+  {
+    "id": "ac_holiday_active_easter",
+    "iconID": "actorconditions_1:92",
+    "name": "@string/actorcondition_ac_holiday_active_easter",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_quest_done_easter",
+    "iconID": "actorconditions_1:92",
+    "name": "@string/actorcondition_ac_holiday_quest_done_easter",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_gift_given_easter",
+    "iconID": "actorconditions_1:60",
+    "name": "@string/actorcondition_ac_holiday_gift_given_easter",
+    "category": "spiritual"
+  },
+  {
+    "id": "ac_holiday_active_fourth_july",
+    "iconID": "actorconditions_1:70",
+    "name": "@string/actorcondition_ac_holiday_active_fourth_july",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_quest_done_fourth_july",
+    "iconID": "actorconditions_1:70",
+    "name": "@string/actorcondition_ac_holiday_quest_done_fourth_july",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_gift_given_fourth_july",
+    "iconID": "actorconditions_1:60",
+    "name": "@string/actorcondition_ac_holiday_gift_given_fourth_july",
+    "category": "spiritual"
+  },
+  {
+    "id": "ac_holiday_active_halloween",
+    "iconID": "actorconditions_1:60",
+    "name": "@string/actorcondition_ac_holiday_active_halloween",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_quest_done_halloween",
+    "iconID": "actorconditions_1:60",
+    "name": "@string/actorcondition_ac_holiday_quest_done_halloween",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_gift_given_halloween",
+    "iconID": "actorconditions_1:60",
+    "name": "@string/actorcondition_ac_holiday_gift_given_halloween",
+    "category": "spiritual"
+  },
+  {
+    "id": "ac_holiday_active_thanksgiving",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_ac_holiday_active_thanksgiving",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_quest_done_thanksgiving",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_ac_holiday_quest_done_thanksgiving",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_gift_given_thanksgiving",
+    "iconID": "actorconditions_1:60",
+    "name": "@string/actorcondition_ac_holiday_gift_given_thanksgiving",
+    "category": "spiritual"
+  },
+  {
+    "id": "ac_holiday_active_christmas",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_ac_holiday_active_christmas",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_quest_done_christmas",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_ac_holiday_quest_done_christmas",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_holiday_gift_given_christmas",
+    "iconID": "actorconditions_1:60",
+    "name": "@string/actorcondition_ac_holiday_gift_given_christmas",
+    "category": "spiritual"
+  },
+  {
+    "id": "ac_event_active_birthday",
+    "iconID": "actorconditions_1:93",
+    "name": "@string/actorcondition_ac_event_active_birthday",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_event_active_graduation",
+    "iconID": "actorconditions_1:93",
+    "name": "@string/actorcondition_ac_event_active_graduation",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_event_active_wedding",
+    "iconID": "actorconditions_1:93",
+    "name": "@string/actorcondition_ac_event_active_wedding",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "ac_event_active_funeral",
+    "iconID": "actorconditions_1:93",
+    "name": "@string/actorcondition_ac_event_active_funeral",
+    "category": "spiritual",
+    "isPositive": 1
+  }
+]

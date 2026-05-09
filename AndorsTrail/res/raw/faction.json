@@ -1,53 +1,392 @@
-{
-  "races": [
-    "human",
-    "half_elf",
-    "elf",
-    "wood_elf",
-    "drow_elf",
-    "sea_elf",
-    "dwarf",
-    "mountain_dwarf",
-    "dark_dwarf",
-    "goblin",
-    "hobgoblin",
-    "orc",
-    "ogre",
-    "halfling",
-    "gnome"
-  ],
-  "attitudes": {
-    "human": "neutral",
-    "half_elf": "friendly",
-    "elf": "friendly",
-    "wood_elf": "friendly",
-    "drow_elf": "hostile",
-    "sea_elf": "friendly",
-    "dwarf": "neutral",
-    "mountain_dwarf": "neutral",
-    "dark_dwarf": "hostile",
-    "goblin": "hostile",
-    "hobgoblin": "hostile",
-    "orc": "hostile",
-    "ogre": "hostile",
-    "halfling": "friendly",
-    "gnome": "friendly"
+[
+  {
+    "id": "faction_favor_human",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_human",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
   },
-  "rivals": {
-    "human": "orc",
-    "half_elf": "dark_dwarf",
-    "elf": "drow_elf",
-    "wood_elf": "drow_elf",
-    "drow_elf": "wood_elf",
-    "sea_elf": "orc",
-    "dwarf": "goblin",
-    "mountain_dwarf": "dark_dwarf",
-    "dark_dwarf": "mountain_dwarf",
-    "goblin": "dwarf",
-    "hobgoblin": "elf",
-    "orc": "human",
-    "ogre": "halfling",
-    "halfling": "ogre",
-    "gnome": "hobgoblin"
+  {
+    "id": "faction_hostile_human",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_human",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_human",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_human",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_half_elf",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_half_elf",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_half_elf",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_half_elf",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_half_elf",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_half_elf",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_elf",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_elf",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_elf",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_elf",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_elf",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_elf",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_wood_elf",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_wood_elf",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_wood_elf",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_wood_elf",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_wood_elf",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_wood_elf",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_drow_elf",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_drow_elf",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_drow_elf",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_drow_elf",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_drow_elf",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_drow_elf",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_sea_elf",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_sea_elf",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_sea_elf",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_sea_elf",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_sea_elf",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_sea_elf",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_dwarf",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_dwarf",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_dwarf",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_dwarf",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_dwarf",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_dwarf",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_mountain_dwarf",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_mountain_dwarf",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_mountain_dwarf",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_mountain_dwarf",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_mountain_dwarf",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_mountain_dwarf",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_dark_dwarf",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_dark_dwarf",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_dark_dwarf",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_dark_dwarf",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_dark_dwarf",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_dark_dwarf",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_goblin",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_goblin",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_goblin",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_goblin",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_goblin",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_goblin",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_hobgoblin",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_hobgoblin",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_hobgoblin",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_hobgoblin",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_hobgoblin",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_hobgoblin",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_orc",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_orc",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_orc",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_orc",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_orc",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_orc",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_ogre",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_ogre",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_ogre",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_ogre",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_ogre",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_ogre",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_halfling",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_halfling",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_halfling",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_halfling",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_halfling",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_halfling",
+    "category": "spiritual",
+    "isPositive": 1
+  },
+  {
+    "id": "faction_favor_gnome",
+    "iconID": "actorconditions_1:41",
+    "name": "@string/actorcondition_faction_favor_gnome",
+    "category": "spiritual",
+    "isPositive": 1,
+    "abilityEffect": {
+      "increaseBlockChance": 3
+    }
+  },
+  {
+    "id": "faction_hostile_gnome",
+    "iconID": "actorconditions_1:96",
+    "name": "@string/actorcondition_faction_hostile_gnome",
+    "category": "mental",
+    "abilityEffect": {
+      "increaseAttackChance": -5
+    }
+  },
+  {
+    "id": "faction_disguise_gnome",
+    "iconID": "actorconditions_1:44",
+    "name": "@string/actorcondition_faction_disguise_gnome",
+    "category": "spiritual",
+    "isPositive": 1
   }
-}
+]
