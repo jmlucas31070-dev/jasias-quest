@@ -4,6 +4,8 @@ import json
 import os
 import random
 
+from at_format import make_capture_conversation_set, write_json
+
 # ============================================================
 # ASTRAL BEAST RESOURCE GENERATOR
 # ============================================================
@@ -920,28 +922,28 @@ LOADRESOURCES_XML = """<?xml version="1.0" encoding="utf-8"?>
 
     <array name="loadresource_actorconditions">
         <item>@raw/actorconditions_beast</item>
-        <item>@raw/actorconditions_region</item>
+        <item>@raw/actorconditions_regions</item>
     </array>
 
     <array name="loadresource_conversationlists">
         <item>@raw/conversationlist_beast</item>
-        <item>@raw/conversationlist_bellom.json</item>
-        <item>@raw/conversationlist_breeding_bellom.json</item>
-        <item>@raw/conversationlist_breeding_dorado.json</item>
-        <item>@raw/conversationlist_breeding_hesperia.json</item>
-        <item>@raw/conversationlist_breeding_ignora.json</item>
-        <item>@raw/conversationlist_breeding_illystrius.json</item>
-        <item>@raw/conversationlist_breeding_kranix.json</item>
-        <item>@raw/conversationlist_breeding_lucidiah.json</item>
-        <item>@raw/conversationlist_breeding_lumia.json</item>
-        <item>@raw/conversationlist_breeding_sejor.json</item>
-        <item>@raw/conversationlist_dorado.json</item>
-        <item>@raw/conversationlist_hesperia.json</item>
-        <item>@raw/conversationlist_ignora.json</item>
-        <item>@raw/conversationlist_illystrius.json</item>
-        <item>@raw/conversationlist_kranix.json</item>
-        <item>@raw/conversationlist_lucidiah.json</item>
-        <item>@raw/conversationlist_lumia.json</item>
+        <item>@raw/conversationlist_bellom</item>
+        <item>@raw/conversationlist_breeding_bellom</item>
+        <item>@raw/conversationlist_breeding_dorado</item>
+        <item>@raw/conversationlist_breeding_hesperia</item>
+        <item>@raw/conversationlist_breeding_ignora</item>
+        <item>@raw/conversationlist_breeding_illystrius</item>
+        <item>@raw/conversationlist_breeding_kranix</item>
+        <item>@raw/conversationlist_breeding_lucidiah</item>
+        <item>@raw/conversationlist_breeding_lumia</item>
+        <item>@raw/conversationlist_breeding_sejor</item>
+        <item>@raw/conversationlist_dorado</item>
+        <item>@raw/conversationlist_hesperia</item>
+        <item>@raw/conversationlist_ignora</item>
+        <item>@raw/conversationlist_illystrius</item>
+        <item>@raw/conversationlist_kranix</item>
+        <item>@raw/conversationlist_lucidiah</item>
+        <item>@raw/conversationlist_lumia</item>
         <item>@raw/conversationlist_professor.json</item>
         <item>@raw/conversationlist_sejor.json</item>
         <item>@raw/conversationlist_shop.json</item>
@@ -978,11 +980,6 @@ LOADRESOURCES_XML = """<?xml version="1.0" encoding="utf-8"?>
 # ============================================================
 # WRITE JSON
 # ============================================================
-
-def write_json(path, data):
-
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4)
 
 def build_beast_lookup(beast_monsters):
 
@@ -1751,96 +1748,9 @@ def create_capture_conversations(beast_monsters):
 
         capture_rate = get_capture_rate(beast_id)
 
-        conversation_id = f"conversation_{beast_id}"
-
-        fight_id = f"fight_{beast_id}"
-
-        catch_id = f"catch_{beast_id}"
-
-        leave_id = f"leave_{beast_id}"
-
-        conversationlists[beast_id] = [
-            {
-                "id": conversation_id,
-                "text": (
-                    f"A wild {beast_name} stands before you."
-                ),
-                "replies": [
-                    {
-                        "text": "Use Spirit Orb.",
-                        "nextPhraseID": catch_id
-                    },
-                    {
-                        "text": "Fight.",
-                        "nextPhraseID": fight_id
-                    },
-                    {
-                        "text": "Leave.",
-                        "nextPhraseID": "X"
-                    }
-                ]
-            },
-            {
-                "id": catch_id,
-                "text": (
-                    f"You throw a Spirit Orb at {beast_name}."
-                ),
-                "requirements": [
-                    {
-                        "item": "spirit_orb_basic",
-                        "quantity": 1
-                    }
-                ],
-                "chance": capture_rate,
-                "successActions": [
-                    {
-                        "removeItem": "spirit_orb_basic",
-                        "quantity": 1
-                    },
-                    {
-                        "giveItem": item_id,
-                        "quantity": 1
-                    },
-                    {
-                        "destroyMonster": beast_id
-                    },
-                    {
-                        "completeQuestObjectives": [beast_id]
-                    }
-                ],
-                "failureActions": [
-                    {
-                        "removeItem": "spirit_orb_basic",
-                        "quantity": 1
-                    }
-                ],
-                "replies": [
-                    {
-                        "text": (
-                            f"Attempt capture ({capture_rate}% chance)."
-                        ),
-                        "nextPhraseID": f"{catch_id}"
-                    },
-                    {
-                        "text": "Leave.",
-                        "nextPhraseID": "X"
-                    }
-                ]
-            },
-            {
-                "id": fight_id,
-                "text": (
-                    f"You prepare to fight {beast_name}."
-                ),
-                "startCombat": beast_id,
-                "replies": [
-                    {
-                        "text": "Fight!",
-                        "nextPhraseID": "F"
-                    }
-                ]
-            }
-        ]
+        conversationlists[beast_id] = make_capture_conversation_set(
+            beast_id, beast_name, item_id, capture_rate
+        )
 
     return conversationlists
 
@@ -2420,7 +2330,7 @@ def main():
 
     all_shop_conversations = []
     for conversations in convo:
-        all_shop_conversations.append(conversations)
+        all_shop_conversations.extend(conversations)
     write_json(
         os.path.join(
             OUTPUT_CONVERSATIONS,

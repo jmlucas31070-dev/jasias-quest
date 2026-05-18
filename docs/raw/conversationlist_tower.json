@@ -1,0 +1,543 @@
+[
+    {
+        "id": "conv_tower_quote_0",
+        "message": "The towers test every guild in turn.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quote_1",
+        "message": "Magic without wisdom is a candle in the wind.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quote_2",
+        "message": "Clerics heal what mages break.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quote_3",
+        "message": "Druids remember what others forget.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quote_4",
+        "message": "Only the worthy reach my chamber.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_grand_wizard",
+        "message": "Twelve elemental towers stand before my own. Conquer them all.",
+        "replies": [
+            {
+                "text": "Tower quests",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "I have all sigils",
+                "nextPhraseID": "conv_grand_wizard_done",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_mage_red",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_mage_blue",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_mage_green",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_mage_violet",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_cleric_ruby",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_cleric_sapphire",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_cleric_emerald",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_cleric_diamond",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_druid_iron",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_druid_copper",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_druid_gold",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_tower_druid_mithril",
+                        "value": "100"
+                    }
+                ]
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_grand_wizard_towers",
+        "message": "Spiral through each floor; the boss waits on the top level.",
+        "replies": [
+            {
+                "text": "Red Mage Tower",
+                "nextPhraseID": "conv_tower_quest_mage_red"
+            },
+            {
+                "text": "Blue Mage Tower",
+                "nextPhraseID": "conv_tower_quest_mage_blue"
+            },
+            {
+                "text": "Green Mage Tower",
+                "nextPhraseID": "conv_tower_quest_mage_green"
+            },
+            {
+                "text": "Violet Mage Tower",
+                "nextPhraseID": "conv_tower_quest_mage_violet"
+            },
+            {
+                "text": "Ruby Cleric Tower",
+                "nextPhraseID": "conv_tower_quest_cleric_ruby"
+            },
+            {
+                "text": "Sapphire Cleric Tower",
+                "nextPhraseID": "conv_tower_quest_cleric_sapphire"
+            },
+            {
+                "text": "Emerald Cleric Tower",
+                "nextPhraseID": "conv_tower_quest_cleric_emerald"
+            },
+            {
+                "text": "Diamond Cleric Tower",
+                "nextPhraseID": "conv_tower_quest_cleric_diamond"
+            },
+            {
+                "text": "Iron Druid Tower",
+                "nextPhraseID": "conv_tower_quest_druid_iron"
+            },
+            {
+                "text": "Copper Druid Tower",
+                "nextPhraseID": "conv_tower_quest_druid_copper"
+            },
+            {
+                "text": "Gold Druid Tower",
+                "nextPhraseID": "conv_tower_quest_druid_gold"
+            },
+            {
+                "text": "Mithril Druid Tower",
+                "nextPhraseID": "conv_tower_quest_druid_mithril"
+            },
+            {
+                "text": "Back",
+                "nextPhraseID": "conv_grand_wizard"
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_mage_red",
+        "message": "Enter tower_mage_red_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_mage_red",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_mage_red",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_mage_blue",
+        "message": "Enter tower_mage_blue_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_mage_blue",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_mage_blue",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_mage_green",
+        "message": "Enter tower_mage_green_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_mage_green",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_mage_green",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_mage_violet",
+        "message": "Enter tower_mage_violet_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_mage_violet",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_mage_violet",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_cleric_ruby",
+        "message": "Enter tower_cleric_ruby_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_cleric_ruby",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_cleric_ruby",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_cleric_sapphire",
+        "message": "Enter tower_cleric_sapphire_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_cleric_sapphire",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_cleric_sapphire",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_cleric_emerald",
+        "message": "Enter tower_cleric_emerald_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_cleric_emerald",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_cleric_emerald",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_cleric_diamond",
+        "message": "Enter tower_cleric_diamond_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_cleric_diamond",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_cleric_diamond",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_druid_iron",
+        "message": "Enter tower_druid_iron_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_druid_iron",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_druid_iron",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_druid_copper",
+        "message": "Enter tower_druid_copper_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_druid_copper",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_druid_copper",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_druid_gold",
+        "message": "Enter tower_druid_gold_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_druid_gold",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_druid_gold",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_tower_quest_druid_mithril",
+        "message": "Enter tower_druid_mithril_l1_sw from the city.",
+        "replies": [
+            {
+                "text": "Understood",
+                "nextPhraseID": "conv_grand_wizard_towers"
+            },
+            {
+                "text": "Turn in sigil",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_tower_druid_mithril",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_druid_mithril",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_grand_wizard_done",
+        "message": "You have proven yourself. Take my blessing.",
+        "replies": [
+            {
+                "text": "Thank you",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_tower_grand",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    }
+]

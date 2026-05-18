@@ -152,6 +152,13 @@ def main() -> int:
     write_loadresources(merged, lr_path)
 
     print("")
+    print(" jasia: validating JSON output...")
+    import validate_content
+
+    if validate_content.main() != 0:
+        return 1
+
+    print("")
     print("=" * 52)
     print(" jasia: all generators finished")
     print("=" * 52)

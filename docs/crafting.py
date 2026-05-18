@@ -13,6 +13,8 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 from copy import deepcopy
 
+from at_format import make_conv, req_actor_condition, req_inv_remove, r_give_item, write_json
+
 # ============================================================
 # PATHS
 # ============================================================
@@ -60,10 +62,6 @@ def sid(text):
         .replace("-", "_")
         .replace("'", "")
     )
-
-def write_json(path, data):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4)
 
 def create_basic_item(iid, name, cost, category, desc):
     return {
@@ -1895,7 +1893,7 @@ for item_name, slot in CLOTHING_ITEMS:
 
 ITEMCATEGORIES["jewelry"] = [
     {"id": "jewelry_items", "name": "Jewelry",
-     "actionType": "equip", "size": "small"}
+     "actionType": "equip", "size": "large"}
 ]
 
 ITEMLISTS["jewelry"] = []
@@ -2706,7 +2704,7 @@ for shop_type in SHOPKEEPER_ITEMS.keys():
     for item in SHOPKEEPER_ITEMS[shop_type]:
         SHOPKEEPER_DROPLISTS[shop_type].append({
             "itemID": item["id"],
-            "chance": 100,
+            "chance": "100",
             "quantity": {"min": 1, "max": 3}
         })
 
@@ -2809,7 +2807,7 @@ for src_id, shop_data in _UNUSED_SHOPKEEPERS.items():
     npc_id  = f"npc_{src_id}"
     conv_id = f"conv_{src_id}_greeting"
     dl_id   = f"dl_{src_id}"
-    shop_items = [{"itemID": sid(i), "chance": 100, "quantity": {"min": 1, "max": 2}}
+    shop_items = [{"itemID": sid(i), "chance": "100", "quantity": {"min": 1, "max": 2}}
                   for i in shop_data["items"]]
     UNUSED_NPC_LIST.append({
         "id": npc_id,
@@ -2869,20 +2867,17 @@ def _craft_entry(conv_id, text, skill_or_guild_cond, input_items, output_item_id
     Build a conversation entry for a crafting interaction.
     input_items: list of (itemID_str, quantity_int)
     """
-    entry = {
-        "id": conv_id,
-        "text": text,
-        "rewards": {
-            "items": [{"itemID": output_item_id, "quantity": qty}]
-        }
-    }
+    requires = [req_inv_remove(iid, q) for iid, q in input_items]
     if skill_or_guild_cond:
-        entry["actorConditions"] = [{"condition": skill_or_guild_cond, "magnitude": 1}]
-    if input_items:
-        entry["inventoryItems"] = [
-            {"itemID": iid, "quantity": q} for iid, q in input_items
-        ]
-    return entry
+        requires.append(req_actor_condition(skill_or_guild_cond))
+    reply = {
+        "text": "Craft",
+        "nextPhraseID": "X",
+        "rewards": [r_give_item(output_item_id, qty)],
+    }
+    if requires:
+        reply["requires"] = requires
+    return make_conv(conv_id, text, [reply])
 
 def _ing_list_to_input(ingredients):
     return [(sid(ing), 1) for ing in ingredients]

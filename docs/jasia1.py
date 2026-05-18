@@ -9,6 +9,8 @@ from copy import deepcopy
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
+from at_format import write_json
+
 OUTPUT_RAW = "./raw"
 OUTPUT_VALUES = "./values"
 OUTPUT_XML = Path("./xml")
@@ -292,10 +294,6 @@ def random_drow_damage():
     low = random.randint(5, 25)
     high = low + random.randint(5, 30)
     return low, high
-
-def write_json(path, data):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4)
 
 def download_template():
     if TMX_TEMPLATE.exists():
@@ -1149,7 +1147,10 @@ for i in range(25):
         "category": "potion",
         "description": "A potion brewed in the royal castle laboratory.",
         "useEffect": {
-            "increaseCurrentHP": random.randint(20, 120)
+            "increaseCurrentHP": {
+                "min": 1,
+                "max": random.randint(20, 120)
+            }
         }
     })
 

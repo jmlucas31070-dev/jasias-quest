@@ -11,6 +11,8 @@ from copy import deepcopy
 from pathlib import Path
 from xml.dom import minidom
 
+from at_format import write_json
+
 # ============================================================
 # PATHS
 # ============================================================
@@ -128,7 +130,7 @@ def make_pp_droplist(dl_id, item_id, chance, qty_min=1, qty_max=1):
         "id": dl_id,
         "items": [{
             "itemID": item_id,
-            "chance": str(chance),
+            "chance": f"{chance}",
             "quantity": {"min": qty_min, "max": qty_max},
         }],
     }
@@ -337,7 +339,7 @@ def build_faction_item_steal_conversations(faction, misc_item_ids):
             "id": f"droplist_pp_item_reward_{faction}_{level}",
             "items": [{
                 "itemID": iid,
-                "chance": str(max(5, 100 // len(reward_items))),
+                "chance": f"{str(max(5, 100 // len(reward_items)))}",
                 "quantity": {"min": 1, "max": 1},
             } for iid in reward_items],
         })
@@ -848,11 +850,6 @@ RACE_ITEMS = {
 # ============================================================
 
 
-def write_json(path, data):
-    path = Path(path)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4)
-
 
 
 def pretty_xml(element):
@@ -923,7 +920,7 @@ def make_drop_item(item_id, chance=100, min_qty=1, max_qty=1):
             "min": min_qty,
             "max": max_qty
         },
-        "chance": str(chance)
+        "chance": f"{chance}"
     }
 
 
