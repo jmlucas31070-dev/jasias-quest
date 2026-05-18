@@ -1,0 +1,1909 @@
+[
+    {
+        "id": "conv_elf_weaponer",
+        "message": "The finest weapons of the Elf are forged here.",
+        "replies": [
+            {
+                "text": "Show me your weapons.",
+                "nextPhraseID": "S"
+            },
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_armorer",
+        "message": "Our armor protects the warriors of the Elf.",
+        "replies": [
+            {
+                "text": "Show me your armor.",
+                "nextPhraseID": "S"
+            },
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_shopkeeper",
+        "message": "Travelers are always welcome among the Elf. I also collect many curios and cultural items from our people.",
+        "replies": [
+            {
+                "text": "Show me your goods.",
+                "nextPhraseID": "S"
+            },
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_leader",
+        "message": "The Goblin grandmaster stole our sacred sigil. Bring it back and you shall earn our favor.",
+        "replies": [
+            {
+                "text": "I will retrieve the sigil.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_elf_retrieve_sigil",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "text": "I have the sigil.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "elf_grandmaster_token",
+                        "value": 1
+                    },
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "elf_grandmaster_token",
+                        "value": 1
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_elf_retrieve_sigil",
+                        "value": 100
+                    }
+                ]
+            },
+            {
+                "text": "Farewell.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_1",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_2",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_3",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_4",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_5",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_6",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_7",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_8",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_9",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_10",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_11",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_12",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_13",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_14",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_15",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_16",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_17",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_18",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_19",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_elf_npc_20",
+        "message": "The warrior eyes you warily. What do you want?",
+        "replies": [
+            {
+                "text": "Battle",
+                "nextPhraseID": "F"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            },
+            {
+                "text": "Pickpocket",
+                "nextPhraseID": "conv_pp_gold_route",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_1"
+                    }
+                ]
+            },
+            {
+                "text": "Steal faction item",
+                "nextPhraseID": "conv_pp_item_route_elf",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_roll_elf_7",
+        "message": "You try to lift something valuable without being seen...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_result_elf_7"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_result_elf_7",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_success_elf_7",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "50"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_success_elf_7",
+        "message": "You slip away with a Elf curio.",
+        "replies": [
+            {
+                "text": "Excellent.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_item_reward_elf_7"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_roll_elf_8",
+        "message": "You try to lift something valuable without being seen...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_result_elf_8"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_result_elf_8",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_success_elf_8",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "60"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_success_elf_8",
+        "message": "You slip away with a Elf curio.",
+        "replies": [
+            {
+                "text": "Excellent.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_item_reward_elf_8"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_roll_elf_9",
+        "message": "You try to lift something valuable without being seen...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_result_elf_9"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_result_elf_9",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_success_elf_9",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "70"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_success_elf_9",
+        "message": "You slip away with a Elf curio.",
+        "replies": [
+            {
+                "text": "Excellent.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_item_reward_elf_9"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_roll_elf_10",
+        "message": "You try to lift something valuable without being seen...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_result_elf_10"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_result_elf_10",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_success_elf_10",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "80"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_success_elf_10",
+        "message": "You slip away with a Elf curio.",
+        "replies": [
+            {
+                "text": "Excellent.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_item_reward_elf_10"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_roll_elf_11",
+        "message": "You try to lift something valuable without being seen...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_result_elf_11"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_result_elf_11",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_success_elf_11",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "90"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_success_elf_11",
+        "message": "You slip away with a Elf curio.",
+        "replies": [
+            {
+                "text": "Excellent.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_item_reward_elf_11"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_roll_elf_12",
+        "message": "You try to lift something valuable without being seen...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_result_elf_12"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_result_elf_12",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_success_elf_12",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "100"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_success_elf_12",
+        "message": "You slip away with a Elf curio.",
+        "replies": [
+            {
+                "text": "Excellent.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_item_reward_elf_12"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_1",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_1"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_1",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_1",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "40"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_1",
+        "message": "You pocket some coins (1\u201320 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_1"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_2",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_2"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_2",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_2",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "45"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_2",
+        "message": "You pocket some coins (1\u201330 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_2"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_3",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_3"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_3",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_3",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "50"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_3",
+        "message": "You pocket some coins (1\u201340 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_3"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_4",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_4"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_4",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_4",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "55"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_4",
+        "message": "You pocket some coins (1\u201350 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_4"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_5",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_5"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_5",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_5",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "60"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_5",
+        "message": "You pocket some coins (1\u201360 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_5"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_6",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_6"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_6",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_6",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "65"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_6",
+        "message": "You pocket some coins (1\u201370 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_6"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_7",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_7"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_7",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_7",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "70"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_7",
+        "message": "You pocket some coins (1\u201380 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_7"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_8",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_8"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_8",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_8",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "75"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_8",
+        "message": "You pocket some coins (1\u201390 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_8"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_9",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_9"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_9",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_9",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "80"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_9",
+        "message": "You pocket some coins (1\u2013100 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_9"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_10",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_10"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_10",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_10",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "85"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_10",
+        "message": "You pocket some coins (1\u2013110 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_10"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_11",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_11"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_11",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_11",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "90"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_11",
+        "message": "You pocket some coins (1\u2013120 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_11"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_roll_12",
+        "message": "You slip a hand toward their belongings...",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_result_12"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_result_12",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_success_12",
+                "requires": [
+                    {
+                        "requireType": "random",
+                        "requireID": "95"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_caught"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_success_12",
+        "message": "You pocket some coins (1\u2013130 gold).",
+        "replies": [
+            {
+                "text": "Nice.",
+                "nextPhraseID": "X"
+            }
+        ],
+        "rewards": [
+            {
+                "rewardType": "dropList",
+                "rewardID": "droplist_pp_gold_reward_12"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_caught",
+        "message": "You've been caught! Guards drag you to the jail.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "mapchange",
+                        "rewardID": "entry",
+                        "mapName": "jail"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_gold_route",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_12",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_12"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_11",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_11"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_10",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_10"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_9",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_9"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_8",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_8"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_7",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_6",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_6"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_5",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_5"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_4",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_4"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_3",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_3"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_2",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_2"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_gold_roll_1"
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_route_human",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_human_12",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_12"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_human_11",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_11"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_human_10",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_10"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_human_9",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_9"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_human_8",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_8"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_human_7",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_route_half_elf",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_half_elf_12",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_12"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_half_elf_11",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_11"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_half_elf_10",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_10"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_half_elf_9",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_9"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_half_elf_8",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_8"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_half_elf_7",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_pp_item_route_elf",
+        "replies": [
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_elf_12",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_12"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_elf_11",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_11"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_elf_10",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_10"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_elf_9",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_9"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_elf_8",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_8"
+                    }
+                ]
+            },
+            {
+                "text": "N",
+                "nextPhraseID": "conv_pp_item_roll_elf_7",
+                "requires": [
+                    {
+                        "requireType": "hasActorCondition",
+                        "requireID": "thief_level_7"
+                    }
+                ]
+            }
+        ]
+    }
+]

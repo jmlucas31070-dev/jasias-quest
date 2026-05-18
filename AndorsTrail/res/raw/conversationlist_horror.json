@@ -1,0 +1,446 @@
+[
+    {
+        "id": "conv_priest",
+        "message": "The haunted places grow restless. Will you cleanse them?",
+        "replies": [
+            {
+                "text": "Tell me of the haunts",
+                "nextPhraseID": "conv_priest_list"
+            },
+            {
+                "text": "I have a trophy",
+                "nextPhraseID": "conv_priest_turnin"
+            },
+            {
+                "text": "Leave",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_list",
+        "message": "Each haunt is a four-chamber labyrinth. Defeat its lord and bring me proof.",
+        "replies": [
+            {
+                "text": "Haunted House",
+                "nextPhraseID": "conv_priest_haunted_house"
+            },
+            {
+                "text": "Haunted Mansion",
+                "nextPhraseID": "conv_priest_haunted_mansion"
+            },
+            {
+                "text": "Haunted Asylum",
+                "nextPhraseID": "conv_priest_haunted_asylum"
+            },
+            {
+                "text": "Haunted Prison",
+                "nextPhraseID": "conv_priest_haunted_prison"
+            },
+            {
+                "text": "Haunted Crypt",
+                "nextPhraseID": "conv_priest_haunted_crypt"
+            },
+            {
+                "text": "Haunted Mausoleum",
+                "nextPhraseID": "conv_priest_haunted_mausoleum"
+            },
+            {
+                "text": "Haunted Graveyard",
+                "nextPhraseID": "conv_priest_haunted_graveyard"
+            },
+            {
+                "text": "Back",
+                "nextPhraseID": "conv_priest"
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_haunted_house",
+        "message": "Enter the haunted house from the south-west chamber.",
+        "replies": [
+            {
+                "text": "Accept quest",
+                "nextPhraseID": "conv_priest",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_house",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Back",
+                "nextPhraseID": "conv_priest_list"
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_turnin_haunted_house",
+        "message": "You bear the trophy of haunted house.",
+        "replies": [
+            {
+                "text": "Turn it in",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_haunted_house",
+                        "value": 1
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_haunted_haunted_house",
+                        "value": "50"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_house",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_haunted_mansion",
+        "message": "Enter the haunted mansion from the south-west chamber.",
+        "replies": [
+            {
+                "text": "Accept quest",
+                "nextPhraseID": "conv_priest",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_mansion",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Back",
+                "nextPhraseID": "conv_priest_list"
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_turnin_haunted_mansion",
+        "message": "You bear the trophy of haunted mansion.",
+        "replies": [
+            {
+                "text": "Turn it in",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_haunted_mansion",
+                        "value": 1
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_haunted_haunted_mansion",
+                        "value": "50"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_mansion",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_haunted_asylum",
+        "message": "Enter the haunted asylum from the south-west chamber.",
+        "replies": [
+            {
+                "text": "Accept quest",
+                "nextPhraseID": "conv_priest",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_asylum",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Back",
+                "nextPhraseID": "conv_priest_list"
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_turnin_haunted_asylum",
+        "message": "You bear the trophy of haunted asylum.",
+        "replies": [
+            {
+                "text": "Turn it in",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_haunted_asylum",
+                        "value": 1
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_haunted_haunted_asylum",
+                        "value": "50"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_asylum",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_haunted_prison",
+        "message": "Enter the haunted prison from the south-west chamber.",
+        "replies": [
+            {
+                "text": "Accept quest",
+                "nextPhraseID": "conv_priest",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_prison",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Back",
+                "nextPhraseID": "conv_priest_list"
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_turnin_haunted_prison",
+        "message": "You bear the trophy of haunted prison.",
+        "replies": [
+            {
+                "text": "Turn it in",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_haunted_prison",
+                        "value": 1
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_haunted_haunted_prison",
+                        "value": "50"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_prison",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_haunted_crypt",
+        "message": "Enter the haunted crypt from the south-west chamber.",
+        "replies": [
+            {
+                "text": "Accept quest",
+                "nextPhraseID": "conv_priest",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_crypt",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Back",
+                "nextPhraseID": "conv_priest_list"
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_turnin_haunted_crypt",
+        "message": "You bear the trophy of haunted crypt.",
+        "replies": [
+            {
+                "text": "Turn it in",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_haunted_crypt",
+                        "value": 1
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_haunted_haunted_crypt",
+                        "value": "50"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_crypt",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_haunted_mausoleum",
+        "message": "Enter the haunted mausoleum from the south-west chamber.",
+        "replies": [
+            {
+                "text": "Accept quest",
+                "nextPhraseID": "conv_priest",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_mausoleum",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Back",
+                "nextPhraseID": "conv_priest_list"
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_turnin_haunted_mausoleum",
+        "message": "You bear the trophy of haunted mausoleum.",
+        "replies": [
+            {
+                "text": "Turn it in",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_haunted_mausoleum",
+                        "value": 1
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_haunted_haunted_mausoleum",
+                        "value": "50"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_mausoleum",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_haunted_graveyard",
+        "message": "Enter the haunted graveyard from the south-west chamber.",
+        "replies": [
+            {
+                "text": "Accept quest",
+                "nextPhraseID": "conv_priest",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_graveyard",
+                        "value": 50
+                    }
+                ]
+            },
+            {
+                "text": "Back",
+                "nextPhraseID": "conv_priest_list"
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_turnin_haunted_graveyard",
+        "message": "You bear the trophy of haunted graveyard.",
+        "replies": [
+            {
+                "text": "Turn it in",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "quest_item_haunted_graveyard",
+                        "value": 1
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_haunted_haunted_graveyard",
+                        "value": "50"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_haunted_haunted_graveyard",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_priest_turnin",
+        "message": "Which trophy do you offer?",
+        "replies": [
+            {
+                "text": "Haunted House",
+                "nextPhraseID": "conv_priest_turnin_haunted_house"
+            },
+            {
+                "text": "Haunted Mansion",
+                "nextPhraseID": "conv_priest_turnin_haunted_mansion"
+            },
+            {
+                "text": "Haunted Asylum",
+                "nextPhraseID": "conv_priest_turnin_haunted_asylum"
+            },
+            {
+                "text": "Haunted Prison",
+                "nextPhraseID": "conv_priest_turnin_haunted_prison"
+            },
+            {
+                "text": "Haunted Crypt",
+                "nextPhraseID": "conv_priest_turnin_haunted_crypt"
+            },
+            {
+                "text": "Haunted Mausoleum",
+                "nextPhraseID": "conv_priest_turnin_haunted_mausoleum"
+            },
+            {
+                "text": "Haunted Graveyard",
+                "nextPhraseID": "conv_priest_turnin_haunted_graveyard"
+            },
+            {
+                "text": "Back",
+                "nextPhraseID": "conv_priest"
+            }
+        ]
+    }
+]

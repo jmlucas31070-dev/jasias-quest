@@ -1,0 +1,623 @@
+[
+    {
+        "ID": "conversation_lumia_league_intro",
+        "text": "Welcome challenger. Collect all 9 gym badges and defeat the Lumia Grandmaster.",
+        "replies": [
+            {
+                "text": "I will conquer the league.",
+                "nextPhraseID": "lumia_league_check",
+                "startQuest": "quest_lumia_league"
+            },
+            {
+                "text": "Maybe later.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "lumia_league_check",
+        "text": "Show me proof of your victories.",
+        "replies": [
+            {
+                "text": "Present all gym badges and grandmaster ribbon.",
+                "nextPhraseID": "lumia_league_complete",
+                "requiresItems": [
+                    {
+                        "itemID": "lumia_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "lumia_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ]
+            },
+            {
+                "text": "I am still working on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "conversation_lumia_league_complete",
+        "text": "You have conquered the Lumia League.",
+        "replies": [
+            {
+                "text": "Claim regional mastery.",
+                "nextPhraseID": "X",
+                "consumeItems": [
+                    {
+                        "itemID": "lumia_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "lumia_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ],
+                "rewardConditions": [
+                    {
+                        "conditionID": "beast_region_lumia",
+                        "magnitude": 1,
+                        "duration": -1
+                    }
+                ],
+                "completeQuestObjectives": [
+                    "lumia_league_progress"
+                ]
+            }
+        ]
+    },
+    {
+        "ID": "conversation_kranix_league_intro",
+        "text": "Welcome challenger. Collect all 9 gym badges and defeat the Kranix Grandmaster.",
+        "replies": [
+            {
+                "text": "I will conquer the league.",
+                "nextPhraseID": "kranix_league_check",
+                "startQuest": "quest_kranix_league"
+            },
+            {
+                "text": "Maybe later.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "kranix_league_check",
+        "text": "Show me proof of your victories.",
+        "replies": [
+            {
+                "text": "Present all gym badges and grandmaster ribbon.",
+                "nextPhraseID": "kranix_league_complete",
+                "requiresItems": [
+                    {
+                        "itemID": "kranix_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "kranix_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ]
+            },
+            {
+                "text": "I am still working on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "conversation_kranix_league_complete",
+        "text": "You have conquered the Kranix League.",
+        "replies": [
+            {
+                "text": "Claim regional mastery.",
+                "nextPhraseID": "X",
+                "consumeItems": [
+                    {
+                        "itemID": "kranix_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "kranix_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ],
+                "rewardConditions": [
+                    {
+                        "conditionID": "beast_region_kranix",
+                        "magnitude": 1,
+                        "duration": -1
+                    }
+                ],
+                "completeQuestObjectives": [
+                    "kranix_league_progress"
+                ]
+            }
+        ]
+    },
+    {
+        "ID": "conversation_ignora_league_intro",
+        "text": "Welcome challenger. Collect all 9 gym badges and defeat the Ignora Grandmaster.",
+        "replies": [
+            {
+                "text": "I will conquer the league.",
+                "nextPhraseID": "ignora_league_check",
+                "startQuest": "quest_ignora_league"
+            },
+            {
+                "text": "Maybe later.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "ignora_league_check",
+        "text": "Show me proof of your victories.",
+        "replies": [
+            {
+                "text": "Present all gym badges and grandmaster ribbon.",
+                "nextPhraseID": "ignora_league_complete",
+                "requiresItems": [
+                    {
+                        "itemID": "ignora_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "ignora_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ]
+            },
+            {
+                "text": "I am still working on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "conversation_ignora_league_complete",
+        "text": "You have conquered the Ignora League.",
+        "replies": [
+            {
+                "text": "Claim regional mastery.",
+                "nextPhraseID": "X",
+                "consumeItems": [
+                    {
+                        "itemID": "ignora_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "ignora_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ],
+                "rewardConditions": [
+                    {
+                        "conditionID": "beast_region_ignora",
+                        "magnitude": 1,
+                        "duration": -1
+                    }
+                ],
+                "completeQuestObjectives": [
+                    "ignora_league_progress"
+                ]
+            }
+        ]
+    },
+    {
+        "ID": "conversation_hesperia_league_intro",
+        "text": "Welcome challenger. Collect all 9 gym badges and defeat the Hesperia Grandmaster.",
+        "replies": [
+            {
+                "text": "I will conquer the league.",
+                "nextPhraseID": "hesperia_league_check",
+                "startQuest": "quest_hesperia_league"
+            },
+            {
+                "text": "Maybe later.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "hesperia_league_check",
+        "text": "Show me proof of your victories.",
+        "replies": [
+            {
+                "text": "Present all gym badges and grandmaster ribbon.",
+                "nextPhraseID": "hesperia_league_complete",
+                "requiresItems": [
+                    {
+                        "itemID": "hesperia_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "hesperia_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ]
+            },
+            {
+                "text": "I am still working on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "conversation_hesperia_league_complete",
+        "text": "You have conquered the Hesperia League.",
+        "replies": [
+            {
+                "text": "Claim regional mastery.",
+                "nextPhraseID": "X",
+                "consumeItems": [
+                    {
+                        "itemID": "hesperia_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "hesperia_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ],
+                "rewardConditions": [
+                    {
+                        "conditionID": "beast_region_hesperia",
+                        "magnitude": 1,
+                        "duration": -1
+                    }
+                ],
+                "completeQuestObjectives": [
+                    "hesperia_league_progress"
+                ]
+            }
+        ]
+    },
+    {
+        "ID": "conversation_lucidiah_league_intro",
+        "text": "Welcome challenger. Collect all 9 gym badges and defeat the Lucidiah Grandmaster.",
+        "replies": [
+            {
+                "text": "I will conquer the league.",
+                "nextPhraseID": "lucidiah_league_check",
+                "startQuest": "quest_lucidiah_league"
+            },
+            {
+                "text": "Maybe later.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "lucidiah_league_check",
+        "text": "Show me proof of your victories.",
+        "replies": [
+            {
+                "text": "Present all gym badges and grandmaster ribbon.",
+                "nextPhraseID": "lucidiah_league_complete",
+                "requiresItems": [
+                    {
+                        "itemID": "lucidiah_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "lucidiah_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ]
+            },
+            {
+                "text": "I am still working on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "conversation_lucidiah_league_complete",
+        "text": "You have conquered the Lucidiah League.",
+        "replies": [
+            {
+                "text": "Claim regional mastery.",
+                "nextPhraseID": "X",
+                "consumeItems": [
+                    {
+                        "itemID": "lucidiah_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "lucidiah_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ],
+                "rewardConditions": [
+                    {
+                        "conditionID": "beast_region_lucidiah",
+                        "magnitude": 1,
+                        "duration": -1
+                    }
+                ],
+                "completeQuestObjectives": [
+                    "lucidiah_league_progress"
+                ]
+            }
+        ]
+    },
+    {
+        "ID": "conversation_illystrius_league_intro",
+        "text": "Welcome challenger. Collect all 9 gym badges and defeat the Illystrius Grandmaster.",
+        "replies": [
+            {
+                "text": "I will conquer the league.",
+                "nextPhraseID": "illystrius_league_check",
+                "startQuest": "quest_illystrius_league"
+            },
+            {
+                "text": "Maybe later.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "illystrius_league_check",
+        "text": "Show me proof of your victories.",
+        "replies": [
+            {
+                "text": "Present all gym badges and grandmaster ribbon.",
+                "nextPhraseID": "illystrius_league_complete",
+                "requiresItems": [
+                    {
+                        "itemID": "illystrius_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "illystrius_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ]
+            },
+            {
+                "text": "I am still working on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "conversation_illystrius_league_complete",
+        "text": "You have conquered the Illystrius League.",
+        "replies": [
+            {
+                "text": "Claim regional mastery.",
+                "nextPhraseID": "X",
+                "consumeItems": [
+                    {
+                        "itemID": "illystrius_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "illystrius_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ],
+                "rewardConditions": [
+                    {
+                        "conditionID": "beast_region_illystrius",
+                        "magnitude": 1,
+                        "duration": -1
+                    }
+                ],
+                "completeQuestObjectives": [
+                    "illystrius_league_progress"
+                ]
+            }
+        ]
+    },
+    {
+        "ID": "conversation_sejor_league_intro",
+        "text": "Welcome challenger. Collect all 9 gym badges and defeat the Sejor Grandmaster.",
+        "replies": [
+            {
+                "text": "I will conquer the league.",
+                "nextPhraseID": "sejor_league_check",
+                "startQuest": "quest_sejor_league"
+            },
+            {
+                "text": "Maybe later.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "sejor_league_check",
+        "text": "Show me proof of your victories.",
+        "replies": [
+            {
+                "text": "Present all gym badges and grandmaster ribbon.",
+                "nextPhraseID": "sejor_league_complete",
+                "requiresItems": [
+                    {
+                        "itemID": "sejor_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "sejor_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ]
+            },
+            {
+                "text": "I am still working on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "conversation_sejor_league_complete",
+        "text": "You have conquered the Sejor League.",
+        "replies": [
+            {
+                "text": "Claim regional mastery.",
+                "nextPhraseID": "X",
+                "consumeItems": [
+                    {
+                        "itemID": "sejor_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "sejor_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ],
+                "rewardConditions": [
+                    {
+                        "conditionID": "beast_region_sejor",
+                        "magnitude": 1,
+                        "duration": -1
+                    }
+                ],
+                "completeQuestObjectives": [
+                    "sejor_league_progress"
+                ]
+            }
+        ]
+    },
+    {
+        "ID": "conversation_bellom_league_intro",
+        "text": "Welcome challenger. Collect all 9 gym badges and defeat the Bellom Grandmaster.",
+        "replies": [
+            {
+                "text": "I will conquer the league.",
+                "nextPhraseID": "bellom_league_check",
+                "startQuest": "quest_bellom_league"
+            },
+            {
+                "text": "Maybe later.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "bellom_league_check",
+        "text": "Show me proof of your victories.",
+        "replies": [
+            {
+                "text": "Present all gym badges and grandmaster ribbon.",
+                "nextPhraseID": "bellom_league_complete",
+                "requiresItems": [
+                    {
+                        "itemID": "bellom_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "bellom_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ]
+            },
+            {
+                "text": "I am still working on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "conversation_bellom_league_complete",
+        "text": "You have conquered the Bellom League.",
+        "replies": [
+            {
+                "text": "Claim regional mastery.",
+                "nextPhraseID": "X",
+                "consumeItems": [
+                    {
+                        "itemID": "bellom_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "bellom_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ],
+                "rewardConditions": [
+                    {
+                        "conditionID": "beast_region_bellom",
+                        "magnitude": 1,
+                        "duration": -1
+                    }
+                ],
+                "completeQuestObjectives": [
+                    "bellom_league_progress"
+                ]
+            }
+        ]
+    },
+    {
+        "ID": "conversation_dorado_league_intro",
+        "text": "Welcome challenger. Collect all 9 gym badges and defeat the Dorado Grandmaster.",
+        "replies": [
+            {
+                "text": "I will conquer the league.",
+                "nextPhraseID": "dorado_league_check",
+                "startQuest": "quest_dorado_league"
+            },
+            {
+                "text": "Maybe later.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "dorado_league_check",
+        "text": "Show me proof of your victories.",
+        "replies": [
+            {
+                "text": "Present all gym badges and grandmaster ribbon.",
+                "nextPhraseID": "dorado_league_complete",
+                "requiresItems": [
+                    {
+                        "itemID": "dorado_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "dorado_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ]
+            },
+            {
+                "text": "I am still working on it.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "ID": "conversation_dorado_league_complete",
+        "text": "You have conquered the Dorado League.",
+        "replies": [
+            {
+                "text": "Claim regional mastery.",
+                "nextPhraseID": "X",
+                "consumeItems": [
+                    {
+                        "itemID": "dorado_gym_badge",
+                        "quantity": 9
+                    },
+                    {
+                        "itemID": "dorado_grandmaster_ribbon",
+                        "quantity": 1
+                    }
+                ],
+                "rewardConditions": [
+                    {
+                        "conditionID": "beast_region_dorado",
+                        "magnitude": 1,
+                        "duration": -1
+                    }
+                ],
+                "completeQuestObjectives": [
+                    "dorado_league_progress"
+                ]
+            }
+        ]
+    }
+]

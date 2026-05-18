@@ -1,0 +1,65 @@
+[
+    {
+        "id": "conv_jail_guard",
+        "message": "Stay in your cell, criminal.",
+        "replies": [
+            {
+                "text": "Yes, sir.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_jail_captain",
+        "message": "You're here until someone posts your bail.",
+        "replies": [
+            {
+                "text": "Understood.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_jail_lawyer",
+        "message": "I can post bail for 100 gold. Interested?",
+        "replies": [
+            {
+                "text": "Pay bail (100 gold)",
+                "nextPhraseID": "conv_jail_freed",
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "gold",
+                        "value": 100
+                    },
+                    {
+                        "requireType": "inventoryRemove",
+                        "requireID": "gold",
+                        "value": 100
+                    }
+                ]
+            },
+            {
+                "text": "Not now.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_jail_freed",
+        "message": "You're free. Try not to end up back here.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "mapchange",
+                        "rewardID": "exit",
+                        "mapName": "jail"
+                    }
+                ]
+            }
+        ]
+    }
+]

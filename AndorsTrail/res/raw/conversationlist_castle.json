@@ -1,0 +1,1979 @@
+[
+    {
+        "id": "conv_npc_ozzy",
+        "message": "Jasia, your sister Sunny has vanished. Will you search for her?",
+        "replies": [
+            {
+                "text": "I will find Sunny.",
+                "nextPhraseID": "conv_ozzy_start",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "text": "I found Sunny.",
+                "nextPhraseID": "conv_ozzy_complete",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_search_sunny",
+                        "value": "1000"
+                    }
+                ]
+            },
+            {
+                "text": "Not now.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_ozzy_start",
+        "message": "Speak with your mother Nymph in the throne room. The servants may also know something.",
+        "replies": [
+            {
+                "text": "I understand.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_npc_nymph",
+        "message": "Your father waits with me in the throne room. Ask the castle folk what they saw.",
+        "replies": [
+            {
+                "text": "I will ask around.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 50
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_jasias_maid",
+        "message": "My lady, your father wishes to speak with you. He waits in the throne room with your mother.",
+        "replies": [
+            {
+                "text": "Thank you.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "key_start_block",
+        "message": "You should speak with the maid first.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_1",
+        "message": "I heard Sunny was studying magic lately. Clue 1: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_1",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_2",
+        "message": "I heard Sunny was studying magic lately. Clue 2: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_2",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_3",
+        "message": "I heard Sunny was studying magic lately. Clue 3: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_3",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_4",
+        "message": "I heard Sunny was studying magic lately. Clue 4: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_4",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_5",
+        "message": "I heard Sunny was studying magic lately. Clue 5: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_5",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_6",
+        "message": "I heard Sunny was studying magic lately. Clue 6: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_6",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_7",
+        "message": "I heard Sunny was studying magic lately. Clue 7: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_7",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_8",
+        "message": "I heard Sunny was studying magic lately. Clue 8: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_8",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_9",
+        "message": "I heard Sunny was studying magic lately. Clue 9: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_9",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_10",
+        "message": "I heard Sunny was studying magic lately. Clue 10: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_10",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_11",
+        "message": "I heard Sunny was studying magic lately. Clue 11: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_11",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_12",
+        "message": "I heard Sunny was studying magic lately. Clue 12: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_12",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_13",
+        "message": "I heard Sunny was studying magic lately. Clue 13: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_13",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_14",
+        "message": "I heard Sunny was studying magic lately. Clue 14: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_14",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_15",
+        "message": "I heard Sunny was studying magic lately. Clue 15: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_15",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_16",
+        "message": "I heard Sunny was studying magic lately. Clue 16: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_16",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_17",
+        "message": "I heard Sunny was studying magic lately. Clue 17: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_17",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_18",
+        "message": "I heard Sunny was studying magic lately. Clue 18: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_18",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_19",
+        "message": "I heard Sunny was studying magic lately. Clue 19: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_19",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_20",
+        "message": "I heard Sunny was studying magic lately. Clue 20: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_20",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_21",
+        "message": "I heard Sunny was studying magic lately. Clue 21: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_21",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_22",
+        "message": "I heard Sunny was studying magic lately. Clue 22: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_22",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_23",
+        "message": "I heard Sunny was studying magic lately. Clue 23: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_23",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_24",
+        "message": "I heard Sunny was studying magic lately. Clue 24: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_24",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_npc_25",
+        "message": "I heard Sunny was studying magic lately. Clue 25: she seemed troubled.",
+        "replies": [
+            {
+                "text": "Tell me more.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_castle_clue_25",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_1",
+        "message": "A psychotic mage may be hiding near the haunted house.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_search_sunny",
+                        "value": "500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_2",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_search_sunny",
+                        "value": "500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_3",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_search_sunny",
+                        "value": "500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_4",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_search_sunny",
+                        "value": "500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_5",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_search_sunny",
+                        "value": "500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_6",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_search_sunny",
+                        "value": "500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_7",
+        "message": "A psychotic mage may be hiding near the haunted graveyard.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_search_sunny",
+                        "value": "500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_8",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_9",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_10",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_11",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_12",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_13",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_14",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_15",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_16",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_17",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_18",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_19",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_20",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_21",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_22",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_23",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_24",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_25",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_26",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_27",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_28",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_29",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_30",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_31",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_32",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_33",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_34",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_35",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_36",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_37",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_38",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_39",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_40",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_41",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_42",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_43",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_44",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_45",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_46",
+        "message": "Strange lights were seen near the swamp.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_47",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_48",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_49",
+        "message": "A wood elf girl matching Sunny's description passed through town.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_town_hint_50",
+        "message": "They say Sunny talked of drow magic and distant moons.",
+        "replies": [
+            {
+                "text": "Thanks.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_castle_guard_tip",
+        "message": "After the castle interviews, I recall Sunny went to the Witch in the swamp.",
+        "replies": [
+            {
+                "text": "The swamp witch?",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_search_sunny",
+                        "value": "100"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 200
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_swamp_witch_1",
+        "message": "The swamp witch shares vision 1 of four: Sunny sought the drow shaman.",
+        "replies": [
+            {
+                "text": "Continue",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_swamp_witch",
+                        "value": 25
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_swamp_witch_2",
+        "message": "The swamp witch shares vision 2 of four: Sunny sought the drow shaman.",
+        "replies": [
+            {
+                "text": "Continue",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_swamp_witch",
+                        "value": 50
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_swamp_witch_3",
+        "message": "The swamp witch shares vision 3 of four: Sunny sought the drow shaman.",
+        "replies": [
+            {
+                "text": "Continue",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_swamp_witch",
+                        "value": 75
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_swamp_witch_4",
+        "message": "The swamp witch shares vision 4 of four: Sunny sought the drow shaman.",
+        "replies": [
+            {
+                "text": "Continue",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_swamp_witch",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 300
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_drow_shaman",
+        "message": "Sunny wished to speak with Lloth. Bring nine reagents and I will send you to her.",
+        "replies": [
+            {
+                "text": "I have the reagents.",
+                "nextPhraseID": "conv_lloth_send",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_swamp_witch",
+                        "value": "100"
+                    }
+                ]
+            },
+            {
+                "text": "Not yet.",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_lloth_send",
+        "message": "Go to Lloth.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "mapchange",
+                        "rewardID": "south",
+                        "mapName": "lloth_realm"
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 400
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_npc_lloth",
+        "message": "You amuse me, wood elf. Settle the dragon dispute and I will tell you of Sunny.",
+        "replies": [
+            {
+                "text": "I accept.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "lloth_ring",
+                        "value": 1
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_lloth_items",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_npc_lloth_after_dragons",
+        "message": "Sunny wanted drow form and magic. She cast a tent spell on a ring, lost it, and vanished.",
+        "replies": [
+            {
+                "text": "Send me back.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_dragon_council",
+                        "value": "100"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "mapchange",
+                        "rewardID": "north",
+                        "mapName": "drow_cave"
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 500
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_brass",
+        "message": "The brass dragon demands a tribute before the council.",
+        "replies": [
+            {
+                "text": "I will help.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_brass",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_bronze",
+        "message": "The bronze dragon demands a tribute before the council.",
+        "replies": [
+            {
+                "text": "I will help.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_bronze",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_copper",
+        "message": "The copper dragon demands a tribute before the council.",
+        "replies": [
+            {
+                "text": "I will help.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_copper",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_silver",
+        "message": "The silver dragon demands a tribute before the council.",
+        "replies": [
+            {
+                "text": "I will help.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_silver",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_gold",
+        "message": "The gold dragon demands a tribute before the council.",
+        "replies": [
+            {
+                "text": "I will help.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_gold",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_yellow",
+        "message": "The yellow dragon demands a tribute before the council.",
+        "replies": [
+            {
+                "text": "I will help.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_yellow",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_white",
+        "message": "The white dragon demands a tribute before the council.",
+        "replies": [
+            {
+                "text": "I will help.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_white",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_black",
+        "message": "The black dragon demands a tribute before the council.",
+        "replies": [
+            {
+                "text": "I will help.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_black",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_blue",
+        "message": "The blue dragon demands a tribute before the council.",
+        "replies": [
+            {
+                "text": "I will help.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_blue",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_red",
+        "message": "The red dragon demands a tribute before the council.",
+        "replies": [
+            {
+                "text": "I will help.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_red",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_platinum",
+        "message": "The platinum dragon watches the council.",
+        "replies": [
+            {
+                "text": "Report progress.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_dragon_gold",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_dragon_red",
+                        "value": "100"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_platinum",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_dragon_chromatic",
+        "message": "The chromatic dragon judges all colors.",
+        "replies": [
+            {
+                "text": "Report progress.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_dragon_platinum",
+                        "value": "100"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_chromatic",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_dragon_council",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 450
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_haunt_hint_haunted_house",
+        "message": "Travelers whisper the psychotic mage hides near the haunted house.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_haunt_hint_haunted_mansion",
+        "message": "Travelers whisper the psychotic mage hides near the haunted mansion.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_haunt_hint_haunted_asylum",
+        "message": "Travelers whisper the psychotic mage hides near the haunted asylum.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_haunt_hint_haunted_prison",
+        "message": "Travelers whisper the psychotic mage hides near the haunted prison.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_haunt_hint_haunted_crypt",
+        "message": "Travelers whisper the psychotic mage hides near the haunted crypt.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_haunt_hint_haunted_mausoleum",
+        "message": "Travelers whisper the psychotic mage hides near the haunted mausoleum.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_haunt_hint_haunted_graveyard",
+        "message": "Travelers whisper the psychotic mage hides near the haunted graveyard.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_psychotic_mage",
+        "message": "You dare confront me?",
+        "replies": [
+            {
+                "text": "Fight!",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_mage_note",
+        "message": "Hybrid drow guarding a tent by the dow mountain will let anyone wearing the ring pass.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X"
+            }
+        ]
+    },
+    {
+        "id": "conv_ring_guard",
+        "message": "Show the ring if you wish to pass.",
+        "replies": [
+            {
+                "text": "...",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "inventoryKeep",
+                        "requireID": "sunny_ring",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_npc_sunny",
+        "message": "Sister... I became a demi-god and left the mortal realm. Take my blessing.",
+        "replies": [
+            {
+                "text": "I'm glad you're safe.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_drow_leader",
+                        "value": "100"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "actorCondition",
+                        "rewardID": "sunny_blessed",
+                        "value": 1
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 1000
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_ozzy_complete",
+        "message": "You found her! The kingdom is in your debt.",
+        "replies": [
+            {
+                "text": "Father...",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_search_sunny",
+                        "value": "1000"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "giveItem",
+                        "rewardID": "gold",
+                        "value": 5000
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 1000
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_moon_elder_red",
+        "message": "The red moon elder tests your resolve.",
+        "replies": [
+            {
+                "text": "Prove myself.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_moon_red",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_moon_elder_orange",
+        "message": "The orange moon elder tests your resolve.",
+        "replies": [
+            {
+                "text": "Prove myself.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_moon_orange",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_moon_elder_yellow",
+        "message": "The yellow moon elder tests your resolve.",
+        "replies": [
+            {
+                "text": "Prove myself.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_moon_yellow",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_moon_elder_green",
+        "message": "The green moon elder tests your resolve.",
+        "replies": [
+            {
+                "text": "Prove myself.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_moon_green",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_moon_elder_blue",
+        "message": "The blue moon elder tests your resolve.",
+        "replies": [
+            {
+                "text": "Prove myself.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_moon_blue",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_moon_elder_indigo",
+        "message": "The indigo moon elder tests your resolve.",
+        "replies": [
+            {
+                "text": "Prove myself.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_moon_indigo",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_moon_elder_violet",
+        "message": "The violet moon elder tests your resolve.",
+        "replies": [
+            {
+                "text": "Prove myself.",
+                "nextPhraseID": "X",
+                "rewards": [
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_moon_violet",
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_drow_leader",
+        "message": "All moon pacts are sealed. Sunny will meet you at the ring entry.",
+        "replies": [
+            {
+                "text": "Summon her.",
+                "nextPhraseID": "X",
+                "requires": [
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_moon_red",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_moon_orange",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_moon_yellow",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_moon_green",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_moon_blue",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_moon_indigo",
+                        "value": "100"
+                    },
+                    {
+                        "requireType": "questProgress",
+                        "requireID": "quest_moon_violet",
+                        "value": "100"
+                    }
+                ],
+                "rewards": [
+                    {
+                        "rewardType": "activateMapObjectGroup",
+                        "rewardID": "Spawn_sunny_summon",
+                        "mapName": "ring_entry"
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_drow_leader",
+                        "value": 100
+                    },
+                    {
+                        "rewardType": "questProgress",
+                        "rewardID": "quest_search_sunny",
+                        "value": 700
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "conv_sunny_ring_search",
+        "message": "The ring realm hums with old magic."
+    },
+    {
+        "id": "castle_blacksmith_greeting",
+        "message": "Royal steel for the princess's champion."
+    },
+    {
+        "id": "castle_alchemist_greeting",
+        "message": "Potions brewed for the search."
+    }
+]
